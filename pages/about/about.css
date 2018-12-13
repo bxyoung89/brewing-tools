@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans");
+.about-page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 200px; }
+
+h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 64px;
+  background: #1d3557;
+  padding: 10px;
+  display: inline-block;
+  margin: 0; }
+
+a {
+  color: #1d3557; }
+  a:hover {
+    color: #457b9d; }
+
+.section {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  position: relative; }
+  .section:after {
+    content: "\2766";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -10px;
+    color: #FFF;
+    font-size: 24px; }
+
+/*# sourceMappingURL=about.css.map */
