@@ -1,0 +1,10 @@
+@import "styles/reset";
+@import "styles/core";
+
+
+body {
+	font-size: 16px;
+	background: $red;
+	color: $not-white;
+	@include fira-sans();
+}

@@ -1,0 +1,124 @@
+@import "styles/core";
+
+.body-content {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 200px;
+}
+
+h1 {
+	@include berkshire-swash();
+	font-size: 64px;
+	background: $dark-blue;
+	padding: 10px;
+	display: inline-block;
+	margin: 0;
+}
+
+p {
+	margin-bottom: 60px;
+}
+
+h2 {
+	font-size: 24px;
+	margin: 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid $not-white;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+
+	> * {
+		height: 300px;
+		background: $dark-blue;
+	}
+}
+
+.grid-item {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+
+	&:hover {
+		.grid-item-content {
+			top: 100px;
+		}
+		.wave-header {
+			top: 0;
+		}
+	}
+}
+
+.grid-item-icon {
+	height: 100%;
+	width: 100%;
+	padding: 20px;
+
+	> object {
+		height: 100%;
+		width: 100%;
+		fill: $not-white;
+	}
+}
+
+.grid-item-content {
+	position: absolute;
+	top: calc(100% + 100px);
+	left: 0;
+	right: 0;
+	height: 100%;
+	padding: 20px;
+	transition: all 300ms ease;
+	font-size: 48px;
+	background: rgba($not-white, 0.9);
+	color: $dark-blue;
+}
+
+.discount {
+	fill: $not-white;
+	opacity: 0.75;
+}
+
+.wave-header {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	transition: all 300ms ease;
+}
+
+.wave-content {
+	position: relative;
+	height: 100px;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+	opacity: 0.8;
+}
+
+.wave {
+	position: absolute;
+	top: 40px;
+	left: -90px;
+	background: $blue;
+	width: 500px;
+	height: 500px;
+	transform-origin: 50% 48%;
+	border-radius: 43%;
+	animation: drift 3000ms infinite linear;
+
+	&.wave2{
+		animation: drift 7000ms infinite linear;
+	}
+
+	&.wave3{
+		animation: drift 5000ms infinite linear;
+	}
+}
+
+@keyframes drift {
+	from { transform: rotate(0deg); }
+	from { transform: rotate(360deg); }
+}

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans");
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer; }
+  .footer > a {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+    opacity: 0.5;
+    transition: all 300ms ease; }
+    .footer > a:hover {
+      opacity: 0.8; }
+    .footer > a > object {
+      height: 100%;
+      width: 100%;
+      pointer-events: none; }
+
+.question-mark,
+.twitter,
+.github {
+  fill: #FFF; }
+
+/*# sourceMappingURL=footer.css.map */

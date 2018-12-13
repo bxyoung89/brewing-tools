@@ -1,0 +1,28 @@
+{
+  "name": "brewing-tools",
+  "version": "1.0.0",
+  "description": "Collection of random brewing tools I'm making",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bxyoung89/brewing-tools.git"
+  },
+  "author": "Broderick Young",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/bxyoung89/brewing-tools/issues"
+  },
+  "homepage": "https://github.com/bxyoung89/brewing-tools#readme",
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "stylelint": "^9.9.0"
+  }
+}

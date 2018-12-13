@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans");
+.body-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 200px; }
+
+h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 64px;
+  background: #1d3557;
+  padding: 10px;
+  display: inline-block;
+  margin: 0; }
+
+p {
+  margin-bottom: 60px; }
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1faee; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px; }
+  .grid > * {
+    height: 300px;
+    background: #1d3557; }
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+  .grid-item:hover .grid-item-content {
+    top: 100px; }
+  .grid-item:hover .wave-header {
+    top: 0; }
+
+.grid-item-icon {
+  height: 100%;
+  width: 100%;
+  padding: 20px; }
+  .grid-item-icon > object {
+    height: 100%;
+    width: 100%;
+    fill: #f1faee; }
+
+.grid-item-content {
+  position: absolute;
+  top: calc(100% + 100px);
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 20px;
+  transition: all 300ms ease;
+  font-size: 48px;
+  background: rgba(241, 250, 238, 0.9);
+  color: #1d3557; }
+
+.discount {
+  fill: #f1faee;
+  opacity: 0.75; }
+
+.wave-header {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: all 300ms ease; }
+
+.wave-content {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8; }
+
+.wave {
+  position: absolute;
+  top: 40px;
+  left: -90px;
+  background: #457b9d;
+  width: 500px;
+  height: 500px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear; }
+  .wave.wave2 {
+    animation: drift 7000ms infinite linear; }
+  .wave.wave3 {
+    animation: drift 5000ms infinite linear; }
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg); }
+  from {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=main-page.css.map */

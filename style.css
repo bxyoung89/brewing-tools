@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans");
+* {
+  box-sizing: border-box; }
+
+body,
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 16px;
+  background: #e63946;
+  color: #f1faee;
+  font-family: "Fira Sans", sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
