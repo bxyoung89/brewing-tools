@@ -1,17 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans");
-.body-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 200px; }
-
-h1 {
-  font-family: "Berkshire Swash", cursive;
-  font-size: 64px;
-  background: #1d3557;
-  padding: 10px;
-  display: inline-block;
-  margin: 0; }
-
 p {
   margin-bottom: 60px; }
 

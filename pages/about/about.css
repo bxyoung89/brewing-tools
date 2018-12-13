@@ -4,19 +4,6 @@
   margin: 0 auto;
   padding-top: 200px; }
 
-h1 {
-  font-family: "Berkshire Swash", cursive;
-  font-size: 64px;
-  background: #1d3557;
-  padding: 10px;
-  display: inline-block;
-  margin: 0; }
-
-a {
-  color: #1d3557; }
-  a:hover {
-    color: #457b9d; }
-
 .section {
   padding-bottom: 40px;
   margin-bottom: 40px;

@@ -8,3 +8,26 @@ body {
 	color: $not-white;
 	@include fira-sans();
 }
+
+h1 {
+	@include berkshire-swash();
+	font-size: 64px;
+	background: $dark-blue;
+	padding: 10px;
+	display: inline-block;
+	margin: 0;
+}
+
+a {
+	color: $dark-blue;
+	&:hover {
+		color: $blue;
+	}
+}
+
+.body-content {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 200px;
+}
+
