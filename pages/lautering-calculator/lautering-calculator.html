@@ -67,6 +67,12 @@
 					<div class="efficiency-number">
 						{{efficiency}}
 					</div>
+					<div v-if="Number.parseFloat(efficiency) > 100" class="efficiency-warning">
+						Seems a bit high.<br><br>Check your numbers?
+					</div>
+					<div v-if="Number.parseFloat(efficiency) < 30" class="efficiency-warning">
+						Seems a bit low.<br><br>Check your numbers?
+					</div>
 				</div>
 			</div>
 		</div>

@@ -69,6 +69,15 @@
 	text-align: center;
 	font-size: 80px;
 	line-height: 140px;
+	@include berkshire-swash();
+}
+
+.efficiency-warning {
+	text-align: center;
+	@include small-caps();
+	color: $red;
+	font-size: 12px;
+	line-height: 10px;
 }
 
 .grains-section-title {

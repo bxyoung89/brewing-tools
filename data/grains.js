@@ -13,12 +13,6 @@ export default [
     "potential": 1.03
   },
   {
-    "name": "Acidulated Malt",
-    "origin": "German",
-    "color": 3.4,
-    "potential": 0
-  },
-  {
     "name": "Amber Malt",
     "origin": "United Kingdom",
     "color": 22,
@@ -103,12 +97,6 @@ export default [
     "potential": 1.036
   },
   {
-    "name": "British Crystal 50-60L",
-    "origin": "UK",
-    "color": 55,
-    "potential": 0
-  },
-  {
     "name": "Brown Malt",
     "origin": "United Kingdom",
     "color": 65,
@@ -179,18 +167,6 @@ export default [
     "origin": "US",
     "color": 2,
     "potential": 1.033
-  },
-  {
-    "name": "CaraHell",
-    "origin": "German",
-    "color": 11,
-    "potential": 0
-  },
-  {
-    "name": "Caramel / Crystal 60L",
-    "origin": "American",
-    "color": 60,
-    "potential": 0
   },
   {
     "name": "Caramel Malt - 120L (Briess)",
@@ -277,12 +253,6 @@ export default [
     "potential": 1.036
   },
   {
-    "name": "CaraMunich III",
-    "origin": "German",
-    "color": 57,
-    "potential": 0
-  },
-  {
     "name": "Caramunich III (Weyermann)",
     "origin": "Germany",
     "color": 71,
@@ -299,12 +269,6 @@ export default [
     "origin": "US",
     "color": 1.5,
     "potential": 1.034
-  },
-  {
-    "name": "Carapils (Dextrine Malt)",
-    "origin": "American",
-    "color": 1.8,
-    "potential": 0
   },
   {
     "name": "Carapils 6-Row (Briess)",
@@ -415,12 +379,6 @@ export default [
     "potential": 1.032
   },
   {
-    "name": "Crystal 60L",
-    "origin": "United Kingdom",
-    "color": 60,
-    "potential": 0
-  },
-  {
     "name": "Crystal 70/80L",
     "origin": "United Kingdom",
     "color": 75,
@@ -455,12 +413,6 @@ export default [
     "origin": "UK",
     "color": 55,
     "potential": 1.034
-  },
-  {
-    "name": "Floor-Malted Bohemian Pilsner",
-    "origin": "German",
-    "color": 1.8,
-    "potential": 0
   },
   {
     "name": "Golden Promise (Simpsons)",
@@ -517,22 +469,10 @@ export default [
     "potential": 1.038
   },
   {
-    "name": "Maris Otter Ale Malt",
-    "origin": "UK",
-    "color": 4,
-    "potential": 0
-  },
-  {
     "name": "Maris Otter Malt (Muntons)",
     "origin": "United Kingdom",
     "color": 3,
     "potential": 1.036
-  },
-  {
-    "name": "Maris Otter Pale",
-    "origin": "United Kingdom",
-    "color": 3.75,
-    "potential": 0
   },
   {
     "name": "Melanoiden Malt",
@@ -589,12 +529,6 @@ export default [
     "potential": 1.038
   },
   {
-    "name": "Munich Light",
-    "origin": "German",
-    "color": 6,
-    "potential": 0
-  },
-  {
     "name": "Munich Malt",
     "origin": "Germany",
     "color": 9,
@@ -647,18 +581,6 @@ export default [
     "origin": "US",
     "color": 1,
     "potential": 1.037
-  },
-  {
-    "name": "Pale 2-Row",
-    "origin": "American",
-    "color": 1.8,
-    "potential": 0
-  },
-  {
-    "name": "Pale 6-Row",
-    "origin": "American",
-    "color": 1.8,
-    "potential": 0
   },
   {
     "name": "Pale Ale Malt",
@@ -829,12 +751,6 @@ export default [
     "potential": 1.025
   },
   {
-    "name": "Roasted Barley",
-    "origin": "United Kingdom",
-    "color": 550,
-    "potential": 0
-  },
-  {
     "name": "Rye Malt",
     "origin": "US",
     "color": 4.7,
@@ -857,12 +773,6 @@ export default [
     "origin": "US",
     "color": 10,
     "potential": 1.036
-  },
-  {
-    "name": "Simpson Golden Promise",
-    "origin": "UK",
-    "color": 2,
-    "potential": 0
   },
   {
     "name": "Smoked Malt",
@@ -905,12 +815,6 @@ export default [
     "origin": "United Kingdom",
     "color": 27,
     "potential": 1.033
-  },
-  {
-    "name": "Triticale, Flaked",
-    "origin": "US",
-    "color": 2,
-    "potential": 0
   },
   {
     "name": "Blacklands Pale Moon (two row)",
@@ -1007,12 +911,6 @@ export default [
     "origin": "US",
     "color": 1.7,
     "potential": 1.036
-  },
-  {
-    "name": "White Wheat",
-    "origin": "American",
-    "color": 2.8,
-    "potential": 0
   },
   {
     "name": "White Wheat Malt",

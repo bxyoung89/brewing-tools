@@ -26,7 +26,6 @@
     .grain-card .dropdown-option > div {
       flex-grow: 1; }
   .grain-card .dropdown-wrapper .dropdown-toggle {
-    margin-bottom: 10px;
     background: #fff; }
 
 .lautering-calculator {
@@ -83,7 +82,17 @@
 .efficiency-number {
   text-align: center;
   font-size: 80px;
-  line-height: 140px; }
+  line-height: 140px;
+  font-family: "Berkshire Swash", cursive; }
+
+.efficiency-warning {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: #e63946;
+  font-size: 12px;
+  line-height: 10px; }
 
 .grains-section-title {
   text-transform: uppercase;
