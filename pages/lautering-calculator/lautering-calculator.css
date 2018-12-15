@@ -1,4 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans");
+.grain-card {
+  background: rgba(241, 250, 238, 0.1);
+  padding: 20px;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 5px; }
+  .grain-card .grain-content {
+    flex-grow: 1; }
+  .grain-card .remove-grain-button {
+    margin-left: 20px;
+    width: 40px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px; }
+    .grain-card .remove-grain-button:hover {
+      background: rgba(230, 57, 70, 0.1); }
+  .grain-card .dropdown-option {
+    display: flex;
+    height: 40px;
+    align-items: center; }
+    .grain-card .dropdown-option > img {
+      height: 30px;
+      margin-right: 10px; }
+    .grain-card .dropdown-option > div {
+      flex-grow: 1; }
+  .grain-card .dropdown-wrapper .dropdown-toggle {
+    margin-bottom: 10px;
+    background: #fff; }
+
 .lautering-calculator {
   margin-top: 30px;
   display: flex;
@@ -61,26 +91,6 @@
   font-weight: bold;
   margin-bottom: 5px;
   font-size: 24px; }
-
-.grain-card {
-  background: rgba(241, 250, 238, 0.1);
-  padding: 20px;
-  display: flex;
-  margin-bottom: 10px;
-  border-radius: 5px; }
-
-.grain-content {
-  flex-grow: 1; }
-
-.remove-grain-button {
-  margin-left: 20px;
-  width: 40px;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  border-radius: 5px; }
-  .remove-grain-button:hover {
-    background: rgba(230, 57, 70, 0.1); }
 
 .more-grains-button {
   width: 100%;

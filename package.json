@@ -24,5 +24,8 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
     "stylelint": "^9.9.0"
+  },
+  "dependencies": {
+    "vue-select": "^2.5.1"
   }
 }

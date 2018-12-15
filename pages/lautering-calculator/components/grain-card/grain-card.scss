@@ -1,0 +1,55 @@
+.grain-card {
+	background: rgba($not-white, 0.1);
+	padding: 20px;
+	display: flex;
+	margin-bottom: 10px;
+	border-radius: 5px;
+
+
+	.grain-content {
+		flex-grow: 1;
+		> select {
+
+		}
+
+		> .input-section {
+
+		}
+	}
+
+	.remove-grain-button {
+		margin-left: 20px;
+		width: 40px;
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+		border-radius: 5px;
+		&:hover {
+			background: rgba($red, 0.1);
+		}
+	}
+
+
+	.dropdown-option {
+		display: flex;
+		height: 40px;
+		align-items: center;
+
+		> img {
+			height: 30px;
+			margin-right: 10px;
+		}
+
+		> div {
+			flex-grow: 1;
+		}
+	}
+
+	.dropdown-wrapper {
+		.dropdown-toggle {
+			margin-bottom: 10px;
+			background: #fff;
+		}
+	}
+}
+

@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/header.css"/>
 		<link rel="stylesheet" type="text/css" href="./lautering-calculator.css"/>
 		<title>Lautering Calculator</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://unpkg.com/vue-select@latest"></script>
 	</head>
 	<body>
 		<div class="header">
@@ -17,7 +19,7 @@
 			<h1>
 				Lautering Efficiency Calculator
 			</h1>
-			<div class="lautering-calculator">
+			<div class="lautering-calculator" id="app" >
 				<div class="inputs">
 					<div class="inputs-title">
 						Enter yo digits...
@@ -28,7 +30,7 @@
 								Wort Volume (Gallons)
 							</div>
 							<div class="regular-input">
-								<input type="number" placeholder="dat volume in dat dere pot" value="5.5">
+								<input type="number" placeholder="dat volume in dat dere pot" v-model="wortVolume">
 							</div>
 						</div>
 						<div class="input-section">
@@ -36,7 +38,7 @@
 								Gravity Measurement (1.xxx)
 							</div>
 							<div class="regular-input">
-								<input type="number" placeholder="how heavy is yo shit" value="1.050">
+								<input type="number" placeholder="how heavy is yo shit" v-model="gravityMeasurement">
 							</div>
 						</div>
 					</div>
@@ -44,76 +46,15 @@
 						<div class="grains-section-title">
 							Grains
 						</div>
-						<div class="grain-card">
-							<div class="grain-content">
-								<select>
-									<option selected>
-										Grain Name
-									</option>
-									<option>
-										Grain 2
-									</option>
-								</select>
-								<div class="input-section">
-									<div class="input-section-title">
-										Pounds
-									</div>
-									<div class="regular-input">
-										<input type="number" placeholder="pounds" value="0">
-									</div>
-								</div>
-							</div>
-							<button class="remove-grain-button">
-								X
-							</button>
+						<div class="grain-list" v-for="(grain, index) in grains">
+							<grain-card
+								v-bind:grain="grain"
+								v-bind:remove-grain-at-index="removeGrainAtIndex"
+								v-bind:index="index"
+								v-bind:number-of-cards="grains.length"
+							/>
 						</div>
-						<div class="grain-card">
-							<div class="grain-content">
-								<select>
-									<option selected>
-										Grain Name
-									</option>
-									<option>
-										Grain 2
-									</option>
-								</select>
-								<div class="input-section">
-									<div class="input-section-title">
-										Pounds
-									</div>
-									<div class="regular-input">
-										<input type="number" placeholder="pounds" value="0">
-									</div>
-								</div>
-							</div>
-							<button class="remove-grain-button">
-								X
-							</button>
-						</div>
-						<div class="grain-card">
-							<div class="grain-content">
-								<select>
-									<option selected>
-										Grain Name
-									</option>
-									<option>
-										Grain 2
-									</option>
-								</select>
-								<div class="input-section">
-									<div class="input-section-title">
-										Pounds
-									</div>
-									<div class="regular-input">
-										<input type="number" placeholder="pounds" value="0">
-									</div>
-								</div>
-							</div>
-							<button class="remove-grain-button">
-								X
-							</button>
-						</div>
-						<button class="more-grains-button">
+						<button class="more-grains-button" v-on:click="addNewGrain">
 							Add more grains
 						</button>
 					</div>
@@ -124,10 +65,12 @@
 						Your efficiency is
 					</div>
 					<div class="efficiency-number">
-						50.35%
+						{{efficiency}}
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<script src="./lautering-calculator.js" type="module"></script>
 	</body>
 </html>

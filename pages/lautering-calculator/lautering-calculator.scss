@@ -1,4 +1,5 @@
 @import "../../styles/core";
+@import "./components/grain-card/grain-card";
 
 .lautering-calculator {
 	margin-top: 30px;
@@ -74,37 +75,6 @@
 	@include small-caps();
 	margin-bottom: 5px;
 	font-size: 24px;
-}
-
-.grain-card {
-	background: rgba($not-white, 0.1);
-	padding: 20px;
-	display: flex;
-	margin-bottom: 10px;
-	border-radius: 5px;
-}
-
-.grain-content {
-	flex-grow: 1;
-	> select {
-
-	}
-
-	> .input-section {
-
-	}
-}
-
-.remove-grain-button {
-	margin-left: 20px;
-	width: 40px;
-	background: transparent;
-	border: 0;
-	cursor: pointer;
-	border-radius: 5px;
-	&:hover {
-		background: rgba($red, 0.1);
-	}
 }
 
 .more-grains-button {
