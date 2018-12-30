@@ -10,9 +10,8 @@ class LauteringCalculatorService {
 			return defaultValue;
 		}
 		const maxPointsByGrain = filteredGrains.map(({grain, pounds }) => {
-			const {potential} = grain;
-			const potentialInPoints = (potential - 1) * 1000;
-			return (potentialInPoints * pounds)/wortVolume;
+			const {ppg} = grain;
+			return (ppg * pounds)/wortVolume;
 		});
 
 		const totalMaxPoints = maxPointsByGrain.reduce((sum, point) => sum+point, 0);

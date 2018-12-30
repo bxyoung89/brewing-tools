@@ -28,7 +28,7 @@
 					<v-select :options="allGrains" label="name" v-model="grain.grain">
 						<tempalte slot="option" slot-scope="option">
 							<div class="dropdown-option">
-								<dynamic-svg v-bind:src="getFlagFromCountry(option.origin)" />
+								<dynamic-svg v-bind:src="getFlagFromCountry(option.country)" />
 								<div>
 									{{option.name}}
 								</div>

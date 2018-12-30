@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "c10da7b18e0ade8d570e";
+/******/ 	var hotCurrentHash = "3acf87f2763c0cb61a94";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2538,7 +2538,7 @@ var render = function() {
                         [
                           _c("dynamic-svg", {
                             attrs: {
-                              src: _vm.getFlagFromCountry(option.origin)
+                              src: _vm.getFlagFromCountry(option.country)
                             }
                           }),
                           _vm._v(" "),
@@ -16432,780 +16432,2846 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// comes from http://www.brewunited.com/grain_database.php#
 /* harmony default export */ __webpack_exports__["default"] = ([{
-  "name": "Acid Malt",
-  "origin": "Germany",
-  "color": 3,
-  "potential": 1.027
+  "name": "Flaked Barley",
+  "lovibond": 2.2,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
 }, {
-  "name": "Acidulated (Weyermann)",
-  "origin": "Germany",
-  "color": 1.8,
-  "potential": 1.03
+  "name": "Flaked Corn",
+  "lovibond": 0.5,
+  "ppg": 40,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
 }, {
-  "name": "Amber Malt",
-  "origin": "United Kingdom",
-  "color": 22,
-  "potential": 1.035
+  "name": "Flaked Oats",
+  "lovibond": 2.2,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Flaked Rice",
+  "lovibond": 0.5,
+  "ppg": 40,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Flaked Rye",
+  "lovibond": 2.8,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Flaked Wheat",
+  "lovibond": 2,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Grits",
+  "lovibond": 1,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Rice Hulls",
+  "lovibond": 0,
+  "ppg": 0,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "other"
+}, {
+  "name": "Rolled Barley",
+  "lovibond": 1.7,
+  "ppg": 35.4,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw",
+  "country": "NZ"
+}, {
+  "name": "Rolled Oats",
+  "lovibond": 2.2,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Rolled Oats",
+  "lovibond": 1.4,
+  "ppg": 12.4,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw",
+  "country": "NZ"
+}, {
+  "name": "Torrified Barley",
+  "lovibond": 2,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Torrified Wheat",
+  "lovibond": 2,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Adjunct",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Dry Malt Extract - Amber",
+  "lovibond": 10,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Dry Malt Extract - Dark",
+  "lovibond": 30,
+  "ppg": 44,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Dry Malt Extract - Extra Light",
+  "lovibond": 2.5,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Dry Malt Extract - Light",
+  "lovibond": 4,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Dry Malt Extract - Munich",
+  "lovibond": 8,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Dry Malt Extract - Pilsen",
+  "lovibond": 2,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Dry Malt Extract - Wheat",
+  "lovibond": 3,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Rice Syrup Solids",
+  "lovibond": 1,
+  "ppg": 37,
+  "mashable": 0,
+  "category": "Dry Extract",
+  "diastatic": 0,
+  "graintype": "raw"
 }, {
   "name": "Aromatic Malt",
-  "origin": "Belgium",
-  "color": 26,
-  "potential": 1.036
-}, {
-  "name": "Barley, Flaked",
-  "origin": "US",
-  "color": 1.7,
-  "potential": 1.032
-}, {
-  "name": "Barley, Raw",
-  "origin": "US",
-  "color": 2,
-  "potential": 1.028
-}, {
-  "name": "Barley, Roasted",
-  "origin": "US",
-  "color": 300,
-  "potential": 1.025
-}, {
-  "name": "Barley, Torrefied",
-  "origin": "US",
-  "color": 1.7,
-  "potential": 1.036
-}, {
-  "name": "Belgian Debittered Black Malt",
-  "origin": "Belgian",
-  "color": 550,
-  "potential": 1.01
-}, {
-  "name": "Biscuit Malt",
-  "origin": "Belgian",
-  "color": 23,
-  "potential": 1.036
-}, {
-  "name": "Black (Patent) Malt",
-  "origin": "US",
-  "color": 500,
-  "potential": 1.025
-}, {
-  "name": "Black Barley (Briess)",
-  "origin": "US",
-  "color": 500,
-  "potential": 1.032
-}, {
-  "name": "Black Barley (Stout)",
-  "origin": "US",
-  "color": 500,
-  "potential": 1.025
-}, {
-  "name": "Blackprinz Malt",
-  "origin": "US",
-  "color": 500,
-  "potential": 1.025
-}, {
-  "name": "Blackprinz Malt (Briess)",
-  "origin": "US",
-  "color": 500,
-  "potential": 1.033
-}, {
-  "name": "Brewers Malt 6-Row (Briess)",
-  "origin": "US",
-  "color": 1.8,
-  "potential": 1.036
-}, {
-  "name": "Brown Malt",
-  "origin": "United Kingdom",
-  "color": 65,
-  "potential": 1.032
-}, {
-  "name": "Brumalt",
-  "origin": "Germany",
-  "color": 23,
-  "potential": 1.033
-}, {
-  "name": "Cara-Pils/Dextrine",
-  "origin": "US",
-  "color": 2,
-  "potential": 1.033
-}, {
-  "name": "Caraamber",
-  "origin": "US",
-  "color": 30,
-  "potential": 1.035
-}, {
-  "name": "Caraaroma",
-  "origin": "Germany",
-  "color": 130,
-  "potential": 1.035
-}, {
-  "name": "Carafa I",
-  "origin": "Germany",
-  "color": 337,
-  "potential": 1.032
-}, {
-  "name": "Carafa I (Weyermann)",
-  "origin": "Germany",
-  "color": 320,
-  "potential": 1.036
-}, {
-  "name": "Carafa II",
-  "origin": "Germany",
-  "color": 412,
-  "potential": 1.032
-}, {
-  "name": "Carafa III",
-  "origin": "Germany",
-  "color": 525,
-  "potential": 1.032
-}, {
-  "name": "Carafa Special I (Weyermann)",
-  "origin": "Germany",
-  "color": 320,
-  "potential": 1.036
-}, {
-  "name": "Carafa Special II (Weyermann)",
-  "origin": "Germany",
-  "color": 415,
-  "potential": 1.036
-}, {
-  "name": "Carafoam",
-  "origin": "US",
-  "color": 2,
-  "potential": 1.033
-}, {
-  "name": "Caramel Malt - 120L (Briess)",
-  "origin": "US",
-  "color": 120,
-  "potential": 1.032
-}, {
-  "name": "Caramel Malt - 80L 6-Row (Briess)",
-  "origin": "US",
-  "color": 80,
-  "potential": 1.033
-}, {
-  "name": "Caramel Wheat Malt",
-  "origin": "Germany",
-  "color": 46,
-  "potential": 1.035
-}, {
-  "name": "Caramel/Crystal Malt - 10L",
-  "origin": "US",
-  "color": 10,
-  "potential": 1.035
-}, {
-  "name": "Caramel/Crystal Malt - 150L",
-  "origin": "US",
-  "color": 150,
-  "potential": 1.035
-}, {
-  "name": "Caramel/Crystal Malt - 15L",
-  "origin": "US",
-  "color": 15,
-  "potential": 1.035
-}, {
-  "name": "Caramel/Crystal Malt - 20L",
-  "origin": "US",
-  "color": 20,
-  "potential": 1.035
-}, {
-  "name": "Caramel/Crystal Malt - 30L",
-  "origin": "US",
-  "color": 30,
-  "potential": 1.035
-}, {
-  "name": "Caramel/Crystal Malt - 40L",
-  "origin": "US",
-  "color": 40,
-  "potential": 1.034
-}, {
-  "name": "Caramel/Crystal Malt - 60L",
-  "origin": "US",
-  "color": 60,
-  "potential": 1.034
-}, {
-  "name": "Caramel/Crystal Malt - 80L",
-  "origin": "US",
-  "color": 80,
-  "potential": 1.034
-}, {
-  "name": "Caramel/Crystal Malt - 90L",
-  "origin": "US",
-  "color": 90,
-  "potential": 1.034
-}, {
-  "name": "Caramel/Crystal Malt -120L",
-  "origin": "US",
-  "color": 120,
-  "potential": 1.033
-}, {
-  "name": "Caramunich I (Weyermann)",
-  "origin": "Germany",
-  "color": 34.5,
-  "potential": 1.036
-}, {
-  "name": "Caramunich III (Weyermann)",
-  "origin": "Germany",
-  "color": 71,
-  "potential": 1.037
-}, {
-  "name": "Caramunich Malt",
-  "origin": "Belgium",
-  "color": 56,
-  "potential": 1.033
-}, {
-  "name": "Carapils (Briess)",
-  "origin": "US",
-  "color": 1.5,
-  "potential": 1.034
-}, {
-  "name": "Carapils 6-Row (Briess)",
-  "origin": "US",
-  "color": 1.3,
-  "potential": 1.034
-}, {
-  "name": "Carared",
-  "origin": "US",
-  "color": 20,
-  "potential": 1.035
-}, {
-  "name": "Caravienne Malt",
-  "origin": "Belgium",
-  "color": 22,
-  "potential": 1.034
-}, {
-  "name": "CHÂTEAU SPELT",
-  "origin": "Belgium",
-  "color": 3.55,
-  "potential": 1
-}, {
-  "name": "Chocolate (Briess)",
-  "origin": "US",
-  "color": 350,
-  "potential": 1.035
-}, {
-  "name": "Chocolate (Dingemans)",
-  "origin": "Belgium",
-  "color": 340,
-  "potential": 1.03
-}, {
-  "name": "Chocolate Malt",
-  "origin": "US",
-  "color": 350,
-  "potential": 1.028
-}, {
-  "name": "Chocolate Malt",
-  "origin": "United Kingdom",
-  "color": 450,
-  "potential": 1.034
-}, {
-  "name": "Chocolate Malt (Muntons)",
-  "origin": "US",
-  "color": 385,
-  "potential": 1.028
-}, {
-  "name": "Chocolate Malt (Thomas Fawcett)",
-  "origin": "United Kingdom",
-  "color": 508,
-  "potential": 1.034
-}, {
-  "name": "Chocolate Malt, Pale",
-  "origin": "US",
-  "color": 225,
-  "potential": 1.028
-}, {
-  "name": "Chocolate Rye Malt",
-  "origin": "Germany",
-  "color": 250,
-  "potential": 1.031
-}, {
-  "name": "Chocolate Wheat Malt",
-  "origin": "Germany",
-  "color": 400,
-  "potential": 1.033
-}, {
-  "name": "Corn - Yellow, Flaked (Briess)",
-  "origin": "US",
-  "color": 1.3,
-  "potential": 1.039
-}, {
-  "name": "Corn, Flaked",
-  "origin": "US",
-  "color": 1.3,
-  "potential": 1.037
-}, {
-  "name": "Crisp Crystal 77L",
-  "origin": "US",
-  "color": 77,
-  "potential": 1.034
-}, {
-  "name": "Crystal 40, 2-Row, (Great Western)",
-  "origin": "US",
-  "color": 40,
-  "potential": 1.032
-}, {
-  "name": "Crystal 60, 2-Row, (Great Western)",
-  "origin": "US",
-  "color": 60,
-  "potential": 1.032
-}, {
-  "name": "Crystal 70/80L",
-  "origin": "United Kingdom",
-  "color": 75,
-  "potential": 1.035
-}, {
-  "name": "Crystal Malt - 60L (Thomas Fawcett)",
-  "origin": "United Kingdom",
-  "color": 60,
-  "potential": 1.034
-}, {
-  "name": "Crystal, Dark (Simpsons)",
-  "origin": "UK",
-  "color": 80,
-  "potential": 1.035
-}, {
-  "name": "Crystal, Extra Dark (Simpsons)",
-  "origin": "UK",
-  "color": 160,
-  "potential": 1.035
-}, {
-  "name": "Crystal, Medium (Simpsons)",
-  "origin": "UK",
-  "color": 55,
-  "potential": 1.035
-}, {
-  "name": "English Crystal, 50-60 L",
-  "origin": "UK",
-  "color": 55,
-  "potential": 1.034
-}, {
-  "name": "Golden Promise (Simpsons)",
-  "origin": "UK",
-  "color": 2,
-  "potential": 1.038
-}, {
-  "name": "Home Roasted Pilsner",
-  "origin": "US",
-  "color": 200,
-  "potential": 1.03
-}, {
-  "name": "Home Toasted/Roasted Munich Malt",
-  "origin": "United Kingdom",
-  "color": 27,
-  "potential": 1.033
-}, {
-  "name": "Honey Malt",
-  "origin": "Canada",
-  "color": 25,
-  "potential": 1.037
-}, {
-  "name": "Honey Malt (Gambrinus)",
-  "origin": "Canada",
-  "color": 25,
-  "potential": 1.038
-}, {
-  "name": "Kolsch Malt",
-  "origin": "Germany",
-  "color": 4.5,
-  "potential": 1.037
-}, {
-  "name": "Lager Malt",
-  "origin": "",
-  "color": 2,
-  "potential": 1.038
-}, {
-  "name": "Light Roasted Barley (Briess)",
-  "origin": "US",
-  "color": 300,
-  "potential": 1.033
-}, {
-  "name": "Maris Otter (Crisp)",
-  "origin": "United Kingdom",
-  "color": 4,
-  "potential": 1.038
-}, {
-  "name": "Maris Otter Malt (Muntons)",
-  "origin": "United Kingdom",
-  "color": 3,
-  "potential": 1.036
-}, {
-  "name": "Melanoiden Malt",
-  "origin": "Germany",
-  "color": 20,
-  "potential": 1.037
-}, {
-  "name": "Melanoidin (Weyermann)",
-  "origin": "Germany",
-  "color": 27,
-  "potential": 1.037
-}, {
-  "name": "MFB Pilsen",
-  "origin": "France",
-  "color": 1.8,
-  "potential": 1.036
-}, {
-  "name": "Mild Malt",
-  "origin": "United Kingdom",
-  "color": 4,
-  "potential": 1.037
-}, {
-  "name": "Munich (BestMälz)",
-  "origin": "Germany",
-  "color": 7.6142132,
-  "potential": 1.035
-}, {
-  "name": "Munich 10L (Briess)",
-  "origin": "US",
-  "color": 7,
-  "potential": 1.035
-}, {
-  "name": "Munich 10L (Gambrinus)",
-  "origin": "US",
-  "color": 10,
-  "potential": 1.035
-}, {
-  "name": "Munich Dark (BestMälz)",
-  "origin": "Germany",
-  "color": 12.6903553,
-  "potential": 1.035
-}, {
-  "name": "Munich I (Weyermann)",
-  "origin": "Germany",
-  "color": 7.1,
-  "potential": 1.038
-}, {
-  "name": "Munich Malt",
-  "origin": "Germany",
-  "color": 9,
-  "potential": 1.037
-}, {
-  "name": "Munich Malt (Great Western)",
-  "origin": "Canada",
-  "color": 9,
-  "potential": 1.037
-}, {
-  "name": "Munich Malt - 10L",
-  "origin": "US",
-  "color": 10,
-  "potential": 1.035
-}, {
-  "name": "Munich Malt - 20L",
-  "origin": "US",
-  "color": 20,
-  "potential": 1.035
-}, {
-  "name": "Munich Malt, Light (Weyermann)",
-  "origin": "Germany",
-  "color": 5.5,
-  "potential": 1.037
-}, {
-  "name": "Oats, Flaked",
-  "origin": "US",
-  "color": 1,
-  "potential": 1.037
-}, {
-  "name": "Oats, Flaked (toasted)",
-  "origin": "US",
-  "color": 15,
-  "potential": 1.037
-}, {
-  "name": "Oats, Golden Naked (Simpsons)",
-  "origin": "UK",
-  "color": 10,
-  "potential": 1.032
-}, {
-  "name": "Oats, Malted",
-  "origin": "US",
-  "color": 1,
-  "potential": 1.037
-}, {
-  "name": "Pale Ale Malt",
-  "origin": "US",
-  "color": 3.5,
-  "potential": 1.036
-}, {
-  "name": "Pale Ale Malt 2-Row (Briess)",
-  "origin": "US",
-  "color": 3.5,
-  "potential": 1.037
-}, {
-  "name": "Pale Ale Malt, Full Pint (Great Western)",
-  "origin": "US",
-  "color": 2.25,
-  "potential": 1.037
-}, {
-  "name": "Pale Chocolate",
-  "origin": "UK",
-  "color": 225,
-  "potential": 1.028
-}, {
-  "name": "Pale Chocolate Malt",
-  "origin": "UK",
-  "color": 250,
-  "potential": 1.033
-}, {
-  "name": "Pale Malt (2 Row) Belgian",
-  "origin": "Belgium",
-  "color": 3,
-  "potential": 1.037
-}, {
-  "name": "Pale Malt (2 Row) UK",
-  "origin": "United Kingdom",
-  "color": 3,
-  "potential": 1.036
-}, {
-  "name": "Pale Malt (2 Row) US",
-  "origin": "US",
-  "color": 2,
-  "potential": 1.036
-}, {
-  "name": "Pale Malt (2 Row), NW Pale",
-  "origin": "US",
-  "color": 2,
-  "potential": 1.036
-}, {
-  "name": "Pale Malt (6 Row) US",
-  "origin": "US",
-  "color": 2,
-  "potential": 1.035
-}, {
-  "name": "Pale Malt, Golden Promise",
-  "origin": "United Kingdom",
-  "color": 2.5,
-  "potential": 1.037
-}, {
-  "name": "Pale Malt, Golden Promise (Thomas Fawcett)",
-  "origin": "United Kingdom",
-  "color": 3,
-  "potential": 1.038
-}, {
-  "name": "Pale Malt, Halcyon",
-  "origin": "United Kingdom",
-  "color": 2.5,
-  "potential": 1.037
-}, {
-  "name": "Pale Malt, Maris Otter",
-  "origin": "United Kingdom",
-  "color": 3,
-  "potential": 1.038
-}, {
-  "name": "Peat Smoked Malt",
-  "origin": "United Kingdom",
-  "color": 2.8,
-  "potential": 1.034
-}, {
-  "name": "Pilsen (BestMälz)",
-  "origin": "Germany",
-  "color": 1.5228426,
-  "potential": 1.036
-}, {
-  "name": "Pilsen (Dingemans)",
-  "origin": "Belgium",
-  "color": 1.6,
-  "potential": 1.037
-}, {
-  "name": "Pilsner (2 Row) Belgian",
-  "origin": "Belgium",
-  "color": 2,
-  "potential": 1.036
-}, {
-  "name": "Pilsner (2 Row) German",
-  "origin": "Germany",
-  "color": 2,
-  "potential": 1.037
-}, {
-  "name": "Pilsner (2 Row) UK",
-  "origin": "United Kingdom",
-  "color": 1,
-  "potential": 1.036
-}, {
-  "name": "Pilsner (Weyermann)",
-  "origin": "Germany",
-  "color": 1.7,
-  "potential": 1.038
-}, {
-  "name": "Pilsner Malt (Avangard)",
-  "origin": "Germany",
-  "color": 3.5,
-  "potential": 1.037
-}, {
-  "name": "Pilsner malt, 300 degrees for 25 minutes",
-  "origin": "US",
-  "color": 20,
-  "potential": 1.035
-}, {
-  "name": "Pilsner malt, 400 degrees for 50 minutes",
-  "origin": "US",
-  "color": 200,
-  "potential": 1.028
-}, {
-  "name": "RedX (BestMälz)",
-  "origin": "Alemanha",
-  "color": 15.2284264,
-  "potential": 1.036
-}, {
-  "name": "Rice, Flaked",
-  "origin": "US",
-  "color": 1,
-  "potential": 1.032
-}, {
-  "name": "Rice, Flaked (Briess)",
-  "origin": "US",
-  "color": 1,
-  "potential": 1.032
+  "lovibond": 20,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 20,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Ashbourne Mild",
+  "lovibond": 5.3,
+  "ppg": 30,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 65,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Black Barley",
+  "lovibond": 530,
+  "ppg": 27,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
+}, {
+  "name": "Black Malt",
+  "lovibond": 500,
+  "ppg": 28,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
+}, {
+  "name": "Blackprinz",
+  "lovibond": 500,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
+}, {
+  "name": "Bonlander Munich",
+  "lovibond": 10,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 40,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Buckwheat Malt - Gluten Free",
+  "lovibond": 2,
+  "ppg": 25,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "CaraBrown",
+  "lovibond": 55,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
+}, {
+  "name": "CaraCrystal Wheat Malt",
+  "lovibond": 55,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 10L",
+  "lovibond": 10,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 15L",
+  "lovibond": 15,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 20L",
+  "lovibond": 20,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 30L",
+  "lovibond": 30,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 40L",
+  "lovibond": 40,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 60L",
+  "lovibond": 60,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 75L",
+  "lovibond": 75,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 80L",
+  "lovibond": 80,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 90L",
+  "lovibond": 90,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 120L",
+  "lovibond": 120,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Caramel / Crystal 150L",
+  "lovibond": 150,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Carapils (Dextrine Malt)",
+  "lovibond": 1.8,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "US"
+}, {
+  "name": "Chocolate",
+  "lovibond": 350,
+  "ppg": 29,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
+}, {
+  "name": "Crystal 10L Millet Malt - Gluten Free",
+  "lovibond": 10,
+  "ppg": 25,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "Crystal 30L Millet Malt - Gluten Free",
+  "lovibond": 30,
+  "ppg": 25,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "Dark Chocolate",
+  "lovibond": 420,
+  "ppg": 29,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
+}, {
+  "name": "Dark Roasted Millet Malt - Gluten Free",
+  "lovibond": 300,
+  "ppg": 25,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "Light Roasted Millet Malt - Gluten Free",
+  "lovibond": 7,
+  "ppg": 25,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "Medium Roasted Millet Malt - Gluten Free",
+  "lovibond": 36,
+  "ppg": 25,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "Midnight Wheat Malt",
+  "lovibond": 550,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
+}, {
+  "name": "Munich - Light 10L",
+  "lovibond": 10,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 40,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Munich Millet Malt - Gluten Free",
+  "lovibond": 7,
+  "ppg": 25,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "Munich - Dark 20L",
+  "lovibond": 20,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 20,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Munich - 60L",
+  "lovibond": 60,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Pale 2-Row",
+  "lovibond": 1.8,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 140,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Pale 2-Row - Toasted",
+  "lovibond": 30,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Pale 6-Row",
+  "lovibond": 1.8,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 160,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Pale Ale",
+  "lovibond": 3.5,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Pale Millet Malt - Gluten Free",
+  "lovibond": 1.5,
+  "ppg": 30,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "gluten-free malt",
+  "country": "US"
+}, {
+  "name": "Pilsner",
+  "lovibond": 1.8,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt",
+  "country": "US"
+}, {
+  "name": "Red Wheat",
+  "lovibond": 2.5,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 180,
+  "graintype": "base malt",
+  "country": "US"
 }, {
   "name": "Roasted Barley",
-  "origin": "US",
-  "color": 300,
-  "potential": 1.025
+  "lovibond": 300,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
 }, {
-  "name": "Rye Malt",
-  "origin": "US",
-  "color": 4.7,
-  "potential": 1.029
-}, {
-  "name": "Rye, Flaked",
-  "origin": "US",
-  "color": 2,
-  "potential": 1.036
-}, {
-  "name": "Rye, Flaked (Briess)",
-  "origin": "US",
-  "color": 4.6,
-  "potential": 1.033
-}, {
-  "name": "Rye, Flaked (toasted)",
-  "origin": "US",
-  "color": 10,
-  "potential": 1.036
+  "name": "Rye",
+  "lovibond": 3.5,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 105,
+  "graintype": "base malt",
+  "country": "US"
 }, {
   "name": "Smoked Malt",
-  "origin": "Germany",
-  "color": 9,
-  "potential": 1.037
-}, {
-  "name": "Special B (Castle Malting)",
-  "origin": "Belgian",
-  "color": 152.284264,
-  "potential": 1.035
-}, {
-  "name": "Special B (Dingemans)",
-  "origin": "Belgium",
-  "color": 147.5,
-  "potential": 1.03
-}, {
-  "name": "Special B Malt",
-  "origin": "Belgium",
-  "color": 180,
-  "potential": 1.03
+  "lovibond": 5,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 140,
+  "graintype": "base malt",
+  "country": "US"
 }, {
   "name": "Special Roast",
-  "origin": "US",
-  "color": 50,
-  "potential": 1.033
+  "lovibond": 50,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
 }, {
-  "name": "Thomas Fawcett Maris Otter",
-  "origin": "United Kingdom",
-  "color": 3,
-  "potential": 1.037
+  "name": "Victory",
+  "lovibond": 28,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "US"
 }, {
-  "name": "Toasted Malt",
-  "origin": "United Kingdom",
-  "color": 27,
-  "potential": 1.033
+  "name": "Vienna",
+  "lovibond": 4,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 130,
+  "graintype": "base malt",
+  "country": "US"
 }, {
-  "name": "Blacklands Pale Moon (two row)",
-  "origin": "US",
-  "color": 3,
-  "potential": 1.037
+  "name": "Wheat",
+  "lovibond": 1.8,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "base malt",
+  "country": "US"
 }, {
-  "name": "Victory Malt",
-  "origin": "US",
-  "color": 25,
-  "potential": 1.034
+  "name": "White Wheat",
+  "lovibond": 2.8,
+  "ppg": 40,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 160,
+  "graintype": "base malt",
+  "country": "US"
 }, {
-  "name": "Vienna (BestMälz)",
-  "origin": "Germany",
-  "color": 4.0609137,
-  "potential": 1.035
+  "name": "Belgian - Aromatic",
+  "lovibond": 38,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 30,
+  "graintype": "roasted malt"
+}, {
+  "name": "Belgian - Biscuit",
+  "lovibond": 23,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 6,
+  "graintype": "roasted malt"
+}, {
+  "name": "Belgian - Cara 20L",
+  "lovibond": 22,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "Belgian - Cara 45L",
+  "lovibond": 42,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "Belgian - Caramel Pils",
+  "lovibond": 8,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "Belgian - CaraMunich",
+  "lovibond": 50,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "Belgian - CaraVienne",
+  "lovibond": 20,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "Belgian - Chocolate",
+  "lovibond": 340,
+  "ppg": 30,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "Belgian - De-Bittered Black",
+  "lovibond": 566,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "Belgian - Munich",
+  "lovibond": 6,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 50,
+  "graintype": "base malt"
+}, {
+  "name": "Belgian - Pale Ale",
+  "lovibond": 3.4,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 60,
+  "graintype": "base malt"
+}, {
+  "name": "Belgian - Pilsner",
+  "lovibond": 1.6,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt"
+}, {
+  "name": "Belgian - Roasted Barley",
+  "lovibond": 575,
+  "ppg": 30,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "Belgian - Special B",
+  "lovibond": 115,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "Belgian - Unmalted Wheat",
+  "lovibond": 2,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Belgian - Wheat",
+  "lovibond": 1.8,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 74,
+  "graintype": "base malt"
+}, {
+  "name": "ESB Malt",
+  "lovibond": 3.5,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 90,
+  "graintype": "base malt",
+  "country": "CA"
+}, {
+  "name": "Honey Malt",
+  "lovibond": 25,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 50,
+  "graintype": "base malt",
+  "country": "CA"
+}, {
+  "name": "Munich Dark",
+  "lovibond": 32,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 30,
+  "graintype": "base malt",
+  "country": "CA"
+}, {
+  "name": "Munich Light",
+  "lovibond": 10,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 90,
+  "graintype": "base malt",
+  "country": "CA"
+}, {
+  "name": "Pale 2-Row",
+  "lovibond": 1.75,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 140,
+  "graintype": "base malt",
+  "country": "CA"
+}, {
+  "name": "Pale Wheat",
+  "lovibond": 2,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 140,
+  "graintype": "base malt",
+  "country": "CA"
+}, {
+  "name": "Black Malt",
+  "lovibond": 526,
+  "ppg": 30,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "FI"
+}, {
+  "name": "Cara Pale",
+  "lovibond": 4,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Cara Plus 100",
+  "lovibond": 38,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Cara Plus 150",
+  "lovibond": 57,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Cara Plus 200",
+  "lovibond": 76,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Cara Plus 250",
+  "lovibond": 94,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Chocolate Malt",
+  "lovibond": 338,
+  "ppg": 31,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "FI"
+}, {
+  "name": "Cookie Malt",
+  "lovibond": 19,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "FI"
+}, {
+  "name": "Crystal Malt 100",
+  "lovibond": 38,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Crystal Malt 150",
+  "lovibond": 57,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Crystal Malt 250",
+  "lovibond": 94,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Crystal Malt 300",
+  "lovibond": 113,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Crystal Malt 50",
+  "lovibond": 19,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "FI"
+}, {
+  "name": "Dark Ale",
+  "lovibond": 14,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "FI"
+}, {
+  "name": "Enzyme Malt",
+  "lovibond": 0,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 180,
+  "graintype": "base malt",
+  "country": "FI"
+}, {
+  "name": "Melanoid Malt",
+  "lovibond": 27,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "FI"
+}, {
+  "name": "Munich Malt",
+  "lovibond": 7,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 80,
+  "graintype": "base malt",
+  "country": "FI"
+}, {
+  "name": "Organic Pilsner Malt",
+  "lovibond": 2,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 110,
+  "graintype": "base malt",
+  "country": "FI"
+}, {
+  "name": "Pale Ale Malt",
+  "lovibond": 2,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 70,
+  "graintype": "base malt",
+  "country": "FI"
+}, {
+  "name": "Pilsner Malt",
+  "lovibond": 2,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt",
+  "country": "FI"
 }, {
   "name": "Vienna Malt",
-  "origin": "Germany",
-  "color": 3.5,
-  "potential": 1.036
+  "lovibond": 3,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 100,
+  "graintype": "base malt",
+  "country": "FI"
 }, {
-  "name": "Vienna Malt (Avangard)",
-  "origin": "Germany",
-  "color": 3,
-  "potential": 1.038
+  "name": "Wheat Malt",
+  "lovibond": 2,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 75,
+  "graintype": "base malt",
+  "country": "FI"
 }, {
-  "name": "Vienna Malt (Briess)",
-  "origin": "US",
-  "color": 3.5,
-  "potential": 1.036
+  "name": "Abbey Malt",
+  "lovibond": 17,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 30,
+  "graintype": "base malt",
+  "country": "DE"
 }, {
-  "name": "Vienna Malt (Weyermann)",
-  "origin": "Germany",
-  "color": 3,
-  "potential": 1.038
+  "name": "Acidulated Malt",
+  "lovibond": 3.4,
+  "ppg": 27,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 10,
+  "graintype": "acidulated malt",
+  "country": "DE"
 }, {
-  "name": "Wheat - White Malt (Briess)",
-  "origin": "US",
-  "color": 2.3,
-  "potential": 1.039
+  "name": "Bohemian Pilsner",
+  "lovibond": 1.9,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 110,
+  "graintype": "base malt",
+  "country": "DE"
 }, {
-  "name": "Wheat Malt, Bel",
-  "origin": "Belgium",
-  "color": 2,
-  "potential": 1.037
+  "name": "CaraAmber",
+  "lovibond": 23,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
 }, {
-  "name": "Wheat Malt, Dark",
-  "origin": "Germany",
-  "color": 9,
-  "potential": 1.039
+  "name": "CaraAroma",
+  "lovibond": 130,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
 }, {
-  "name": "Wheat Malt, Ger",
-  "origin": "Germany",
-  "color": 2,
-  "potential": 1.039
+  "name": "CaraBelge",
+  "lovibond": 13.6,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
 }, {
-  "name": "Wheat Malt, White",
-  "origin": "US",
-  "color": 2.4,
-  "potential": 1.04
+  "name": "CaraBohemian",
+  "lovibond": 75,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
 }, {
-  "name": "Wheat Malt, White (Rahr)",
-  "origin": "US",
-  "color": 4,
-  "potential": 1.039
+  "name": "Carafa I",
+  "lovibond": 340,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
 }, {
-  "name": "Wheat, Flaked",
-  "origin": "US",
-  "color": 1.6,
-  "potential": 1.035
+  "name": "Carafa II",
+  "lovibond": 425,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
 }, {
-  "name": "Wheat, Roasted",
-  "origin": "Germany",
-  "color": 425,
-  "potential": 1.025
+  "name": "Carafa III",
+  "lovibond": 535,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
 }, {
-  "name": "Wheat, Torrified",
-  "origin": "US",
-  "color": 1.7,
-  "potential": 1.036
+  "name": "CaraFoam",
+  "lovibond": 1.8,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
 }, {
-  "name": "White Wheat Malt",
-  "origin": "US",
-  "color": 2.4,
-  "potential": 1.04
+  "name": "CaraHell",
+  "lovibond": 11,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
 }, {
-  "name": "White Wheat Malt",
-  "origin": "US",
-  "color": 2.4,
-  "potential": 1.04
-}].sort(function (a, b) {
-  return a.name < b.name;
-}));
+  "name": "Caramel Pils",
+  "lovibond": 2.4,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "Caramel Wheat",
+  "lovibond": 46,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "CaraMunich I",
+  "lovibond": 39,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "CaraMunich II",
+  "lovibond": 46,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "CaraMunich III",
+  "lovibond": 57,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "Carapils",
+  "lovibond": 1.3,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "CaraRed",
+  "lovibond": 20,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "CaraRye",
+  "lovibond": 67,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "DE"
+}, {
+  "name": "Chocolate Rye",
+  "lovibond": 240,
+  "ppg": 31,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
+}, {
+  "name": "Chocolate Wheat",
+  "lovibond": 413,
+  "ppg": 31,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
+}, {
+  "name": "Dark Munich",
+  "lovibond": 10,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 40,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Dark Wheat",
+  "lovibond": 6.5,
+  "ppg": 39,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 10,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "De-Husked Caraf I",
+  "lovibond": 340,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
+}, {
+  "name": "De-Husked Caraf II",
+  "lovibond": 418,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
+}, {
+  "name": "De-Husked Caraf III",
+  "lovibond": 470,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "DE"
+}, {
+  "name": "Floor-Malted Bohemian Pilsner",
+  "lovibond": 1.8,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Floor-Malted Bohemian Pilsner Dk",
+  "lovibond": 6.5,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 80,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Floor-Malted Bohemian Wheat",
+  "lovibond": 2,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 90,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Kölsch",
+  "lovibond": 4.4,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 60,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Melanoidin",
+  "lovibond": 25,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 10,
+  "graintype": "roasted malt",
+  "country": "DE"
+}, {
+  "name": "Munich Dark",
+  "lovibond": 15.5,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 25,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Munich Light",
+  "lovibond": 6,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 47,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Pale Ale",
+  "lovibond": 2.3,
+  "ppg": 39,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 70,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Pale Wheat",
+  "lovibond": 1.5,
+  "ppg": 39,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 95,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Pilsner",
+  "lovibond": 1.6,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 110,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Red X",
+  "lovibond": 12,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 68,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Rye",
+  "lovibond": 3.5,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 90,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Smoked Malt",
+  "lovibond": 3,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 50,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Spelt Malt",
+  "lovibond": 2,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 30,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Vienna",
+  "lovibond": 4,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 100,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Wheat Malt",
+  "lovibond": 2,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 90,
+  "graintype": "base malt",
+  "country": "DE"
+}, {
+  "name": "Ale Malt",
+  "lovibond": 3,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 60,
+  "graintype": "base malt",
+  "country": "IE"
+}, {
+  "name": "Distillers Malt",
+  "lovibond": 2,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 90,
+  "graintype": "base malt",
+  "country": "IE"
+}, {
+  "name": "Lager Malt",
+  "lovibond": 2,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 70,
+  "graintype": "base malt",
+  "country": "IE"
+}, {
+  "name": "Stout Malt",
+  "lovibond": 2,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 80,
+  "graintype": "base malt",
+  "country": "IE"
+}, {
+  "name": "Ale Malt",
+  "lovibond": 3.04569,
+  "ppg": 37.4,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 70,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "American Ale Malt",
+  "lovibond": 2.53807,
+  "ppg": 37.3,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 70,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Aurora Malt",
+  "lovibond": 29.4416,
+  "ppg": 37.2,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 57,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Biscuit Malt",
+  "lovibond": 30.4569,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Brown Malt",
+  "lovibond": 90.3553,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Dark Chocolate Malt",
+  "lovibond": 659.898,
+  "ppg": 32.7,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Dark Crystal Malt",
+  "lovibond": 96.4467,
+  "ppg": 35.4,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "NZ"
+}, {
+  "name": "Gladiator Malt",
+  "lovibond": 5.07614,
+  "ppg": 37.3,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 73,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Lager Light",
+  "lovibond": 1.4264,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 80,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Light Chocolate Malt",
+  "lovibond": 456.853,
+  "ppg": 32.7,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Light Crystal Malt",
+  "lovibond": 31.9797,
+  "ppg": 35.4,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "NZ"
+}, {
+  "name": "Malted Rye",
+  "lovibond": 3,
+  "ppg": 40.2,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Manuka Smoked Malt",
+  "lovibond": 2.03046,
+  "ppg": 36.8,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Medium Crystal Malt",
+  "lovibond": 56.3452,
+  "ppg": 35.4,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt",
+  "country": "NZ"
+}, {
+  "name": "Munich Malt",
+  "lovibond": 7.86802,
+  "ppg": 36.8,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 74,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Organic Pilsner",
+  "lovibond": 1.58629,
+  "ppg": 37.9,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 45,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Pilsner Malt",
+  "lovibond": 1.92893,
+  "ppg": 37.3,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 80,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Red Back Malt",
+  "lovibond": 32.9949,
+  "ppg": 35.4,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Roast Barley",
+  "lovibond": 736.041,
+  "ppg": 32.7,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Roasted Wheat",
+  "lovibond": 279.188,
+  "ppg": 33.6,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Shepherds Delight Malt",
+  "lovibond": 152.284,
+  "ppg": 36.5,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Sour Grapes Malt",
+  "lovibond": 2.03046,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Supernova Malt",
+  "lovibond": 58.3756,
+  "ppg": 37.4,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Toffee Malt",
+  "lovibond": 5.32995,
+  "ppg": 38.8,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt",
+  "country": "NZ"
+}, {
+  "name": "Vienna Malt",
+  "lovibond": 3.45178,
+  "ppg": 39.1,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 71,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "Wheat Malt",
+  "lovibond": 2.13198,
+  "ppg": 35.4,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 73,
+  "graintype": "base malt",
+  "country": "NZ"
+}, {
+  "name": "United Kingdom - Amber",
+  "lovibond": 27,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 20,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Black Patent",
+  "lovibond": 525,
+  "ppg": 27,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "United Kingdom - Brown",
+  "lovibond": 65,
+  "ppg": 32,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "United Kingdom - Cara Malt",
+  "lovibond": 17.5,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Carastan (30/37)",
+  "lovibond": 34,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Carastan Light (15L)",
+  "lovibond": 15,
+  "ppg": 35,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Chocolate",
+  "lovibond": 425,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "United Kingdom - Coffee Malt",
+  "lovibond": 150,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "United Kingdom - Crystal 15L",
+  "lovibond": 15,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 30L",
+  "lovibond": 30,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 45L",
+  "lovibond": 45,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 50L",
+  "lovibond": 50,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 55L",
+  "lovibond": 55,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 60L",
+  "lovibond": 60,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 70L",
+  "lovibond": 70,
+  "ppg": 34,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 90L",
+  "lovibond": 90,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal 140L",
+  "lovibond": 140,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Crystal Rye",
+  "lovibond": 90,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Dextrine Malt",
+  "lovibond": 1.8,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Dark Crystal 80L",
+  "lovibond": 80,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Extra Dark Crystal 120L",
+  "lovibond": 120,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Extra Dark Crystal 160L",
+  "lovibond": 160,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "crystal malt"
+}, {
+  "name": "United Kingdom - Golden Naked Oats",
+  "lovibond": 10,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "United Kingdom - Golden Promise",
+  "lovibond": 3,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 70,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Halcyon",
+  "lovibond": 2,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 120,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Lager",
+  "lovibond": 1.4,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 67,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Malted Naked Oats",
+  "lovibond": 1.3,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Maris Otter Pale",
+  "lovibond": 3.75,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 62,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Mild",
+  "lovibond": 3,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 50,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Munich",
+  "lovibond": 6,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 40,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Oat Malt",
+  "lovibond": 2,
+  "ppg": 28,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Optic",
+  "lovibond": 2.1,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 75,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Pale 2-Row",
+  "lovibond": 2.5,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 90,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Pale Chocolate",
+  "lovibond": 207,
+  "ppg": 33,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "United Kingdom - Pearl",
+  "lovibond": 2.1,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 100,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Peated Malt",
+  "lovibond": 2.5,
+  "ppg": 38,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Pilsen",
+  "lovibond": 1.8,
+  "ppg": 36,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 100,
+  "graintype": "base malt"
+}, {
+  "name": "United Kingdom - Roasted Barley",
+  "lovibond": 550,
+  "ppg": 29,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 0,
+  "graintype": "roasted malt"
+}, {
+  "name": "United Kingdom - Wheat",
+  "lovibond": 2,
+  "ppg": 37,
+  "mashable": 1,
+  "category": "Grain",
+  "diastatic": 75,
+  "graintype": "base malt"
+}, {
+  "name": "Liquid Malt Extract - Amber",
+  "lovibond": 10,
+  "ppg": 35,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Dark",
+  "lovibond": 30,
+  "ppg": 35,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Extra Light",
+  "lovibond": 2.5,
+  "ppg": 37,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Light",
+  "lovibond": 4,
+  "ppg": 35,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Maris Otter",
+  "lovibond": 4,
+  "ppg": 36,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Munich",
+  "lovibond": 8,
+  "ppg": 35,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Pilsen",
+  "lovibond": 2,
+  "ppg": 35,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Rye",
+  "lovibond": 9,
+  "ppg": 35,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Liquid Malt Extract - Wheat",
+  "lovibond": 3,
+  "ppg": 35,
+  "mashable": 0,
+  "category": "Liquid Extract",
+  "diastatic": 0,
+  "graintype": "extract"
+}, {
+  "name": "Agave Nectar",
+  "lovibond": 2,
+  "ppg": 52.5,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Sugar - Clear/Blond (0L)",
+  "lovibond": 0,
+  "ppg": 38,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - Clear (0L)",
+  "lovibond": 0,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - Golden (5L)",
+  "lovibond": 5,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - Amber (40L)",
+  "lovibond": 40,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - D-45",
+  "lovibond": 45,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Sugar - Amber/Brown (60L)",
+  "lovibond": 60,
+  "ppg": 38,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - Dark (80L)",
+  "lovibond": 80,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - D-90",
+  "lovibond": 90,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - D2 (160L)",
+  "lovibond": 160,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Syrup - D-180",
+  "lovibond": 180,
+  "ppg": 32,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Belgian Candi Sugar - Dark (275L)",
+  "lovibond": 275,
+  "ppg": 38,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Brown Rice Syrup - Gluten Free",
+  "lovibond": 2,
+  "ppg": 44,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "raw"
+}, {
+  "name": "Brown Sugar",
+  "lovibond": 15,
+  "ppg": 45,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Cane Sugar",
+  "lovibond": 0,
+  "ppg": 46,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Corn Sugar - Dextrose",
+  "lovibond": 0.5,
+  "ppg": 46,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Corn Syrup",
+  "lovibond": 0.5,
+  "ppg": 37,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Honey",
+  "lovibond": 2,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Honey (Buckwheat)",
+  "lovibond": 2,
+  "ppg": 42,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Invert Sugar",
+  "lovibond": 1,
+  "ppg": 46,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Lactose (Milk Sugar)",
+  "lovibond": 1,
+  "ppg": 41,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Maltodextrin",
+  "lovibond": 0,
+  "ppg": 39,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Maple Syrup",
+  "lovibond": 35,
+  "ppg": 30,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Molasses",
+  "lovibond": 80,
+  "ppg": 36,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Soft Candi Sugar - Blond",
+  "lovibond": 5,
+  "ppg": 38,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Soft Candi Sugar - Brown",
+  "lovibond": 60,
+  "ppg": 38,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "White Sorghum Syrup  - Gluten Free",
+  "lovibond": 1.5,
+  "ppg": 37,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Turbinado",
+  "lovibond": 10,
+  "ppg": 44,
+  "mashable": 0,
+  "category": "Sugar",
+  "diastatic": 0,
+  "graintype": "sugar"
+}, {
+  "name": "Acerola",
+  "lovibond": 0,
+  "ppg": 1.5,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Apple",
+  "lovibond": 0,
+  "ppg": 5.6,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Apricot",
+  "lovibond": 0,
+  "ppg": 4.05,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Apricot (dried)",
+  "lovibond": 0,
+  "ppg": 17.9,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Banana",
+  "lovibond": 0,
+  "ppg": 7.65,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Blackberry",
+  "lovibond": 0,
+  "ppg": 3.6,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Blueberry",
+  "lovibond": 0,
+  "ppg": 4.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Boysenberry",
+  "lovibond": 0,
+  "ppg": 2.5,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Cantaloupe",
+  "lovibond": 0,
+  "ppg": 3.4,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Carambola",
+  "lovibond": 0,
+  "ppg": 1.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Carrot",
+  "lovibond": 0,
+  "ppg": 2,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Casaba Melon",
+  "lovibond": 0,
+  "ppg": 1.9,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Cashew",
+  "lovibond": 0,
+  "ppg": 3,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Celery",
+  "lovibond": 0,
+  "ppg": 0.75,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Cherry",
+  "lovibond": 0,
+  "ppg": 6.3,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Cherry, dark sweet",
+  "lovibond": 0,
+  "ppg": 6.4,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Cherry, Montmorency",
+  "lovibond": 0,
+  "ppg": 3.55,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Crabapple",
+  "lovibond": 0,
+  "ppg": 3.85,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Cranberry",
+  "lovibond": 0,
+  "ppg": 1.8,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Currant, black",
+  "lovibond": 0,
+  "ppg": 4.2,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Currant, red",
+  "lovibond": 0,
+  "ppg": 2.7,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Date",
+  "lovibond": 0,
+  "ppg": 27,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Date (dried)",
+  "lovibond": 0,
+  "ppg": 28.9,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Dewberry",
+  "lovibond": 0,
+  "ppg": 2.5,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Elderberry",
+  "lovibond": 0,
+  "ppg": 2.75,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Fig",
+  "lovibond": 0,
+  "ppg": 5.3,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Figs (dried)",
+  "lovibond": 0,
+  "ppg": 29.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Gooseberry",
+  "lovibond": 0,
+  "ppg": 4.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Grape",
+  "lovibond": 0,
+  "ppg": 7.15,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Grape, concord",
+  "lovibond": 0,
+  "ppg": 4,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Grapefruit",
+  "lovibond": 0,
+  "ppg": 2.75,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Guanabana",
+  "lovibond": 0,
+  "ppg": 4,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Guava",
+  "lovibond": 0,
+  "ppg": 2.8,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Honeydew Melon",
+  "lovibond": 0,
+  "ppg": 4.5,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Jackfruit",
+  "lovibond": 0,
+  "ppg": 8.3,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Kiwi",
+  "lovibond": 0,
+  "ppg": 5.75,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Lemon juice",
+  "lovibond": 0,
+  "ppg": 1,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Lime",
+  "lovibond": 0,
+  "ppg": 0.45,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Lime juice",
+  "lovibond": 0,
+  "ppg": 0.45,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Loganberry",
+  "lovibond": 0,
+  "ppg": 2.6,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Lychee (Litchi)",
+  "lovibond": 0,
+  "ppg": 7.65,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Mango",
+  "lovibond": 0,
+  "ppg": 4.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Maple Sap",
+  "lovibond": 0,
+  "ppg": 0.9,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Maple Syrup",
+  "lovibond": 0,
+  "ppg": 29.8,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Mulberry",
+  "lovibond": 0,
+  "ppg": 6.1,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Nectarine",
+  "lovibond": 0,
+  "ppg": 3.4,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Orange",
+  "lovibond": 0,
+  "ppg": 4.1,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Orange (Blood Orange)",
+  "lovibond": 0,
+  "ppg": 4.05,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Orange juice",
+  "lovibond": 0,
+  "ppg": 4.8,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Papaya",
+  "lovibond": 0,
+  "ppg": 2.9,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Passionfruit",
+  "lovibond": 0,
+  "ppg": 5,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Peach",
+  "lovibond": 0,
+  "ppg": 4.05,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Pear",
+  "lovibond": 0,
+  "ppg": 4.5,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Persimmon",
+  "lovibond": 0,
+  "ppg": 6.3,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Pineapple",
+  "lovibond": 0,
+  "ppg": 5.85,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Plum",
+  "lovibond": 0,
+  "ppg": 4.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Pomegranate",
+  "lovibond": 0,
+  "ppg": 5.2,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Prickly Pear",
+  "lovibond": 0,
+  "ppg": 4.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Prunes (dried)",
+  "lovibond": 0,
+  "ppg": 19.8,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Pumpkin (fresh)",
+  "lovibond": 0,
+  "ppg": 1,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Pumpkin (canned)",
+  "lovibond": 0,
+  "ppg": 1,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Quince",
+  "lovibond": 0,
+  "ppg": 0.45,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Raisins (dried)",
+  "lovibond": 0,
+  "ppg": 29.25,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Raspberry",
+  "lovibond": 0,
+  "ppg": 3.15,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Raspberry, black",
+  "lovibond": 0,
+  "ppg": 2.8,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Raspberry, red",
+  "lovibond": 0,
+  "ppg": 2.3,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Rhubarb",
+  "lovibond": 0,
+  "ppg": 0.4,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Strawberry",
+  "lovibond": 0,
+  "ppg": 3.15,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Sultanas",
+  "lovibond": 0,
+  "ppg": 8.55,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Tangelo",
+  "lovibond": 0,
+  "ppg": 3.35,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Tangerine",
+  "lovibond": 0,
+  "ppg": 2.95,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Tomato",
+  "lovibond": 0,
+  "ppg": 1.25,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Watermelon",
+  "lovibond": 0,
+  "ppg": 4.05,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}, {
+  "name": "Youngberry",
+  "lovibond": 0,
+  "ppg": 2.5,
+  "mashable": 0,
+  "category": "Fruit",
+  "diastatic": 0,
+  "graintype": "fruit"
+}]);
 
 /***/ }),
 
@@ -17929,17 +19995,14 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 var countryCodeToSvgPath = {
-  "Germany": 'flag-icons/264-germany.svg',
-  "German": 'flag-icons/264-germany.svg',
-  "Alemanha": 'flag-icons/264-germany.svg',
+  "NZ": 'flag-icons/264-new-zealand.svg',
   "US": 'flag-icons/264-united-states.svg',
-  "American": 'flag-icons/264-united-states.svg',
-  "United Kingdom": 'flag-icons/264-united-kingdom.svg',
+  "BE": 'flag-icons/264-belgium.svg',
+  "CA": 'flag-icons/264-canada.svg',
+  "FI": 'flag-icons/264-finland.svg',
+  "DE": 'flag-icons/264-germany.svg',
   "UK": 'flag-icons/264-united-kingdom.svg',
-  "Belgium": 'flag-icons/264-belgium.svg',
-  "Belgian": 'flag-icons/264-belgium.svg',
-  "Canada": 'flag-icons/264-canada.svg',
-  "France": 'flag-icons/264-france.svg'
+  "IE": 'flag-icons/264-ireland.svg'
 };
 
 var CountryCodeToSVGPathService =
@@ -17952,7 +20015,7 @@ function () {
   _createClass(CountryCodeToSVGPathService, [{
     key: "getSvgPath",
     value: function getSvgPath(countryCode) {
-      return countryCodeToSvgPath[countryCode] || '/brewing-tools/images/flag-icons/unknown-country.svg';
+      return countryCodeToSvgPath[countryCode] || 'flag-icons/unknown-country.svg';
     }
   }]);
 
@@ -18045,9 +20108,8 @@ function () {
       var maxPointsByGrain = filteredGrains.map(function (_ref) {
         var grain = _ref.grain,
             pounds = _ref.pounds;
-        var potential = grain.potential;
-        var potentialInPoints = (potential - 1) * 1000;
-        return potentialInPoints * pounds / wortVolume;
+        var ppg = grain.ppg;
+        return ppg * pounds / wortVolume;
       });
       var totalMaxPoints = maxPointsByGrain.reduce(function (sum, point) {
         return sum + point;
