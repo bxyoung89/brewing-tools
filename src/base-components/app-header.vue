@@ -1,0 +1,36 @@
+<template>
+	<div class="header">
+		<router-link to="/">
+			Brewing Tools
+		</router-link>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: "app-header"
+	}
+</script>
+
+<style lang="scss" scoped>
+	@import "../styles/core";
+
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 40px;
+		background: $dark-blue;
+		color: $not-white;
+		padding: 5px;
+		line-height: 30px;
+		font-size: 30px;
+		@include berkshire-swash();
+
+		> a {
+			text-decoration: none;
+			color: $not-white;
+		}
+	}
+</style>

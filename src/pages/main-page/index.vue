@@ -1,0 +1,83 @@
+<template>
+	<div class="body-content">
+		<h1>
+			Brewing Tools
+		</h1>
+		<p>
+			In order to get more knowledge about brewing I made a couple of tools. Check them out if you want!
+		</p>
+		<div class="grid-with-title">
+			<h2>
+				Calculators
+			</h2>
+			<div class="grid">
+				<div class="grid-item" v-for="tool in tools">
+					<main-page-link
+						v-bind:url="tool.url"
+						v-bind:text="tool.text"
+						v-bind:svg="tool.svg"
+					/>
+				</div>
+			</div>
+		</div>
+		<app-footer />
+	</div>
+</template>
+
+<script>
+	import MainPageLink from './components/main-page-link.vue';
+	import AppFooter from './components/app-footer.vue';
+
+	export default {
+		name: "main-page",
+		data: () => ({
+			tools: [
+				{
+					url: '/lautering-calculator',
+					text: 'Lautering Efficiency Calculator',
+					svg: 'discount.svg',
+				},
+				// {
+				// 	url: '/lautering-calculator',
+				// 	text: 'Lautering Efficiency Calculator',
+				// 	svg: 'images/discount.svg',
+				// },
+				// {
+				// 	url: '/lautering-calculator',
+				// 	text: 'Lautering Efficiency Calculator',
+				// 	svg: 'images/discount.svg',
+				// },
+			],
+		}),
+		components: {
+			'main-page-link': MainPageLink,
+			'app-footer': AppFooter,
+		}
+	}
+</script>
+
+<style lang="scss" scoped>
+	@import "../../styles/core";
+
+	p {
+		margin-bottom: 60px;
+	}
+
+	h2 {
+		font-size: 24px;
+		margin: 0 0 20px;
+		border-bottom: 1px solid $not-white;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 10px;
+
+		> * {
+			height: 300px;
+			background: $dark-blue;
+		}
+	}
+
+</style>
