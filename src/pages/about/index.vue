@@ -29,10 +29,11 @@
 				Storybook
 			</h2>
 			<p>
-				Developed using storybook as a UI playground. To learn about the project check out https://storybook.js.org/.
+				Developed using storybook as a UI playground. To learn about the project check out <a
+				href="https://storybook.js.org/.">https://storybook.js.org/</a>.
 			</p>
 			<p>
-				You can view my instance <a href="/dist/storybook/index.html">here</a>
+				You can view my instance <a href="./dist/storybook/index.html">here</a>
 			</p>
 		</div>
 	</div>
