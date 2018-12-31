@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a2de394ae23aeb949776";
+/******/ 	var hotCurrentHash = "a9736464eadf58c2205c";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2705,7 +2705,8 @@ var staticRenderFns = [
         _vm._v("\n\t\t\tYou can view my instance "),
         _c("a", { attrs: { href: "./dist/storybook/index.html" } }, [
           _vm._v("here")
-        ])
+        ]),
+        _vm._v(".\n\t\t")
       ])
     ])
   }

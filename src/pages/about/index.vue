@@ -33,7 +33,7 @@
 				href="https://storybook.js.org/.">https://storybook.js.org/</a>.
 			</p>
 			<p>
-				You can view my instance <a href="./dist/storybook/index.html">here</a>
+				You can view my instance <a href="./dist/storybook/index.html">here</a>.
 			</p>
 		</div>
 	</div>
