@@ -1,4 +1,4 @@
-Proper svg code splitting. Right now bundle has every single svg.
+Proper svg code splitting. Right now bundle has every single svg. (or cull images)
 
 Svg sprite usage.
 
@@ -10,3 +10,5 @@ Dynamic base components registry
 
 
 Mobile layouts.
+
+Allow for metric measurements

@@ -2,7 +2,7 @@
 	<div class="body-content">
 		<app-header />
 		<h1>
-			About❧
+			About ❧
 		</h1>
 		<div class="section">
 			<h2>

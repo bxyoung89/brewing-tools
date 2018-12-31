@@ -4,7 +4,7 @@
 		<h1>
 			Lautering Efficiency Calculator
 		</h1>
-		<div class="lautering-calculator" id="app">
+		<div class="lautering-calculator">
 			<div class="inputs">
 				<div class="inputs-title">
 					Enter yo digits...

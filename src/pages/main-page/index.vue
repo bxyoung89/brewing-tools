@@ -37,11 +37,11 @@
 					text: 'Lautering Efficiency Calculator',
 					svg: 'discount.svg',
 				},
-				// {
-				// 	url: '/lautering-calculator',
-				// 	text: 'Lautering Efficiency Calculator',
-				// 	svg: 'images/discount.svg',
-				// },
+				{
+					url: '/hydrometer-correction',
+					text: 'Hydrometer Temperature Correction',
+					svg: 'thermometer.svg',
+				},
 				// {
 				// 	url: '/lautering-calculator',
 				// 	text: 'Lautering Efficiency Calculator',

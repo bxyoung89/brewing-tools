@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "3acf87f2763c0cb61a94";
+/******/ 	var hotCurrentHash = "3a4b20674ac8d732a736";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1032,6 +1032,69 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _services_hydrometer_correction_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../services/hydrometer-correction-service */ "./src/services/hydrometer-correction-service.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "hydrometer-temperature-correction",
+  data: function data() {
+    return {
+      gravityReading: 1.05,
+      currentTemperature: 80,
+      calibrationTemperature: 68
+    };
+  },
+  computed: {
+    adjustedGravity: function adjustedGravity() {
+      return _services_hydrometer_correction_service__WEBPACK_IMPORTED_MODULE_0__["default"].getCorrectedValue(this.gravityReading, this.currentTemperature, this.calibrationTemperature);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/lautering-calculator/components/grain-card.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/lautering-calculator/components/grain-card.vue?vue&type=script&lang=js& ***!
@@ -1293,6 +1356,10 @@ __webpack_require__.r(__webpack_exports__);
         url: '/lautering-calculator',
         text: 'Lautering Efficiency Calculator',
         svg: 'discount.svg'
+      }, {
+        url: '/hydrometer-correction',
+        text: 'Hydrometer Temperature Correction',
+        svg: 'thermometer.svg'
       }]
     };
   },
@@ -1316,7 +1383,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/di
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px; }\n\nbody {\n  font-size: 16px;\n  background: #e63946;\n  color: #f1faee;\n  font-family: \"Fira Sans\", sans-serif; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  background: #1d3557;\n  padding: 10px;\n  display: inline-block;\n  margin: 0; }\n\na {\n  color: #1d3557; }\n  a:hover {\n    color: #457b9d; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 200px; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px; }\n\nbody {\n  font-size: 16px;\n  background: #e63946;\n  color: #f1faee;\n  font-family: \"Fira Sans\", sans-serif; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  background: #1d3557;\n  padding: 10px;\n  display: inline;\n  margin: 0;\n  line-height: 100px; }\n\na {\n  color: #1d3557; }\n  a:hover {\n    color: #457b9d; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 200px; }\n", ""]);
 
 
 
@@ -1368,6 +1435,24 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ber
 
 // Module
 exports.push([module.i, ".about-page-content[data-v-1d95d4fc] {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 200px;\n}\n.section[data-v-1d95d4fc] {\n  padding-bottom: 40px;\n  margin-bottom: 40px;\n  position: relative;\n}\n.section[data-v-1d95d4fc]:after {\n    content: \"\\2766\";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-top: -10px;\n    color: #FFF;\n    font-size: 24px;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
+
+// Module
+exports.push([module.i, ".hydrometer-temperature-correction[data-v-580440fa] {\n  margin-top: 30px;\n  background: #a8dadc;\n}\n.inputs[data-v-580440fa] {\n  background: #457b9d;\n  padding: 20px;\n}\n.adjusted-gravity[data-v-580440fa] {\n  font-family: \"Berkshire Swash\", cursive;\n  text-align: center;\n  font-size: 48px;\n  line-height: 100px;\n  color: #1d3557;\n}\n.input-with-label[data-v-580440fa]:not(:last-child) {\n  margin-bottom: 20px;\n}\n.input-with-label .label[data-v-580440fa] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 14px;\n  margin-bottom: 5px;\n}\n.input-with-label[data-v-580440fa] > input {\n  width: 100%;\n}\n", ""]);
 
 
 
@@ -2433,7 +2518,7 @@ var render = function() {
     [
       _c("app-header"),
       _vm._v(" "),
-      _c("h1", [_vm._v("\n\t\tAbout❧\n\t")]),
+      _c("h1", [_vm._v("\n\t\tAbout ❧\n\t")]),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
@@ -2493,6 +2578,128 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "body-content" },
+    [
+      _c("app-header"),
+      _vm._v(" "),
+      _c("h1", [_vm._v("\n\t\tHydrometer Temperature Correction\n\t")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "hydrometer-temperature-correction" }, [
+        _c("div", { staticClass: "inputs" }, [
+          _c("div", { staticClass: "input-with-label" }, [
+            _c("div", { staticClass: "label" }, [
+              _vm._v("\n\t\t\t\t\tGravity Reading\n\t\t\t\t")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.gravityReading,
+                  expression: "gravityReading"
+                }
+              ],
+              attrs: { type: "number" },
+              domProps: { value: _vm.gravityReading },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.gravityReading = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-with-label" }, [
+            _c("div", { staticClass: "label" }, [
+              _vm._v("\n\t\t\t\t\tCurrent Temperature (F)\n\t\t\t\t")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.currentTemperature,
+                  expression: "currentTemperature"
+                }
+              ],
+              attrs: { type: "number" },
+              domProps: { value: _vm.currentTemperature },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.currentTemperature = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-with-label" }, [
+            _c("div", { staticClass: "label" }, [
+              _vm._v("\n\t\t\t\t\tCalibration Temperature (F)\n\t\t\t\t")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.calibrationTemperature,
+                  expression: "calibrationTemperature"
+                }
+              ],
+              attrs: { type: "number" },
+              domProps: { value: _vm.calibrationTemperature },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.calibrationTemperature = $event.target.value
+                }
+              }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "adjusted-gravity" }, [
+          _vm._v("\n\t\t\t" + _vm._s(_vm.adjustedGravity) + "\n\t\t")
+        ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -2645,7 +2852,7 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v("\n\t\tLautering Efficiency Calculator\n\t")]),
       _vm._v(" "),
-      _c("div", { staticClass: "lautering-calculator", attrs: { id: "app" } }, [
+      _c("div", { staticClass: "lautering-calculator" }, [
         _c("div", { staticClass: "inputs" }, [
           _c("div", { staticClass: "inputs-title" }, [
             _vm._v("\n\t\t\t\tEnter yo digits...\n\t\t\t")
@@ -7507,6 +7714,38 @@ if(true) {
  if(!content.locals) {
    module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=style&index=0&id=1d95d4fc&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/about/index.vue?vue&type=style&index=0&id=1d95d4fc&lang=scss&scoped=true&", function() {
      var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=style&index=0&id=1d95d4fc&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/about/index.vue?vue&type=style&index=0&id=1d95d4fc&lang=scss&scoped=true&");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("6149086f", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&", function() {
+     var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&");
      if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
      update(newContent);
    });
@@ -19416,6 +19655,111 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/pages/hydrometer-temperature-correction/index.vue":
+/*!***************************************************************!*\
+  !*** ./src/pages/hydrometer-temperature-correction/index.vue ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=580440fa&scoped=true& */ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _index_vue_vue_type_style_index_0_id_580440fa_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& */ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "580440fa",
+  null
+  
+)
+
+/* hot reload */
+if (true) {
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"))
+  if (api.compatible) {
+    module.hot.accept()
+    if (!module.hot.data) {
+      api.createRecord('580440fa', component.options)
+    } else {
+      api.reload('580440fa', component.options)
+    }
+    module.hot.accept(/*! ./index.vue?vue&type=template&id=580440fa&scoped=true& */ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true&", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=580440fa&scoped=true& */ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true&");
+(function () {
+      api.rerender('580440fa', {
+        render: _index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+        staticRenderFns: _index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
+      })
+    })(__WEBPACK_OUTDATED_DEPENDENCIES__); })
+  }
+}
+component.options.__file = "src/pages/hydrometer-temperature-correction/index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./src/pages/hydrometer-temperature-correction/index.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************!*\
+  !*** ./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_style_index_0_id_580440fa_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_style_index_0_id_580440fa_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_style_index_0_id_580440fa_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_style_index_0_id_580440fa_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_style_index_0_id_580440fa_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_style_index_0_id_580440fa_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true&":
+/*!**********************************************************************************************************!*\
+  !*** ./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!../../../node_modules/vue-svg-inline-loader/dist/index.min.js!./index.vue?vue&type=template&id=580440fa&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-svg-inline-loader/dist/index.min.js!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=template&id=580440fa&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_node_modules_vue_svg_inline_loader_dist_index_min_js_index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./src/pages/lautering-calculator/components/grain-card.vue":
 /*!******************************************************************!*\
   !*** ./src/pages/lautering-calculator/components/grain-card.vue ***!
@@ -19955,6 +20299,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_main_page_index_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/main-page/index.vue */ "./src/pages/main-page/index.vue");
 /* harmony import */ var _pages_lautering_calculator_index_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/lautering-calculator/index.vue */ "./src/pages/lautering-calculator/index.vue");
 /* harmony import */ var _pages_about_index_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/about/index.vue */ "./src/pages/about/index.vue");
+/* harmony import */ var _pages_hydrometer_temperature_correction_index_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/hydrometer-temperature-correction/index.vue */ "./src/pages/hydrometer-temperature-correction/index.vue");
+
 
 
 
@@ -19974,6 +20320,9 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_router__WEBPACK_IMPORTED_MOD
   }, {
     path: '/about',
     component: _pages_about_index_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }, {
+    path: '/hydrometer-correction',
+    component: _pages_hydrometer_temperature_correction_index_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }]
 }));
 
@@ -20063,6 +20412,55 @@ function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (new GuidService());
+
+/***/ }),
+
+/***/ "./src/services/hydrometer-correction-service.js":
+/*!*******************************************************!*\
+  !*** ./src/services/hydrometer-correction-service.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var specificGravityRatio = function specificGravityRatio(temperature) {
+  return 1.00130346 - 0.000134722124 * temperature + 0.00000204052596 * Math.pow(temperature, 2) - 2.32820948E-09 * Math.pow(temperature, 3);
+};
+
+var HydrometerCorrectionService =
+/*#__PURE__*/
+function () {
+  function HydrometerCorrectionService() {
+    _classCallCheck(this, HydrometerCorrectionService);
+  }
+
+  _createClass(HydrometerCorrectionService, [{
+    key: "getCorrectedValue",
+    value: function getCorrectedValue(gravityReading, currentTemperature, calibrationTemperature) {
+      var numberGravityReading = Number.parseFloat(gravityReading);
+      var numberCurrentTemperature = Number.parseFloat(currentTemperature);
+      var numberCalibrationTemperature = Number.parseFloat(calibrationTemperature);
+
+      if (Number.isNaN(numberGravityReading) || Number.isNaN(numberCurrentTemperature) || Number.isNaN(numberCalibrationTemperature) || numberCalibrationTemperature === 0) {
+        return '--';
+      }
+
+      var correctedValue = numberGravityReading * (specificGravityRatio(numberCurrentTemperature) / specificGravityRatio(numberCalibrationTemperature));
+      return correctedValue.toFixed(3);
+    }
+  }]);
+
+  return HydrometerCorrectionService;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (new HydrometerCorrectionService());
 
 /***/ }),
 
