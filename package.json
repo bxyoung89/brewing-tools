@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build-all": "npm run build && npm run build-storybook",
     "build": "webpack --progress --config ./build/webpack.config.js",
     "build-svgs": "webpack --progress --config ./build/webpack.config.svg.js",
     "dev": "webpack-dev-server --config ./build/webpack.config.dev.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o ./dist/storybook"
   },
   "repository": {
     "type": "git",

@@ -89,7 +89,7 @@
 				display: flex;
 				justify-content: center;
 				padding: 5px;
-				
+
 				&:hover {
 					> svg {
 						fill: $red;
