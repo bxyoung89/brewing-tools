@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "12f857497e85859d24e2";
+/******/ 	var hotCurrentHash = "a2de394ae23aeb949776";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1055,6 +1055,7 @@ var updateElementWithSvgText = function updateElementWithSvgText(elementId, svgT
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -2692,13 +2693,17 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\n\t\t\tDeveloped using storybook as a UI playground. To learn about the project check out https://storybook.js.org/.\n\t\t"
-        )
+          "\n\t\t\tDeveloped using storybook as a UI playground. To learn about the project check out "
+        ),
+        _c("a", { attrs: { href: "https://storybook.js.org/." } }, [
+          _vm._v("https://storybook.js.org/")
+        ]),
+        _vm._v(".\n\t\t")
       ]),
       _vm._v(" "),
       _c("p", [
         _vm._v("\n\t\t\tYou can view my instance "),
-        _c("a", { attrs: { href: "/dist/storybook/index.html" } }, [
+        _c("a", { attrs: { href: "./dist/storybook/index.html" } }, [
           _vm._v("here")
         ])
       ])
