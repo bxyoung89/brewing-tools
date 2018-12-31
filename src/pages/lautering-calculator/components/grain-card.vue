@@ -26,14 +26,14 @@
 				</div>
 				<div class="dropdown-wrapper">
 					<v-select :options="allGrains" label="name" v-model="grain.grain">
-						<tempalte slot="option" slot-scope="option">
+						<template slot="option" slot-scope="option">
 							<div class="dropdown-option">
-								<dynamic-svg v-bind:src="getFlagFromCountry(option.country)" />
+								<dynamic-svg :src="getFlagFromCountry(option.country)" />
 								<div>
 									{{option.name}}
 								</div>
 							</div>
-						</tempalte>
+						</template>
 					</v-select>
 				</div>
 			</div>
@@ -47,9 +47,11 @@
 				</div>
 			</div>
 		</div>
-		<button class="remove-grain-button" v-on:click="removeGrainAtIndex(index)" v-if="numberOfCards > 1">
-			X
-		</button>
+		<div class="remove-grain-button" v-if="numberOfCards > 1">
+			<app-button theme="unstyled" :click="() => removeGrainAtIndex(index)" >
+				<dynamic-svg src="cancel.svg" />
+			</app-button>
+		</div>
 	</div>
 </template>
 
@@ -77,13 +79,28 @@
 
 		.remove-grain-button {
 			margin-left: 20px;
-			width: 40px;
-			background: transparent;
-			border: 0;
-			cursor: pointer;
-			border-radius: 5px;
-			&:hover {
-				background: rgba($red, 0.1);
+
+			/deep/ > button {
+				height: 100%;
+				width: 40px;
+				border: 0;
+				cursor: pointer;
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				padding: 5px;
+				
+				&:hover {
+					> svg {
+						fill: $red;
+					}
+				}
+
+				> svg {
+					height: 100%;
+					width: 100%;
+					fill: $not-white;
+				}
 			}
 		}
 
@@ -105,7 +122,7 @@
 
 		.dropdown-wrapper {
 			/deep/ .dropdown-toggle {
-				background: #fff;
+				background: $white;
 			}
 		}
 	}

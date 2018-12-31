@@ -13,9 +13,9 @@
 			<div class="grid">
 				<div class="grid-item" v-for="tool in tools">
 					<main-page-link
-						v-bind:url="tool.url"
-						v-bind:text="tool.text"
-						v-bind:svg="tool.svg"
+						:url="tool.url"
+						:text="tool.text"
+						:svg="tool.svg"
 					/>
 				</div>
 			</div>
@@ -50,8 +50,8 @@
 			],
 		}),
 		components: {
-			'main-page-link': MainPageLink,
-			'app-footer': AppFooter,
+			MainPageLink,
+			AppFooter,
 		}
 	}
 </script>

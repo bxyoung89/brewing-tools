@@ -1,8 +1,8 @@
 <template>
 	<div class="main-page-link">
-		<router-link v-bind:to="url">
+		<router-link :to="url">
 			<div class="grid-item-icon">
-				<dynamic-svg v-bind:src="svg" />
+				<dynamic-svg :src="svg" />
 			</div>
 			<div class="wave-header">
 				<div class="wave-content">

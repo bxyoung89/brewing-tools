@@ -28,9 +28,13 @@
 		font-size: 30px;
 		@include berkshire-swash();
 
-		> a {
+		/deep/ a {
 			text-decoration: none;
 			color: $not-white;
+
+			&:hover {
+				opacity: 0.75;
+			}
 		}
 	}
 </style>

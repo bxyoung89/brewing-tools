@@ -602,133 +602,149 @@ export default [
 		"graintype": "base malt",
 		"country": "US"
 	}, {
-		"name": "Belgian - Aromatic",
+		"name": "Aromatic",
 		"lovibond": 38,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 30,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "BE",
 	}, {
-		"name": "Belgian - Biscuit",
+		"name": "Biscuit",
 		"lovibond": 23,
 		"ppg": 35,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 6,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Cara 20L",
+		"name": "Cara 20L",
 		"lovibond": 22,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Cara 45L",
+		"name": "Cara 45L",
 		"lovibond": 42,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Caramel Pils",
+		"name": "Caramel Pils",
 		"lovibond": 8,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - CaraMunich",
+		"name": "CaraMunich",
 		"lovibond": 50,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - CaraVienne",
+		"name": "CaraVienne",
 		"lovibond": 20,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Chocolate",
+		"name": "Chocolate",
 		"lovibond": 340,
 		"ppg": 30,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - De-Bittered Black",
+		"name": "De-Bittered Black",
 		"lovibond": 566,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Munich",
+		"name": "Munich",
 		"lovibond": 6,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 50,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Pale Ale",
+		"name": "Pale Ale",
 		"lovibond": 3.4,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 60,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Pilsner",
+		"name": "Pilsner",
 		"lovibond": 1.6,
 		"ppg": 37,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 120,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Roasted Barley",
+		"name": "Roasted Barley",
 		"lovibond": 575,
 		"ppg": 30,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Special B",
+		"name": "Special B",
 		"lovibond": 115,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Unmalted Wheat",
+		"name": "Unmalted Wheat",
 		"lovibond": 2,
 		"ppg": 36,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "raw"
+		"graintype": "raw",
+		"country": "BE"
 	}, {
-		"name": "Belgian - Wheat",
+		"name": "Wheat",
 		"lovibond": 1.8,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 74,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "BE"
 	}, {
 		"name": "ESB Malt",
 		"lovibond": 3.5,
@@ -1639,317 +1655,356 @@ export default [
 		"graintype": "base malt",
 		"country": "NZ"
 	}, {
-		"name": "United Kingdom - Amber",
+		"name": "Amber",
 		"lovibond": 27,
 		"ppg": 32,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 20,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Black Patent",
+		"name": "Black Patent",
 		"lovibond": 525,
 		"ppg": 27,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Brown",
+		"name": "Brown",
 		"lovibond": 65,
 		"ppg": 32,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "UK",
 	}, {
-		"name": "United Kingdom - Cara Malt",
+		"name": "Cara Malt",
 		"lovibond": 17.5,
 		"ppg": 35,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Carastan (30/37)",
+		"name": "Carastan (30/37)",
 		"lovibond": 34,
 		"ppg": 35,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Carastan Light (15L)",
+		"name": "Carastan Light (15L)",
 		"lovibond": 15,
 		"ppg": 35,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Chocolate",
+		"name": "Chocolate",
 		"lovibond": 425,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Coffee Malt",
+		"name": "Coffee Malt",
 		"lovibond": 150,
 		"ppg": 36,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 15L",
+		"name": "Crystal 15L",
 		"lovibond": 15,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 30L",
+		"name": "Crystal 30L",
 		"lovibond": 30,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 45L",
+		"name": "Crystal 45L",
 		"lovibond": 45,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 50L",
+		"name": "Crystal 50L",
 		"lovibond": 50,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 55L",
+		"name": "Crystal 55L",
 		"lovibond": 55,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 60L",
+		"name": "Crystal 60L",
 		"lovibond": 60,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 70L",
+		"name": "Crystal 70L",
 		"lovibond": 70,
 		"ppg": 34,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 90L",
+		"name": "Crystal 90L",
 		"lovibond": 90,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal 140L",
+		"name": "Crystal 140L",
 		"lovibond": 140,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Crystal Rye",
+		"name": "Crystal Rye",
 		"lovibond": 90,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Dextrine Malt",
+		"name": "Dextrine Malt",
 		"lovibond": 1.8,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Dark Crystal 80L",
+		"name": "Dark Crystal 80L",
 		"lovibond": 80,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Extra Dark Crystal 120L",
+		"name": "Extra Dark Crystal 120L",
 		"lovibond": 120,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Extra Dark Crystal 160L",
+		"name": "Extra Dark Crystal 160L",
 		"lovibond": 160,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "crystal malt"
+		"graintype": "crystal malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Golden Naked Oats",
+		"name": "Golden Naked Oats",
 		"lovibond": 10,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "raw"
+		"graintype": "raw",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Golden Promise",
+		"name": "Golden Promise",
 		"lovibond": 3,
 		"ppg": 37,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 70,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Halcyon",
+		"name": "Halcyon",
 		"lovibond": 2,
 		"ppg": 36,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 120,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Lager",
+		"name": "Lager",
 		"lovibond": 1.4,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 67,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Malted Naked Oats",
+		"name": "Malted Naked Oats",
 		"lovibond": 1.3,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Maris Otter Pale",
+		"name": "Maris Otter Pale",
 		"lovibond": 3.75,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 62,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Mild",
+		"name": "Mild",
 		"lovibond": 3,
 		"ppg": 37,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 50,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Munich",
+		"name": "Munich",
 		"lovibond": 6,
 		"ppg": 37,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 40,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Oat Malt",
+		"name": "Oat Malt",
 		"lovibond": 2,
 		"ppg": 28,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Optic",
+		"name": "Optic",
 		"lovibond": 2.1,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 75,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Pale 2-Row",
+		"name": "Pale 2-Row",
 		"lovibond": 2.5,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 90,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Pale Chocolate",
+		"name": "Pale Chocolate",
 		"lovibond": 207,
 		"ppg": 33,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Pearl",
+		"name": "Pearl",
 		"lovibond": 2.1,
 		"ppg": 37,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 100,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Peated Malt",
+		"name": "Peated Malt",
 		"lovibond": 2.5,
 		"ppg": 38,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Pilsen",
+		"name": "Pilsen",
 		"lovibond": 1.8,
 		"ppg": 36,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 100,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Roasted Barley",
+		"name": "Roasted Barley",
 		"lovibond": 550,
 		"ppg": 29,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 0,
-		"graintype": "roasted malt"
+		"graintype": "roasted malt",
+		"country": "UK"
 	}, {
-		"name": "United Kingdom - Wheat",
+		"name": "Wheat",
 		"lovibond": 2,
 		"ppg": 37,
 		"mashable": 1,
 		"category": "Grain",
 		"diastatic": 75,
-		"graintype": "base malt"
+		"graintype": "base malt",
+		"country": "UK"
 	}, {
 		"name": "Liquid Malt Extract - Amber",
 		"lovibond": 10,

@@ -33,15 +33,18 @@
 					</div>
 					<div class="grain-list" v-for="(grain, index) in grains">
 						<grain-card
-							v-bind:grain="grain"
-							v-bind:remove-grain-at-index="removeGrainAtIndex"
-							v-bind:index="index"
-							v-bind:number-of-cards="grains.length"
+							:grain="grain"
+							:remove-grain-at-index="removeGrainAtIndex"
+							:index="index"
+							:number-of-cards="grains.length"
 						/>
 					</div>
-					<button class="more-grains-button" v-on:click="addNewGrain">
-						Add more grains
-					</button>
+					<div class="more-grains-button">
+						<app-button theme="dark-blue" :click="addNewGrain">
+							Add more grains
+						</app-button>
+					</div>
+
 				</div>
 
 			</div>
@@ -100,7 +103,7 @@
 			},
 		},
 		components: {
-			'grain-card': GrainCard,
+			GrainCard,
 		}
 	}
 </script>
@@ -197,16 +200,11 @@
 
 	.more-grains-button {
 		width: 100%;
-		background: $dark-blue;
-		border: 0;
-		cursor: pointer;
-		border-radius: 5px;
-		padding: 10px;
-		font-size: 24px;
-		color: $not-white;
 
-		&:hover {
-			background: rgba($dark-blue, 0.9);
+		/deep/ > button {
+			width: 100%;
+			padding: 10px;
+			font-size: 24px;
 		}
 	}
 </style>

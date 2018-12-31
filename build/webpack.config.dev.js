@@ -29,9 +29,6 @@ module.exports = {
 					{
 						loader: 'vue-loader',
 					},
-					{
-						loader: 'vue-svg-inline-loader'
-					}
 				]
 			},
 			{

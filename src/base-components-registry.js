@@ -1,7 +1,9 @@
 import DynamicSvg from './base-components/dynamic-svg.vue';
 import AppHeader from './base-components/app-header.vue';
+import AppButton from './base-components/app-button.vue';
 
 export default {
-	'dynamic-svg': DynamicSvg,
-	'app-header': AppHeader,
+	DynamicSvg,
+	AppHeader,
+	AppButton,
 }
