@@ -13,3 +13,4 @@ Mobile layouts.
 
 Allow for metric measurements
 
+Don't use powershell command to delete dist folder.

@@ -1,11 +1,10 @@
-import {storiesOf} from '@storybook/vue';
-import AppHeader from '../base-components/app-header';
-import StoryRouter from 'storybook-vue-router';
+import { storiesOf } from "@storybook/vue";
+import StoryRouter from "storybook-vue-router";
+import AppHeader from "../base-components/app-header.vue";
 
-storiesOf('App Header', module)
+storiesOf("App Header", module)
 	.addDecorator(StoryRouter())
-	.add('header', () => ({
-		components: {AppHeader},
-		template: '<app-header/>',
+	.add("header", () => ({
+		components: { AppHeader },
+		template: "<app-header/>",
 	}));
-
