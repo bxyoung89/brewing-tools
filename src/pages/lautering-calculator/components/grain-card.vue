@@ -1,19 +1,7 @@
 <script>
-	import allGrains from '../../../data/grains.js';
-	import CountryCodeToSvgPathService from '../../../services/country-code-to-svg-path-service.js';
-	import VueSelect from 'vue-select'
 	export default {
 		name: 'grain-card',
 		props: ['index', 'grain', 'removeGrainAtIndex', 'numberOfCards'],
-		data: function() {
-			return {
-				allGrains,
-				getFlagFromCountry: (country) => CountryCodeToSvgPathService.getSvgPath(country),
-			};
-		},
-		components: {
-			'v-select': VueSelect,
-		}
 	}
 </script>
 
@@ -24,18 +12,7 @@
 				<div class="input-section-title">
 					Grain
 				</div>
-				<div class="dropdown-wrapper">
-					<v-select :options="allGrains" label="name" v-model="grain.grain">
-						<template slot="option" slot-scope="option">
-							<div class="dropdown-option">
-								<dynamic-svg :src="getFlagFromCountry(option.country)" />
-								<div>
-									{{option.name}}
-								</div>
-							</div>
-						</template>
-					</v-select>
-				</div>
+				<grain-dropdown v-model="grain.grain" />
 			</div>
 
 			<div class="input-section">
@@ -101,28 +78,6 @@
 					width: 100%;
 					fill: $not-white;
 				}
-			}
-		}
-
-
-		.dropdown-option {
-			display: flex;
-			height: 40px;
-			align-items: center;
-
-			/deep/ > svg {
-				height: 30px;
-				margin-right: 10px;
-			}
-
-			/deep/ > div {
-				flex-grow: 1;
-			}
-		}
-
-		.dropdown-wrapper {
-			/deep/ .dropdown-toggle {
-				background: $white;
 			}
 		}
 	}

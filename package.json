@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-all": "rmdir dist && npm run build && npm run build-storybook" ,
+    "build-all": "npm run lint && rmdir /s /q dist && npm run build && npm run build-storybook" ,
     "build": "webpack --progress --config ./build/webpack.config.js",
     "build-svgs": "webpack --progress --config ./build/webpack.config.svg.js",
     "dev": "webpack-dev-server --config ./build/webpack.config.dev.js",

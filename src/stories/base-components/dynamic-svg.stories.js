@@ -1,14 +1,11 @@
 import { storiesOf } from "@storybook/vue";
-import DynamicSvg from "../base-components/dynamic-svg.vue";
-import CountryCodeToSvgPathService from "../services/country-code-to-svg-path-service";
+import CountryCodeToSvgPathService from "../../services/country-code-to-svg-path-service";
 
-storiesOf("Dynamic Svg", module)
+storiesOf("Base Components/Dynamic Svg", module)
 	.add("static", () => ({
-		components: { DynamicSvg },
 		template: "<dynamic-svg src=\"discount.svg\"></dynamic-svg>",
 	}))
 	.add("switching", () => ({
-		components: { DynamicSvg },
 		data: () => ({
 			country: "BE",
 		}),
