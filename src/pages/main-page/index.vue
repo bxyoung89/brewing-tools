@@ -42,11 +42,11 @@
 					text: 'Hydrometer Temperature Correction',
 					svg: 'thermometer.svg',
 				},
-				// {
-				// 	url: '/lautering-calculator',
-				// 	text: 'Lautering Efficiency Calculator',
-				// 	svg: 'images/discount.svg',
-				// },
+				{
+					url: '/ibu-calculator',
+					text: 'IBU Calculator',
+					svg: 'hop.svg',
+				},
 			],
 		}),
 		components: {

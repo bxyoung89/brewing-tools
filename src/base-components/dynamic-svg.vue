@@ -1,5 +1,5 @@
 <template>
-	<div :id="divId">{{src}}</div>
+	<div :id="divId"></div>
 </template>
 
 <script>

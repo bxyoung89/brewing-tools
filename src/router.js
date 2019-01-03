@@ -4,6 +4,7 @@ import MainPage from "./pages/main-page/index.vue";
 import LauteringCalculator from "./pages/lautering-calculator/index.vue";
 import About from "./pages/about/index.vue";
 import HydrometerTemperatureCorrection from "./pages/hydrometer-temperature-correction/index.vue";
+import IBUCalculator from "./pages/ibu-calculator/index.vue";
 
 Vue.use(Router);
 
@@ -28,6 +29,10 @@ export default new Router({
 		{
 			path: "/hydrometer-correction",
 			component: HydrometerTemperatureCorrection,
+		},
+		{
+			path: "/ibu-calculator",
+			component: IBUCalculator,
 		},
 	],
 });

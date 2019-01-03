@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "0339d60f42315eba37d6";
+/******/ 	var hotCurrentHash = "4bddb72a5595fd75a2e3";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -983,6 +983,48 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/checkbox.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _services_guid_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/guid-service */ "./src/services/guid-service.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "checkbox",
+  props: ['value'],
+  data: function data() {
+    return {
+      checkboxId: "checkbox-".concat(_services_guid_service__WEBPACK_IMPORTED_MODULE_0__["default"].newGuid())
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/dynamic-svg.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/dynamic-svg.vue?vue&type=script&lang=js& ***!
@@ -1075,6 +1117,35 @@ __webpack_require__.r(__webpack_exports__);
   },
   components: {
     'v-select': vue_select__WEBPACK_IMPORTED_MODULE_2___default.a
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/hop-dropdown.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _data_hops_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/hops.js */ "./src/data/hops.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'hop-dropdown',
+  props: ['value'],
+  data: function data() {
+    return {
+      allHops: _data_hops_js__WEBPACK_IMPORTED_MODULE_0__["default"]
+    };
+  },
+  components: {
+    'v-select': vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
   }
 });
 
@@ -1194,6 +1265,174 @@ __webpack_require__.r(__webpack_exports__);
     adjustedGravity: function adjustedGravity() {
       return _services_hydrometer_correction_service__WEBPACK_IMPORTED_MODULE_0__["default"].getCorrectedValue(this.gravityReading, this.currentTemperature, this.calibrationTemperature);
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'hop-card',
+  props: ['index', 'hop', 'removeHopAtIndex', 'numberOfCards'],
+  methods: {
+    onHopDropdownChange: function onHopDropdownChange(hop) {
+      if (this.hop.name === hop.name) {
+        return;
+      }
+
+      var newHop = _objectSpread({}, this.hop, hop, {
+        alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid
+      });
+
+      this.$emit('changed', newHop, this.index);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/index.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_hop_card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hop-card.vue */ "./src/pages/ibu-calculator/components/hop-card.vue");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _services_ibu_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/ibu-service */ "./src/services/ibu-service.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+var emptyHop = {
+  name: "",
+  alphaAcid: 0,
+  boilTime: 60,
+  isWholeHop: false,
+  ounces: 0
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "ibu-calculator",
+  data: function data() {
+    return {
+      finalVolume: 5.5,
+      boilGravity: 1.050,
+      hops: [_objectSpread({}, emptyHop)],
+      selectedCalculator: _services_ibu_service__WEBPACK_IMPORTED_MODULE_2__["default"].getAllIBUCalculators()[0],
+      ibuCalculators: _services_ibu_service__WEBPACK_IMPORTED_MODULE_2__["default"].getAllIBUCalculators()
+    };
+  },
+  methods: {
+    removeHopAtIndex: function removeHopAtIndex(index) {
+      this.hops.splice(index, 1);
+    },
+    addNewHop: function addNewHop() {
+      this.hops.push(_objectSpread({}, emptyHop));
+    },
+    updateHopAtIndex: function updateHopAtIndex(hop, index) {
+      this.hops.splice(index, 1, hop);
+    }
+  },
+  computed: {
+    ibu: function ibu() {
+      return _services_ibu_service__WEBPACK_IMPORTED_MODULE_2__["default"].getIBUs(this.selectedCalculator.id, this.hops, this.finalVolume, this.boilGravity);
+    }
+  },
+  components: {
+    HopCard: _components_hop_card_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    "v-select": vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
   }
 });
 
@@ -1449,6 +1688,10 @@ __webpack_require__.r(__webpack_exports__);
         url: '/hydrometer-correction',
         text: 'Hydrometer Temperature Correction',
         svg: 'thermometer.svg'
+      }, {
+        url: '/ibu-calculator',
+        text: 'IBU Calculator',
+        svg: 'hop.svg'
       }]
     };
   },
@@ -1472,7 +1715,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/di
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px; }\n\nbody {\n  font-size: 16px;\n  background: #e63946;\n  color: #f1faee;\n  font-family: \"Fira Sans\", sans-serif; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  background: #1d3557;\n  padding: 10px;\n  display: inline;\n  margin: 0;\n  line-height: 100px; }\n\na {\n  color: #1d3557; }\n  a:hover {\n    color: #457b9d; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 200px; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px;\n  line-height: 24px; }\n\nbody {\n  font-size: 16px;\n  background: #e63946;\n  color: #f1faee;\n  font-family: \"Fira Sans\", sans-serif; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  background: #1d3557;\n  padding: 10px;\n  display: inline;\n  margin: 0;\n  line-height: 100px; }\n\na {\n  color: #1d3557; }\n  a:hover {\n    color: #457b9d; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 200px; }\n", ""]);
 
 
 
@@ -1514,6 +1757,24 @@ exports.push([module.i, ".header[data-v-c94d3c22] {\n  position: fixed;\n  top: 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
+
+// Module
+exports.push([module.i, ".checkbox.doesnt-have-label[data-v-2941070e] {\n  display: inline-block;\n}\n.checkbox.doesnt-have-label[data-v-2941070e] .checkbox-label {\n    display: inline-block;\n}\n.checkbox[data-v-2941070e] > input {\n  display: none;\n}\n.checkbox[data-v-2941070e] > input:checked + label:hover .styled-checkbox {\n  background: #a8dadc;\n}\n.checkbox[data-v-2941070e] > input:checked + label .styled-checkbox {\n  background: #1d3557;\n}\n.checkbox[data-v-2941070e] > input:checked + label .styled-checkbox:before, .checkbox[data-v-2941070e] > input:checked + label .styled-checkbox:after {\n    opacity: 1;\n}\n.checkbox-label[data-v-2941070e] {\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n.checkbox-label[data-v-2941070e]:hover > .styled-checkbox:before, .checkbox-label[data-v-2941070e]:hover > .styled-checkbox:after {\n    opacity: 1;\n}\n.styled-checkbox[data-v-2941070e] {\n  height: 30px;\n  width: 30px;\n  border-radius: 5px;\n  border: 2px solid #f1faee;\n  position: relative;\n}\n.styled-checkbox[data-v-2941070e]:before {\n    content: \"\";\n    position: absolute;\n    width: 3px;\n    height: 15px;\n    background: #f1faee;\n    transform: rotate(45deg);\n    left: 14px;\n    top: 5px;\n    opacity: 0;\n}\n.styled-checkbox[data-v-2941070e]:after {\n    content: \"\";\n    position: absolute;\n    width: 3px;\n    height: 6px;\n    background: #f1faee;\n    transform: rotate(-45deg);\n    left: 7px;\n    top: 11px;\n    opacity: 0;\n}\n[data-v-2941070e] .styled-checkbox.has-label {\n    margin-right: 10px;\n}\n", ""]);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true& ***!
@@ -1527,6 +1788,24 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ber
 
 // Module
 exports.push([module.i, ".grain-dropdown[data-v-119d394e] .dropdown-toggle {\n  background: #FFF;\n}\n.dropdown-option[data-v-119d394e] {\n  display: flex;\n  height: 40px;\n  align-items: center;\n}\n.dropdown-option[data-v-119d394e] > svg {\n    height: 30px;\n    margin-right: 10px;\n}\n.dropdown-option[data-v-119d394e] > div {\n    flex-grow: 1;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
+
+// Module
+exports.push([module.i, ".hop-dropdown[data-v-31275dcb] .dropdown-toggle {\n  background: #FFF;\n}\n.dropdown-option[data-v-31275dcb] {\n  height: 40px;\n  align-items: center;\n  padding: 5px 0;\n}\n.hop-name[data-v-31275dcb] {\n  font-size: 16px;\n  line-height: 16px;\n}\n[data-v-31275dcb] .hop-name.no-aa {\n    line-height: 30px;\n}\n.hop-alpha-acid[data-v-31275dcb] {\n  opacity: 0.75;\n  font-size: 12px;\n}\n", ""]);
 
 
 
@@ -1563,6 +1842,42 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ber
 
 // Module
 exports.push([module.i, ".hydrometer-temperature-correction[data-v-580440fa] {\n  margin-top: 30px;\n  background: #a8dadc;\n}\n.inputs[data-v-580440fa] {\n  background: #457b9d;\n  padding: 20px;\n}\n.adjusted-gravity[data-v-580440fa] {\n  font-family: \"Berkshire Swash\", cursive;\n  text-align: center;\n  font-size: 48px;\n  line-height: 100px;\n  color: #1d3557;\n}\n.input-with-label[data-v-580440fa]:not(:last-child) {\n  margin-bottom: 20px;\n}\n.input-with-label .label[data-v-580440fa] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 14px;\n  margin-bottom: 5px;\n}\n.input-with-label[data-v-580440fa] > input {\n  width: 100%;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
+
+// Module
+exports.push([module.i, ".hop-card-content[data-v-06252e56] {\n  display: grid;\n  margin-bottom: 10px;\n  grid-template-columns: 220px 80px 80px 80px 100px;\n  grid-column-gap: 10px;\n}\n.hop-card-content[data-v-06252e56] > div > input {\n    width: 100%;\n}\n[data-v-06252e56] .hop-card-content.has-cancel-button {\n    grid-template-columns: 220px 80px 80px 50px 100px 30px;\n}\n.title-row[data-v-06252e56] {\n  text-align: center;\n  font-size: 14px;\n}\n.checkbox-wrapper[data-v-06252e56] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.remove-hop-button[data-v-06252e56] > button {\n  height: 100%;\n  width: 30px;\n  border: 0;\n  cursor: pointer;\n  border-radius: 5px;\n  display: flex;\n  justify-content: center;\n  padding: 5px;\n}\n.remove-hop-button[data-v-06252e56] > button:hover > svg {\n    fill: #e63946;\n}\n.remove-hop-button[data-v-06252e56] > button > svg {\n    height: 100%;\n    width: 100%;\n    fill: #f1faee;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
+
+// Module
+exports.push([module.i, ".ibu-calculator[data-v-707abe3a] {\n  margin-top: 30px;\n  display: flex;\n  background: #457b9d;\n}\n.ibu-calculator[data-v-707abe3a] .dropdown-toggle {\n    background: #FFF;\n}\n.ibu-calculator[data-v-707abe3a] .clear {\n    display: none;\n}\n.inputs[data-v-707abe3a] {\n  flex-grow: 1;\n  padding: 20px;\n}\n.double-section[data-v-707abe3a] {\n  display: flex;\n  justify-content: space-between;\n}\n.double-section > *[data-v-707abe3a] {\n    flex-grow: 1;\n}\n.double-section > *[data-v-707abe3a]:first-child {\n      padding-right: 20px;\n}\n.double-section > *[data-v-707abe3a]:last-child {\n      padding-left: 20px;\n}\n.input-section[data-v-707abe3a] {\n  margin-bottom: 20px;\n}\n.input-section-title[data-v-707abe3a] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  margin-bottom: 5px;\n  font-size: 12px;\n}\n.regular-input[data-v-707abe3a] {\n  width: 100%;\n}\n.regular-input > input[data-v-707abe3a] {\n    width: 100%;\n}\n.ibu[data-v-707abe3a] {\n  width: 350px;\n  min-width: 350px;\n  background: #a8dadc;\n  padding: 20px;\n  color: #1d3557;\n}\n.ibu-title[data-v-707abe3a] {\n  width: 100%;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n}\n.ibu-number[data-v-707abe3a] {\n  text-align: center;\n  font-size: 80px;\n  line-height: 140px;\n  font-family: \"Berkshire Swash\", cursive;\n}\n.ibu-warning[data-v-707abe3a] {\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  color: #e63946;\n  font-size: 12px;\n  line-height: 10px;\n}\n.hops-section-title[data-v-707abe3a] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  margin-bottom: 5px;\n  font-size: 24px;\n}\n.more-hops-button[data-v-707abe3a] {\n  width: 100%;\n}\n.more-hops-button[data-v-707abe3a] > button {\n    width: 100%;\n    padding: 10px;\n    font-size: 24px;\n}\n.footnotes[data-v-707abe3a] {\n  margin-top: 30px;\n  font-size: 12px;\n  opacity: 0.75;\n}\n", ""]);
 
 
 
@@ -2612,6 +2927,57 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var this$1 = this
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { class: { checkbox: true, "doesnt-have-label": !_vm.$slots.default } },
+    [
+      _c("input", {
+        attrs: { type: "checkbox", id: _vm.checkboxId },
+        domProps: { checked: _vm.value },
+        on: {
+          change: function() {
+            this$1.$emit("input", !this$1.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "label",
+        { staticClass: "checkbox-label", attrs: { for: _vm.checkboxId } },
+        [
+          _c("div", {
+            class: { "styled-checkbox": true, "has-label": _vm.$slots.default }
+          }),
+          _vm._v(" "),
+          _c("div", [_vm._t("default")], 2)
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/base-components/dynamic-svg.vue?vue&type=template&id=00735f10&":
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/dynamic-svg.vue?vue&type=template&id=00735f10& ***!
@@ -2627,7 +2993,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: _vm.divId } }, [_vm._v(_vm._s(_vm.src))])
+  return _c("div", { attrs: { id: _vm.divId } })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2684,6 +3050,80 @@ var render = function() {
                   ],
                   1
                 )
+              ]
+            }
+          }
+        ])
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var this$1 = this
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "hop-dropdown" },
+    [
+      _c("v-select", {
+        attrs: {
+          options: _vm.allHops,
+          label: "name",
+          value: _vm.value,
+          taggable: ""
+        },
+        on: {
+          input: function(val) {
+            this$1.$emit("input", val)
+          }
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "option",
+            fn: function(option) {
+              return [
+                _c("div", { staticClass: "dropdown-option" }, [
+                  _c(
+                    "div",
+                    { class: { "hop-name": true, "no-aa": !option.avgaa } },
+                    [
+                      _vm._v(
+                        "\n\t\t\t\t\t" + _vm._s(option.name) + "\n\t\t\t\t"
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  option.avgaa
+                    ? _c("div", { staticClass: "hop-alpha-acid" }, [
+                        _vm._v(
+                          "\n\t\t\t\t\tAverage Alpha Acid " +
+                            _vm._s(option.avgaa) +
+                            "%\n\t\t\t\t"
+                        )
+                      ])
+                    : _vm._e()
+                ])
               ]
             }
           }
@@ -2924,6 +3364,378 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "adjusted-gravity" }, [
           _vm._v("\n\t\t\t" + _vm._s(_vm.adjustedGravity) + "\n\t\t")
+        ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "hop-card" }, [
+    _vm.hop === undefined
+      ? _c(
+          "div",
+          {
+            class: {
+              "hop-card-content": true,
+              "title-row": true,
+              "has-cancel-button": _vm.numberOfCards > 1
+            }
+          },
+          [
+            _c("div", [_vm._v("\n\t\t\tName\n\t\t")]),
+            _vm._v(" "),
+            _c("div", [_vm._v("\n\t\t\tAlpha Acid\n\t\t")]),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", [_vm._v("\n\t\t\tOunces\n\t\t")]),
+            _vm._v(" "),
+            _c("div", [_vm._v("\n\t\t\tWhole Hop?\n\t\t")]),
+            _vm._v(" "),
+            _vm.numberOfCards > 1 ? _c("div") : _vm._e()
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.hop !== undefined
+      ? _c(
+          "div",
+          {
+            class: {
+              "hop-card-content": true,
+              "has-cancel-button": _vm.numberOfCards > 1
+            }
+          },
+          [
+            _c(
+              "div",
+              [
+                _c("hop-dropdown", {
+                  attrs: { value: _vm.hop },
+                  on: { input: _vm.onHopDropdownChange }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("div", [
+              _c("input", {
+                attrs: { type: "number" },
+                domProps: { value: _vm.hop.alphaAcid },
+                on: {
+                  input: function(event) {
+                    return _vm.onHopDropdownChange({
+                      alphaAcid: event.target.value
+                    })
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("input", {
+                attrs: { type: "number" },
+                domProps: { value: _vm.hop.boilTime },
+                on: {
+                  input: function(event) {
+                    return _vm.onHopDropdownChange({
+                      boilTime: event.target.value
+                    })
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("input", {
+                attrs: { type: "number" },
+                domProps: { value: _vm.hop.ounces },
+                on: {
+                  input: function(event) {
+                    return _vm.onHopDropdownChange({
+                      ounces: event.target.value
+                    })
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "div",
+                { staticClass: "checkbox-wrapper" },
+                [
+                  _c("checkbox", {
+                    attrs: { value: _vm.hop.isWholeHop },
+                    on: {
+                      input: function(value) {
+                        return _vm.onHopDropdownChange({ isWholeHop: value })
+                      }
+                    },
+                    model: {
+                      value: _vm.hop.isWholeHop,
+                      callback: function($$v) {
+                        _vm.$set(_vm.hop, "isWholeHop", $$v)
+                      },
+                      expression: "hop.isWholeHop"
+                    }
+                  })
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm.numberOfCards > 1
+              ? _c(
+                  "div",
+                  { staticClass: "remove-hop-button" },
+                  [
+                    _c(
+                      "app-button",
+                      {
+                        attrs: {
+                          theme: "unstyled",
+                          click: function() {
+                            return _vm.removeHopAtIndex(_vm.index)
+                          }
+                        }
+                      },
+                      [_c("dynamic-svg", { attrs: { src: "cancel.svg" } })],
+                      1
+                    )
+                  ],
+                  1
+                )
+              : _vm._e()
+          ]
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_vm._v("\n\t\t\tBoil Time"), _c("i", [_vm._v("*")])])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "body-content" },
+    [
+      _c("app-header"),
+      _vm._v(" "),
+      _c("h1", [_vm._v("\n\t\tIBU Calculator\n\t")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "ibu-calculator" }, [
+        _c("div", { staticClass: "inputs" }, [
+          _c("div", { staticClass: "input-section" }, [
+            _c("div", { staticClass: "input-section-title" }, [
+              _vm._v("\n\t\t\t\t\tIBU Formula\n\t\t\t\t")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "regular-input" },
+              [
+                _c("v-select", {
+                  attrs: { label: "name", options: _vm.ibuCalculators },
+                  model: {
+                    value: _vm.selectedCalculator,
+                    callback: function($$v) {
+                      _vm.selectedCalculator = $$v
+                    },
+                    expression: "selectedCalculator"
+                  }
+                })
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "double-section" }, [
+            _c("div", { staticClass: "input-section" }, [
+              _c("div", { staticClass: "input-section-title" }, [
+                _vm._v(
+                  "\n\t\t\t\t\t\tAfter Boil Wort Volume (Gallons)\n\t\t\t\t\t"
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "regular-input" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.finalVolume,
+                      expression: "finalVolume"
+                    }
+                  ],
+                  attrs: {
+                    type: "number",
+                    placeholder: "dat volume in dat dere pot"
+                  },
+                  domProps: { value: _vm.finalVolume },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.finalVolume = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-section" }, [
+              _c("div", { staticClass: "input-section-title" }, [
+                _vm._v(
+                  "\n\t\t\t\t\t\tGravity Measurement During Boil (1.xxx)\n\t\t\t\t\t"
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "regular-input" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.boilGravity,
+                      expression: "boilGravity"
+                    }
+                  ],
+                  attrs: {
+                    type: "number",
+                    placeholder: "how heavy is yo shit"
+                  },
+                  domProps: { value: _vm.boilGravity },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.boilGravity = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "hops-section" },
+            [
+              _c("div", { staticClass: "hops-section-title" }, [
+                _vm._v("\n\t\t\t\t\tHops\n\t\t\t\t")
+              ]),
+              _vm._v(" "),
+              _c("hop-card", { attrs: { "number-of-cards": _vm.hops.length } }),
+              _vm._v(" "),
+              _vm._l(_vm.hops, function(hop, index) {
+                return _c(
+                  "div",
+                  { staticClass: "hop-list" },
+                  [
+                    _c("hop-card", {
+                      attrs: {
+                        hop: hop,
+                        "remove-hop-at-index": _vm.removeHopAtIndex,
+                        index: index,
+                        "number-of-cards": _vm.hops.length
+                      },
+                      on: { changed: _vm.updateHopAtIndex }
+                    })
+                  ],
+                  1
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "more-hops-button" },
+                [
+                  _c(
+                    "app-button",
+                    { attrs: { theme: "dark-blue", click: _vm.addNewHop } },
+                    [_vm._v("\n\t\t\t\t\t\tAdd more hops\n\t\t\t\t\t")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "footnotes" }, [
+                _vm._v(
+                  "\n\t\t\t\t\t* If you add hops in at 60 minutes of a 60 minute boil, put 60.\n\t\t\t\t"
+                )
+              ])
+            ],
+            2
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "ibu" }, [
+          _c("div", { staticClass: "ibu-title" }, [
+            _vm._v("\n\t\t\t\tYour estimated IBUs are\n\t\t\t")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "ibu-number" }, [
+            _vm._v("\n\t\t\t\t" + _vm._s(_vm.ibu) + "\n\t\t\t")
+          ]),
+          _vm._v(" "),
+          Number.parseFloat(_vm.ibu) > 200
+            ? _c("div", { staticClass: "ibu-warning" }, [
+                _vm._v("\n\t\t\t\tSeems a bit high."),
+                _c("br"),
+                _c("br"),
+                _vm._v("Check your numbers?\n\t\t\t")
+              ])
+            : _vm._e()
         ])
       ])
     ],
@@ -7903,6 +8715,38 @@ if(true) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("708045ac", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&", function() {
+     var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true&":
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true& ***!
@@ -7925,6 +8769,38 @@ if(true) {
  if(!content.locals) {
    module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true&", function() {
      var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/grain-dropdown.vue?vue&type=style&index=0&id=119d394e&lang=scss&scoped=true&");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("53bd9a86", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&", function() {
+     var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&");
      if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
      update(newContent);
    });
@@ -7989,6 +8865,70 @@ if(true) {
  if(!content.locals) {
    module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&", function() {
      var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/hydrometer-temperature-correction/index.vue?vue&type=style&index=0&id=580440fa&lang=scss&scoped=true&");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib??vue-loader-options!./hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("0b9e0034", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib??vue-loader-options!./hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&", function() {
+     var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib??vue-loader-options!./hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("7d298736", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&", function() {
+     var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&");
      if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
      update(newContent);
    });
@@ -16688,6 +17628,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base_components_app_header_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./base-components/app-header.vue */ "./src/base-components/app-header.vue");
 /* harmony import */ var _base_components_app_button_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./base-components/app-button.vue */ "./src/base-components/app-button.vue");
 /* harmony import */ var _base_components_grain_dropdown_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./base-components/grain-dropdown.vue */ "./src/base-components/grain-dropdown.vue");
+/* harmony import */ var _base_components_hop_dropdown_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./base-components/hop-dropdown.vue */ "./src/base-components/hop-dropdown.vue");
+/* harmony import */ var _base_components_checkbox_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base-components/checkbox.vue */ "./src/base-components/checkbox.vue");
+
+
 
 
 
@@ -16696,7 +17640,9 @@ __webpack_require__.r(__webpack_exports__);
   DynamicSvg: _base_components_dynamic_svg_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   AppHeader: _base_components_app_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   AppButton: _base_components_app_button_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-  GrainDropdown: _base_components_grain_dropdown_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  GrainDropdown: _base_components_grain_dropdown_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+  HopDropdown: _base_components_hop_dropdown_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+  Checkbox: _base_components_checkbox_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 
 /***/ }),
@@ -16911,6 +17857,111 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/base-components/checkbox.vue":
+/*!******************************************!*\
+  !*** ./src/base-components/checkbox.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkbox.vue?vue&type=template&id=2941070e&scoped=true& */ "./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true&");
+/* harmony import */ var _checkbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkbox.vue?vue&type=script&lang=js& */ "./src/base-components/checkbox.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _checkbox_vue_vue_type_style_index_0_id_2941070e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& */ "./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _checkbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "2941070e",
+  null
+  
+)
+
+/* hot reload */
+if (true) {
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"))
+  if (api.compatible) {
+    module.hot.accept()
+    if (!module.hot.data) {
+      api.createRecord('2941070e', component.options)
+    } else {
+      api.reload('2941070e', component.options)
+    }
+    module.hot.accept(/*! ./checkbox.vue?vue&type=template&id=2941070e&scoped=true& */ "./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true&", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkbox.vue?vue&type=template&id=2941070e&scoped=true& */ "./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true&");
+(function () {
+      api.rerender('2941070e', {
+        render: _checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+        staticRenderFns: _checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
+      })
+    })(__WEBPACK_OUTDATED_DEPENDENCIES__); })
+  }
+}
+component.options.__file = "src/base-components/checkbox.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/base-components/checkbox.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./src/base-components/checkbox.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib!../../node_modules/vue-loader/lib??vue-loader-options!./checkbox.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&":
+/*!****************************************************************************************************!*\
+  !*** ./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_style_index_0_id_2941070e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-style-loader!../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=style&index=0&id=2941070e&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_style_index_0_id_2941070e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_style_index_0_id_2941070e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_style_index_0_id_2941070e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_style_index_0_id_2941070e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_style_index_0_id_2941070e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true&":
+/*!*************************************************************************************!*\
+  !*** ./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./checkbox.vue?vue&type=template&id=2941070e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/base-components/checkbox.vue?vue&type=template&id=2941070e&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_checkbox_vue_vue_type_template_id_2941070e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./src/base-components/dynamic-svg.vue":
 /*!*********************************************!*\
   !*** ./src/base-components/dynamic-svg.vue ***!
@@ -17098,6 +18149,111 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grain_dropdown_vue_vue_type_template_id_119d394e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grain_dropdown_vue_vue_type_template_id_119d394e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/base-components/hop-dropdown.vue":
+/*!**********************************************!*\
+  !*** ./src/base-components/hop-dropdown.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true& */ "./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true&");
+/* harmony import */ var _hop_dropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hop-dropdown.vue?vue&type=script&lang=js& */ "./src/base-components/hop-dropdown.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _hop_dropdown_vue_vue_type_style_index_0_id_31275dcb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& */ "./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _hop_dropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "31275dcb",
+  null
+  
+)
+
+/* hot reload */
+if (true) {
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"))
+  if (api.compatible) {
+    module.hot.accept()
+    if (!module.hot.data) {
+      api.createRecord('31275dcb', component.options)
+    } else {
+      api.reload('31275dcb', component.options)
+    }
+    module.hot.accept(/*! ./hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true& */ "./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true&", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true& */ "./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true&");
+(function () {
+      api.rerender('31275dcb', {
+        render: _hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+        staticRenderFns: _hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
+      })
+    })(__WEBPACK_OUTDATED_DEPENDENCIES__); })
+  }
+}
+component.options.__file = "src/base-components/hop-dropdown.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/base-components/hop-dropdown.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./src/base-components/hop-dropdown.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&":
+/*!********************************************************************************************************!*\
+  !*** ./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_style_index_0_id_31275dcb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-style-loader!../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_style_index_0_id_31275dcb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_style_index_0_id_31275dcb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_style_index_0_id_31275dcb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_style_index_0_id_31275dcb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_style_index_0_id_31275dcb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true&":
+/*!*****************************************************************************************!*\
+  !*** ./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=template&id=31275dcb&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -20010,6 +21166,439 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/data/hops.js":
+/*!**************************!*\
+  !*** ./src/data/hops.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  name: "Admiral",
+  avgaa: 14.5
+}, {
+  name: "Ahtanum",
+  avgaa: 6
+}, {
+  name: "Amarillo",
+  avgaa: 8.6
+}, {
+  name: "Apollo",
+  avgaa: 20
+}, {
+  name: "Aquila",
+  avgaa: 7
+}, {
+  name: "Aurora",
+  avgaa: 8
+}, {
+  name: "Azacca",
+  avgaa: 15
+}, {
+  name: "B. C. Goldings",
+  avgaa: 5
+}, {
+  name: "Banner",
+  avgaa: 11
+}, {
+  name: "Belma",
+  avgaa: 9.4
+}, {
+  name: "Bramling Cross",
+  avgaa: 6.5
+}, {
+  name: "Bravo",
+  avgaa: 15.5
+}, {
+  name: "Brewer's Gold",
+  avgaa: 9
+}, {
+  name: "Bullion",
+  avgaa: 8
+}, {
+  name: "CTZ",
+  avgaa: 15.5
+}, {
+  name: "Calypso",
+  avgaa: 13
+}, {
+  name: "Cascade",
+  avgaa: 7
+}, {
+  name: "Cascade DBL",
+  avgaa: 0.8
+}, {
+  name: "Cascade LupuLN2",
+  avgaa: 12
+}, {
+  name: "Centennial",
+  avgaa: 10
+}, {
+  name: "Challenger",
+  avgaa: 8.5
+}, {
+  name: "Chinook",
+  avgaa: 13
+}, {
+  name: "Citra",
+  avgaa: 11
+}, {
+  name: "Citra DBL",
+  avgaa: 2.6
+}, {
+  name: "Citra LupuLN2",
+  avgaa: 25
+}, {
+  name: "Cluster",
+  avgaa: 6.5
+}, {
+  name: "Columbia",
+  avgaa: 8.8
+}, {
+  name: "Columbus",
+  avgaa: 15
+}, {
+  name: "Columbus LupuLN2",
+  avgaa: 24.5
+}, {
+  name: "Comet",
+  avgaa: 11
+}, {
+  name: "Crystal",
+  avgaa: 4.3
+}, {
+  name: "Domestic Hallertau",
+  avgaa: 3.9
+}, {
+  name: "Dr. Rudi",
+  avgaa: 11
+}, {
+  name: "East Kent Goldings",
+  avgaa: 5
+}, {
+  name: "Ekuanot",
+  avgaa: 14.25
+}, {
+  name: "Ekuanot DBL",
+  avgaa: 3.2
+}, {
+  name: "Ekuanot LupuLN2",
+  avgaa: 25.5
+}, {
+  name: "El Dorado",
+  avgaa: 15.7
+}, {
+  name: "Ella",
+  avgaa: 14.8
+}, {
+  name: "Eroica",
+  avgaa: 12
+}, {
+  name: "Falconer's Flight",
+  avgaa: 10
+}, {
+  name: "First Gold",
+  avgaa: 7.5
+}, {
+  name: "Fuggles",
+  avgaa: 4.5
+}, {
+  name: "Galaxy",
+  avgaa: 14.25
+}, {
+  name: "Galena",
+  avgaa: 13
+}, {
+  name: "Glacier",
+  avgaa: 5.5
+}, {
+  name: "Goldings",
+  avgaa: 4.5
+}, {
+  name: "Green Bullet",
+  avgaa: 11
+}, {
+  name: "Hallertau Blanc",
+  avgaa: 10
+}, {
+  name: "Hallertau Hersbrucker",
+  avgaa: 4
+}, {
+  name: "Hallertau Mittelfruh",
+  avgaa: 3.75
+}, {
+  name: "Herald",
+  avgaa: 12
+}, {
+  name: "Hersbrucker",
+  avgaa: 4
+}, {
+  name: "Horizon",
+  avgaa: 12.5
+}, {
+  name: "Huell Melon",
+  avgaa: 7.2
+}, {
+  name: "Huller Bitterer",
+  avgaa: 5.75
+}, {
+  name: "Jarrylo",
+  avgaa: 16.3
+}, {
+  name: "Kent Goldings",
+  avgaa: 5
+}, {
+  name: "Kohatu",
+  avgaa: 6.5
+}, {
+  name: "Lemondrop",
+  avgaa: 6
+}, {
+  name: "Liberty",
+  avgaa: 4
+}, {
+  name: "Loral",
+  avgaa: 11.75
+}, {
+  name: "Loral DBL",
+  avgaa: 3
+}, {
+  name: "Loral LupuLN2",
+  avgaa: 19.5
+}, {
+  name: "Lublin",
+  avgaa: 4.5
+}, {
+  name: "Magnum",
+  avgaa: 15
+}, {
+  name: "Mandarina Bavaria",
+  avgaa: 8.5
+}, {
+  name: "Millenium",
+  avgaa: 15.5
+}, {
+  name: "Mosaic",
+  avgaa: 12.5
+}, {
+  name: "Mosaic DBL",
+  avgaa: 2.2
+}, {
+  name: "Mosaic LupuLN2",
+  avgaa: 22
+}, {
+  name: "Motueka",
+  avgaa: 7
+}, {
+  name: "Mount Hood",
+  avgaa: 4.8
+}, {
+  name: "Mount Rainier",
+  avgaa: 6.2
+}, {
+  name: "Moutere",
+  avgaa: 18.5
+}, {
+  name: "Nelson Sauvin",
+  avgaa: 12.5
+}, {
+  name: "Newport",
+  avgaa: 15.5
+}, {
+  name: "Northdown",
+  avgaa: 8.6
+}, {
+  name: "Northern Brewer",
+  avgaa: 7.8
+}, {
+  name: "Nugget",
+  avgaa: 14
+}, {
+  name: "Olympic",
+  avgaa: 12
+}, {
+  name: "Omega",
+  avgaa: 10
+}, {
+  name: "Opal",
+  avgaa: 6.5
+}, {
+  name: "Orion",
+  avgaa: 7
+}, {
+  name: "Pacific Gem",
+  avgaa: 15.4
+}, {
+  name: "Pacific Jade",
+  avgaa: 13
+}, {
+  name: "Pacifica",
+  avgaa: 5
+}, {
+  name: "Palisade",
+  avgaa: 7.5
+}, {
+  name: "Perle",
+  avgaa: 8.2
+}, {
+  name: "Phoenix",
+  avgaa: 10
+}, {
+  name: "Pilgrim",
+  avgaa: 11
+}, {
+  name: "Pioneer",
+  avgaa: 9
+}, {
+  name: "Pride of Ringwood",
+  avgaa: 10
+}, {
+  name: "Progress",
+  avgaa: 6.25
+}, {
+  name: "Rakau",
+  avgaa: 10.5
+}, {
+  name: "Record",
+  avgaa: 6.5
+}, {
+  name: "Riwaka",
+  avgaa: 5.5
+}, {
+  name: "Saaz",
+  avgaa: 3.5
+}, {
+  name: "Santiam",
+  avgaa: 6.5
+}, {
+  name: "Saphir",
+  avgaa: 4.25
+}, {
+  name: "Satus",
+  avgaa: 13
+}, {
+  name: "Simcoe",
+  avgaa: 12.7
+}, {
+  name: "Simcoe DBL",
+  avgaa: 2.2
+}, {
+  name: "Simcoe LupuLN2",
+  avgaa: 23
+}, {
+  name: "Sonnet",
+  avgaa: 4.5
+}, {
+  name: "Sorachi Ace",
+  avgaa: 11.1
+}, {
+  name: "Southern Cross",
+  avgaa: 12.5
+}, {
+  name: "Sovereign",
+  avgaa: 5.5
+}, {
+  name: "Spalt",
+  avgaa: 4.5
+}, {
+  name: "Sterling",
+  avgaa: 8.7
+}, {
+  name: "Sticklebract",
+  avgaa: 11.5
+}, {
+  name: "Strisselspalt",
+  avgaa: 3.5
+}, {
+  name: "Styrian Goldings",
+  avgaa: 5.5
+}, {
+  name: "Summer",
+  avgaa: 6
+}, {
+  name: "Summit",
+  avgaa: 18.5
+}, {
+  name: "Super Alpha",
+  avgaa: 13
+}, {
+  name: "Super Styrians",
+  avgaa: 9
+}, {
+  name: "Taiheke",
+  avgaa: 7
+}, {
+  name: "Talisman",
+  avgaa: 8
+}, {
+  name: "Target",
+  avgaa: 11.5
+}, {
+  name: "Tettnanger",
+  avgaa: 4.5
+}, {
+  name: "Tomahawk",
+  avgaa: 15
+}, {
+  name: "Topaz",
+  avgaa: 15.9
+}, {
+  name: "Ultra",
+  avgaa: 4.5
+}, {
+  name: "Vanguard",
+  avgaa: 5
+}, {
+  name: "Vic Secret",
+  avgaa: 15.5
+}, {
+  name: "Wai-iti",
+  avgaa: 3
+}, {
+  name: "Waimea",
+  avgaa: 17.5
+}, {
+  name: "Wakatu",
+  avgaa: 7.5
+}, {
+  name: "Warrior",
+  avgaa: 16
+}, {
+  name: "Whitbread Golding",
+  avgaa: 6
+}, {
+  name: "Willamette",
+  avgaa: 4.5
+}, {
+  name: "Wye Challenger",
+  avgaa: 8.9
+}, {
+  name: "Wye Target",
+  avgaa: 10
+}, {
+  name: "Yakima Cluster",
+  avgaa: 7
+}, {
+  name: "Yamhill Goldings",
+  avgaa: 4
+}, {
+  name: "Yeoman",
+  avgaa: 7.25
+}, {
+  name: "Zenith",
+  avgaa: 9
+}, {
+  name: "Zeus",
+  avgaa: 16
+}, {
+  name: "Zythos",
+  avgaa: 11
+}]);
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -20251,6 +21840,216 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_580440fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/components/hop-card.vue":
+/*!**********************************************************!*\
+  !*** ./src/pages/ibu-calculator/components/hop-card.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hop-card.vue?vue&type=template&id=06252e56&scoped=true& */ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true&");
+/* harmony import */ var _hop_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hop-card.vue?vue&type=script&lang=js& */ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _hop_card_vue_vue_type_style_index_0_id_06252e56_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& */ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _hop_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "06252e56",
+  null
+  
+)
+
+/* hot reload */
+if (true) {
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"))
+  if (api.compatible) {
+    module.hot.accept()
+    if (!module.hot.data) {
+      api.createRecord('06252e56', component.options)
+    } else {
+      api.reload('06252e56', component.options)
+    }
+    module.hot.accept(/*! ./hop-card.vue?vue&type=template&id=06252e56&scoped=true& */ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true&", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hop-card.vue?vue&type=template&id=06252e56&scoped=true& */ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true&");
+(function () {
+      api.rerender('06252e56', {
+        render: _hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+        staticRenderFns: _hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
+      })
+    })(__WEBPACK_OUTDATED_DEPENDENCIES__); })
+  }
+}
+component.options.__file = "src/pages/ibu-calculator/components/hop-card.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./src/pages/ibu-calculator/components/hop-card.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib!../../../../node_modules/vue-loader/lib??vue-loader-options!./hop-card.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&":
+/*!********************************************************************************************************************!*\
+  !*** ./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_style_index_0_id_06252e56_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-style-loader!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib??vue-loader-options!./hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=style&index=0&id=06252e56&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_style_index_0_id_06252e56_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_style_index_0_id_06252e56_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_style_index_0_id_06252e56_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_style_index_0_id_06252e56_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_style_index_0_id_06252e56_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true&":
+/*!*****************************************************************************************************!*\
+  !*** ./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true& ***!
+  \*****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./hop-card.vue?vue&type=template&id=06252e56&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/components/hop-card.vue?vue&type=template&id=06252e56&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_card_vue_vue_type_template_id_06252e56_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/index.vue":
+/*!********************************************!*\
+  !*** ./src/pages/ibu-calculator/index.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=707abe3a&scoped=true& */ "./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./src/pages/ibu-calculator/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _index_vue_vue_type_style_index_0_id_707abe3a_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& */ "./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "707abe3a",
+  null
+  
+)
+
+/* hot reload */
+if (true) {
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"))
+  if (api.compatible) {
+    module.hot.accept()
+    if (!module.hot.data) {
+      api.createRecord('707abe3a', component.options)
+    } else {
+      api.reload('707abe3a', component.options)
+    }
+    module.hot.accept(/*! ./index.vue?vue&type=template&id=707abe3a&scoped=true& */ "./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true&", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=707abe3a&scoped=true& */ "./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true&");
+(function () {
+      api.rerender('707abe3a', {
+        render: _index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+        staticRenderFns: _index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
+      })
+    })(__WEBPACK_OUTDATED_DEPENDENCIES__); })
+  }
+}
+component.options.__file = "src/pages/ibu-calculator/index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/index.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./src/pages/ibu-calculator/index.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&":
+/*!******************************************************************************************************!*\
+  !*** ./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_707abe3a_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=style&index=0&id=707abe3a&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_707abe3a_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_707abe3a_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_707abe3a_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_707abe3a_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_707abe3a_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true&":
+/*!***************************************************************************************!*\
+  !*** ./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=template&id=707abe3a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/pages/ibu-calculator/index.vue?vue&type=template&id=707abe3a&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_707abe3a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -20796,6 +22595,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_lautering_calculator_index_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/lautering-calculator/index.vue */ "./src/pages/lautering-calculator/index.vue");
 /* harmony import */ var _pages_about_index_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/about/index.vue */ "./src/pages/about/index.vue");
 /* harmony import */ var _pages_hydrometer_temperature_correction_index_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/hydrometer-temperature-correction/index.vue */ "./src/pages/hydrometer-temperature-correction/index.vue");
+/* harmony import */ var _pages_ibu_calculator_index_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/ibu-calculator/index.vue */ "./src/pages/ibu-calculator/index.vue");
+
 
 
 
@@ -20819,6 +22620,9 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_router__WEBPACK_IMPORTED_MOD
   }, {
     path: "/hydrometer-correction",
     component: _pages_hydrometer_temperature_correction_index_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }, {
+    path: "/ibu-calculator",
+    component: _pages_ibu_calculator_index_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   }]
 }));
 
@@ -20960,6 +22764,188 @@ function () {
 
 /***/ }),
 
+/***/ "./src/services/ibu-calculators/filter-out-dry-hops.js":
+/*!*************************************************************!*\
+  !*** ./src/services/ibu-calculators/filter-out-dry-hops.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (hops) {
+  return hops.filter(function (hop) {
+    return hop.boilTime > 0 && hop.alphaAcid > 0 && hop.ounces > 0;
+  });
+});
+
+/***/ }),
+
+/***/ "./src/services/ibu-calculators/get-corrected-gravity.js":
+/*!***************************************************************!*\
+  !*** ./src/services/ibu-calculators/get-corrected-gravity.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (gravity) {
+  if (gravity <= 1.05) {
+    return gravity;
+  }
+
+  return 1 + (gravity - 1.05) / 2;
+});
+
+/***/ }),
+
+/***/ "./src/services/ibu-calculators/simple-ibu-calculator.js":
+/*!***************************************************************!*\
+  !*** ./src/services/ibu-calculators/simple-ibu-calculator.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _unit_conversion_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../unit-conversion-service */ "./src/services/unit-conversion-service.js");
+/* harmony import */ var _get_corrected_gravity__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./get-corrected-gravity */ "./src/services/ibu-calculators/get-corrected-gravity.js");
+/* harmony import */ var _filter_out_dry_hops__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filter-out-dry-hops */ "./src/services/ibu-calculators/filter-out-dry-hops.js");
+
+
+
+
+var simpleWholeHopUtilizationFunction = function simpleWholeHopUtilizationFunction(boilTime) {
+  if (boilTime < 10) {
+    return 0.05;
+  }
+
+  if (boilTime < 20) {
+    return 0.12;
+  }
+
+  if (boilTime < 30) {
+    return 0.15;
+  }
+
+  if (boilTime < 45) {
+    return 0.19;
+  }
+
+  if (boilTime < 60) {
+    return 0.22;
+  }
+
+  if (boilTime < 75) {
+    return 0.24;
+  }
+
+  return 0.27;
+};
+
+var simplePelletHopUtilizationFunction = function simplePelletHopUtilizationFunction(boilTime) {
+  if (boilTime < 10) {
+    return 0.06;
+  }
+
+  if (boilTime < 20) {
+    return 0.15;
+  }
+
+  if (boilTime < 30) {
+    return 0.19;
+  }
+
+  if (boilTime < 45) {
+    return 0.24;
+  }
+
+  if (boilTime < 60) {
+    return 0.27;
+  }
+
+  if (boilTime < 75) {
+    return 0.30;
+  }
+
+  return 0.34;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Simple",
+  id: "Simple",
+  calculateIBUs: function calculateIBUs(hops, gallonsOfWort, boilGravity) {
+    var boilHops = Object(_filter_out_dry_hops__WEBPACK_IMPORTED_MODULE_2__["default"])(hops);
+    var correctedGravity = Object(_get_corrected_gravity__WEBPACK_IMPORTED_MODULE_1__["default"])(boilGravity);
+    var gravityDenominator = _unit_conversion_service__WEBPACK_IMPORTED_MODULE_0__["default"].convertGallonsToLitres(gallonsOfWort) * correctedGravity;
+    var hopIBUs = boilHops.map(function (_ref) {
+      var alphaAcid = _ref.alphaAcid,
+          boilTime = _ref.boilTime,
+          isWholeHop = _ref.isWholeHop,
+          ounces = _ref.ounces;
+      var grams = _unit_conversion_service__WEBPACK_IMPORTED_MODULE_0__["default"].convertOuncesToGrams(ounces);
+      var utilization = isWholeHop ? simpleWholeHopUtilizationFunction(boilTime) : simplePelletHopUtilizationFunction(boilTime);
+      return grams * utilization * (alphaAcid / 100) * 1000 / gravityDenominator;
+    });
+    return hopIBUs.reduce(function (sum, ibu) {
+      return sum + ibu;
+    }, 0);
+  }
+});
+
+/***/ }),
+
+/***/ "./src/services/ibu-service.js":
+/*!*************************************!*\
+  !*** ./src/services/ibu-service.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ibu_calculators_simple_ibu_calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ibu-calculators/simple-ibu-calculator */ "./src/services/ibu-calculators/simple-ibu-calculator.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+ // import TinsenthIBUCalculator from "./ibu-calculators/tinsenth-ibu-calculator";
+
+var calculators = [// TinsenthIBUCalculator,
+_ibu_calculators_simple_ibu_calculator__WEBPACK_IMPORTED_MODULE_0__["default"]];
+
+var IBUService =
+/*#__PURE__*/
+function () {
+  function IBUService() {
+    _classCallCheck(this, IBUService);
+  }
+
+  _createClass(IBUService, [{
+    key: "getAllIBUCalculators",
+    value: function getAllIBUCalculators() {
+      return calculators;
+    }
+  }, {
+    key: "getIBUs",
+    value: function getIBUs(calculatorId, hops, gallonsOfWort, boilGravity) {
+      var matchingCalculator = calculators.find(function (calc) {
+        return calc.id === calculatorId;
+      }) || calculators[0];
+      return matchingCalculator.calculateIBUs(hops, gallonsOfWort, boilGravity).toFixed(0);
+    }
+  }]);
+
+  return IBUService;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (new IBUService());
+
+/***/ }),
+
 /***/ "./src/services/lautering-calculator-service.js":
 /*!******************************************************!*\
   !*** ./src/services/lautering-calculator-service.js ***!
@@ -21017,6 +23003,74 @@ function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (new LauteringCalculatorService());
+
+/***/ }),
+
+/***/ "./src/services/unit-conversion-service.js":
+/*!*************************************************!*\
+  !*** ./src/services/unit-conversion-service.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var LITRES_IN_A_GALLON = 3.78541;
+var GRAMS_IN_A_OUNCE = 28.3495;
+var unitToOtherUnitMap = {
+  gallons: {
+    litres: LITRES_IN_A_GALLON
+  },
+  litres: {
+    gallons: 1 / LITRES_IN_A_GALLON
+  },
+  ounces: {
+    grams: GRAMS_IN_A_OUNCE
+  },
+  grams: {
+    ounces: 1 / GRAMS_IN_A_OUNCE
+  }
+};
+
+var UnitConversionService =
+/*#__PURE__*/
+function () {
+  function UnitConversionService() {
+    _classCallCheck(this, UnitConversionService);
+  }
+
+  _createClass(UnitConversionService, [{
+    key: "convertGallonsToLitres",
+    value: function convertGallonsToLitres(gallons) {
+      return unitToOtherUnitMap.gallons.litres * gallons;
+    }
+  }, {
+    key: "convertLitresToGallons",
+    value: function convertLitresToGallons(litres) {
+      return unitToOtherUnitMap.litres.gallons * litres;
+    }
+  }, {
+    key: "convertOuncesToGrams",
+    value: function convertOuncesToGrams(ounces) {
+      return unitToOtherUnitMap.ounces.grams * ounces;
+    }
+  }, {
+    key: "convertGramsToOunces",
+    value: function convertGramsToOunces(grams) {
+      return unitToOtherUnitMap.grams.ounces * grams;
+    }
+  }]);
+
+  return UnitConversionService;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (new UnitConversionService());
 
 /***/ }),
 
