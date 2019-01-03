@@ -48,21 +48,21 @@
 				<input
 					type="number"
 					:value="hop.alphaAcid"
-					v-on:input="(event) => onHopDropdownChange({alphaAcid: event.target.value})"
+					v-on:input="(event) => onHopDropdownChange({alphaAcid: Number.parseFloat(event.target.value)})"
 				/>
 			</div>
 			<div>
 				<input
 					type="number"
 					:value="hop.boilTime"
-					v-on:input="(event) => onHopDropdownChange({boilTime: event.target.value})"
+					v-on:input="(event) => onHopDropdownChange({boilTime: Number.parseFloat(event.target.value)})"
 				/>
 			</div>
 			<div>
 				<input
 					type="number"
 					:value="hop.ounces"
-					v-on:input="(event) => onHopDropdownChange({ounces: event.target.value})"
+					v-on:input="(event) => onHopDropdownChange({ounces: Number.parseFloat(event.target.value)})"
 				/>
 			</div>
 			<div>

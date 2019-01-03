@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "4bddb72a5595fd75a2e3";
+/******/ 	var hotCurrentHash = "9bd16ec322cad27adf93";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -3447,7 +3447,7 @@ var render = function() {
                 on: {
                   input: function(event) {
                     return _vm.onHopDropdownChange({
-                      alphaAcid: event.target.value
+                      alphaAcid: Number.parseFloat(event.target.value)
                     })
                   }
                 }
@@ -3461,7 +3461,7 @@ var render = function() {
                 on: {
                   input: function(event) {
                     return _vm.onHopDropdownChange({
-                      boilTime: event.target.value
+                      boilTime: Number.parseFloat(event.target.value)
                     })
                   }
                 }
@@ -3475,7 +3475,7 @@ var render = function() {
                 on: {
                   input: function(event) {
                     return _vm.onHopDropdownChange({
-                      ounces: event.target.value
+                      ounces: Number.parseFloat(event.target.value)
                     })
                   }
                 }
@@ -22800,10 +22800,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/services/ibu-calculators/simple-ibu-calculator.js":
-/*!***************************************************************!*\
-  !*** ./src/services/ibu-calculators/simple-ibu-calculator.js ***!
-  \***************************************************************/
+/***/ "./src/services/ibu-calculators/rager-ibu-calculator.js":
+/*!**************************************************************!*\
+  !*** ./src/services/ibu-calculators/rager-ibu-calculator.js ***!
+  \**************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -22873,8 +22873,8 @@ var simplePelletHopUtilizationFunction = function simplePelletHopUtilizationFunc
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Simple",
-  id: "Simple",
+  name: "Rager",
+  id: "Rager",
   calculateIBUs: function calculateIBUs(hops, gallonsOfWort, boilGravity) {
     var boilHops = Object(_filter_out_dry_hops__WEBPACK_IMPORTED_MODULE_2__["default"])(hops);
     var correctedGravity = Object(_get_corrected_gravity__WEBPACK_IMPORTED_MODULE_1__["default"])(boilGravity);
@@ -22896,6 +22896,37 @@ var simplePelletHopUtilizationFunction = function simplePelletHopUtilizationFunc
 
 /***/ }),
 
+/***/ "./src/services/ibu-calculators/tinsenth-ibu-calculator.js":
+/*!*****************************************************************!*\
+  !*** ./src/services/ibu-calculators/tinsenth-ibu-calculator.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _filter_out_dry_hops__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./filter-out-dry-hops */ "./src/services/ibu-calculators/filter-out-dry-hops.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Tinsenth",
+  id: "Tinsenth",
+  calculateIBUs: function calculateIBUs(hops, gallonsOfWort, boilGravity) {
+    var boilHops = Object(_filter_out_dry_hops__WEBPACK_IMPORTED_MODULE_0__["default"])(hops);
+    var hopIBUs = boilHops.map(function (_ref) {
+      var alphaAcid = _ref.alphaAcid,
+          boilTime = _ref.boilTime,
+          ounces = _ref.ounces;
+      var timeContribution = (1 - Math.pow(Math.E, -0.04 * boilTime)) / 4.15;
+      return 75 * alphaAcid * ounces * 1.65 * Math.pow(0.000125, boilGravity - 1) * timeContribution / gallonsOfWort;
+    });
+    return hopIBUs.reduce(function (sum, ibu) {
+      return sum + ibu;
+    }, 0);
+  }
+});
+
+/***/ }),
+
 /***/ "./src/services/ibu-service.js":
 /*!*************************************!*\
   !*** ./src/services/ibu-service.js ***!
@@ -22905,17 +22936,17 @@ var simplePelletHopUtilizationFunction = function simplePelletHopUtilizationFunc
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ibu_calculators_simple_ibu_calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ibu-calculators/simple-ibu-calculator */ "./src/services/ibu-calculators/simple-ibu-calculator.js");
+/* harmony import */ var _ibu_calculators_rager_ibu_calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ibu-calculators/rager-ibu-calculator */ "./src/services/ibu-calculators/rager-ibu-calculator.js");
+/* harmony import */ var _ibu_calculators_tinsenth_ibu_calculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ibu-calculators/tinsenth-ibu-calculator */ "./src/services/ibu-calculators/tinsenth-ibu-calculator.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
- // import TinsenthIBUCalculator from "./ibu-calculators/tinsenth-ibu-calculator";
 
-var calculators = [// TinsenthIBUCalculator,
-_ibu_calculators_simple_ibu_calculator__WEBPACK_IMPORTED_MODULE_0__["default"]];
+
+var calculators = [_ibu_calculators_tinsenth_ibu_calculator__WEBPACK_IMPORTED_MODULE_1__["default"], _ibu_calculators_rager_ibu_calculator__WEBPACK_IMPORTED_MODULE_0__["default"]];
 
 var IBUService =
 /*#__PURE__*/

@@ -47,8 +47,8 @@ const simplePelletHopUtilizationFunction = (boilTime) => {
 };
 
 export default {
-	name: "Simple",
-	id: "Simple",
+	name: "Rager",
+	id: "Rager",
 	calculateIBUs: (hops, gallonsOfWort, boilGravity) => {
 		const boilHops = filterOutDryHops(hops);
 		const correctedGravity = getCorrectedGravity(boilGravity);

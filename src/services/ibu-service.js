@@ -1,9 +1,9 @@
-import SimpleIBUCalculator from "./ibu-calculators/simple-ibu-calculator";
-// import TinsenthIBUCalculator from "./ibu-calculators/tinsenth-ibu-calculator";
+import RagerIBUCalculator from "./ibu-calculators/rager-ibu-calculator";
+import TinsenthIBUCalculator from "./ibu-calculators/tinsenth-ibu-calculator";
 
 const calculators = [
-	// TinsenthIBUCalculator,
-	SimpleIBUCalculator,
+	TinsenthIBUCalculator,
+	RagerIBUCalculator,
 ];
 
 class IBUService {
