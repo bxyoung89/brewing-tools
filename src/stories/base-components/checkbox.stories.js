@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/vue";
 
-storiesOf("Base Components/test", module)
+storiesOf("Base Components/Checkbox", module)
 	.add("with attached label", () => ({
 		template: "<checkbox v-model='checked'>Hello World!</checkbox>",
 		data: () => ({ checked: true }),

@@ -87,7 +87,9 @@
 	@import "../../../styles/core";
 
 	.hop-card {
-
+		/deep/ .clear {
+			display: none;
+		}
 	}
 
 	.hop-card-content {

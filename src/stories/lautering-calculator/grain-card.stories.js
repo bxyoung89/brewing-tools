@@ -7,7 +7,6 @@ storiesOf("Lautering Calculator/Grain Card", module)
 		template: "<grain-card index='0' :grain='grain' numberOfCards='1' ></grain-card>",
 		data: () => ({
 			grain: {},
-			pounds: 0,
 		}),
 	}))
 	.add("second item", () => ({
@@ -15,6 +14,5 @@ storiesOf("Lautering Calculator/Grain Card", module)
 		template: "<grain-card index='1' :grain='grain' numberOfCards='2' ></grain-card>",
 		data: () => ({
 			grain: {},
-			pounds: 0,
 		}),
 	}));

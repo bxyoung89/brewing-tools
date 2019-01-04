@@ -134,10 +134,6 @@
 		/deep/ .dropdown-toggle {
 			background: $white;
 		}
-
-		/deep/ .clear {
-			display: none;
-		}
 	}
 
 	.inputs {

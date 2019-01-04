@@ -48,7 +48,7 @@
 		/deep/ > input:checked + label {
 			&:hover {
 				.styled-checkbox {
-					background: $light-blue;
+					background: rgba($dark-blue, .5);
 				}
 			}
 
