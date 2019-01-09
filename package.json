@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-all": "npm run lint && rmdir /s /q dist && npm run build && npm run build-storybook" ,
+    "clean": "node build/clean.js",
+    "build-all": "npm run lint && npm run clean && npm run build && npm run build-storybook",
     "build": "webpack --progress --config ./build/webpack.config.js",
     "build-svgs": "webpack --progress --config ./build/webpack.config.svg.js",
     "dev": "webpack-dev-server --config ./build/webpack.config.dev.js",
@@ -52,13 +53,14 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@storybook/vue": "^4.1.4",
+    "del": "^3.0.0",
     "glob": "^7.1.3",
     "html-loader": "^0.5.5",
+    "storybook-vue-router": "^1.0.2",
     "svg-sprite-loader": "^4.1.3",
     "vue": "^2.5.21",
     "vue-router": "^3.0.2",
-    "vue-select": "^2.5.1",
-    "@storybook/vue": "^4.1.4",
-    "storybook-vue-router": "^1.0.2"
+    "vue-select": "^2.5.1"
   }
 }
