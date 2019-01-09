@@ -20,10 +20,9 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		height: 40px;
-		background: $dark-blue;
+		height: auto;
 		color: $not-white;
-		padding: 5px;
+		padding: 15px;
 		line-height: 30px;
 		font-size: 30px;
 		@include berkshire-swash();

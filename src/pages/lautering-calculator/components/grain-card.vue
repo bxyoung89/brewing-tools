@@ -36,21 +36,48 @@
 	@import "../../../styles/core";
 
 	.grain-card {
-		background: rgba($not-white, 0.1);
-		padding: 20px;
+		// background: rgba($not-white, 0.3);
+		padding: 20px 0;
+		border-top: 1px solid tint($red, 50);
+		border-bottom: 1px solid tint($red, 50);
 		display: flex;
-		margin-bottom: 10px;
+		margin-bottom: -1px;
 		border-radius: 5px;
-
 
 		.grain-content {
 			flex-grow: 1;
+			/*display: flex;
+			flex-direction: row;
+*/
+			> * {
+				flex-grow: 1;
+			}
+
 			> select {
 
 			}
 
 			> .input-section {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-bottom: 10px;
 
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.input-section-title {
+				@include small-caps();
+				margin-right: 15px;
+				font-size: 12px;
+				color: $dark-blue;
+			}
+
+			.grain-dropdown {
+				min-width: 180px;
+				width: 100%;
 			}
 		}
 
@@ -59,26 +86,35 @@
 
 			/deep/ > button {
 				height: 100%;
-				width: 40px;
+				width: 30px;
 				border: 0;
 				cursor: pointer;
 				border-radius: 5px;
 				display: flex;
 				justify-content: center;
 				padding: 5px;
+				margin: 0;
 
 				&:hover {
 					> svg {
-						fill: $red;
+						fill: $white;
 					}
 				}
 
 				> svg {
 					height: 100%;
 					width: 100%;
-					fill: $not-white;
+					fill: tint($red, 30);
 				}
 			}
+		}
+	}
+
+	.regular-input {
+		width: 100%;
+
+		> input {
+			width: 100%;
 		}
 	}
 </style>

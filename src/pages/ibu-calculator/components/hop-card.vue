@@ -110,6 +110,7 @@
 	.title-row {
 		text-align: center;
 		font-size: 14px;
+		color: $dark-blue;
 	}
 
 	.checkbox-wrapper {
@@ -123,24 +124,23 @@
 	.remove-hop-button {
 		/deep/ > button {
 			height: 100%;
-			width: 30px;
+			width: 20px;
 			border: 0;
 			cursor: pointer;
 			border-radius: 5px;
-			display: flex;
-			justify-content: center;
 			padding: 5px;
+			margin-top: 5px;
 
 			&:hover {
 				> svg {
-					fill: $red;
+					fill: $white;
 				}
 			}
 
 			> svg {
 				height: 100%;
 				width: 100%;
-				fill: $not-white;
+				fill: tint($red, 30);
 			}
 		}
 	}

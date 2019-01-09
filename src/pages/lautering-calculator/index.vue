@@ -114,7 +114,7 @@
 	.lautering-calculator {
 		margin-top: 30px;
 		display: flex;
-		background: $blue;
+		background: tint($red, 80);
 	}
 
 	.inputs {
@@ -146,13 +146,13 @@
 
 	.input-section {
 		margin-bottom: 20px;
-
 	}
 
 	.input-section-title {
 		@include small-caps();
 		margin-bottom: 5px;
 		font-size: 12px;
+		color: $dark-blue;
 	}
 
 	.regular-input {
@@ -163,12 +163,12 @@
 		}
 	}
 
-
 	.efficiency {
 		width: 350px;
-		background: $light-blue;
+		background: tint($red, 2);
 		padding: 20px;
 		color: $dark-blue;
+		border-left: 15px solid $red;
 	}
 
 	.efficiency-title {
@@ -200,11 +200,14 @@
 
 	.more-grains-button {
 		width: 100%;
+		display: flex;
+		align-items: center;
+		margin-top: 20px;
 
 		/deep/ > button {
-			width: 100%;
 			padding: 10px;
-			font-size: 24px;
+			font-size: 18px;
+			margin: 0 auto;
 		}
 	}
 </style>

@@ -55,20 +55,30 @@
 
 	.hydrometer-temperature-correction {
 		margin-top: 30px;
-		background: $light-blue;
+		background: tint($red, 2);
+		display: flex;
+
+		> * {
+			width: 100%;
+		}
 	}
 
 	.inputs {
-		background: $blue;
+		background: tint($red, 80);
 		padding: 20px;
 	}
 
 	.adjusted-gravity {
 		@include berkshire-swash();
+		width: 350px;
+		min-width: 350px;
 		text-align: center;
-		font-size: 48px;
-		line-height: 100px;
+		font-size: 80px;
 		color: $dark-blue;
+		border-left: 15px solid $red;
+		display: flex;
+    align-items: center;
+    justify-content: center;
 	}
 
 	.input-with-label {
@@ -82,6 +92,7 @@
 			font-size: 12px;
 			line-height: 14px;
 			margin-bottom: 5px;
+			color: $dark-blue;
 		}
 
 		/deep/ > input {
