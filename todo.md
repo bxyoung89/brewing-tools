@@ -13,4 +13,6 @@ Mobile layouts.
 
 Allow for metric measurements
 
-Don't use powershell command to delete dist folder.
+Favicon
+
+Make X button a component.
