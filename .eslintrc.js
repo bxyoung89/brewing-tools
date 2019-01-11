@@ -1,9 +1,16 @@
 module.exports = {
-	"extends": "airbnb-base",
+	"extends": [
+		"airbnb-base",
+		"plugin:vue/essential",
+	],
+	"parserOptions": {
+		parser: "babel-eslint",
+		allowImportExportEverywhere: true,
+	},
 	"rules": {
 		"indent": ["error", "tab"],
 		"no-tabs": "off",
-		"linebreak-style": ["warn", "windows"],
+		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "double"],
 		"max-len": "off",
 		"class-methods-use-this": "off",

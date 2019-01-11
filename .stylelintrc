@@ -1,5 +1,9 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-recommended-scss",
+  "processors": [],
+  "Plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
     "indentation": "tab",
     "string-quotes": "double",
@@ -7,17 +11,18 @@
     "color-hex-case": "upper",
     "color-hex-length": "short",
     "color-named": "never",
-    "selector-no-id": true,
+    "selector-max-id": 0,
     "selector-attribute-quotes": "always",
     "declaration-no-important": true,
     "property-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,
     "function-url-quotes": "always",
-    "function-url-data-uris": "always",
     "font-weight-notation": "numeric",
     "font-family-name-quotes": "always-where-recommended",
     "at-rule-no-vendor-prefix": true,
     "selector-no-vendor-prefix": true,
-    "media-feature-name-no-vendor-prefix": true
+    "media-feature-name-no-vendor-prefix": true,
+    "linebreaks": "unix",
+    "no-descending-specificity": null
   }
 }

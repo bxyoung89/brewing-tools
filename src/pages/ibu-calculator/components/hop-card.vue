@@ -1,21 +1,21 @@
 <script>
-	export default {
-		name: 'hop-card',
-		props: ['index', 'hop', 'removeHopAtIndex', 'numberOfCards'],
-		methods: {
-			onHopDropdownChange: function (hop) {
-				if(this.hop.name === hop.name){
-					return;
-				}
-				const newHop = {
-					...this.hop,
-					...hop,
-					alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid,
-				};
-				this.$emit('changed', newHop, this.index);
-			},
+export default {
+	name: "hop-card",
+	props: ["index", "hop", "removeHopAtIndex", "numberOfCards"],
+	methods: {
+		onHopDropdownChange(hop) {
+			if (this.hop.name === hop.name) {
+				return;
+			}
+			const newHop = {
+				...this.hop,
+				...hop,
+				alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid,
+			};
+			this.$emit("changed", newHop, this.index);
 		},
-	}
+	},
+};
 </script>
 
 <template>

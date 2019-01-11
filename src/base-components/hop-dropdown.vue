@@ -1,19 +1,19 @@
 <script>
-	import allHops from '../data/hops.js';
-	import VueSelect from 'vue-select';
+import VueSelect from "vue-select";
+import allHops from "../data/hops";
 
-	export default {
-		name: 'hop-dropdown',
-		props: ['value'],
-		data: function () {
-			return {
-				allHops,
-			};
-		},
-		components: {
-			'v-select': VueSelect,
-		}
-	}
+export default {
+	name: "hop-dropdown",
+	props: ["value"],
+	data() {
+		return {
+			allHops,
+		};
+	},
+	components: {
+		"v-select": VueSelect,
+	},
+};
 </script>
 
 <template>
@@ -51,6 +51,7 @@
 	.hop-name {
 		font-size: 16px;
 		line-height: 16px;
+
 		/deep/ &.no-aa {
 			line-height: 30px;
 		}

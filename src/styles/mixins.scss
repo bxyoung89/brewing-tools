@@ -1,15 +1,15 @@
-@mixin small-caps(){
+@mixin small-caps() {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 // Slightly lighten a color
 @function tint($color, $percentage) {
-  @return mix($color, white, $percentage);
+	@return mix($color, white, $percentage);
 }
 
 // Slightly darken a color
 @function shade($color, $percentage) {
-  @return mix($color, black, $percentage);
+	@return mix($color, black, $percentage);
 }

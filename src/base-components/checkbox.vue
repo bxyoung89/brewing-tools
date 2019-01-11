@@ -18,15 +18,15 @@
 </template>
 
 <script>
-	import GuidService from '../services/guid-service';
+import GuidService from "../services/guid-service";
 
-	export default {
-		name: "checkbox",
-		props: ['value'],
-		data: () => ({
-			checkboxId: `checkbox-${GuidService.newGuid()}`,
-		}),
-	}
+export default {
+	name: "checkbox",
+	props: ["value"],
+	data: () => ({
+		checkboxId: `checkbox-${GuidService.newGuid()}`,
+	}),
+};
 </script>
 
 <style lang="scss" scoped>
@@ -48,15 +48,15 @@
 		/deep/ > input:checked + label {
 			&:hover {
 				.styled-checkbox {
-					background: rgba($dark-blue, .5);
+					background: rgba($dark-blue, 0.5);
 				}
 			}
 
 			.styled-checkbox {
 				background: $dark-blue;
 
-				&:before,
-				&:after {
+				&::before,
+				&::after {
 					opacity: 1;
 				}
 			}
@@ -70,8 +70,8 @@
 
 		&:hover {
 			/deep/ > .styled-checkbox {
-				&:before,
-				&:after {
+				&::before,
+				&::after {
 					opacity: 1;
 				}
 			}
@@ -85,7 +85,7 @@
 		border: 2px solid $not-white;
 		position: relative;
 
-		&:before {
+		&::before {
 			content: "";
 			position: absolute;
 			width: 3px;
@@ -97,7 +97,7 @@
 			opacity: 0;
 		}
 
-		&:after {
+		&::after {
 			content: "";
 			position: absolute;
 			width: 3px;

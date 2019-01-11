@@ -7,9 +7,9 @@
 </template>
 
 <script>
-	export default {
-		name: "app-header"
-	}
+export default {
+	name: "app-header",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -25,6 +25,7 @@
 		padding: 15px;
 		line-height: 30px;
 		font-size: 30px;
+
 		@include berkshire-swash();
 
 		/deep/ a {

@@ -11,7 +11,7 @@
 				Calculators
 			</h2>
 			<div class="grid">
-				<div class="grid-item" v-for="tool in tools">
+				<div class="grid-item" v-for="tool in tools" :key="tool.url">
 					<main-page-link
 						:url="tool.url"
 						:text="tool.text"
@@ -25,35 +25,35 @@
 </template>
 
 <script>
-	import MainPageLink from './components/main-page-link.vue';
-	import AppFooter from './components/app-footer.vue';
+import MainPageLink from "./components/main-page-link.vue";
+import AppFooter from "./components/app-footer.vue";
 
-	export default {
-		name: "main-page",
-		data: () => ({
-			tools: [
-				{
-					url: '/lautering-calculator',
-					text: 'Lautering Efficiency Calculator',
-					svg: 'discount.svg',
-				},
-				{
-					url: '/hydrometer-correction',
-					text: 'Hydrometer Temperature Correction',
-					svg: 'thermometer.svg',
-				},
-				{
-					url: '/ibu-calculator',
-					text: 'IBU Calculator',
-					svg: 'hop.svg',
-				},
-			],
-		}),
-		components: {
-			MainPageLink,
-			AppFooter,
-		}
-	}
+export default {
+	name: "main-page",
+	data: () => ({
+		tools: [
+			{
+				url: "/lautering-calculator",
+				text: "Lautering Efficiency Calculator",
+				svg: "discount.svg",
+			},
+			{
+				url: "/hydrometer-correction",
+				text: "Hydrometer Temperature Correction",
+				svg: "thermometer.svg",
+			},
+			{
+				url: "/ibu-calculator",
+				text: "IBU Calculator",
+				svg: "hop.svg",
+			},
+		],
+	}),
+	components: {
+		MainPageLink,
+		AppFooter,
+	},
+};
 </script>
 
 <style lang="scss" scoped>

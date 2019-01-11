@@ -33,21 +33,21 @@
 </template>
 
 <script>
-	import HydrometerCorrectionService from '../../services/hydrometer-correction-service';
+import HydrometerCorrectionService from "../../services/hydrometer-correction-service";
 
-	export default {
-		name: "hydrometer-temperature-correction",
-		data: () => ({
-			gravityReading: 1.05,
-			currentTemperature: 80,
-			calibrationTemperature: 68,
-		}),
-		computed: {
-			adjustedGravity: function () {
-				return HydrometerCorrectionService.getCorrectedValue(this.gravityReading, this.currentTemperature, this.calibrationTemperature);
-			},
+export default {
+	name: "hydrometer-temperature-correction",
+	data: () => ({
+		gravityReading: 1.05,
+		currentTemperature: 80,
+		calibrationTemperature: 68,
+	}),
+	computed: {
+		adjustedGravity() {
+			return HydrometerCorrectionService.getCorrectedValue(this.gravityReading, this.currentTemperature, this.calibrationTemperature);
 		},
-	}
+	},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -77,18 +77,18 @@
 		color: $dark-blue;
 		border-left: 15px solid $red;
 		display: flex;
-    align-items: center;
-    justify-content: center;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.input-with-label {
-
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
 
 		.label {
 			@include small-caps();
+
 			font-size: 12px;
 			line-height: 14px;
 			margin-bottom: 5px;

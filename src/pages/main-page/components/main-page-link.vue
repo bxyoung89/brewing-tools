@@ -19,10 +19,10 @@
 </template>
 
 <script>
-	export default {
-		name: "main-page-link",
-		props: ['url', 'text', 'svg'],
-	}
+export default {
+	name: "main-page-link",
+	props: ["url", "text", "svg"],
+};
 </script>
 
 <style lang="scss" scoped>
@@ -118,6 +118,7 @@
 		from {
 			transform: rotate(0deg);
 		}
+
 		from {
 			transform: rotate(360deg);
 		}

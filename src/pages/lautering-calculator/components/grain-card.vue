@@ -1,8 +1,8 @@
 <script>
-	export default {
-		name: 'grain-card',
-		props: ['index', 'grain', 'removeGrainAtIndex', 'numberOfCards'],
-	}
+export default {
+	name: "grain-card",
+	props: ["index", "grain", "removeGrainAtIndex", "numberOfCards"],
+};
 </script>
 
 <template>
@@ -46,15 +46,8 @@
 
 		.grain-content {
 			flex-grow: 1;
-			/*display: flex;
-			flex-direction: row;
-*/
 			> * {
 				flex-grow: 1;
-			}
-
-			> select {
-
 			}
 
 			> .input-section {
