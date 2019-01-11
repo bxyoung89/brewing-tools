@@ -36,7 +36,6 @@ export default {
 	@import "../../../styles/core";
 
 	.grain-card {
-		// background: rgba($not-white, 0.3);
 		padding: 20px 0;
 		border-top: 1px solid tint($red, 50);
 		border-bottom: 1px solid tint($red, 50);
