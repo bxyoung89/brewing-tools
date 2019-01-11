@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "89721ecb234614cdf630";
+/******/ 	var hotCurrentHash = "a7f5124bff55f73d714d";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -920,7 +920,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'app'
+  name: "app"
 });
 
 /***/ }),
@@ -941,19 +941,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 var themeToClassMap = {
-  'white': 'white-button',
-  'red': 'red-button',
-  'light-blue': 'light-blue-button',
-  'blue': 'blue-button',
-  'dark-blue': 'dark-blue-button',
-  'unstyled': 'unstyled-button'
+  white: "white-button",
+  red: "red-button",
+  "light-blue": "light-blue-button",
+  blue: "blue-button",
+  "dark-blue": "dark-blue-button",
+  unstyled: "unstyled-button"
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "app-button",
-  props: ['theme', 'click'],
+  props: ["theme", "click"],
   computed: {
     finalClassName: function finalClassName() {
-      return "app-button ".concat(themeToClassMap[this.theme || 'white']);
+      return "app-button ".concat(themeToClassMap[this.theme || "white"]);
     }
   }
 });
@@ -1015,7 +1015,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "checkbox",
-  props: ['value'],
+  props: ["value"],
   data: function data() {
     return {
       checkboxId: "checkbox-".concat(_services_guid_service__WEBPACK_IMPORTED_MODULE_0__["default"].newGuid())
@@ -1048,14 +1048,14 @@ var updateElementWithSvgText = function updateElementWithSvgText(elementId, svgT
     return;
   }
 
-  element.insertAdjacentHTML('afterend', svgText);
-  element.nextElementSibling.setAttribute('id', elementId);
+  element.insertAdjacentHTML("afterend", svgText);
+  element.nextElementSibling.setAttribute("id", elementId);
   element.remove();
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "dynamic-svg",
-  props: ['src'],
+  props: ["src"],
   data: function data() {
     return {
       divId: "dynamic-svg-".concat(_services_guid_service__WEBPACK_IMPORTED_MODULE_0__["default"].newGuid())
@@ -1097,26 +1097,26 @@ var updateElementWithSvgText = function updateElementWithSvgText(elementId, svgT
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _data_grains_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/grains.js */ "./src/data/grains.js");
-/* harmony import */ var _services_country_code_to_svg_path_service_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/country-code-to-svg-path-service.js */ "./src/services/country-code-to-svg-path-service.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_grains__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/grains */ "./src/data/grains.js");
+/* harmony import */ var _services_country_code_to_svg_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/country-code-to-svg-path-service */ "./src/services/country-code-to-svg-path-service.js");
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'grain-dropdown',
-  props: ['value'],
+  name: "grain-dropdown",
+  props: ["value"],
   data: function data() {
     return {
-      allGrains: _data_grains_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+      allGrains: _data_grains__WEBPACK_IMPORTED_MODULE_1__["default"],
       getFlagFromCountry: function getFlagFromCountry(country) {
-        return _services_country_code_to_svg_path_service_js__WEBPACK_IMPORTED_MODULE_1__["default"].getSvgPath(country);
+        return _services_country_code_to_svg_path_service__WEBPACK_IMPORTED_MODULE_2__["default"].getSvgPath(country);
       }
     };
   },
   components: {
-    'v-select': vue_select__WEBPACK_IMPORTED_MODULE_2___default.a
+    "v-select": vue_select__WEBPACK_IMPORTED_MODULE_0___default.a
   }
 });
 
@@ -1131,21 +1131,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _data_hops_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/hops.js */ "./src/data/hops.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_hops__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/hops */ "./src/data/hops.js");
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'hop-dropdown',
-  props: ['value'],
+  name: "hop-dropdown",
+  props: ["value"],
   data: function data() {
     return {
-      allHops: _data_hops_js__WEBPACK_IMPORTED_MODULE_0__["default"]
+      allHops: _data_hops__WEBPACK_IMPORTED_MODULE_1__["default"]
     };
   },
   components: {
-    'v-select': vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
+    "v-select": vue_select__WEBPACK_IMPORTED_MODULE_0___default.a
   }
 });
 
@@ -1284,8 +1284,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'hop-card',
-  props: ['index', 'hop', 'removeHopAtIndex', 'numberOfCards'],
+  name: "hop-card",
+  props: ["index", "hop", "removeHopAtIndex", "numberOfCards"],
   methods: {
     onHopDropdownChange: function onHopDropdownChange(hop) {
       if (this.hop.name === hop.name) {
@@ -1296,7 +1296,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid
       });
 
-      this.$emit('changed', newHop, this.index);
+      this.$emit("changed", newHop, this.index);
     }
   }
 });
@@ -1312,9 +1312,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_hop_card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hop-card.vue */ "./src/pages/ibu-calculator/components/hop-card.vue");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_hop_card_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hop-card.vue */ "./src/pages/ibu-calculator/components/hop-card.vue");
 /* harmony import */ var _services_ibu_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/ibu-service */ "./src/services/ibu-service.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
@@ -1431,8 +1431,8 @@ var emptyHop = {
     }
   },
   components: {
-    HopCard: _components_hop_card_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    "v-select": vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
+    HopCard: _components_hop_card_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    "v-select": vue_select__WEBPACK_IMPORTED_MODULE_0___default.a
   }
 });
 
@@ -1448,8 +1448,8 @@ var emptyHop = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'grain-card',
-  props: ['index', 'grain', 'removeGrainAtIndex', 'numberOfCards']
+  name: "grain-card",
+  props: ["index", "grain", "removeGrainAtIndex", "numberOfCards"]
 });
 
 /***/ }),
@@ -1464,7 +1464,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_grain_card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/grain-card.vue */ "./src/pages/lautering-calculator/components/grain-card.vue");
-/* harmony import */ var _services_lautering_calculator_service_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/lautering-calculator-service.js */ "./src/services/lautering-calculator-service.js");
+/* harmony import */ var _services_lautering_calculator_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/lautering-calculator-service */ "./src/services/lautering-calculator-service.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1562,7 +1562,7 @@ var emptyGrain = {
   },
   computed: {
     efficiency: function efficiency() {
-      return _services_lautering_calculator_service_js__WEBPACK_IMPORTED_MODULE_1__["default"].getEfficiency(this.wortVolume, this.gravityMeasurement, this.grains);
+      return _services_lautering_calculator_service__WEBPACK_IMPORTED_MODULE_1__["default"].getEfficiency(this.wortVolume, this.gravityMeasurement, this.grains);
     }
   },
   components: {
@@ -1632,7 +1632,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "main-page-link",
-  props: ['url', 'text', 'svg']
+  props: ["url", "text", "svg"]
 });
 
 /***/ }),
@@ -1681,17 +1681,17 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       tools: [{
-        url: '/lautering-calculator',
-        text: 'Lautering Efficiency Calculator',
-        svg: 'discount.svg'
+        url: "/lautering-calculator",
+        text: "Lautering Efficiency Calculator",
+        svg: "discount.svg"
       }, {
-        url: '/hydrometer-correction',
-        text: 'Hydrometer Temperature Correction',
-        svg: 'thermometer.svg'
+        url: "/hydrometer-correction",
+        text: "Hydrometer Temperature Correction",
+        svg: "thermometer.svg"
       }, {
-        url: '/ibu-calculator',
-        text: 'IBU Calculator',
-        svg: 'hop.svg'
+        url: "/ibu-calculator",
+        text: "IBU Calculator",
+        svg: "hop.svg"
       }]
     };
   },
@@ -1715,7 +1715,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/di
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px;\n  line-height: 24px; }\n\nbody {\n  font-size: 16px;\n  background: #e63946;\n  color: #f1faee;\n  font-family: \"Fira Sans\", sans-serif;\n  padding: 15px; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  padding: 10px 0;\n  display: inline;\n  margin: 0;\n  line-height: 100px; }\n\na {\n  color: #1d3557; }\n  a:hover {\n    color: #457b9d; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 80px; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px;\n  line-height: 24px; }\n\nbody {\n  font-size: 16px;\n  background: #E63946;\n  color: #F1FAEE;\n  font-family: \"Fira Sans\", sans-serif;\n  padding: 15px; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  padding: 10px 0;\n  display: inline;\n  margin: 0;\n  line-height: 100px; }\n\na {\n  color: #1D3557; }\n  a:hover {\n    color: #457B9D; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 80px; }\n", ""]);
 
 
 
@@ -1733,7 +1733,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".app-button[data-v-3ad9cc14] {\n  border: 0;\n  background: #FFF;\n  border-bottom: 2px solid gray;\n  border-radius: 5px;\n  color: #1d3557;\n  padding: 5px;\n  font-size: 12px;\n  line-height: 20px;\n  cursor: pointer;\n}\n.app-button[data-v-3ad9cc14]:hover {\n    background: #cccccc;\n}\n.app-button[data-v-3ad9cc14]:active {\n    border-top: 2px solid gray;\n    border-bottom: 0;\n}\n.app-button[data-v-3ad9cc14]:focus {\n    outline: 0;\n    box-shadow: 0 0 5px 2px #457b9d;\n}\n.app-button.red-button[data-v-3ad9cc14] {\n    background: #e63946;\n    border-bottom: 2px solid #770f17;\n    color: #f1faee;\n}\n.app-button.red-button[data-v-3ad9cc14]:hover {\n      background: #d21a28;\n}\n.app-button.red-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #770f17;\n      border-bottom: 0;\n}\n.app-button.light-blue-button[data-v-3ad9cc14] {\n    background: #a8dadc;\n    border-bottom: 2px solid #358083;\n}\n.app-button.light-blue-button[data-v-3ad9cc14]:hover {\n      background: #5fbbbf;\n}\n.app-button.light-blue-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #358083;\n      border-bottom: 0;\n}\n.app-button.blue-button[data-v-3ad9cc14] {\n    background: #457b9d;\n    border-bottom: 2px solid #162833;\n    color: #f1faee;\n}\n.app-button.blue-button[data-v-3ad9cc14]:hover {\n      background: #355f7a;\n}\n.app-button.blue-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #162833;\n      border-bottom: 0;\n}\n.app-button.dark-blue-button[data-v-3ad9cc14] {\n    background: #1d3557;\n    border-bottom: 2px solid #101e31;\n    color: #f1faee;\n}\n.app-button.dark-blue-button[data-v-3ad9cc14]:hover {\n      background: #2a4c7d;\n}\n.app-button.dark-blue-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #101e31;\n      border-bottom: 0;\n}\n.app-button.unstyled-button[data-v-3ad9cc14] {\n    border: 0;\n    background: transparent;\n    border-radius: 0;\n    padding: 0;\n    height: auto;\n    line-height: 1.2em;\n}\n.app-button.unstyled-button[data-v-3ad9cc14]:hover {\n      background: transparent;\n}\n.app-button.unstyled-button[data-v-3ad9cc14]:active {\n      border-top: 0;\n      border-bottom: 0;\n}\n.app-button.unstyled-button[data-v-3ad9cc14]:focus {\n      outline: 0;\n      box-shadow: none;\n}\n", ""]);
+exports.push([module.i, ".app-button[data-v-3ad9cc14] {\n  border: 0;\n  background: #FFF;\n  border-bottom: 2px solid gray;\n  border-radius: 5px;\n  color: #1D3557;\n  padding: 5px;\n  font-size: 12px;\n  line-height: 20px;\n  cursor: pointer;\n}\n.app-button[data-v-3ad9cc14]:hover {\n    background: #cccccc;\n}\n.app-button[data-v-3ad9cc14]:active {\n    border-top: 2px solid gray;\n    border-bottom: 0;\n}\n.app-button[data-v-3ad9cc14]:focus {\n    outline: 0;\n    box-shadow: 0 0 5px 2px #457b9d;\n}\n.app-button.red-button[data-v-3ad9cc14] {\n    background: #E63946;\n    border-bottom: 2px solid #770f17;\n    color: #F1FAEE;\n}\n.app-button.red-button[data-v-3ad9cc14]:hover {\n      background: #d21a28;\n}\n.app-button.red-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #770f17;\n      border-bottom: 0;\n}\n.app-button.light-blue-button[data-v-3ad9cc14] {\n    background: #A8DADC;\n    border-bottom: 2px solid #358083;\n}\n.app-button.light-blue-button[data-v-3ad9cc14]:hover {\n      background: #5fbbbf;\n}\n.app-button.light-blue-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #358083;\n      border-bottom: 0;\n}\n.app-button.blue-button[data-v-3ad9cc14] {\n    background: #457B9D;\n    border-bottom: 2px solid #162833;\n    color: #F1FAEE;\n}\n.app-button.blue-button[data-v-3ad9cc14]:hover {\n      background: #355f7a;\n}\n.app-button.blue-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #162833;\n      border-bottom: 0;\n}\n.app-button.dark-blue-button[data-v-3ad9cc14] {\n    background: #1D3557;\n    border-bottom: 2px solid #101e31;\n    color: #F1FAEE;\n}\n.app-button.dark-blue-button[data-v-3ad9cc14]:hover {\n      background: #2a4c7d;\n}\n.app-button.dark-blue-button[data-v-3ad9cc14]:active {\n      border-top: 2px solid #101e31;\n      border-bottom: 0;\n}\n.app-button.unstyled-button[data-v-3ad9cc14] {\n    border: 0;\n    background: transparent;\n    border-radius: 0;\n    padding: 0;\n    height: auto;\n    line-height: 1.2em;\n}\n.app-button.unstyled-button[data-v-3ad9cc14]:hover {\n      background: transparent;\n}\n.app-button.unstyled-button[data-v-3ad9cc14]:active {\n      border-top: 0;\n      border-bottom: 0;\n}\n.app-button.unstyled-button[data-v-3ad9cc14]:focus {\n      outline: 0;\n      box-shadow: none;\n}\n", ""]);
 
 
 
@@ -1751,7 +1751,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".header[data-v-c94d3c22] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: auto;\n  color: #f1faee;\n  padding: 15px;\n  line-height: 30px;\n  font-size: 30px;\n  font-family: \"Berkshire Swash\", cursive;\n}\n.header[data-v-c94d3c22] a {\n    text-decoration: none;\n    color: #f1faee;\n}\n.header[data-v-c94d3c22] a:hover {\n      opacity: 0.75;\n}\n", ""]);
+exports.push([module.i, ".header[data-v-c94d3c22] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: auto;\n  color: #F1FAEE;\n  padding: 15px;\n  line-height: 30px;\n  font-size: 30px;\n  font-family: \"Berkshire Swash\", cursive;\n}\n.header[data-v-c94d3c22] a {\n    text-decoration: none;\n    color: #F1FAEE;\n}\n.header[data-v-c94d3c22] a:hover {\n      opacity: 0.75;\n}\n", ""]);
 
 
 
@@ -1769,7 +1769,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".checkbox.doesnt-have-label[data-v-2941070e] {\n  display: inline-block;\n}\n.checkbox.doesnt-have-label[data-v-2941070e] .checkbox-label {\n    display: inline-block;\n}\n.checkbox[data-v-2941070e] > input {\n  display: none;\n}\n.checkbox[data-v-2941070e] > input:checked + label:hover .styled-checkbox {\n  background: rgba(29, 53, 87, 0.5);\n}\n.checkbox[data-v-2941070e] > input:checked + label .styled-checkbox {\n  background: #1d3557;\n}\n.checkbox[data-v-2941070e] > input:checked + label .styled-checkbox:before, .checkbox[data-v-2941070e] > input:checked + label .styled-checkbox:after {\n    opacity: 1;\n}\n.checkbox-label[data-v-2941070e] {\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n.checkbox-label[data-v-2941070e]:hover > .styled-checkbox:before, .checkbox-label[data-v-2941070e]:hover > .styled-checkbox:after {\n    opacity: 1;\n}\n.styled-checkbox[data-v-2941070e] {\n  height: 30px;\n  width: 30px;\n  border-radius: 5px;\n  border: 2px solid #f1faee;\n  position: relative;\n}\n.styled-checkbox[data-v-2941070e]:before {\n    content: \"\";\n    position: absolute;\n    width: 3px;\n    height: 15px;\n    background: #f1faee;\n    transform: rotate(45deg);\n    left: 14px;\n    top: 5px;\n    opacity: 0;\n}\n.styled-checkbox[data-v-2941070e]:after {\n    content: \"\";\n    position: absolute;\n    width: 3px;\n    height: 6px;\n    background: #f1faee;\n    transform: rotate(-45deg);\n    left: 7px;\n    top: 11px;\n    opacity: 0;\n}\n[data-v-2941070e] .styled-checkbox.has-label {\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, ".checkbox.doesnt-have-label[data-v-2941070e] {\n  display: inline-block;\n}\n.checkbox.doesnt-have-label[data-v-2941070e] .checkbox-label {\n    display: inline-block;\n}\n.checkbox[data-v-2941070e] > input {\n  display: none;\n}\n.checkbox[data-v-2941070e] > input:checked + label:hover .styled-checkbox {\n  background: rgba(29, 53, 87, 0.5);\n}\n.checkbox[data-v-2941070e] > input:checked + label .styled-checkbox {\n  background: #1D3557;\n}\n.checkbox[data-v-2941070e] > input:checked + label .styled-checkbox::before, .checkbox[data-v-2941070e] > input:checked + label .styled-checkbox::after {\n    opacity: 1;\n}\n.checkbox-label[data-v-2941070e] {\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n.checkbox-label[data-v-2941070e]:hover > .styled-checkbox::before, .checkbox-label[data-v-2941070e]:hover > .styled-checkbox::after {\n    opacity: 1;\n}\n.styled-checkbox[data-v-2941070e] {\n  height: 30px;\n  width: 30px;\n  border-radius: 5px;\n  border: 2px solid #F1FAEE;\n  position: relative;\n}\n.styled-checkbox[data-v-2941070e]::before {\n    content: \"\";\n    position: absolute;\n    width: 3px;\n    height: 15px;\n    background: #F1FAEE;\n    transform: rotate(45deg);\n    left: 14px;\n    top: 5px;\n    opacity: 0;\n}\n.styled-checkbox[data-v-2941070e]::after {\n    content: \"\";\n    position: absolute;\n    width: 3px;\n    height: 6px;\n    background: #F1FAEE;\n    transform: rotate(-45deg);\n    left: 7px;\n    top: 11px;\n    opacity: 0;\n}\n[data-v-2941070e] .styled-checkbox.has-label {\n    margin-right: 10px;\n}\n", ""]);
 
 
 
@@ -1823,7 +1823,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".about-page-content[data-v-1d95d4fc] {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 200px;\n}\n.section[data-v-1d95d4fc] {\n  padding-bottom: 40px;\n  margin-bottom: 40px;\n  position: relative;\n}\n.section[data-v-1d95d4fc]:after {\n    content: \"\\2766\";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-top: -10px;\n    color: #FFF;\n    font-size: 24px;\n}\n", ""]);
+exports.push([module.i, ".about-page-content[data-v-1d95d4fc] {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 200px;\n}\n.section[data-v-1d95d4fc] {\n  padding-bottom: 40px;\n  margin-bottom: 40px;\n  position: relative;\n}\n.section[data-v-1d95d4fc]::after {\n    content: \"\\2766\";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-top: -10px;\n    color: #FFF;\n    font-size: 24px;\n}\n", ""]);
 
 
 
@@ -1841,7 +1841,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".hydrometer-temperature-correction[data-v-580440fa] {\n  margin-top: 30px;\n  background: #fffbfb;\n  display: flex;\n}\n.hydrometer-temperature-correction > *[data-v-580440fa] {\n    width: 100%;\n}\n.inputs[data-v-580440fa] {\n  background: #eb616b;\n  padding: 20px;\n}\n.adjusted-gravity[data-v-580440fa] {\n  font-family: \"Berkshire Swash\", cursive;\n  width: 350px;\n  min-width: 350px;\n  text-align: center;\n  font-size: 80px;\n  color: #1d3557;\n  border-left: 15px solid #e63946;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.input-with-label[data-v-580440fa]:not(:last-child) {\n  margin-bottom: 20px;\n}\n.input-with-label .label[data-v-580440fa] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 14px;\n  margin-bottom: 5px;\n  color: #1d3557;\n}\n.input-with-label[data-v-580440fa] > input {\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, ".hydrometer-temperature-correction[data-v-580440fa] {\n  margin-top: 30px;\n  background: #fffbfb;\n  display: flex;\n}\n.hydrometer-temperature-correction > *[data-v-580440fa] {\n    width: 100%;\n}\n.inputs[data-v-580440fa] {\n  background: #eb616b;\n  padding: 20px;\n}\n.adjusted-gravity[data-v-580440fa] {\n  font-family: \"Berkshire Swash\", cursive;\n  width: 350px;\n  min-width: 350px;\n  text-align: center;\n  font-size: 80px;\n  color: #1D3557;\n  border-left: 15px solid #E63946;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.input-with-label[data-v-580440fa]:not(:last-child) {\n  margin-bottom: 20px;\n}\n.input-with-label .label[data-v-580440fa] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  font-size: 12px;\n  line-height: 14px;\n  margin-bottom: 5px;\n  color: #1D3557;\n}\n.input-with-label[data-v-580440fa] > input {\n  width: 100%;\n}\n", ""]);
 
 
 
@@ -1859,7 +1859,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".hop-card[data-v-06252e56] .clear {\n  display: none;\n}\n.hop-card-content[data-v-06252e56] {\n  display: grid;\n  margin-bottom: 10px;\n  grid-template-columns: 220px 80px 80px 80px 100px;\n  grid-column-gap: 10px;\n}\n.hop-card-content[data-v-06252e56] > div > input {\n    width: 100%;\n}\n[data-v-06252e56] .hop-card-content.has-cancel-button {\n    grid-template-columns: 220px 80px 80px 50px 100px 30px;\n}\n.title-row[data-v-06252e56] {\n  text-align: center;\n  font-size: 14px;\n  color: #1d3557;\n}\n.checkbox-wrapper[data-v-06252e56] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.remove-hop-button[data-v-06252e56] > button {\n  height: 100%;\n  width: 20px;\n  border: 0;\n  cursor: pointer;\n  border-radius: 5px;\n  padding: 5px;\n  margin-top: 5px;\n}\n.remove-hop-button[data-v-06252e56] > button:hover > svg {\n    fill: #FFF;\n}\n.remove-hop-button[data-v-06252e56] > button > svg {\n    height: 100%;\n    width: 100%;\n    fill: #f8c4c8;\n}\n", ""]);
+exports.push([module.i, ".hop-card[data-v-06252e56] .clear {\n  display: none;\n}\n.hop-card-content[data-v-06252e56] {\n  display: grid;\n  margin-bottom: 10px;\n  grid-template-columns: 220px 80px 80px 80px 100px;\n  grid-column-gap: 10px;\n}\n.hop-card-content[data-v-06252e56] > div > input {\n    width: 100%;\n}\n[data-v-06252e56] .hop-card-content.has-cancel-button {\n    grid-template-columns: 220px 80px 80px 50px 100px 30px;\n}\n.title-row[data-v-06252e56] {\n  text-align: center;\n  font-size: 14px;\n  color: #1D3557;\n}\n.checkbox-wrapper[data-v-06252e56] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.remove-hop-button[data-v-06252e56] > button {\n  height: 100%;\n  width: 20px;\n  border: 0;\n  cursor: pointer;\n  border-radius: 5px;\n  padding: 5px;\n  margin-top: 5px;\n}\n.remove-hop-button[data-v-06252e56] > button:hover > svg {\n    fill: #FFF;\n}\n.remove-hop-button[data-v-06252e56] > button > svg {\n    height: 100%;\n    width: 100%;\n    fill: #f8c4c8;\n}\n", ""]);
 
 
 
@@ -1877,7 +1877,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".ibu-calculator[data-v-707abe3a] {\n  margin-top: 30px;\n  display: flex;\n  background: #eb616b;\n}\n.ibu-calculator[data-v-707abe3a] .dropdown-toggle {\n    background: #FFF;\n}\n.inputs[data-v-707abe3a] {\n  flex-grow: 1;\n  padding: 20px;\n}\n.double-section[data-v-707abe3a] {\n  display: flex;\n  justify-content: space-between;\n}\n.double-section > *[data-v-707abe3a] {\n    flex-grow: 1;\n}\n.double-section > *[data-v-707abe3a]:first-child {\n      padding-right: 20px;\n}\n.double-section > *[data-v-707abe3a]:last-child {\n      padding-left: 20px;\n}\n.input-section[data-v-707abe3a] {\n  margin-bottom: 20px;\n}\n.input-section-title[data-v-707abe3a] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  margin-bottom: 5px;\n  font-size: 12px;\n  color: #1d3557;\n}\n.regular-input[data-v-707abe3a] {\n  width: 100%;\n}\n.regular-input > input[data-v-707abe3a] {\n    width: 100%;\n}\n.ibu[data-v-707abe3a] {\n  width: 350px;\n  min-width: 350px;\n  padding: 20px;\n  color: #1d3557;\n  background: #fffbfb;\n  border-left: 15px solid #e63946;\n}\n.ibu-title[data-v-707abe3a] {\n  width: 100%;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n}\n.ibu-number[data-v-707abe3a] {\n  text-align: center;\n  font-size: 80px;\n  line-height: 140px;\n  font-family: \"Berkshire Swash\", cursive;\n}\n.ibu-warning[data-v-707abe3a] {\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  color: #e63946;\n  font-size: 12px;\n  line-height: 10px;\n}\n.hops-section-title[data-v-707abe3a] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  margin-bottom: 5px;\n  font-size: 24px;\n}\n.more-hops-button[data-v-707abe3a] {\n  width: 100%;\n  display: flex;\n  align-items: center;\n}\n.more-hops-button[data-v-707abe3a] > button {\n    padding: 10px;\n    font-size: 18px;\n    margin: 0 auto;\n}\n.footnotes[data-v-707abe3a] {\n  margin-top: 30px;\n  font-size: 12px;\n  opacity: 0.75;\n  color: #1d3557;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, ".ibu-calculator[data-v-707abe3a] {\n  margin-top: 30px;\n  display: flex;\n  background: #eb616b;\n}\n.ibu-calculator[data-v-707abe3a] .dropdown-toggle {\n    background: #FFF;\n}\n.inputs[data-v-707abe3a] {\n  flex-grow: 1;\n  padding: 20px;\n}\n.double-section[data-v-707abe3a] {\n  display: flex;\n  justify-content: space-between;\n}\n.double-section > *[data-v-707abe3a] {\n    flex-grow: 1;\n}\n.double-section > *[data-v-707abe3a]:first-child {\n      padding-right: 20px;\n}\n.double-section > *[data-v-707abe3a]:last-child {\n      padding-left: 20px;\n}\n.input-section[data-v-707abe3a] {\n  margin-bottom: 20px;\n}\n.input-section-title[data-v-707abe3a] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  margin-bottom: 5px;\n  font-size: 12px;\n  color: #1D3557;\n}\n.regular-input[data-v-707abe3a] {\n  width: 100%;\n}\n.regular-input > input[data-v-707abe3a] {\n    width: 100%;\n}\n.ibu[data-v-707abe3a] {\n  width: 350px;\n  min-width: 350px;\n  padding: 20px;\n  color: #1D3557;\n  background: #fffbfb;\n  border-left: 15px solid #E63946;\n}\n.ibu-title[data-v-707abe3a] {\n  width: 100%;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n}\n.ibu-number[data-v-707abe3a] {\n  text-align: center;\n  font-size: 80px;\n  line-height: 140px;\n  font-family: \"Berkshire Swash\", cursive;\n}\n.ibu-warning[data-v-707abe3a] {\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  color: #E63946;\n  font-size: 12px;\n  line-height: 10px;\n}\n.hops-section-title[data-v-707abe3a] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  margin-bottom: 5px;\n  font-size: 24px;\n}\n.more-hops-button[data-v-707abe3a] {\n  width: 100%;\n  display: flex;\n  align-items: center;\n}\n.more-hops-button[data-v-707abe3a] > button {\n    padding: 10px;\n    font-size: 18px;\n    margin: 0 auto;\n}\n.footnotes[data-v-707abe3a] {\n  margin-top: 30px;\n  font-size: 12px;\n  opacity: 0.75;\n  color: #1D3557;\n  text-align: center;\n}\n", ""]);
 
 
 
@@ -1895,7 +1895,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".grain-card[data-v-2aed8d04] {\n  padding: 20px 0;\n  border-top: 1px solid #f39ca3;\n  border-bottom: 1px solid #f39ca3;\n  display: flex;\n  margin-bottom: -1px;\n  border-radius: 5px;\n}\n.grain-card .grain-content[data-v-2aed8d04] {\n    flex-grow: 1;\n    /*display: flex;\n\t\t\tflex-direction: row;\n*/\n}\n.grain-card .grain-content > *[data-v-2aed8d04] {\n      flex-grow: 1;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04] {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      margin-bottom: 10px;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04]:last-child {\n        margin-bottom: 0;\n}\n.grain-card .grain-content .input-section-title[data-v-2aed8d04] {\n      text-transform: uppercase;\n      letter-spacing: 0.1em;\n      font-weight: bold;\n      margin-right: 15px;\n      font-size: 12px;\n      color: #1d3557;\n}\n.grain-card .grain-content .grain-dropdown[data-v-2aed8d04] {\n      min-width: 180px;\n      width: 100%;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] {\n    margin-left: 20px;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button {\n      height: 100%;\n      width: 30px;\n      border: 0;\n      cursor: pointer;\n      border-radius: 5px;\n      display: flex;\n      justify-content: center;\n      padding: 5px;\n      margin: 0;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button:hover > svg {\n        fill: #FFF;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button > svg {\n        height: 100%;\n        width: 100%;\n        fill: #f8c4c8;\n}\n.regular-input[data-v-2aed8d04] {\n  width: 100%;\n}\n.regular-input > input[data-v-2aed8d04] {\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, ".grain-card[data-v-2aed8d04] {\n  padding: 20px 0;\n  border-top: 1px solid #f39ca3;\n  border-bottom: 1px solid #f39ca3;\n  display: flex;\n  margin-bottom: -1px;\n  border-radius: 5px;\n}\n.grain-card .grain-content[data-v-2aed8d04] {\n    flex-grow: 1;\n}\n.grain-card .grain-content > *[data-v-2aed8d04] {\n      flex-grow: 1;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04] {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      margin-bottom: 10px;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04]:last-child {\n        margin-bottom: 0;\n}\n.grain-card .grain-content .input-section-title[data-v-2aed8d04] {\n      text-transform: uppercase;\n      letter-spacing: 0.1em;\n      font-weight: 700;\n      margin-right: 15px;\n      font-size: 12px;\n      color: #1D3557;\n}\n.grain-card .grain-content .grain-dropdown[data-v-2aed8d04] {\n      min-width: 180px;\n      width: 100%;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] {\n    margin-left: 20px;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button {\n      height: 100%;\n      width: 30px;\n      border: 0;\n      cursor: pointer;\n      border-radius: 5px;\n      display: flex;\n      justify-content: center;\n      padding: 5px;\n      margin: 0;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button:hover > svg {\n        fill: #FFF;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button > svg {\n        height: 100%;\n        width: 100%;\n        fill: #f8c4c8;\n}\n.regular-input[data-v-2aed8d04] {\n  width: 100%;\n}\n.regular-input > input[data-v-2aed8d04] {\n    width: 100%;\n}\n", ""]);
 
 
 
@@ -1913,7 +1913,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".lautering-calculator[data-v-6c171f15] {\n  margin-top: 30px;\n  display: flex;\n  background: #eb616b;\n}\n.inputs[data-v-6c171f15] {\n  flex-grow: 1;\n  padding: 20px;\n}\n.inputs-title[data-v-6c171f15] {\n  margin-bottom: 20px;\n  font-size: 36px;\n}\n.double-section[data-v-6c171f15] {\n  display: flex;\n  justify-content: space-between;\n}\n.double-section > *[data-v-6c171f15] {\n    flex-grow: 1;\n}\n.double-section > *[data-v-6c171f15]:first-child {\n      padding-right: 20px;\n}\n.double-section > *[data-v-6c171f15]:last-child {\n      padding-left: 20px;\n}\n.input-section[data-v-6c171f15] {\n  margin-bottom: 20px;\n}\n.input-section-title[data-v-6c171f15] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  margin-bottom: 5px;\n  font-size: 12px;\n  color: #1d3557;\n}\n.regular-input[data-v-6c171f15] {\n  width: 100%;\n}\n.regular-input > input[data-v-6c171f15] {\n    width: 100%;\n}\n.efficiency[data-v-6c171f15] {\n  width: 350px;\n  background: #fffbfb;\n  padding: 20px;\n  color: #1d3557;\n  border-left: 15px solid #e63946;\n}\n.efficiency-title[data-v-6c171f15] {\n  width: 100%;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n}\n.efficiency-number[data-v-6c171f15] {\n  text-align: center;\n  font-size: 80px;\n  line-height: 140px;\n  font-family: \"Berkshire Swash\", cursive;\n}\n.efficiency-warning[data-v-6c171f15] {\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  color: #e63946;\n  font-size: 12px;\n  line-height: 10px;\n}\n.grains-section-title[data-v-6c171f15] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: bold;\n  margin-bottom: 5px;\n  font-size: 24px;\n}\n.more-grains-button[data-v-6c171f15] {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-top: 20px;\n}\n.more-grains-button[data-v-6c171f15] > button {\n    padding: 10px;\n    font-size: 18px;\n    margin: 0 auto;\n}\n", ""]);
+exports.push([module.i, ".lautering-calculator[data-v-6c171f15] {\n  margin-top: 30px;\n  display: flex;\n  background: #eb616b;\n}\n.inputs[data-v-6c171f15] {\n  flex-grow: 1;\n  padding: 20px;\n}\n.inputs-title[data-v-6c171f15] {\n  margin-bottom: 20px;\n  font-size: 36px;\n}\n.double-section[data-v-6c171f15] {\n  display: flex;\n  justify-content: space-between;\n}\n.double-section > *[data-v-6c171f15] {\n    flex-grow: 1;\n}\n.double-section > *[data-v-6c171f15]:first-child {\n      padding-right: 20px;\n}\n.double-section > *[data-v-6c171f15]:last-child {\n      padding-left: 20px;\n}\n.input-section[data-v-6c171f15] {\n  margin-bottom: 20px;\n}\n.input-section-title[data-v-6c171f15] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  margin-bottom: 5px;\n  font-size: 12px;\n  color: #1D3557;\n}\n.regular-input[data-v-6c171f15] {\n  width: 100%;\n}\n.regular-input > input[data-v-6c171f15] {\n    width: 100%;\n}\n.efficiency[data-v-6c171f15] {\n  width: 350px;\n  background: #fffbfb;\n  padding: 20px;\n  color: #1D3557;\n  border-left: 15px solid #E63946;\n}\n.efficiency-title[data-v-6c171f15] {\n  width: 100%;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n}\n.efficiency-number[data-v-6c171f15] {\n  text-align: center;\n  font-size: 80px;\n  line-height: 140px;\n  font-family: \"Berkshire Swash\", cursive;\n}\n.efficiency-warning[data-v-6c171f15] {\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  color: #E63946;\n  font-size: 12px;\n  line-height: 10px;\n}\n.grains-section-title[data-v-6c171f15] {\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  margin-bottom: 5px;\n  font-size: 24px;\n}\n.more-grains-button[data-v-6c171f15] {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  margin-top: 20px;\n}\n.more-grains-button[data-v-6c171f15] > button {\n    padding: 10px;\n    font-size: 18px;\n    margin: 0 auto;\n}\n", ""]);
 
 
 
@@ -1949,7 +1949,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".main-page-link[data-v-76fa093d] {\n  display: block;\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n  cursor: pointer;\n}\n.main-page-link:hover .grid-item-content[data-v-76fa093d] {\n    top: 100px;\n}\n.main-page-link:hover .wave-header[data-v-76fa093d] {\n    top: 0;\n}\n.grid-item-icon[data-v-76fa093d] {\n  height: 100%;\n  width: 100%;\n  padding: 20px;\n}\n.grid-item-icon[data-v-76fa093d] > svg {\n    height: 100%;\n    width: 100%;\n    fill: #f1faee;\n    opacity: 0.75;\n}\n.grid-item-content[data-v-76fa093d] {\n  position: absolute;\n  top: calc(100% + 100px);\n  left: 0;\n  right: 0;\n  height: 100%;\n  padding: 20px;\n  transition: all 300ms ease;\n  font-size: 30px;\n  background: rgba(241, 250, 238, 0.9);\n  color: #1d3557;\n  text-align: center;\n}\n.discount[data-v-76fa093d] {\n  fill: #f1faee;\n  opacity: 0.75;\n}\n.wave-header[data-v-76fa093d] {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  transition: all 300ms ease;\n}\n.wave-content[data-v-76fa093d] {\n  position: relative;\n  height: 100px;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  opacity: 0.9;\n}\n.wave[data-v-76fa093d] {\n  position: absolute;\n  top: 40px;\n  left: -90px;\n  background: #f1faee;\n  width: 500px;\n  height: 500px;\n  transform-origin: 50% 48%;\n  border-radius: 43%;\n  animation: drift-data-v-76fa093d 3000ms infinite linear;\n}\n.wave.wave2[data-v-76fa093d] {\n    animation: drift-data-v-76fa093d 7000ms infinite linear;\n}\n.wave.wave3[data-v-76fa093d] {\n    animation: drift-data-v-76fa093d 5000ms infinite linear;\n}\n@keyframes drift-data-v-76fa093d {\nfrom {\n    transform: rotate(0deg);\n}\nfrom {\n    transform: rotate(360deg);\n}\n}\n", ""]);
+exports.push([module.i, ".main-page-link[data-v-76fa093d] {\n  display: block;\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n  cursor: pointer;\n}\n.main-page-link:hover .grid-item-content[data-v-76fa093d] {\n    top: 100px;\n}\n.main-page-link:hover .wave-header[data-v-76fa093d] {\n    top: 0;\n}\n.grid-item-icon[data-v-76fa093d] {\n  height: 100%;\n  width: 100%;\n  padding: 20px;\n}\n.grid-item-icon[data-v-76fa093d] > svg {\n    height: 100%;\n    width: 100%;\n    fill: #F1FAEE;\n    opacity: 0.75;\n}\n.grid-item-content[data-v-76fa093d] {\n  position: absolute;\n  top: calc(100% + 100px);\n  left: 0;\n  right: 0;\n  height: 100%;\n  padding: 20px;\n  transition: all 300ms ease;\n  font-size: 30px;\n  background: rgba(241, 250, 238, 0.9);\n  color: #1D3557;\n  text-align: center;\n}\n.discount[data-v-76fa093d] {\n  fill: #F1FAEE;\n  opacity: 0.75;\n}\n.wave-header[data-v-76fa093d] {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  transition: all 300ms ease;\n}\n.wave-content[data-v-76fa093d] {\n  position: relative;\n  height: 100px;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  opacity: 0.9;\n}\n.wave[data-v-76fa093d] {\n  position: absolute;\n  top: 40px;\n  left: -90px;\n  background: #F1FAEE;\n  width: 500px;\n  height: 500px;\n  transform-origin: 50% 48%;\n  border-radius: 43%;\n  animation: drift-data-v-76fa093d 3000ms infinite linear;\n}\n.wave.wave2[data-v-76fa093d] {\n    animation: drift-data-v-76fa093d 7000ms infinite linear;\n}\n.wave.wave3[data-v-76fa093d] {\n    animation: drift-data-v-76fa093d 5000ms infinite linear;\n}\n@keyframes drift-data-v-76fa093d {\nfrom {\n    transform: rotate(0deg);\n}\nfrom {\n    transform: rotate(360deg);\n}\n}\n", ""]);
 
 
 
@@ -1967,7 +1967,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, "p[data-v-1bb3ae12] {\n  margin-bottom: 60px;\n}\nh2[data-v-1bb3ae12] {\n  font-size: 24px;\n  margin: 0 0 20px;\n  border-bottom: 1px solid #f1faee;\n}\n.grid[data-v-1bb3ae12] {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr;\n  grid-gap: 10px;\n}\n.grid > *[data-v-1bb3ae12] {\n    height: 300px;\n    background: #1d3557;\n}\n", ""]);
+exports.push([module.i, "p[data-v-1bb3ae12] {\n  margin-bottom: 60px;\n}\nh2[data-v-1bb3ae12] {\n  font-size: 24px;\n  margin: 0 0 20px;\n  border-bottom: 1px solid #F1FAEE;\n}\n.grid[data-v-1bb3ae12] {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr;\n  grid-gap: 10px;\n}\n.grid > *[data-v-1bb3ae12] {\n    height: 300px;\n    background: #1D3557;\n}\n", ""]);
 
 
 
@@ -3680,7 +3680,7 @@ var render = function() {
               _vm._l(_vm.hops, function(hop, index) {
                 return _c(
                   "div",
-                  { staticClass: "hop-list" },
+                  { key: index, staticClass: "hop-list" },
                   [
                     _c("hop-card", {
                       attrs: {
@@ -3954,7 +3954,7 @@ var render = function() {
               _vm._l(_vm.grains, function(grain, index) {
                 return _c(
                   "div",
-                  { staticClass: "grain-list" },
+                  { key: index, staticClass: "grain-list" },
                   [
                     _c("grain-card", {
                       attrs: {
@@ -4172,7 +4172,7 @@ var render = function() {
           _vm._l(_vm.tools, function(tool) {
             return _c(
               "div",
-              { staticClass: "grid-item" },
+              { key: tool.url, staticClass: "grid-item" },
               [
                 _c("main-page-link", {
                   attrs: { url: tool.url, text: tool.text, svg: tool.svg }
