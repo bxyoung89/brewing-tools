@@ -129,7 +129,7 @@ export default {
 	.ibu-calculator {
 		margin-top: 30px;
 		display: flex;
-		background: $blue;
+		background: tint($red, 80);
 
 		/deep/ .dropdown-toggle {
 			background: $white;
@@ -167,6 +167,7 @@ export default {
 
 		margin-bottom: 5px;
 		font-size: 12px;
+		color: $dark-blue;
 	}
 
 	.regular-input {
@@ -181,9 +182,10 @@ export default {
 	.ibu {
 		width: 350px;
 		min-width: 350px;
-		background: $light-blue;
 		padding: 20px;
 		color: $dark-blue;
+		background: tint($red, 2);
+		border-left: 15px solid $red;
 	}
 
 	.ibu-title {
@@ -220,11 +222,13 @@ export default {
 
 	.more-hops-button {
 		width: 100%;
+		display: flex;
+		align-items: center;
 
 		/deep/ > button {
-			width: 100%;
 			padding: 10px;
-			font-size: 24px;
+			font-size: 18px;
+			margin: 0 auto;
 		}
 	}
 
@@ -232,5 +236,7 @@ export default {
 		margin-top: 30px;
 		font-size: 12px;
 		opacity: 0.75;
+		color: $dark-blue;
+		text-align: center;
 	}
 </style>
