@@ -31,7 +31,7 @@
 					<div class="grains-section-title">
 						Grains
 					</div>
-					<div class="grain-list" v-for="(grain, index) in grains">
+					<div class="grain-list" v-for="(grain, index) in grains" :key="index">
 						<grain-card
 							:grain="grain"
 							:remove-grain-at-index="removeGrainAtIndex"
@@ -67,45 +67,45 @@
 </template>
 
 <script>
-	import GrainCard from './components/grain-card.vue';
-	import LauteringCalculatorService from '../../services/lautering-calculator-service.js';
+import GrainCard from "./components/grain-card.vue";
+import LauteringCalculatorService from "../../services/lautering-calculator-service";
 
-	const emptyGrain = {
-		grain: undefined,
-		pounds: 0,
-	};
+const emptyGrain = {
+	grain: undefined,
+	pounds: 0,
+};
 
 
-	export default {
-		name: "lautering-calculator",
-		data: () => ({
-			wortVolume: 5.5,
-			gravityMeasurement: 1.050,
-			grains: [
-				{
-					...emptyGrain,
-				}
-			],
-		}),
-		methods: {
-			removeGrainAtIndex: function (index) {
-				this.grains.splice(index, 1);
+export default {
+	name: "lautering-calculator",
+	data: () => ({
+		wortVolume: 5.5,
+		gravityMeasurement: 1.050,
+		grains: [
+			{
+				...emptyGrain,
 			},
-			addNewGrain: function () {
-				this.grains.push({
-					...emptyGrain,
-				});
-			},
+		],
+	}),
+	methods: {
+		removeGrainAtIndex(index) {
+			this.grains.splice(index, 1);
 		},
-		computed: {
-			efficiency: function () {
-				return LauteringCalculatorService.getEfficiency(this.wortVolume, this.gravityMeasurement, this.grains);
-			},
+		addNewGrain() {
+			this.grains.push({
+				...emptyGrain,
+			});
 		},
-		components: {
-			GrainCard,
-		}
-	}
+	},
+	computed: {
+		efficiency() {
+			return LauteringCalculatorService.getEfficiency(this.wortVolume, this.gravityMeasurement, this.grains);
+		},
+	},
+	components: {
+		GrainCard,
+	},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -146,11 +146,11 @@
 
 	.input-section {
 		margin-bottom: 20px;
-
 	}
 
 	.input-section-title {
 		@include small-caps();
+
 		margin-bottom: 5px;
 		font-size: 12px;
 	}
@@ -174,6 +174,7 @@
 	.efficiency-title {
 		width: 100%;
 		text-align: center;
+
 		@include small-caps();
 	}
 
@@ -181,12 +182,15 @@
 		text-align: center;
 		font-size: 80px;
 		line-height: 140px;
+
 		@include berkshire-swash();
 	}
 
 	.efficiency-warning {
 		text-align: center;
+
 		@include small-caps();
+
 		color: $red;
 		font-size: 12px;
 		line-height: 10px;
@@ -194,6 +198,7 @@
 
 	.grains-section-title {
 		@include small-caps();
+
 		margin-bottom: 5px;
 		font-size: 24px;
 	}

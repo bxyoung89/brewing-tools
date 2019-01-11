@@ -1,21 +1,21 @@
 <script>
-	import allGrains from '../data/grains.js';
-	import CountryCodeToSvgPathService from '../services/country-code-to-svg-path-service.js';
-	import VueSelect from 'vue-select'
+import VueSelect from "vue-select";
+import allGrains from "../data/grains";
+import CountryCodeToSvgPathService from "../services/country-code-to-svg-path-service";
 
-	export default {
-		name: 'grain-dropdown',
-		props: ['value'],
-		data: function () {
-			return {
-				allGrains,
-				getFlagFromCountry: (country) => CountryCodeToSvgPathService.getSvgPath(country),
-			};
-		},
-		components: {
-			'v-select': VueSelect,
-		}
-	}
+export default {
+	name: "grain-dropdown",
+	props: ["value"],
+	data() {
+		return {
+			allGrains,
+			getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
+		};
+	},
+	components: {
+		"v-select": VueSelect,
+	},
+};
 </script>
 
 <template>

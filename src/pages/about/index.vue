@@ -40,9 +40,9 @@
 </template>
 
 <script>
-	export default {
-		name: "about"
-	}
+export default {
+	name: "about",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -59,7 +59,7 @@
 		margin-bottom: 40px;
 		position: relative;
 
-		&:after {
+		&::after {
 			content: "\2766";
 			position: absolute;
 			top: 100%;

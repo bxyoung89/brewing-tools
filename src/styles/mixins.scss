@@ -1,5 +1,5 @@
-@mixin small-caps(){
+@mixin small-caps() {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	font-weight: bold;
+	font-weight: 700;
 }

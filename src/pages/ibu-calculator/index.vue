@@ -37,7 +37,7 @@
 						Hops
 					</div>
 					<hop-card :number-of-cards="hops.length" />
-					<div class="hop-list" v-for="(hop, index) in hops">
+					<div class="hop-list" v-for="(hop, index) in hops" :key="index">
 						<hop-card
 							:hop="hop"
 							:remove-hop-at-index="removeHopAtIndex"
@@ -72,55 +72,55 @@
 </template>
 
 <script>
-	import HopCard from './components/hop-card.vue';
-	import VueSelect from 'vue-select';
-	import IBUService from '../../services/ibu-service';
+import VueSelect from "vue-select";
+import HopCard from "./components/hop-card.vue";
+import IBUService from "../../services/ibu-service";
 
-	const emptyHop = {
-		name: "",
-		alphaAcid: 0,
-		boilTime: 60,
-		isWholeHop: false,
-		ounces: 0,
-	};
+const emptyHop = {
+	name: "",
+	alphaAcid: 0,
+	boilTime: 60,
+	isWholeHop: false,
+	ounces: 0,
+};
 
 
-	export default {
-		name: "ibu-calculator",
-		data: () => ({
-			finalVolume: 5.5,
-			boilGravity: 1.050,
-			hops: [
-				{
-					...emptyHop,
-				}
-			],
-			selectedCalculator: IBUService.getAllIBUCalculators()[0],
-			ibuCalculators: IBUService.getAllIBUCalculators(),
-		}),
-		methods: {
-			removeHopAtIndex: function (index) {
-				this.hops.splice(index, 1);
+export default {
+	name: "ibu-calculator",
+	data: () => ({
+		finalVolume: 5.5,
+		boilGravity: 1.050,
+		hops: [
+			{
+				...emptyHop,
 			},
-			addNewHop: function () {
-				this.hops.push({
-					...emptyHop,
-				});
-			},
-			updateHopAtIndex: function(hop, index){
-				this.hops.splice(index, 1, hop);
-			}
+		],
+		selectedCalculator: IBUService.getAllIBUCalculators()[0],
+		ibuCalculators: IBUService.getAllIBUCalculators(),
+	}),
+	methods: {
+		removeHopAtIndex(index) {
+			this.hops.splice(index, 1);
 		},
-		computed: {
-			ibu: function(){
-				return IBUService.getIBUs(this.selectedCalculator.id, this.hops, this.finalVolume, this.boilGravity);
-			},
+		addNewHop() {
+			this.hops.push({
+				...emptyHop,
+			});
 		},
-		components: {
-			HopCard,
-			"v-select": VueSelect,
-		}
-	}
+		updateHopAtIndex(hop, index) {
+			this.hops.splice(index, 1, hop);
+		},
+	},
+	computed: {
+		ibu() {
+			return IBUService.getIBUs(this.selectedCalculator.id, this.hops, this.finalVolume, this.boilGravity);
+		},
+	},
+	components: {
+		HopCard,
+		"v-select": VueSelect,
+	},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -160,11 +160,11 @@
 
 	.input-section {
 		margin-bottom: 20px;
-
 	}
 
 	.input-section-title {
 		@include small-caps();
+
 		margin-bottom: 5px;
 		font-size: 12px;
 	}
@@ -189,6 +189,7 @@
 	.ibu-title {
 		width: 100%;
 		text-align: center;
+
 		@include small-caps();
 	}
 
@@ -196,12 +197,15 @@
 		text-align: center;
 		font-size: 80px;
 		line-height: 140px;
+
 		@include berkshire-swash();
 	}
 
 	.ibu-warning {
 		text-align: center;
+
 		@include small-caps();
+
 		color: $red;
 		font-size: 12px;
 		line-height: 10px;
@@ -209,6 +213,7 @@
 
 	.hops-section-title {
 		@include small-caps();
+
 		margin-bottom: 5px;
 		font-size: 24px;
 	}

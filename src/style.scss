@@ -2,16 +2,17 @@
 @import "styles/core";
 @import "styles/inputs";
 
-
 body {
 	font-size: 16px;
 	background: $red;
 	color: $not-white;
+
 	@include fira-sans();
 }
 
 h1 {
 	@include berkshire-swash();
+
 	font-size: 64px;
 	background: $dark-blue;
 	padding: 10px;
@@ -22,6 +23,7 @@ h1 {
 
 a {
 	color: $dark-blue;
+
 	&:hover {
 		color: $blue;
 	}
@@ -32,4 +34,3 @@ a {
 	margin: 0 auto;
 	padding-top: 200px;
 }
-

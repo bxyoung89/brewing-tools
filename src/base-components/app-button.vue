@@ -5,29 +5,29 @@
 </template>
 
 <script>
-	const themeToClassMap = {
-		'white': 'white-button',
-		'red': 'red-button',
-		'light-blue': 'light-blue-button',
-		'blue': 'blue-button',
-		'dark-blue': 'dark-blue-button',
-		'unstyled': 'unstyled-button',
-	};
+const themeToClassMap = {
+	white: "white-button",
+	red: "red-button",
+	"light-blue": "light-blue-button",
+	blue: "blue-button",
+	"dark-blue": "dark-blue-button",
+	unstyled: "unstyled-button",
+};
 
 
-	export default {
-		name: "app-button",
-		props: ['theme', 'click'],
-		computed: {
-			finalClassName: function () {
-				return `app-button ${themeToClassMap[this.theme || 'white']}`;
-			}
-		}
-	}
+export default {
+	name: "app-button",
+	props: ["theme", "click"],
+	computed: {
+		finalClassName() {
+			return `app-button ${themeToClassMap[this.theme || "white"]}`;
+		},
+	},
+};
 </script>
 
 <style lang="scss" scoped>
-	@import '../styles/core';
+	@import "../styles/core";
 
 	.app-button {
 		border: 0;
