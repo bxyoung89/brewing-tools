@@ -12,6 +12,6 @@ These commands are all preceded by `npm run`
 - lint -- lints scss and js
 
 #Release instructions
-- pull master into release
+- pull master into gh-pages
 - run build-all
 - commit the changes.
