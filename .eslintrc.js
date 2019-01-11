@@ -3,7 +3,7 @@ module.exports = {
 	"rules": {
 		"indent": ["error", "tab"],
 		"no-tabs": "off",
-		"linebreak-style": ["warn", "windows"],
+		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "double"],
 		"max-len": "off",
 		"class-methods-use-this": "off",

@@ -12,7 +12,8 @@
     "dev": "webpack-dev-server --config ./build/webpack.config.dev.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o ./dist/storybook",
-    "lint": "node ./node_modules/eslint/bin/eslint.js --fix ./src"
+    "lint": "node ./node_modules/eslint/bin/eslint.js --fix ./src",
+    "lint-scss": " node ./node_modules/stylelint/bin/stylelint.js --fix ./src --syntax scss"
   },
   "repository": {
     "type": "git",
