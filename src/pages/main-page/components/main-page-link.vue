@@ -67,9 +67,10 @@ export default {
 		height: 100%;
 		padding: 20px;
 		transition: all 300ms ease;
-		font-size: 48px;
+		font-size: 30px;
 		background: rgba($not-white, 0.9);
 		color: $dark-blue;
+		text-align: center;
 	}
 
 	.discount {
@@ -90,14 +91,14 @@ export default {
 		height: 100px;
 		overflow: hidden;
 		transform: translate3d(0, 0, 0);
-		opacity: 0.8;
+		opacity: 0.9;
 	}
 
 	.wave {
 		position: absolute;
 		top: 40px;
 		left: -90px;
-		background: $blue;
+		background: $not-white;
 		width: 500px;
 		height: 500px;
 		transform-origin: 50% 48%;

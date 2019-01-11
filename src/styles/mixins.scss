@@ -3,3 +3,13 @@
 	letter-spacing: 0.1em;
 	font-weight: 700;
 }
+
+// Slightly lighten a color
+@function tint($color, $percentage) {
+	@return mix($color, white, $percentage);
+}
+
+// Slightly darken a color
+@function shade($color, $percentage) {
+	@return mix($color, black, $percentage);
+}
