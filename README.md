@@ -9,3 +9,9 @@ These commands are all preceded by `npm run`
 - storybook -- ui playground on port 6006
 - build-storybook -- makes the static storybook
 - build-all -- runs all build steps (should be run before pushing)
+- lint -- lints scss and js
+
+#Release instructions
+- pull master into release
+- run build-all
+- commit the changes.
