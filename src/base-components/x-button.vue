@@ -7,10 +7,10 @@
 </template>
 
 <script>
-	export default {
-		name: "x-button",
-		props: ['click', 'className']
-	}
+export default {
+	name: "x-button",
+	props: ["click", "className"],
+};
 </script>
 
 <style lang="scss" scoped>

@@ -2272,7 +2272,7 @@ export default [
 	},
 	{
 		name: "Northern Brewer",
-		description: "Originally bred in England in 1934, Northern Brewer is a cross between Canterbury Golding and a male seedling of Brewer\'s Gold. It was originally grown in the North of England but has become one of the main varieties in the Hallertau region of Germany. Northern Brewer displays pleasant pine and mint characteristics in dual purpose brewing applications.",
+		description: "Originally bred in England in 1934, Northern Brewer is a cross between Canterbury Golding and a male seedling of Brewer's Gold. It was originally grown in the North of England but has become one of the main varieties in the Hallertau region of Germany. Northern Brewer displays pleasant pine and mint characteristics in dual purpose brewing applications.",
 		country: "DE",
 		aromaProfile: [
 			"mint",
@@ -2301,7 +2301,7 @@ export default [
 	},
 	{
 		name: "Nugget",
-		description: "Bred in 1970 by the USDA breeding program in Oregon and released in 1983, Nugget is a high alpha cultivar that is beginning to gain some acceptance as a dual purpose variety. Its lineage includes Brewer\'s Gold, Canterbury Golding, and Early Green.",
+		description: "Bred in 1970 by the USDA breeding program in Oregon and released in 1983, Nugget is a high alpha cultivar that is beginning to gain some acceptance as a dual purpose variety. Its lineage includes Brewer's Gold, Canterbury Golding, and Early Green.",
 		country: "US",
 		aromaProfile: [
 			"green",
@@ -2331,7 +2331,7 @@ export default [
 	},
 	{
 		name: "Olympic",
-		description: "Released for commercial production in 1983, Olympic is a descendant of Brewer\'s Gold, Fuggle, and East Kent Golding. It is primarily used as a bittering hop, however some subtle citrus and spice aroma characteristics have been noted.",
+		description: "Released for commercial production in 1983, Olympic is a descendant of Brewer's Gold, Fuggle, and East Kent Golding. It is primarily used as a bittering hop, however some subtle citrus and spice aroma characteristics have been noted.",
 		country: "US",
 		aromaProfile: [
 			"citrus",
@@ -2436,7 +2436,7 @@ export default [
 		],
 		averageAlphaAcidPercentage: 3.9,
 		averageBetaAcidPercentage: 3,
-		averageTotalOil: .5,
+		averageTotalOil: 0.5,
 		oilBreakdown: {
 			bPinene: 0.5,
 			myrcene: 26.4,
@@ -3469,7 +3469,7 @@ export default [
 	},
 	{
 		name: "Strisselspalt",
-		description: "A traditional landrace variety from the Alsace region in France, near Strasbourg,\ Strisselspalt is globally accepted as a classic, noble variety. Its aroma is delicate with floral, spicy, herbal and subtle citrus notes.",
+		description: "A traditional landrace variety from the Alsace region in France, near Strasbourg, Strisselspalt is globally accepted as a classic, noble variety. Its aroma is delicate with floral, spicy, herbal and subtle citrus notes.",
 		country: "FR",
 		aromaProfile: [
 			"herbal",

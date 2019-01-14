@@ -1,27 +1,29 @@
 <script>
-	export default {
-		name: "hop-card",
-		props: ["index", "hop", "removeHopAtIndex", "numberOfCards"],
-		methods: {
-			onHopDropdownChange(hop) {
-				if (this.hop.name === hop.name) {
-					return;
-				}
-				const newHop = {
-					...this.hop,
-					...hop,
-					alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid,
-				};
-				this.$emit("changed", newHop, this.index);
-			},
+export default {
+	name: "hop-card",
+	props: ["index", "hop", "removeHopAtIndex", "numberOfCards"],
+	methods: {
+		onHopDropdownChange(hop) {
+			if (this.hop.name === hop.name) {
+				return;
+			}
+			const newHop = {
+				...this.hop,
+				...hop,
+				alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid,
+			};
+			this.$emit("changed", newHop, this.index);
 		},
-	};
+	},
+};
 </script>
 
 <template>
 	<div class="hop-card">
-		<div :class="{'hop-card-content': true, 'title-row': true, 'has-cancel-button': numberOfCards > 1}"
-				 v-if="hop === undefined">
+		<div
+			:class="{'hop-card-content': true, 'title-row': true, 'has-cancel-button': numberOfCards > 1}"
+			v-if="hop === undefined"
+		>
 			<div>
 				Name
 			</div>

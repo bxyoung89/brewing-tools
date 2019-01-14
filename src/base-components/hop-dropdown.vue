@@ -1,21 +1,21 @@
 <script>
-	import VueSelect from "vue-select";
-	import allHops from "../data/hop-directory";
-	import CountryCodeToSvgPathService from "../services/country-code-to-svg-path-service";
+import VueSelect from "vue-select";
+import allHops from "../data/hop-directory";
+import CountryCodeToSvgPathService from "../services/country-code-to-svg-path-service";
 
-	export default {
-		name: "hop-dropdown",
-		props: ["value"],
-		data() {
-			return {
-				allHops,
-				getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
-			};
-		},
-		components: {
-			"v-select": VueSelect,
-		},
-	};
+export default {
+	name: "hop-dropdown",
+	props: ["value"],
+	data() {
+		return {
+			allHops,
+			getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
+		};
+	},
+	components: {
+		"v-select": VueSelect,
+	},
+};
 </script>
 
 <template>
