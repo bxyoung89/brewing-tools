@@ -7,6 +7,10 @@ const countryCodeToSvgPath = {
 	DE: "flag-icons/264-germany.svg",
 	UK: "flag-icons/264-united-kingdom.svg",
 	IE: "flag-icons/264-ireland.svg",
+	FR: "flag-icons/264-france.svg",
+	CZ: "flag-icons/264-czech-republic.svg",
+	AU: "flag-icons/264-australia.svg",
+	SI: "flag-icons/264-slovenia.svg",
 };
 
 class CountryCodeToSVGPathService {

@@ -1,6 +1,7 @@
 @import "styles/reset";
 @import "styles/core";
 @import "styles/inputs";
+@import "styles/library-overrides/vue-select.scss";
 
 body {
 	font-size: 16px;

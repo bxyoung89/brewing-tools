@@ -46,16 +46,15 @@ export default {
 		display: flex;
 		height: 40px;
 		align-items: center;
+		padding: 0 5px;
 
 		/deep/ > svg {
 			height: 30px;
-			margin-right: 10px;
+			margin: 5px;
 		}
 
 		/deep/ > div {
 			flex-grow: 1;
 		}
 	}
-
-
 </style>

@@ -8,7 +8,7 @@ storiesOf("IBU Calculator/Hop Card", module)
 		data: () => ({
 			hop: {
 				name: "",
-				alphaAcid: 0,
+				averageAlphaAcidPercentage: 0,
 				boilTime: 60,
 				isWholeHop: false,
 				ounces: 0,
@@ -21,7 +21,7 @@ storiesOf("IBU Calculator/Hop Card", module)
 		data: () => ({
 			hop: {
 				name: "",
-				alphaAcid: 0,
+				averageAlphaAcidPercentage: 0,
 				boilTime: 60,
 				isWholeHop: false,
 				ounces: 0,
