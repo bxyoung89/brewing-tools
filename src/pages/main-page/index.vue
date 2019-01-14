@@ -47,6 +47,11 @@ export default {
 				text: "IBU Calculator",
 				svg: "hop.svg",
 			},
+			{
+				url: "/hop-directory",
+				text: "Hop Directory",
+				svg: "hop.svg",
+			},
 		],
 	}),
 	components: {
