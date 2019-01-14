@@ -3,9 +3,6 @@
 		<a href="https://github.com/bxyoung89/brewing-tools" target="_blank">
 			<dynamic-svg src="social-icons/039-github.svg" />
 		</a>
-		<a href="https://twitter.com/bxyoung89" target="_blank">
-			<dynamic-svg src="social-icons/013-twitter-1.svg" />
-		</a>
 		<router-link to="/about">
 			<dynamic-svg src="question-mark.svg" />
 		</router-link>

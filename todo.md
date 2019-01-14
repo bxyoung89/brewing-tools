@@ -15,4 +15,11 @@ Allow for metric measurements
 
 Favicon
 
-Make X button a component.
+
+Add attribution for contributors to about and stop doing only my twitter in footer.
+
+Fix button styling on hop detail
+
+Linkify the descriptions for the hop detail
+
+Double check icon attribution
