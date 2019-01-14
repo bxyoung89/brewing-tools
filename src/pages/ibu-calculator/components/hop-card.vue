@@ -1,26 +1,27 @@
 <script>
-export default {
-	name: "hop-card",
-	props: ["index", "hop", "removeHopAtIndex", "numberOfCards"],
-	methods: {
-		onHopDropdownChange(hop) {
-			if (this.hop.name === hop.name) {
-				return;
-			}
-			const newHop = {
-				...this.hop,
-				...hop,
-				alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid,
-			};
-			this.$emit("changed", newHop, this.index);
+	export default {
+		name: "hop-card",
+		props: ["index", "hop", "removeHopAtIndex", "numberOfCards"],
+		methods: {
+			onHopDropdownChange(hop) {
+				if (this.hop.name === hop.name) {
+					return;
+				}
+				const newHop = {
+					...this.hop,
+					...hop,
+					alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid,
+				};
+				this.$emit("changed", newHop, this.index);
+			},
 		},
-	},
-};
+	};
 </script>
 
 <template>
 	<div class="hop-card">
-		<div :class="{'hop-card-content': true, 'title-row': true, 'has-cancel-button': numberOfCards > 1}" v-if="hop === undefined">
+		<div :class="{'hop-card-content': true, 'title-row': true, 'has-cancel-button': numberOfCards > 1}"
+				 v-if="hop === undefined">
 			<div>
 				Name
 			</div>
@@ -74,11 +75,7 @@ export default {
 					/>
 				</div>
 			</div>
-			<div class="remove-hop-button" v-if="numberOfCards > 1">
-				<app-button theme="unstyled" :click="() => removeHopAtIndex(index)">
-					<dynamic-svg src="cancel.svg"/>
-				</app-button>
-			</div>
+			<x-button v-if="numberOfCards > 1" :click="() => removeHopAtIndex(index)" class-name="remove-hop-button"/>
 		</div>
 	</div>
 </template>
@@ -122,26 +119,7 @@ export default {
 	}
 
 	.remove-hop-button {
-		/deep/ > button {
-			height: 100%;
-			width: 20px;
-			border: 0;
-			cursor: pointer;
-			border-radius: 5px;
-			padding: 5px;
-			margin-top: 5px;
-
-			&:hover {
-				> svg {
-					fill: $white;
-				}
-			}
-
-			> svg {
-				height: 100%;
-				width: 100%;
-				fill: tint($red, 30);
-			}
-		}
+		height: 100%;
+		width: 20px;
 	}
 </style>

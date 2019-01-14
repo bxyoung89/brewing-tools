@@ -17,10 +17,10 @@ const themeToClassMap = {
 
 export default {
 	name: "app-button",
-	props: ["theme", "click"],
+	props: ["theme", "click", "className"],
 	computed: {
 		finalClassName() {
-			return `app-button ${themeToClassMap[this.theme || "white"]}`;
+			return `app-button ${themeToClassMap[this.theme || "white"]} ${this.className}`;
 		},
 	},
 };

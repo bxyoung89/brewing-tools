@@ -24,11 +24,7 @@ export default {
 				</div>
 			</div>
 		</div>
-		<div class="remove-grain-button" v-if="numberOfCards > 1">
-			<app-button theme="unstyled" :click="() => removeGrainAtIndex(index)" >
-				<dynamic-svg src="cancel.svg" />
-			</app-button>
-		</div>
+		<x-button :click="() => removeGrainAtIndex(index)" class-name="remove-grain-button" v-if="numberOfCards > 1" />
 	</div>
 </template>
 
@@ -75,30 +71,7 @@ export default {
 
 		.remove-grain-button {
 			margin-left: 20px;
-
-			/deep/ > button {
-				height: 100%;
-				width: 30px;
-				border: 0;
-				cursor: pointer;
-				border-radius: 5px;
-				display: flex;
-				justify-content: center;
-				padding: 5px;
-				margin: 0;
-
-				&:hover {
-					> svg {
-						fill: $white;
-					}
-				}
-
-				> svg {
-					height: 100%;
-					width: 100%;
-					fill: tint($red, 30);
-				}
-			}
+			width: 30px;
 		}
 	}
 

@@ -4,6 +4,7 @@ import AppButton from "./base-components/app-button.vue";
 import GrainDropdown from "./base-components/grain-dropdown.vue";
 import HopDropdown from "./base-components/hop-dropdown.vue";
 import Checkbox from "./base-components/checkbox.vue";
+import XButton from "./base-components/x-button.vue";
 
 export default {
 	DynamicSvg,
@@ -12,4 +13,5 @@ export default {
 	GrainDropdown,
 	HopDropdown,
 	Checkbox,
+	XButton,
 };

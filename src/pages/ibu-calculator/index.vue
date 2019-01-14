@@ -78,7 +78,7 @@ import IBUService from "../../services/ibu-service";
 
 const emptyHop = {
 	name: "",
-	alphaAcid: 0,
+	averageAlphaAcidPercentage: 0,
 	boilTime: 60,
 	isWholeHop: false,
 	ounces: 0,
