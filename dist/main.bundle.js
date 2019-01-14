@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a7f5124bff55f73d714d";
+/******/ 	var hotCurrentHash = "9b0906ca09111092ec63";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -950,10 +950,10 @@ var themeToClassMap = {
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "app-button",
-  props: ["theme", "click"],
+  props: ["theme", "click", "className"],
   computed: {
     finalClassName: function finalClassName() {
-      return "app-button ".concat(themeToClassMap[this.theme || "white"]);
+      return "app-button ".concat(themeToClassMap[this.theme || "white"], " ").concat(this.className);
     }
   }
 });
@@ -1133,7 +1133,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _data_hops__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/hops */ "./src/data/hops.js");
+/* harmony import */ var _data_hop_directory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/hop-directory */ "./src/data/hop-directory.js");
+/* harmony import */ var _services_country_code_to_svg_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/country-code-to-svg-path-service */ "./src/services/country-code-to-svg-path-service.js");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1141,12 +1143,39 @@ __webpack_require__.r(__webpack_exports__);
   props: ["value"],
   data: function data() {
     return {
-      allHops: _data_hops__WEBPACK_IMPORTED_MODULE_1__["default"]
+      allHops: _data_hop_directory__WEBPACK_IMPORTED_MODULE_1__["default"],
+      getFlagFromCountry: function getFlagFromCountry(country) {
+        return _services_country_code_to_svg_path_service__WEBPACK_IMPORTED_MODULE_2__["default"].getSvgPath(country);
+      }
     };
   },
   components: {
     "v-select": vue_select__WEBPACK_IMPORTED_MODULE_0___default.a
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/x-button.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "x-button",
+  props: ["click", "className"]
 });
 
 /***/ }),
@@ -1398,7 +1427,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var emptyHop = {
   name: "",
-  alphaAcid: 0,
+  averageAlphaAcidPercentage: 0,
   boilTime: 60,
   isWholeHop: false,
   ounces: 0
@@ -1715,7 +1744,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/di
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px;\n  line-height: 24px; }\n\nbody {\n  font-size: 16px;\n  background: #E63946;\n  color: #F1FAEE;\n  font-family: \"Fira Sans\", sans-serif;\n  padding: 15px; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  padding: 10px 0;\n  display: inline;\n  margin: 0;\n  line-height: 100px; }\n\na {\n  color: #1D3557; }\n  a:hover {\n    color: #457B9D; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 80px; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  margin: 0;\n  padding: 0; }\n\ninput {\n  font-size: 16px;\n  padding: 5px;\n  border: 0;\n  border-radius: 5px;\n  line-height: 24px; }\n\n.v-select li > a {\n  padding: 0; }\n\nbody {\n  font-size: 16px;\n  background: #E63946;\n  color: #F1FAEE;\n  font-family: \"Fira Sans\", sans-serif;\n  padding: 15px; }\n\nh1 {\n  font-family: \"Berkshire Swash\", cursive;\n  font-size: 64px;\n  padding: 10px 0;\n  display: inline;\n  margin: 0;\n  line-height: 100px; }\n\na {\n  color: #1D3557; }\n  a:hover {\n    color: #457B9D; }\n\n.body-content {\n  max-width: 1000px;\n  margin: 0 auto;\n  padding-top: 80px; }\n", ""]);
 
 
 
@@ -1787,7 +1816,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".grain-dropdown[data-v-119d394e] .dropdown-toggle {\n  background: #FFF;\n}\n.dropdown-option[data-v-119d394e] {\n  display: flex;\n  height: 40px;\n  align-items: center;\n}\n.dropdown-option[data-v-119d394e] > svg {\n    height: 30px;\n    margin-right: 10px;\n}\n.dropdown-option[data-v-119d394e] > div {\n    flex-grow: 1;\n}\n", ""]);
+exports.push([module.i, ".grain-dropdown[data-v-119d394e] .dropdown-toggle {\n  background: #FFF;\n}\n.dropdown-option[data-v-119d394e] {\n  display: flex;\n  height: 40px;\n  align-items: center;\n  padding: 0 5px;\n}\n.dropdown-option[data-v-119d394e] > svg {\n    height: 30px;\n    margin: 5px;\n}\n.dropdown-option[data-v-119d394e] > div {\n    flex-grow: 1;\n}\n", ""]);
 
 
 
@@ -1805,7 +1834,25 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".hop-dropdown[data-v-31275dcb] .dropdown-toggle {\n  background: #FFF;\n}\n.dropdown-option[data-v-31275dcb] {\n  height: 40px;\n  align-items: center;\n  padding: 5px 0;\n}\n.hop-name[data-v-31275dcb] {\n  font-size: 16px;\n  line-height: 16px;\n}\n[data-v-31275dcb] .hop-name.no-aa {\n    line-height: 30px;\n}\n.hop-alpha-acid[data-v-31275dcb] {\n  opacity: 0.75;\n  font-size: 12px;\n}\n", ""]);
+exports.push([module.i, ".hop-dropdown[data-v-31275dcb] .dropdown-toggle {\n  background: #FFF;\n}\n.dropdown-option[data-v-31275dcb] {\n  height: 40px;\n  align-items: center;\n  padding: 5px 0;\n  display: flex;\n}\n.flag-wrapper[data-v-31275dcb] {\n  height: 40px;\n  width: 40px;\n  padding: 5px;\n}\n.flag-wrapper[data-v-31275dcb] > svg {\n    height: 30px;\n}\n.name-and-alpha-acid[data-v-31275dcb] {\n  flex-grow: 1;\n}\n.hop-name[data-v-31275dcb] {\n  font-size: 16px;\n  line-height: 16px;\n}\n[data-v-31275dcb] .hop-name.no-aa {\n    line-height: 30px;\n}\n.hop-alpha-acid[data-v-31275dcb] {\n  opacity: 0.75;\n  font-size: 12px;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
+
+// Module
+exports.push([module.i, ".x-button[data-v-2abe28dd] .inner-button {\n  height: 100%;\n  width: 100%;\n  border: 0;\n  cursor: pointer;\n  padding: 5px;\n}\n.x-button[data-v-2abe28dd] .inner-button:hover > svg {\n    fill: #FFF;\n}\n.x-button[data-v-2abe28dd] .inner-button > svg {\n    height: 100%;\n    width: 100%;\n    fill: #f8c4c8;\n}\n", ""]);
 
 
 
@@ -1859,7 +1906,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".hop-card[data-v-06252e56] .clear {\n  display: none;\n}\n.hop-card-content[data-v-06252e56] {\n  display: grid;\n  margin-bottom: 10px;\n  grid-template-columns: 220px 80px 80px 80px 100px;\n  grid-column-gap: 10px;\n}\n.hop-card-content[data-v-06252e56] > div > input {\n    width: 100%;\n}\n[data-v-06252e56] .hop-card-content.has-cancel-button {\n    grid-template-columns: 220px 80px 80px 50px 100px 30px;\n}\n.title-row[data-v-06252e56] {\n  text-align: center;\n  font-size: 14px;\n  color: #1D3557;\n}\n.checkbox-wrapper[data-v-06252e56] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.remove-hop-button[data-v-06252e56] > button {\n  height: 100%;\n  width: 20px;\n  border: 0;\n  cursor: pointer;\n  border-radius: 5px;\n  padding: 5px;\n  margin-top: 5px;\n}\n.remove-hop-button[data-v-06252e56] > button:hover > svg {\n    fill: #FFF;\n}\n.remove-hop-button[data-v-06252e56] > button > svg {\n    height: 100%;\n    width: 100%;\n    fill: #f8c4c8;\n}\n", ""]);
+exports.push([module.i, ".hop-card[data-v-06252e56] .clear {\n  display: none;\n}\n.hop-card-content[data-v-06252e56] {\n  display: grid;\n  margin-bottom: 10px;\n  grid-template-columns: 220px 80px 80px 80px 100px;\n  grid-column-gap: 10px;\n}\n.hop-card-content[data-v-06252e56] > div > input {\n    width: 100%;\n}\n[data-v-06252e56] .hop-card-content.has-cancel-button {\n    grid-template-columns: 220px 80px 80px 50px 100px 30px;\n}\n.title-row[data-v-06252e56] {\n  text-align: center;\n  font-size: 14px;\n  color: #1D3557;\n}\n.checkbox-wrapper[data-v-06252e56] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.remove-hop-button[data-v-06252e56] {\n  height: 100%;\n  width: 20px;\n}\n", ""]);
 
 
 
@@ -1895,7 +1942,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".grain-card[data-v-2aed8d04] {\n  padding: 20px 0;\n  border-top: 1px solid #f39ca3;\n  border-bottom: 1px solid #f39ca3;\n  display: flex;\n  margin-bottom: -1px;\n  border-radius: 5px;\n}\n.grain-card .grain-content[data-v-2aed8d04] {\n    flex-grow: 1;\n}\n.grain-card .grain-content > *[data-v-2aed8d04] {\n      flex-grow: 1;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04] {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      margin-bottom: 10px;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04]:last-child {\n        margin-bottom: 0;\n}\n.grain-card .grain-content .input-section-title[data-v-2aed8d04] {\n      text-transform: uppercase;\n      letter-spacing: 0.1em;\n      font-weight: 700;\n      margin-right: 15px;\n      font-size: 12px;\n      color: #1D3557;\n}\n.grain-card .grain-content .grain-dropdown[data-v-2aed8d04] {\n      min-width: 180px;\n      width: 100%;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] {\n    margin-left: 20px;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button {\n      height: 100%;\n      width: 30px;\n      border: 0;\n      cursor: pointer;\n      border-radius: 5px;\n      display: flex;\n      justify-content: center;\n      padding: 5px;\n      margin: 0;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button:hover > svg {\n        fill: #FFF;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] > button > svg {\n        height: 100%;\n        width: 100%;\n        fill: #f8c4c8;\n}\n.regular-input[data-v-2aed8d04] {\n  width: 100%;\n}\n.regular-input > input[data-v-2aed8d04] {\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, ".grain-card[data-v-2aed8d04] {\n  padding: 20px 0;\n  border-top: 1px solid #f39ca3;\n  border-bottom: 1px solid #f39ca3;\n  display: flex;\n  margin-bottom: -1px;\n  border-radius: 5px;\n}\n.grain-card .grain-content[data-v-2aed8d04] {\n    flex-grow: 1;\n}\n.grain-card .grain-content > *[data-v-2aed8d04] {\n      flex-grow: 1;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04] {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      margin-bottom: 10px;\n}\n.grain-card .grain-content > .input-section[data-v-2aed8d04]:last-child {\n        margin-bottom: 0;\n}\n.grain-card .grain-content .input-section-title[data-v-2aed8d04] {\n      text-transform: uppercase;\n      letter-spacing: 0.1em;\n      font-weight: 700;\n      margin-right: 15px;\n      font-size: 12px;\n      color: #1D3557;\n}\n.grain-card .grain-content .grain-dropdown[data-v-2aed8d04] {\n      min-width: 180px;\n      width: 100%;\n}\n.grain-card .remove-grain-button[data-v-2aed8d04] {\n    margin-left: 20px;\n    width: 30px;\n}\n.regular-input[data-v-2aed8d04] {\n  width: 100%;\n}\n.regular-input > input[data-v-2aed8d04] {\n    width: 100%;\n}\n", ""]);
 
 
 
@@ -3104,25 +3151,49 @@ var render = function() {
             fn: function(option) {
               return [
                 _c("div", { staticClass: "dropdown-option" }, [
-                  _c(
-                    "div",
-                    { class: { "hop-name": true, "no-aa": !option.avgaa } },
-                    [
-                      _vm._v(
-                        "\n\t\t\t\t\t" + _vm._s(option.name) + "\n\t\t\t\t"
+                  option.averageAlphaAcidPercentage
+                    ? _c(
+                        "div",
+                        { staticClass: "flag-wrapper" },
+                        [
+                          _c("dynamic-svg", {
+                            attrs: {
+                              src: _vm.getFlagFromCountry(option.country)
+                            }
+                          })
+                        ],
+                        1
                       )
-                    ]
-                  ),
+                    : _vm._e(),
                   _vm._v(" "),
-                  option.avgaa
-                    ? _c("div", { staticClass: "hop-alpha-acid" }, [
+                  _c("div", { staticClass: "name-and-alpha-acid" }, [
+                    _c(
+                      "div",
+                      {
+                        class: {
+                          "hop-name": true,
+                          "no-aa": !option.averageAlphaAcidPercentage
+                        }
+                      },
+                      [
                         _vm._v(
-                          "\n\t\t\t\t\tAverage Alpha Acid " +
-                            _vm._s(option.avgaa) +
-                            "%\n\t\t\t\t"
+                          "\n\t\t\t\t\t\t" +
+                            _vm._s(option.name) +
+                            "\n\t\t\t\t\t"
                         )
-                      ])
-                    : _vm._e()
+                      ]
+                    ),
+                    _vm._v(" "),
+                    option.averageAlphaAcidPercentage
+                      ? _c("div", { staticClass: "hop-alpha-acid" }, [
+                          _vm._v(
+                            "\n\t\t\t\t\t\tAverage Alpha Acid " +
+                              _vm._s(option.averageAlphaAcidPercentage) +
+                              "%\n\t\t\t\t\t"
+                          )
+                        ])
+                      : _vm._e()
+                  ])
                 ])
               ]
             }
@@ -3132,6 +3203,56 @@ var render = function() {
     ],
     1
   )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var this$1 = this
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      class: ((_obj = { "x-button": true }),
+      (_obj[this.className] = true),
+      _obj)
+    },
+    [
+      _c(
+        "app-button",
+        {
+          attrs: {
+            theme: "unstyled",
+            click: function() {
+              return this$1.click()
+            },
+            "class-name": "inner-button"
+          }
+        },
+        [_c("dynamic-svg", { attrs: { src: "cancel.svg" } })],
+        1
+      )
+    ],
+    1
+  )
+  var _obj
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -3508,28 +3629,17 @@ var render = function() {
             ]),
             _vm._v(" "),
             _vm.numberOfCards > 1
-              ? _c(
-                  "div",
-                  { staticClass: "remove-hop-button" },
-                  [
-                    _c(
-                      "app-button",
-                      {
-                        attrs: {
-                          theme: "unstyled",
-                          click: function() {
-                            return _vm.removeHopAtIndex(_vm.index)
-                          }
-                        }
-                      },
-                      [_c("dynamic-svg", { attrs: { src: "cancel.svg" } })],
-                      1
-                    )
-                  ],
-                  1
-                )
+              ? _c("x-button", {
+                  attrs: {
+                    click: function() {
+                      return _vm.removeHopAtIndex(_vm.index)
+                    },
+                    "class-name": "remove-hop-button"
+                  }
+                })
               : _vm._e()
-          ]
+          ],
+          1
         )
       : _vm._e()
   ])
@@ -3764,82 +3874,75 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "grain-card" }, [
-    _c("div", { staticClass: "grain-content" }, [
-      _c(
-        "div",
-        { staticClass: "input-section" },
-        [
-          _c("div", { staticClass: "input-section-title" }, [
-            _vm._v("\n\t\t\t\tGrain\n\t\t\t")
-          ]),
-          _vm._v(" "),
-          _c("grain-dropdown", {
-            model: {
-              value: _vm.grain.grain,
-              callback: function($$v) {
-                _vm.$set(_vm.grain, "grain", $$v)
-              },
-              expression: "grain.grain"
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "input-section" }, [
-        _c("div", { staticClass: "input-section-title" }, [
-          _vm._v("\n\t\t\t\tPounds\n\t\t\t")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "regular-input" }, [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.grain.pounds,
-                expression: "grain.pounds"
-              }
-            ],
-            attrs: { type: "number", placeholder: "pounds", value: "0" },
-            domProps: { value: _vm.grain.pounds },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.grain, "pounds", $event.target.value)
-              }
-            }
-          })
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _vm.numberOfCards > 1
-      ? _c(
+  return _c(
+    "div",
+    { staticClass: "grain-card" },
+    [
+      _c("div", { staticClass: "grain-content" }, [
+        _c(
           "div",
-          { staticClass: "remove-grain-button" },
+          { staticClass: "input-section" },
           [
-            _c(
-              "app-button",
-              {
-                attrs: {
-                  theme: "unstyled",
-                  click: function() {
-                    return _vm.removeGrainAtIndex(_vm.index)
-                  }
-                }
-              },
-              [_c("dynamic-svg", { attrs: { src: "cancel.svg" } })],
-              1
-            )
+            _c("div", { staticClass: "input-section-title" }, [
+              _vm._v("\n\t\t\t\tGrain\n\t\t\t")
+            ]),
+            _vm._v(" "),
+            _c("grain-dropdown", {
+              model: {
+                value: _vm.grain.grain,
+                callback: function($$v) {
+                  _vm.$set(_vm.grain, "grain", $$v)
+                },
+                expression: "grain.grain"
+              }
+            })
           ],
           1
-        )
-      : _vm._e()
-  ])
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-section" }, [
+          _c("div", { staticClass: "input-section-title" }, [
+            _vm._v("\n\t\t\t\tPounds\n\t\t\t")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "regular-input" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.grain.pounds,
+                  expression: "grain.pounds"
+                }
+              ],
+              attrs: { type: "number", placeholder: "pounds", value: "0" },
+              domProps: { value: _vm.grain.pounds },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.grain, "pounds", $event.target.value)
+                }
+              }
+            })
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm.numberOfCards > 1
+        ? _c("x-button", {
+            attrs: {
+              click: function() {
+                return _vm.removeGrainAtIndex(_vm.index)
+              },
+              "class-name": "remove-grain-button"
+            }
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -8801,6 +8904,38 @@ if(true) {
  if(!content.locals) {
    module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&", function() {
      var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/hop-dropdown.vue?vue&type=style&index=0&id=31275dcb&lang=scss&scoped=true&");
+     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("27f237e4", content, false, {});
+// Hot Module Replacement
+if(true) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&", function() {
+     var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&");
      if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
      update(newContent);
    });
@@ -17630,6 +17765,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base_components_grain_dropdown_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./base-components/grain-dropdown.vue */ "./src/base-components/grain-dropdown.vue");
 /* harmony import */ var _base_components_hop_dropdown_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./base-components/hop-dropdown.vue */ "./src/base-components/hop-dropdown.vue");
 /* harmony import */ var _base_components_checkbox_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base-components/checkbox.vue */ "./src/base-components/checkbox.vue");
+/* harmony import */ var _base_components_x_button_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./base-components/x-button.vue */ "./src/base-components/x-button.vue");
+
 
 
 
@@ -17642,7 +17779,8 @@ __webpack_require__.r(__webpack_exports__);
   AppButton: _base_components_app_button_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   GrainDropdown: _base_components_grain_dropdown_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
   HopDropdown: _base_components_hop_dropdown_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-  Checkbox: _base_components_checkbox_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+  Checkbox: _base_components_checkbox_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+  XButton: _base_components_x_button_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
 });
 
 /***/ }),
@@ -18254,6 +18392,111 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hop_dropdown_vue_vue_type_template_id_31275dcb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/base-components/x-button.vue":
+/*!******************************************!*\
+  !*** ./src/base-components/x-button.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./x-button.vue?vue&type=template&id=2abe28dd&scoped=true& */ "./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true&");
+/* harmony import */ var _x_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./x-button.vue?vue&type=script&lang=js& */ "./src/base-components/x-button.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _x_button_vue_vue_type_style_index_0_id_2abe28dd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& */ "./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _x_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "2abe28dd",
+  null
+  
+)
+
+/* hot reload */
+if (true) {
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"))
+  if (api.compatible) {
+    module.hot.accept()
+    if (!module.hot.data) {
+      api.createRecord('2abe28dd', component.options)
+    } else {
+      api.reload('2abe28dd', component.options)
+    }
+    module.hot.accept(/*! ./x-button.vue?vue&type=template&id=2abe28dd&scoped=true& */ "./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true&", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./x-button.vue?vue&type=template&id=2abe28dd&scoped=true& */ "./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true&");
+(function () {
+      api.rerender('2abe28dd', {
+        render: _x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+        staticRenderFns: _x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
+      })
+    })(__WEBPACK_OUTDATED_DEPENDENCIES__); })
+  }
+}
+component.options.__file = "src/base-components/x-button.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/base-components/x-button.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./src/base-components/x-button.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib!../../node_modules/vue-loader/lib??vue-loader-options!./x-button.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&":
+/*!****************************************************************************************************!*\
+  !*** ./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_style_index_0_id_2abe28dd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-style-loader!../../node_modules/css-loader/dist/cjs.js!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib??vue-loader-options!./x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=style&index=0&id=2abe28dd&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_style_index_0_id_2abe28dd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_style_index_0_id_2abe28dd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_style_index_0_id_2abe28dd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_style_index_0_id_2abe28dd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_lib_loader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_style_index_0_id_2abe28dd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true&":
+/*!*************************************************************************************!*\
+  !*** ./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./x-button.vue?vue&type=template&id=2abe28dd&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/base-components/x-button.vue?vue&type=template&id=2abe28dd&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_x_button_vue_vue_type_template_id_2abe28dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -21166,435 +21409,2819 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/data/hops.js":
-/*!**************************!*\
-  !*** ./src/data/hops.js ***!
-  \**************************/
+/***/ "./src/data/hop-directory.js":
+/*!***********************************!*\
+  !*** ./src/data/hop-directory.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+// total oil is mL/100g
 /* harmony default export */ __webpack_exports__["default"] = ([{
   name: "Admiral",
-  avgaa: 14.5
+  description: "Bred at Wye College and released in 1998, Admiral is a cross between Challenger and Northdown and was designed to be a complement to Target. Its mild aroma characteristics make it suitable for late-hopping and dry hopping applications in combination with other varieties.",
+  country: "UK",
+  aromaProfile: ["orange", "tea", "fresh", "sap"],
+  styles: ["english style ale", "english style bitter", "pale ale", "ipa", "weise"],
+  averageAlphaAcidPercentage: 14.5,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.35,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 43.5,
+    linalool: 0,
+    caryophyllene: 7,
+    farnesene: 1,
+    humulene: 24.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 24
+  }
 }, {
   name: "Ahtanum",
-  avgaa: 6
+  brandName: "YCR 1 CV",
+  description: "Bred by Yakima Chief Ranches, Ahtanum YCR 1 cv. is an aroma-type cultivar used for its aromatic properties and moderate bittering. The variety is named after the location where Charles Carpenter established the first hop farm east of the Cascade Mountains in Washington State in 1869.",
+  country: "US",
+  aromaProfile: ["grapefruit", "floral", "cedar"],
+  styles: ["lager", "ipa", "pale ale"],
+  averageAlphaAcidPercentage: 5,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.1,
+  oilBreakdown: {
+    bPinene: 7.5,
+    myrcene: 50,
+    linalool: 0.5,
+    caryophyllene: 10.5,
+    farnesene: 0,
+    humulene: 18.5,
+    geraniol: 0.55,
+    selinene: 0,
+    other: 18.5
+  }
 }, {
   name: "Amarillo",
-  avgaa: 8.6
+  brandName: "VGXP01 CV",
+  description: "Discovered by Virgil Gamache Farms, Amarillo is one of the top ten aroma varieties utilized by craft brewers. It features relatively high alpha acids along with extremely high levels of myrcene for citrus and grapefruit flavors.",
+  country: "US",
+  aromaProfile: ["grapefruit", "orange", "lemon", "melon", "apricot", "peach"],
+  styles: ["american style ale", "ipa"],
+  averageAlphaAcidPercentage: 9,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 1.65,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 45,
+    linalool: 0.65,
+    caryophyllene: 8.5,
+    farnesene: 7.5,
+    humulene: 21.5,
+    geraniol: 0.2,
+    selinene: 0,
+    other: 16
+  }
 }, {
-  name: "Apollo",
-  avgaa: 20
-}, {
-  name: "Aquila",
-  avgaa: 7
+  name: "Aramis",
+  description: "Developed in 2002 as a cross between French Strisselspalt and UK WGV, Aramis is an aroma variety with sweet and spicy characteristics. It resembles Strisselspalt, but contains higher oil and alpha content.",
+  country: "FR",
+  aromaProfile: ["green", "herbal", "spicy", "citrus"],
+  styles: ["belgian style ale", "biere de saison", "pale ale", "porter"],
+  averageAlphaAcidPercentage: 8.2,
+  averageBetaAcidPercentage: 4.15,
+  averageTotalOil: 1.4,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 40,
+    linalool: 0,
+    caryophyllene: 7.4,
+    farnesene: 3,
+    humulene: 21,
+    geraniol: 0,
+    selinene: 0,
+    other: 28.6
+  }
 }, {
   name: "Aurora",
-  avgaa: 8
+  description: "A diploid hybrid of Northern Brewer and a TG seedling of unknown origin, Aurora displays an intense yet pleasant aroma in finished beers. It is also known as Super Styrian.",
+  country: "SI",
+  aromaProfile: ["noble"],
+  styles: ["english style ale", "belgian style ale"],
+  averageAlphaAcidPercentage: 10,
+  averageBetaAcidPercentage: 3.45,
+  averageTotalOil: 1.4,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 22.5,
+    linalool: 0,
+    caryophyllene: 7.5,
+    farnesene: 7.5,
+    humulene: 22.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 40
+  }
 }, {
   name: "Azacca",
-  avgaa: 15
+  brandName: "ADHA 483",
+  description: "Azacca, named for the Hatian god of agriculture, is a hop big in citrus and tropical fuit tones. It's excellent aromatic qualities have quickly made Azacca a go-to- hop for late and dry hop additions in varying styles of beer",
+  country: "US",
+  aromaProfile: ["mango", "papaya", "orange", "grapefruit", "lemon", "piney", "spicy", "pineapple", "grassy", "tropical fruit", "citrus"],
+  styles: ["american style ale", "ipa", "saison"],
+  averageAlphaAcidPercentage: 15,
+  averageBetaAcidPercentage: 4.75,
+  averageTotalOil: 2.5,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 50.5,
+    linalool: 0,
+    caryophyllene: 10,
+    farnesene: 0.5,
+    humulene: 16,
+    geraniol: 0,
+    selinene: 0,
+    other: 23
+  }
 }, {
-  name: "B. C. Goldings",
-  avgaa: 5
+  name: "Bitter Gold",
+  description: "Released in 1999, Bitter Gold is a high alpha variety with excellent aroma capabilities. Its lineage includes Brewer's Gold, Bullion, Comet, and Fuggle. Bitter Gold offers limited aroma when used as a bittering hop but delivers diverse stone and tropical fruit flavors in later additions.",
+  country: "US",
+  aromaProfile: ["pear", "watermelon", "stone fruit", "fresh cut grass"],
+  styles: ["belgian style ale", "pale ale", "ipa"],
+  averageAlphaAcidPercentage: 13.75,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.75,
+    myrcene: 50,
+    linalool: 0.55,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 1.4,
+    geraniol: 0.2,
+    selinene: 0,
+    other: 24.5
+  }
 }, {
-  name: "Banner",
-  avgaa: 11
+  name: "Boadicea",
+  description: "Bred at Wye College and released in 2004, Boadicea is a dwarf variety derived from open pollination of a second-generation wild, Japanese female hop. Its aroma is very mild with subtle grass, floral, and fruit characteristics.",
+  country: "UK",
+  aromaProfile: ["floral", "orchard blossom", "ripe fruit"],
+  styles: ["belgian style ale", "pale ale", "ipa"],
+  averageAlphaAcidPercentage: 8.75,
+  averageBetaAcidPercentage: 3.7,
+  averageTotalOil: 1.8,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 35,
+    linalool: 0,
+    caryophyllene: 17,
+    farnesene: 2.5,
+    humulene: 10,
+    geraniol: 0,
+    selinene: 0,
+    other: 25.5
+  }
 }, {
-  name: "Belma",
-  avgaa: 9.4
+  name: "Bobek",
+  description: "A diploid hybrid of Northern Brewer and a TG seedling of unknown origin, Bobek displays an intense yet pleasant aroma in finished beers.",
+  country: "SI",
+  aromaProfile: ["noble"],
+  styles: ["english style ale", "lager", "pilsner", "english style bitter"],
+  averageAlphaAcidPercentage: 5.65,
+  averageBetaAcidPercentage: 5.05,
+  averageTotalOil: 2.25,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 37.5,
+    linalool: 0,
+    caryophyllene: 5,
+    farnesene: 5.5,
+    humulene: 16,
+    geraniol: 0,
+    selinene: 0,
+    other: 36
+  }
+}, {
+  name: "Bouclier",
+  description: "Developed in 2005 as a cross between Strisselspalt and a UK male, Bouclier is the most recent release from the French varietal research program. Its UK lineage includes Wye Challenger, Early Bird Golding, and Northern Brewer. Bouclier's combination of French and English aromas allows it to bring a French touch to English-style beers.",
+  country: "FR",
+  aromaProfile: ["herbal", "grass", "spicy"],
+  styles: ["saison", "stout", "pilsner", "lager"],
+  averageAlphaAcidPercentage: 8.2,
+  averageBetaAcidPercentage: 2.85,
+  averageTotalOil: 1.35,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 38,
+    linalool: 0,
+    caryophyllene: 0,
+    farnesene: 0,
+    humulene: 34,
+    geraniol: 0,
+    selinene: 0,
+    other: 28
+  }
 }, {
   name: "Bramling Cross",
-  avgaa: 6.5
+  description: "Bred at Wye College in 1927, Bramling Cross is a cross between Brambling (a traditional Golding variety) and a male seedling of the Manitoban wild hop. It is often used in traditional cask conditioned beers due to its distinct characteristics.",
+  country: "UK",
+  aromaProfile: ["blackcurrant", "loganberry", "vanilla"],
+  styles: ["english style bitter", "brown ale", "porter", "black ale", "dunkel"],
+  averageAlphaAcidPercentage: 6,
+  averageBetaAcidPercentage: 2.75,
+  averageTotalOil: 0.85,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 36,
+    linalool: 0,
+    caryophyllene: 15,
+    farnesene: 1,
+    humulene: 30,
+    geraniol: 0,
+    selinene: 0,
+    other: 25.5
+  }
 }, {
   name: "Bravo",
-  avgaa: 15.5
+  brandName: "hopsteiner 0146",
+  description: "Developed by Hopstiener Breeding Program and released in 2006, Bravo is a second generation super-alpha variety. It is an excellent bittering variety and can provide pleasant fruit and sweet floral aroma characteristics in some applications.",
+  country: "US",
+  aromaProfile: ["orange", "vanilla"],
+  styles: ["pale ale", "ipa", "barley wine"],
+  averageAlphaAcidPercentage: 16.6,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 2.75,
+  oilBreakdown: {
+    bPinene: 0.9,
+    myrcene: 57.5,
+    linalool: 0.5,
+    caryophyllene: 7,
+    farnesene: 0,
+    humulene: 9.5,
+    geraniol: 0.8,
+    selinene: 0,
+    other: 23
+  }
 }, {
   name: "Brewer's Gold",
-  avgaa: 9
+  description: "Bred at Wye College in 1919, Brewer's Gold is an ancestor to many major high alpha hops including Sterling, Galena, Horizon, Centennial, and Nugget. It is an English variety, however American-grown Brewer's Gold contains higher levels of alpha acids than its English counterpart.",
+  country: "US",
+  aromaProfile: ["blackcurrant", "spicy"],
+  styles: ["english style ale", "belgian style ale", "german style ale"],
+  averageAlphaAcidPercentage: 9.5,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 2.25,
+  oilBreakdown: {
+    bPinene: 0.75,
+    myrcene: 52.5,
+    linalool: 0.65,
+    caryophyllene: 10,
+    farnesene: 0,
+    humulene: 15,
+    geraniol: 1.4,
+    selinene: 0,
+    other: 18
+  }
+}, {
+  name: "Brewer's Gold",
+  description: "Bred circa 1918 and first produced in 1919, Brewer's Gold is one of the first varieties to emerge from a UK breeding program by professor E.S. Salmon. It is an open pollinated seeding of a wild Manitoba hop. Brewer's Gold has a high resin content and provides well-balanced bitterness which is ideally complemented by late hop additions in lager beers.",
+  country: "DE",
+  aromaProfile: ["blackcurrant", "spicy"],
+  styles: ["english style ale", "belgian style ale", "german style ale"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 3,
+  averageTotalOil: 1.3,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 45,
+    linalool: 0,
+    caryophyllene: 7.5,
+    farnesene: 0,
+    humulene: 30,
+    geraniol: 1.0,
+    selinene: 0,
+    other: 16.5
+  }
+}, {
+  name: "Brooklyn",
+  description: "Develped by the New Zealand Institute for Plant and Food Research hop breeding program and released in 2015, Brooklyn is a triploid variety from New Zealand Southern Cross and a selected New Zealand male. It is a big hop with high alpha content, however, sensory panels have also indicated the prescence of grapefruit, tropical fruit, and passionfruit characteristics.",
+  country: "NZ",
+  aromaProfile: ["grapefruit", "passionfruit", "spice", "sweet hay"],
+  styles: ["ipa", "double ipa"],
+  averageAlphaAcidPercentage: 18.5,
+  averageBetaAcidPercentage: 9,
+  averageTotalOil: 1.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 22,
+    linalool: 0,
+    caryophyllene: 5.8,
+    farnesene: 0.3,
+    humulene: 15.2,
+    geraniol: 0,
+    selinene: 0,
+    other: 60
+  }
 }, {
   name: "Bullion",
-  avgaa: 8
-}, {
-  name: "CTZ",
-  avgaa: 15.5
-}, {
-  name: "Calypso",
-  avgaa: 13
+  description: "Recognized as one of the first super-alpha varieties, Bullion is a cross between Wild Manitoba BB1 and an English male hop. It was a major variety throughout the mid-1940s, however commercial production cease din 1985 due to newer varieties with higher alpha acid content and better storage capacity.",
+  country: "US",
+  aromaProfile: ["blackcurrant", "zesty"],
+  styles: ["stout", "porter", "dark larger"],
+  averageAlphaAcidPercentage: 9,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.7,
+    myrcene: 47.5,
+    linalool: 0.65,
+    caryophyllene: 11.5,
+    farnesene: 0,
+    humulene: 20,
+    geraniol: 0.2,
+    selinene: 0,
+    other: 18.5
+  }
 }, {
   name: "Cascade",
-  avgaa: 7
+  description: "Originating from the USDA-ARA beeding program, Cascade is an aroma-type cultivar bred in 1958 and released in 1972. It was developed by open pollination of a Fuggle seedling. Cascade is the most popular variety in craft brewing and is known for having a unique floral, spicy, and citrus character with balanced bittering potential.",
+  country: "US",
+  aromaProfile: ["grapefruit", "floral", "pine"],
+  styles: ["american pale ale", "ipa"],
+  averageAlphaAcidPercentage: 7.25,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 1.65,
+  oilBreakdown: {
+    bPinene: 0.65,
+    myrcene: 52.5,
+    linalool: 0.45,
+    caryophyllene: 7,
+    farnesene: 7.5,
+    humulene: 17,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 14.5
+  }
 }, {
-  name: "Cascade DBL",
-  avgaa: 0.8
+  name: "Cashmere",
+  description: "Released by Washington State University in 2013, Cashmere is a daughter of Cascade, containing Northern Brewer germplasm through the male parent. It contains higher alpha acid content than Cascade and twice as much humulene providing smooth bitterness and a mild citrus fruit aroma.",
+  country: "US",
+  aromaProfile: ["melon", "lemon", "lime", "spice"],
+  styles: ["ipa"],
+  averageAlphaAcidPercentage: 8.4,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 1.3,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 40.5,
+    linalool: 0,
+    caryophyllene: 12.75,
+    farnesene: 0,
+    humulene: 27.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 19
+  }
 }, {
-  name: "Cascade LupuLN2",
-  avgaa: 12
+  name: "Celia",
+  description: "A hybrid of Styrian Golding, Aurora, and a Slovenia wild hop, Celia is known for its noble characteristics. It has widespread usage in lager and ale-style beers.",
+  country: "SI",
+  aromaProfile: ["noble"],
+  styles: ["belgian style ale", "lager", "red ale"],
+  averageAlphaAcidPercentage: 4.5,
+  averageBetaAcidPercentage: 2.65,
+  averageTotalOil: 2.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 30.5,
+    linalool: 0,
+    caryophyllene: 8.5,
+    farnesene: 5,
+    humulene: 20.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 35.5
+  }
 }, {
   name: "Centennial",
-  avgaa: 10
+  description: "Bred in 1974 and released by Washington State University in 1190, Centennial is a aroma-type cultivar that has found favor as one of the most popular varieties in craft brewing. It is often referred to as a super-Cascade (containing nearly double the alpha content) and can be used for bittering purposes. Centennial is a diploid cross between Brewer's Gold and a USDA male.",
+  country: "US",
+  aromaProfile: ["lemon", "floral", "orange blossom"],
+  styles: ["american pale ale", "ipa"],
+  averageAlphaAcidPercentage: 9.5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0.9,
+    myrcene: 60,
+    linalool: 0.75,
+    caryophyllene: 16,
+    farnesene: 0,
+    humulene: 15,
+    geraniol: 1.5,
+    selinene: 0,
+    other: 14.5
+  }
 }, {
   name: "Challenger",
-  avgaa: 8.5
+  description: "Bred at Wye College and introduced in 1972, Challenger is a granddaughter of Nothern Brewer and niece of Northdown. It is a versatile variety with wide application in both early and late kettle additions.",
+  country: "UK",
+  aromaProfile: ["cedar", "green tea", "sweet fruit"],
+  styles: ["english style ale", "brown ale", "pale ale"],
+  averageAlphaAcidPercentage: 7.5,
+  averageBetaAcidPercentage: 4.25,
+  averageTotalOil: 1.35,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 36,
+    linalool: 0,
+    caryophyllene: 9.5,
+    farnesene: 0,
+    humulene: 25,
+    geraniol: 0,
+    selinene: 0,
+    other: 33.5
+  }
+}, {
+  name: "Chelan",
+  description: "Developed by John I Haas, Inc. and released in 1994, Chenlan is similar to Galena but contains higher alpha acids.",
+  country: "US",
+  aromaProfile: ["mild"],
+  styles: ["american style ale"],
+  averageAlphaAcidPercentage: 13.25,
+  averageBetaAcidPercentage: 9.15,
+  averageTotalOil: 1.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 50,
+    linalool: 0,
+    caryophyllene: 10.5,
+    farnesene: 0,
+    humulene: 13.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 25
+  }
 }, {
   name: "Chinook",
-  avgaa: 13
+  description: "Developed by the USDA breeding program in Washington State and released in 1985 as a high alpha bittering variety, Chinook is a cross between Pentham Golding and a USDA male. In recent years, it has found favor as a dual purpose hop in the craft brewing community as a result of its spice and pine aroma characteristics.",
+  country: "US",
+  aromaProfile: ["grapefruit", "spicy", "pine"],
+  styles: ["ipa", "american pale ale", "stout", "porter"],
+  averageAlphaAcidPercentage: 13.25,
+  averageBetaAcidPercentage: 3.5,
+  averageTotalOil: 1.75,
+  oilBreakdown: {
+    bPinene: 0.4,
+    myrcene: 25,
+    linalool: 0.4,
+    caryophyllene: 10,
+    farnesene: 0,
+    humulene: 21,
+    geraniol: 0.85,
+    selinene: 0,
+    other: 41.5
+  }
 }, {
   name: "Citra",
-  avgaa: 11
-}, {
-  name: "Citra DBL",
-  avgaa: 2.6
-}, {
-  name: "Citra LupuLN2",
-  avgaa: 25
+  brandName: "HBC 394 CV",
+  description: "Developed by Hop Breeding Company and released in 2007, Citra HBC 394 cv. features high alpha acid and total oil content with a low percentage of co-humulone. It is one of the top ten aroma varieties for craft brewers imparting distinct citrus and tropical fruit flavors.",
+  country: "US",
+  aromaProfile: ["grapefruit", "melon", "lime", "gooseberry", "passion fruit"],
+  styles: ["ipa", "american pale ale"],
+  averageAlphaAcidPercentage: 13,
+  averageBetaAcidPercentage: 3.75,
+  averageTotalOil: 2.25,
+  oilBreakdown: {
+    bPinene: 0.85,
+    myrcene: 65,
+    linalool: 0.75,
+    caryophyllene: 6.5,
+    farnesene: 0,
+    humulene: 9.5,
+    geraniol: 0.4,
+    selinene: 0,
+    other: 13
+  }
 }, {
   name: "Cluster",
-  avgaa: 6.5
+  description: "Cluster is one of the oldest hop varieties grown in the United states and until the late 1970s, accounted for the majority of the country's hop acreage. Its pedigree is unknown, however hybridization of imported varieties and indigenous male hops has been suggested. Cluster is an excellent dual purpose hop and is often used in the reproduction of historical beer styles.",
+  country: "US",
+  aromaProfile: ["floral", "earty", "sweet fruit"],
+  styles: ["lager", "stout", "porter"],
+  averageAlphaAcidPercentage: 7.5,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 41,
+    linalool: 0.6,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 17.5,
+    geraniol: 0.75,
+    selinene: 0,
+    other: 29
+  }
 }, {
   name: "Columbia",
-  avgaa: 8.8
+  description: "Selected in 1967 at Oregon State University in Corvalis, Oregon. Columbia is a descendent of Fuggle and a sister selection of Willamette. Commercial production was discontinued in the early 1980s in favor of Willamette, however small quantities are again being produced.",
+  country: "US",
+  aromaProfile: ["noble"],
+  styles: ["english style ale"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 3.5,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.7,
+    myrcene: 50,
+    linalool: 0.35,
+    caryophyllene: 10.5,
+    farnesene: 4,
+    humulene: 17,
+    geraniol: 0.4,
+    selinene: 0,
+    other: 17
+  }
 }, {
   name: "Columbus",
-  avgaa: 15
-}, {
-  name: "Columbus LupuLN2",
-  avgaa: 24.5
+  description: "Originally selected by Charles Zimmerman for Hopunion, Inc., Columbus is a descendent of Nugget. It is a high alpha variety and is primarily used for bittering purposes. Columbus is often referred to as CTZ, a trio of similar hops including Tomahawk and Zeus.",
+  country: "US",
+  aromaProfile: ["black pepper", "dank", "red fruit"],
+  styles: ["ipa", "imperial ale", "pale ale"],
+  averageAlphaAcidPercentage: 16,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 3.5,
+  oilBreakdown: {
+    bPinene: 0.8,
+    myrcene: 50,
+    linalool: 0.5,
+    caryophyllene: 8,
+    farnesene: 0,
+    humulene: 11.5,
+    geraniol: 0.35,
+    selinene: 0,
+    other: 28
+  }
 }, {
   name: "Comet",
-  avgaa: 11
+  description: "Developed in 1961 and released in 1975 by the USDA, Comet was selected for its high alpha acid content and adaptability to growing conditions in the Yakima Valley. Commercial production ceased in the 1980s in favor of newer super-alpha hops. Comet has made a recent comeback, finding favor in dual purpose application due to its unique \"wild American\" aroma.",
+  country: "US",
+  aromaProfile: ["wild american", "grass", "grapefruit"],
+  styles: ["ale", "lager"],
+  averageAlphaAcidPercentage: 9.25,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 1.6,
+  oilBreakdown: {
+    bPinene: 0.95,
+    myrcene: 47.5,
+    linalool: 0.65,
+    caryophyllene: 12.5,
+    farnesene: 0,
+    humulene: 1.5,
+    geraniol: 0.55,
+    selinene: 0,
+    other: 35.5
+  }
 }, {
   name: "Crystal",
-  avgaa: 4.3
+  description: "Bred in 1983 by the USDA, Crystal is a triploid aroma-type cultivar from Hallertau Mittelfrüh, Cascade, Brewer's Gold, and Early Green. It is primarily grown in Oregon and has become increasingly popular among craft brewers due to its versatility in a variety of beer styles.",
+  country: "US",
+  aromaProfile: ["woody", "green"],
+  styles: ["belgian style ale", "english style bitter", "kölsch", "lager", "pilsner"],
+  averageAlphaAcidPercentage: 4.5,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 1.55,
+  oilBreakdown: {
+    bPinene: 0.7,
+    myrcene: 42.5,
+    linalool: 0.8,
+    caryophyllene: 8.5,
+    farnesene: 0,
+    humulene: 25,
+    geraniol: 0.55,
+    selinene: 0,
+    other: 22
+  }
 }, {
-  name: "Domestic Hallertau",
-  avgaa: 3.9
+  name: "Dana",
+  description: "Developed as a cross between German Magnum and a wild Slovenian male, Dana displays subtle floral and citrus characteristics.",
+  country: "SI",
+  aromaProfile: ["floral", "citrus"],
+  styles: ["pale ale", "ipa"],
+  averageAlphaAcidPercentage: 9.9,
+  averageBetaAcidPercentage: 3.55,
+  averageTotalOil: 1.25,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 44,
+    linalool: 0,
+    caryophyllene: 6,
+    farnesene: 7.5,
+    humulene: 23.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 19
+  }
 }, {
   name: "Dr. Rudi",
-  avgaa: 11
+  brandName: "68-4-96",
+  description: "Developed at the New Zealand Horticultural Centre (now New Zealand Institute for Plant and Food Research) and released in 1976 as \"Super Alpha\", Dr. Rudi is a triploid variety bred from New Zealand Smoothcone. Its name was changed to Dr. Rudi in 2012. Dr. Rudi works well in single-hopped beers or in conjunction with multiple aroma varieties.",
+  country: "NZ",
+  aromaProfile: ["resin", "pine", "lemongrass"],
+  styles: ["ale", "lager"],
+  averageAlphaAcidPercentage: 11,
+  averageBetaAcidPercentage: 7.25,
+  averageTotalOil: 1.3,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 29,
+    linalool: 0,
+    caryophyllene: 10,
+    farnesene: 0.5,
+    humulene: 33.2,
+    geraniol: 0,
+    selinene: 0,
+    other: 32
+  }
 }, {
-  name: "East Kent Goldings",
-  avgaa: 5
+  name: "East Kent Golding",
+  description: "Developed from wild Canterbury Whitebine and released to market in the late 1700s, East Kent Golding is the quintessential English variety. Its ideal application is late aroma hopping or post-fermentation.",
+  country: "UK",
+  aromaProfile: ["lavender", "honey", "lemon", "thyme", "orange", "grapefruit"],
+  styles: ["porter", "stout", "english style ale"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 2.35,
+  averageTotalOil: 0.6,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 30,
+    linalool: 0,
+    caryophyllene: 14,
+    farnesene: 0,
+    humulene: 41,
+    geraniol: 0,
+    selinene: 0,
+    other: 14
+  }
 }, {
   name: "Ekuanot",
-  avgaa: 14.25
-}, {
-  name: "Ekuanot DBL",
-  avgaa: 3.2
-}, {
-  name: "Ekuanot LupuLN2",
-  avgaa: 25.5
+  brandName: "HBC 366 CV",
+  description: "Developed by Hop Breeding Company and released in 2014, Ekuanot HBC 366 cv. features pronounced aroma characteristics and extremely high oil content. This variety bursts out of the spring soil in vibrant yellow and gradually matures to a deep green color by Fall harvest.",
+  country: "US",
+  aromaProfile: ["melon", "berry", "lime", "apple", "papaya", "green pepper", "mango", "mandarin orange"],
+  styles: ["ipa", "american style ale", "belgian style ale", "american pale ale"],
+  averageAlphaAcidPercentage: 14.25,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 3,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 37.5,
+    linalool: 0.4,
+    caryophyllene: 10,
+    farnesene: 0,
+    humulene: 16,
+    geraniol: 0.35,
+    selinene: 0,
+    other: 34
+  }
 }, {
   name: "El Dorado",
-  avgaa: 15.7
+  brandName: "El Dorado",
+  description: "El Dorado was developed in 2008, and released in 2010 by CLS Farms in Moxee, Washington.",
+  country: "US",
+  aromaProfile: ["cherry", "apricot", "pear", "citrus", "watermelon", "grass", "wood", "mint"],
+  styles: ["blonde", "lager", "american pale ale", "ipa", "cream ale", "red ale", "wheat"],
+  averageAlphaAcidPercentage: 15,
+  averageBetaAcidPercentage: 7.5,
+  averageTotalOil: 2.9,
+  oilBreakdown: {
+    bPinene: 0.5,
+    myrcene: 57.5,
+    linalool: 0.75,
+    caryophyllene: 7,
+    farnesene: 0.1,
+    humulene: 12.5,
+    geraniol: 0.025,
+    selinene: 0,
+    other: 21.5
+  }
 }, {
   name: "Ella",
-  avgaa: 14.8
+  brandName: "01-220-060",
+  description: "Bred in 2001 and released in 2007, Ella is a half sister to Galaxy and daughter of male parent Spalt. It is reminiscent of a nobel variety in lower doses, but imparts strong tropical fruit flavors in larger additions.",
+  country: "AU",
+  aromaProfile: ["floral", "noble", "spicy", "star anise", "grapefruit"],
+  styles: ["lager", "pilsner"],
+  averageAlphaAcidPercentage: 14.8,
+  averageBetaAcidPercentage: 6.3,
+  averageTotalOil: 2.9,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 45,
+    linalool: 0,
+    caryophyllene: 15,
+    farnesene: 0,
+    humulene: 19,
+    geraniol: 0,
+    selinene: 3,
+    other: 17
+  }
+}, {
+  name: "Endeavor",
+  description: "Bred in 2002 at Wye College, Endeavour is a seedling of Cascade and granddaughter of Target. It provides a unique English flavor with notable citrus and red-fruit flavors.",
+  country: "UK",
+  aromaProfile: ["blackcurrant", "loganberry", "spice", "grapefruit", "lime"],
+  styles: ["english style ale", "lager"],
+  averageAlphaAcidPercentage: 9.05,
+  averageBetaAcidPercentage: 4.55,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 32,
+    linalool: 0,
+    caryophyllene: 0,
+    farnesene: 6.5,
+    humulene: 6.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 55
+  }
+}, {
+  name: "Enigma",
+  brandName: "02-216-008",
+  description: "Expanded in 2013, Enigma is one of the newest Austrailian hops. It is a descendent of Swiss Tettnang, but offers many more diverse flavors than its heritage would suggest. Enigma is an excellent choice for late additions and dry hop applications",
+  country: "AU",
+  aromaProfile: ["pinot gris", "raspberry", "redcurrant", "tropical fruit"],
+  styles: ["pale ale", "ipa", "amber"],
+  averageAlphaAcidPercentage: 15,
+  averageBetaAcidPercentage: 5.6,
+  averageTotalOil: 2.7,
+  unknownOilBreakdown: true,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 0,
+    linalool: 0,
+    caryophyllene: 0,
+    farnesene: 0,
+    humulene: 0,
+    geraniol: 0,
+    selinene: 0,
+    other: 0
+  }
+}, {
+  name: "Epic",
+  description: "Found as a chance seedling in 1987 and grown as an ornamental garden plant until 2004, Epic was expanded for commercial production in winter 2014-2015. The history of the field, combined with the oil composition of Epic, strongly suggests that the lineage includes Alliance hops. Early brewing experience indicated medium intensity, deep fruit, and berry-link aromas without any citrus or floral notes. Epic is an excellent lat aroma hop.",
+  country: "UK",
+  aromaProfile: ["fruity", "berry"],
+  styles: ["pale ale"],
+  averageAlphaAcidPercentage: 4,
+  averageBetaAcidPercentage: 2.1,
+  averageTotalOil: 0.6,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 12,
+    linalool: 0,
+    caryophyllene: 0,
+    farnesene: 1.5,
+    humulene: 42,
+    geraniol: 0,
+    selinene: 0,
+    other: 45
+  }
 }, {
   name: "Eroica",
-  avgaa: 12
+  description: "Released by the Idaho Agricultural Experiment Station, Oregon Agricultural Experiment Station, and USDA-ARS in 1982, Eroica is an open pollinated cross of Brewer's Gold. It is primarily a bittering hop, however some brewers have noted fruit forward flavors in late applications.",
+  country: "US",
+  aromaProfile: ["fruit"],
+  styles: ["pale ale", "amber", "porter", "english style bitter"],
+  averageAlphaAcidPercentage: 11.1,
+  averageBetaAcidPercentage: 4.15,
+  averageTotalOil: 0.9,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 60,
+    linalool: 0,
+    caryophyllene: 10,
+    farnesene: 0,
+    humulene: 0,
+    geraniol: 0,
+    selinene: 0,
+    other: 28.5
+  }
 }, {
-  name: "Falconer's Flight",
-  avgaa: 10
+  name: "Flaconer's Flight",
+  isBlend: true,
+  description: "Developed by Hopunion LLC in 2010, Flaconer's Flight hop pellets are an exclusive proprietary hop blend created to honor and support the legacy of Northwest brewing legen, Glen Hay Falconer. Proceeds form each Flaconer's Flight purchase is contributed to the Glen Hay Falconer Foundation. These hop pellets are an excellent complement to many IPA and Pale Ale-oriented hop varieties. Specific aroma descriptors include distinct tropical, floral, lemon, and grapefruit characteristics.",
+  country: "US",
+  aromaProfile: ["lemon", "grapefruit"],
+  styles: ["american pale ale", "ipa"],
+  averageAlphaAcidPercentage: 10.75,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 1.7,
+  oilBreakdown: {
+    bPinene: 0.75,
+    myrcene: 52.5,
+    linalool: 0.7,
+    caryophyllene: 7,
+    farnesene: 1.5,
+    humulene: 14,
+    geraniol: 0.6,
+    selinene: 0,
+    other: 22.95
+  }
+}, {
+  name: "Flaconer's Flight 7CS",
+  isBlend: true,
+  description: "This proprietary blend combines seven \"C\" hops and additional experimental varieties. Like its predecessor, Flaconer's Flight 7Cs delivers strong fruit and citrus characteristics, but is layered with additional spicy, earthy overtones that allow it to function as the perfect addition to American-style ales.",
+  country: "US",
+  aromaProfile: ["fruit", "citrus", "spice", "earth"],
+  styles: ["american pale ale", "ipa", "double ipa"],
+  averageAlphaAcidPercentage: 9.75,
+  averageBetaAcidPercentage: 4.9,
+  averageTotalOil: 1.75,
+  oilBreakdown: {
+    bPinene: 0.75,
+    myrcene: 47.5,
+    linalool: 0.65,
+    caryophyllene: 8.5,
+    farnesene: 0.5,
+    humulene: 15.5,
+    geraniol: 0.65,
+    selinene: 0,
+    other: 25.45
+  }
 }, {
   name: "First Gold",
-  avgaa: 7.5
+  description: "Bred at Wye College in 1995, First Gold is a cross between Whitbred Golding Variety and a dwarf male. It features many of the flavor characteristics of WGV and has found favor in both general kettle and late or dry hopping applications. ",
+  country: "UK",
+  aromaProfile: ["geranium", "mangolia", "apricot", "tangerine", "orange marmalade"],
+  styles: ["belgian style ale", "enlgish style ale", "bitter", "bier de garde", "saison"],
+  averageAlphaAcidPercentage: 7.45,
+  averageBetaAcidPercentage: 3.2,
+  averageTotalOil: 1.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 25.5,
+    linalool: 0,
+    caryophyllene: 6.5,
+    farnesene: 3,
+    humulene: 22,
+    geraniol: 0,
+    selinene: 0,
+    other: 43
+  }
 }, {
-  name: "Fuggles",
-  avgaa: 4.5
+  name: "Fuggle",
+  description: "Discovered as a chance seedling in 1861 and propagated by Richard Fuggle in Kent, England in 1875, Fuggle was once the most prominent English hop. It accounted for 78% of production in 1949. The variety is now grown in the United States, primarily in Oregon, and displays slightly stronger characteristics than the english version. Fuggle is often compared to, and used in conjunction with, Golding hops.",
+  country: "US",
+  aromaProfile: ["mild", "wood", "grass", "mint"],
+  styles: ["pale ale", "brown ale", "stout"],
+  averageAlphaAcidPercentage: 4.5,
+  averageBetaAcidPercentage: 2.75,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0.35,
+    myrcene: 20,
+    linalool: 0.8,
+    caryophyllene: 13,
+    farnesene: 6.5,
+    humulene: 35,
+    geraniol: 0.2,
+    selinene: 0,
+    other: 24
+  }
+}, {
+  name: "Fuggle",
+  description: "Selected from a seedling in 1861 and released in 1875, Fuggle is the most referred and famous English variety. It is known for its classic English aroma and is often used in conjunction with Golding.",
+  country: "UK",
+  aromaProfile: ["green tea", "mint", "grass", "floral"],
+  styles: ["english style bitter", "stout", "brown ale", "porter", "pale ale"],
+  averageAlphaAcidPercentage: 4.3,
+  averageBetaAcidPercentage: 2.5,
+  averageTotalOil: 1.05,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 26,
+    linalool: 0,
+    caryophyllene: 11,
+    farnesene: 6,
+    humulene: 35.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 21.5
+  }
 }, {
   name: "Galaxy",
-  avgaa: 14.25
+  brandName: "94-203-008",
+  description: "Commercially available since 2009, Galaxy is the most internationally recognized Austrailian hop variety. Its lineage includes high alpha Austrailian hops and European cultivars, specifically German Perle.",
+  country: "AU",
+  aromaProfile: ["passionfruit", "peach", "clean citrus"],
+  styles: ["pale ale", "ipa"],
+  averageAlphaAcidPercentage: 13.8,
+  averageBetaAcidPercentage: 5.85,
+  averageTotalOil: 4,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 51,
+    linalool: 0,
+    caryophyllene: 8,
+    farnesene: 4,
+    humulene: 1.5,
+    geraniol: 0,
+    selinene: 6,
+    other: 29.5
+  }
 }, {
   name: "Galena",
-  avgaa: 13
+  description: "Developed by the USDA breeding program in Idaho in 1968 and released in 1978, Galena is an open pollinated cross of Brewer's Gold. It is a high alpha variety with increasingly popular aroma characteristics",
+  country: "US",
+  aromaProfile: ["pear", "pineapple", "lime", "blackcurrant", "grapefruit"],
+  styles: ["american ale", "porter", "stout"],
+  averageAlphaAcidPercentage: 14,
+  averageBetaAcidPercentage: 8,
+  averageTotalOil: 1.7,
+  oilBreakdown: {
+    bPinene: 0.55,
+    myrcene: 45,
+    linalool: 0.2,
+    caryophyllene: 7,
+    farnesene: 0,
+    humulene: 14,
+    geraniol: 0.65,
+    selinene: 0,
+    other: 31.5
+  }
 }, {
   name: "Glacier",
-  avgaa: 5.5
+  description: "Released in 200 by Washington State University, Glacier is an offspring of French Elsasser, Brewer's Gold, and Northern Brewer. It was selected for its good yield potential and low co-humulone, providing smoothness and balanced bitterness in beer.",
+  country: "US",
+  aromaProfile: ["plum", "blackberry", "wood"],
+  styles: ["english style pale ale", "porter", "stout", "english style bitter"],
+  averageAlphaAcidPercentage: 11.5,
+  averageBetaAcidPercentage: 8.5,
+  averageTotalOil: 1,
+  oilBreakdown: {
+    bPinene: 0.4,
+    myrcene: 40,
+    linalool: 0.95,
+    caryophyllene: 10.5,
+    farnesene: 0,
+    humulene: 30,
+    geraniol: 0.25,
+    selinene: 0,
+    other: 17
+  }
 }, {
-  name: "Goldings",
-  avgaa: 4.5
+  name: "Golding",
+  description: "Golding hops consist of a group of traditional English aroma varieties which have been cultivated since 1790. The cultivar originated in England and was named after villages in East Kent (Pentham, Rothersham, Canterbury, Eastwell). US Golding is the Canterbury strain.",
+  country: "US",
+  aromaProfile: ["delicate", "sweet floral"],
+  styles: ["pale ale", "stout", "bitter", "barley wine"],
+  averageAlphaAcidPercentage: 4.75,
+  averageBetaAcidPercentage: 2.75,
+  averageTotalOil: 0.7,
+  oilBreakdown: {
+    bPinene: 0.4,
+    myrcene: 30,
+    linalool: 0.75,
+    caryophyllene: 12.5,
+    farnesene: 0,
+    humulene: 40,
+    geraniol: 0.2,
+    selinene: 0,
+    other: 15
+  }
 }, {
   name: "Green Bullet",
-  avgaa: 11
+  description: "Released in 1972 from the New Zealand DSIR (now New Zealand Institute for Plant and Food Research) Green Bullet is a triploid alpha variety bred by open pollination of the New Zealand \"Smoothcone\" variety. It is traditionally considered a bittering variety for lagers, but also carries spicy characteristics typical of Slovenia hop varieties.",
+  country: "NZ",
+  aromaProfile: ["spicy", "dried fruit", "floral"],
+  styles: ["english style bitter", "lager", "stout"],
+  averageAlphaAcidPercentage: 12.5,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 1.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 38,
+    linalool: 0,
+    caryophyllene: 9.2,
+    farnesene: 0.3,
+    humulene: 28.2,
+    geraniol: 0,
+    selinene: 0,
+    other: 29
+  }
+}, {
+  name: "Hallertau",
+  description: "US Hallertau originates from the classic Hallertau variety of Germany. It is a noble aroma variety. Despite low yeild and low resistance to disease, Hallertau remains a historic hop and is often celebrated in the production of purist recipies and traditional beer styles.",
+  country: "US",
+  aromaProfile: ["noble"],
+  styles: ["bock", "pilsner", "lager"],
+  averageAlphaAcidPercentage: 5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0.4,
+    myrcene: 21.5,
+    linalool: 0.8,
+    caryophyllene: 12.5,
+    farnesene: 0,
+    humulene: 40,
+    geraniol: 0.35,
+    selinene: 0,
+    other: 23.5
+  }
 }, {
   name: "Hallertau Blanc",
-  avgaa: 10
+  description: "Bred at the Hop Research Institute in Hüll and released in 2012, Hallertau Blanc was commercialized as a new, German aroma variety in response to growing demand from the craft beer industry for distinct flavor profiles. Hallertau Blanc is the daughter of Cascade and displays a wide variety of tropical fruit, stone fruit, and citrus flavors.",
+  country: "DE",
+  aromaProfile: ["passion fruit", "grapefruit", "pineapple", "grape", "lemongrass"],
+  styles: ["ipa", "pale ale"],
+  averageAlphaAcidPercentage: 10.5,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.35,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 62.5,
+    linalool: 0.35,
+    caryophyllene: 1,
+    farnesene: 0,
+    humulene: 1.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 34
+  }
 }, {
-  name: "Hallertau Hersbrucker",
-  avgaa: 4
-}, {
-  name: "Hallertau Mittelfruh",
-  avgaa: 3.75
+  name: "Helga",
+  brandName: "A-86-29",
+  description: "Bred in 1986 and formerly known as Southern Hallertau, Helga is a descendent of Hallertau Mittelfrüh. Its brewing characteristics resemble that of its parent, however it demonstrates a forgiving and refined character in a variety of beer styles and hop applications.",
+  country: "AU",
+  aromaProfile: ["pleasant", "noble"],
+  styles: ["ale", "lager"],
+  averageAlphaAcidPercentage: 6.4,
+  averageBetaAcidPercentage: 6,
+  averageTotalOil: 0.8,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 7,
+    linalool: 0.35,
+    caryophyllene: 27.5,
+    farnesene: 0,
+    humulene: 45,
+    geraniol: 0,
+    selinene: 3,
+    other: 25.5
+  }
 }, {
   name: "Herald",
-  avgaa: 12
+  description: "Bred at Wye College and registered in 1996, Herald is a sister to Pioneer and Pilgrim hops. It is known for its clean bittering characteristics and fresh citrus flavors.",
+  country: "UK",
+  aromaProfile: ["orange", "grapefruit"],
+  styles: ["pale ale", "english style bitter", "dark ale"],
+  averageAlphaAcidPercentage: 11,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.45,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 40,
+    linalool: 0,
+    caryophyllene: 7,
+    farnesene: 0,
+    humulene: 15,
+    geraniol: 0,
+    selinene: 3,
+    other: 41.5
+  }
+}, {
+  name: "Herkules",
+  description: "Bred at the Hop Research Center in Hüll and released in 2006, Herkules is a high alpha, bittering hop that holds true to its name. It is a daughter of Taurus with some citrus and melon characteristics.",
+  country: "DE",
+  aromaProfile: ["robust", "melon"],
+  styles: ["german style lager", "ale", "altbier"],
+  averageAlphaAcidPercentage: 14.5,
+  averageBetaAcidPercentage: 4.75,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 40,
+    linalool: 0.55,
+    caryophyllene: 9.5,
+    farnesene: 0,
+    humulene: 37.5,
+    geraniol: 0,
+    selinene: 3,
+    other: 16
+  }
 }, {
   name: "Hersbrucker",
-  avgaa: 4
+  description: "A landrace variety originating form the Hersbruck region of Southern Germany, Hersbrucker has expanded and is now widely grown throughout the Hallertau and Spalt regions. It displays a delicate aroma profile that is often compared to other noble varieties.",
+  country: "DE",
+  aromaProfile: ["hay", "tobacco", "orange"],
+  styles: ["lager", "pilsner", "bock", "wheat", "kölsch", "helles"],
+  averageAlphaAcidPercentage: 2.75,
+  averageBetaAcidPercentage: 4.25,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 22.5,
+    linalool: 0.75,
+    caryophyllene: 10.5,
+    farnesene: 0,
+    humulene: 25,
+    geraniol: 0,
+    selinene: 3,
+    other: 40.5
+  }
 }, {
   name: "Horizon",
-  avgaa: 12.5
+  description: "Bred in Oregon in 1970 and released in 1997, Horizon is a descendant of Brewer's Gold and half-sister to Nugget. Its low co-humulone is similar to noble varieties and provides smoothness to beer, however alpha acid levels that can reach as high as 12%. Horizon can be utilized in every stage of the brewing process.",
+  country: "US",
+  aromaProfile: ["floral bouquet", "spicy"],
+  styles: ["ale", "lager"],
+  averageAlphaAcidPercentage: 10.4,
+  averageBetaAcidPercentage: 6.5,
+  averageTotalOil: 1,
+  oilBreakdown: {
+    bPinene: 0.7,
+    myrcene: 50,
+    linalool: 1.2,
+    caryophyllene: 11,
+    farnesene: 4,
+    humulene: 15,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 17.5
+  }
 }, {
   name: "Huell Melon",
-  avgaa: 7.2
+  description: "Bred at the Hop Research Institute in Hüll and released in 2012, Huell (Hüll) Melon was commercialiezed as a new, German aroma variety in response to growing demand from the craft beer industry for distinct flavor profiles. It displays bold flavors that are not associated with typical hop variety aromas and has found favor in many hop forward, IPA and pale al beer styles.",
+  country: "DE",
+  aromaProfile: ["honeydew melon", "strawberry", "tropical fruit", "orange", "vanilla"],
+  styles: ["wheat", "belgian style ale", "pale ale"],
+  averageAlphaAcidPercentage: 7.2,
+  averageBetaAcidPercentage: 7.6,
+  averageTotalOil: 0.8,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 36,
+    linalool: 0.55,
+    caryophyllene: 7.5,
+    farnesene: 0,
+    humulene: 15,
+    geraniol: 0,
+    selinene: 0,
+    other: 40
+  }
 }, {
-  name: "Huller Bitterer",
-  avgaa: 5.75
+  name: "Idaho 7",
+  brandName: "Idaho 7",
+  description: "Idaho 7 was bred and released by Jackson Farms near Boise, Idaho. Idaho 7 presents as pugnent tropical fruit and citrus (think apricot, orange, red grapefruit, papaya) with big notes of resiny pine and hints of black tea.",
+  country: "US",
+  aromaProfile: ["pineapple", "peach", "pine", "resin", "mango", "black tea"],
+  styles: ["ipa", "pale ale", "wheat"],
+  averageAlphaAcidPercentage: 11.75,
+  averageBetaAcidPercentage: 4.25,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 50,
+    linalool: 0.75,
+    caryophyllene: 8,
+    farnesene: 0.5,
+    humulene: 15,
+    geraniol: 0.45,
+    selinene: 0,
+    other: 24.7
+  }
 }, {
-  name: "Jarrylo",
-  avgaa: 16.3
+  name: "Independence",
+  isBlend: true,
+  brandName: "TRI2303 Blend",
+  description: "Praying homage to the classic hops, Independence blend merges old world with new world spirit giving a truly American aroma and flavor profile. Bringing forth tobacco, earthy, pine, and grassy notes with citrus and herbs to support the aroma profile, Independence symbolizes the pioneer spirit carried through the many generations of growers in the Pacific Northwest.",
+  country: "US",
+  aromaProfile: ["floral", "stone fruit", "citrus", "herbal", "tobacco", "earth", "pine", "grass"],
+  styles: ["american style pilsner", "lager", "blonde", "pale ale"],
+  averageAlphaAcidPercentage: 4.7,
+  averageBetaAcidPercentage: 1.5,
+  averageTotalOil: 0.4,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 36.6,
+    linalool: 1.1,
+    caryophyllene: 10,
+    farnesene: 0.1,
+    humulene: 18.8,
+    geraniol: 0.9,
+    selinene: 0,
+    other: 31.9
+  }
 }, {
-  name: "Kent Goldings",
-  avgaa: 5
+  name: "Kazbek",
+  description: "Selected form breeding material with origin in Russian wild hops, Kazbek was released in 2008. It is named after the highest peak within the middle Caucasus mountain range.",
+  country: "CZ",
+  aromaProfile: ["spicy", "lemon"],
+  styles: ["pilsner", "lager", "ipa"],
+  averageAlphaAcidPercentage: 6.5,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.35,
+  oilBreakdown: {
+    bPinene: 0.7,
+    myrcene: 47.5,
+    linalool: 0.4,
+    caryophyllene: 12.5,
+    farnesene: 0,
+    humulene: 27.5,
+    geraniol: 0.125,
+    selinene: 0,
+    other: 14
+  }
 }, {
   name: "Kohatu",
-  avgaa: 6.5
-}, {
-  name: "Lemondrop",
-  avgaa: 6
+  brandName: "Kohatu",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 2011, Kohatu is a descendent of Hallertau Mittelfrüh. It works well in single hop applications and is described as having intense fruit characteristics.",
+  country: "NZ",
+  aromaProfile: ["tropical fruit"],
+  styles: ["pale ale", "pilsner"],
+  averageAlphaAcidPercentage: 6.5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 36,
+    linalool: 0,
+    caryophyllene: 11.5,
+    farnesene: 0.3,
+    humulene: 36.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 21.5
+  }
 }, {
   name: "Liberty",
-  avgaa: 4
+  description: "Bred in 1983, Liberty is an extension of the Hallertau hop family. It is a half-sister to Ultra, Mt. Hood, and Crystal. It displays mild floral and spice characteristics with some subtle citrus notes.",
+  country: "US",
+  aromaProfile: ["noble", "floral", "herbal", "spicy", "delicate", "lemon"],
+  styles: ["pilsner", "bock", "wheat", "lager", "kölsch"],
+  averageAlphaAcidPercentage: 4.75,
+  averageBetaAcidPercentage: 3.5,
+  averageTotalOil: 1.4,
+  oilBreakdown: {
+    bPinene: 0.2,
+    myrcene: 20,
+    linalool: 0.8,
+    caryophyllene: 12.5,
+    farnesene: 0,
+    humulene: 40,
+    geraniol: 0.2,
+    selinene: 0,
+    other: 25
+  }
 }, {
   name: "Loral",
-  avgaa: 11.75
-}, {
-  name: "Loral DBL",
-  avgaa: 3
-}, {
-  name: "Loral LupuLN2",
-  avgaa: 19.5
-}, {
-  name: "Lublin",
-  avgaa: 4.5
+  brandName: "HBC 291 CV",
+  description: "Developed by Hop Breeding Company and released in 2016, Loral HBC 291 has a noble heritage that straddles the fence between old and new world hop aromatics. It has the ability to complement all beer styles, making it a very versatile hop in the brewery.",
+  country: "US",
+  aromaProfile: ["floral", "pepper", "lemon-citrus", "dark fruit"],
+  styles: ["ipa", "american pale ale", "saison", "belgian style ale", "wheat", "pilsner"],
+  averageAlphaAcidPercentage: 15,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 2.6,
+  oilBreakdown: {
+    bPinene: 0.65,
+    myrcene: 55,
+    linalool: 1.05,
+    caryophyllene: 5.35,
+    farnesene: 0,
+    humulene: 17.9,
+    geraniol: 0.25,
+    selinene: 0,
+    other: 18.85
+  }
 }, {
   name: "Magnum",
-  avgaa: 15
+  description: "Bred at the Hop Research Center in Hüll in 1980 and released in 1993, Magnum is a German variety (also grown in the US) and daughter of Galena. It is a high alpha cultivar and is often used as the base bittering variety. Magnum does not display any distinct aroma characteristics, however, subtle spice and fruit characteristics have been noted by some brewers.",
+  country: "US",
+  aromaProfile: ["subtle spice and fruit", "clean bittering"],
+  styles: ["ipa", "lager", "pilsner", "stout"],
+  averageAlphaAcidPercentage: 13.75,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 35,
+    linalool: 0.55,
+    caryophyllene: 9.5,
+    farnesene: 0,
+    humulene: 27.5,
+    geraniol: 0.45,
+    selinene: 0,
+    other: 25.5
+  }
+}, {
+  name: "Magnum",
+  description: "Bred at the Hop Research Center in Hüll in 1980 and released in 1993, Magnum is a German variety (also grown in the US) and daughter of Galena. It is a high alpha cultivar and is often used as the base bittering variety. Magnum does not display any distinct aroma characteristics, however, subtle spice and fruit characteristics have been noted by some brewers.",
+  country: "DE",
+  aromaProfile: ["Subtle spice and fruit", "clean bittering"],
+  styles: ["ipa", "lager", "pilsner", "stout"],
+  averageAlphaAcidPercentage: 13.75,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 35,
+    linalool: 0.55,
+    caryophyllene: 9.5,
+    farnesene: 0,
+    humulene: 27.5,
+    geraniol: 0.45,
+    selinene: 0,
+    other: 25.5
+  }
 }, {
   name: "Mandarina Bavaria",
-  avgaa: 8.5
+  description: "Bred at the Hop Research Center in Hüll and released in 2012, Mandarina Bavaria was commercialized as a new, German aroma variety in response to growing demand from the craft beer industry for distinct flavor profiles. It is the daughter of Cascade and displays many citrus characteristics, however, the most notable aroma is tangerine.",
+  country: "DE",
+  aromaProfile: ["tangerine", "grapefruit", "lime"],
+  styles: ["ipa", "saison"],
+  averageAlphaAcidPercentage: 8.5,
+  averageBetaAcidPercentage: 5.75,
+  averageTotalOil: 2.2,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 71,
+    linalool: 0.35,
+    caryophyllene: 3,
+    farnesene: 0,
+    humulene: 10,
+    geraniol: 0,
+    selinene: 0,
+    other: 15.15
+  }
 }, {
-  name: "Millenium",
-  avgaa: 15.5
+  name: "Merkur",
+  description: "Bred at the Hop Research Center in Hüll and registered in 2001, Merkur was the first mildew-resistant hop variety from the research center. It is a cross between Magnum and German experimental variety 81/8/13. It is a high alpha variety with low co-humulone oil percentages. In some dual purpose applications, Merkur displays subtle earth and citrus notes.",
+  country: "DE",
+  aromaProfile: ["sugar", "pineapple", "mint"],
+  styles: ["lager", "pilsner", "stout"],
+  averageAlphaAcidPercentage: 13,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 2.5,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 47.5,
+    linalool: 0.85,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 30,
+    geraniol: 0,
+    selinene: 0,
+    other: 11.5
+  }
+}, {
+  name: "Millennium",
+  description: "Bred by the John I. Haas breeding program and released in 2000, Millennium is a super-alpha variety with mild herbal aromas. It is a descendent of Nugget.",
+  country: "US",
+  aromaProfile: ["resin", "herbal", "floral", "pear"],
+  styles: ["ale", "barely wine", "stout"],
+  averageAlphaAcidPercentage: 17,
+  averageBetaAcidPercentage: 5.75,
+  averageTotalOil: 2.25,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 45,
+    linalool: 0.45,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 20,
+    geraniol: 0.2,
+    selinene: 0,
+    other: 23.5
+  }
+}, {
+  name: "Mittlefrüh",
+  description: "Despite being grown in regions throughout Germany, Mittlefrüh is commonly referred to as \"Hallertau Mittlefrüh\" as it was once the major Hallertau landrace variety. It is a classic German aroma hop associated with Bavarian-style lager beers, however, due to disease, acreage has been decreasing. Mittlefrüh is distinguished by an intense, pleasantly-harmonic bitterness.",
+  country: "DE",
+  aromaProfile: ["grass", "tea", "citrus"],
+  styles: ["lager", "pilsner", "wheat", "cask-conditioned ale"],
+  averageAlphaAcidPercentage: 3.75,
+  averageBetaAcidPercentage: 4,
+  averageTotalOil: 1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 15.5,
+    linalool: 0.9,
+    caryophyllene: 14.6,
+    farnesene: 0,
+    humulene: 55.1,
+    geraniol: 0,
+    selinene: 0,
+    other: 25.5
+  }
 }, {
   name: "Mosaic",
-  avgaa: 12.5
+  brandName: "HBC 369 CV",
+  description: "Developed by Hop Brewing Company and released in 2012, Mosaic HBC 369 cv contains high alpha content and features a unique and complex aroma profile that translates favorably into a variety of beer styles. It is a daughter of Simcoe YCR 14 cv. and a Nugget derived male. Mosaic is named in honor of the artistic assortment of aromas and flavors it is capable of presenting.",
+  country: "US",
+  aromaProfile: ["blueberry", "tangerine", "papaya", "rose", "blossom", "bubble gum"],
+  styles: ["pale ale", "ipa", "stout"],
+  averageAlphaAcidPercentage: 12.25,
+  averageBetaAcidPercentage: 3.75,
+  averageTotalOil: 1.9,
+  oilBreakdown: {
+    bPinene: 0.8,
+    myrcene: 52,
+    linalool: 0.6,
+    caryophyllene: 5.5,
+    farnesene: 0,
+    humulene: 12.5,
+    geraniol: 0.7,
+    selinene: 0,
+    other: 27.5
+  }
 }, {
-  name: "Mosaic DBL",
-  avgaa: 2.2
+  name: "Mouteka",
+  brandName: "87.14-20",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 1996, Motueka is a cross between a New Zealand breeding selection and Saaz. It offers a unique aroma and flavor profile suitable for producing big beer styles. Motueka performs well when used in multiple additions from a single hop bill.",
+  country: "NZ",
+  aromaProfile: ["lime", "lemon", "tromical fruit"],
+  styles: ["english style ale", "lager", "pilsner"],
+  averageAlphaAcidPercentage: 7,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 0.8,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 47.5,
+    linalool: 0,
+    caryophyllene: 2,
+    farnesene: 12.2,
+    humulene: 3.6,
+    geraniol: 0,
+    selinene: 0,
+    other: 35.5
+  }
 }, {
-  name: "Mosaic LupuLN2",
-  avgaa: 22
+  name: "Mt. Hood",
+  description: "Bred in 1983 and released from the USDA breeding program in Oregon in 1989, Mt. Hood is a triploid aroma-type cultivar with similarities to German Hallertau and German Hersbrucker. It is named after the famous Oregon volcano",
+  country: "US",
+  aromaProfile: ["pungent"],
+  styles: ["lager", "altbier", "bock", "helles", "wheat"],
+  averageAlphaAcidPercentage: 5.25,
+  averageBetaAcidPercentage: 6.5,
+  averageTotalOil: 1.4,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 30,
+    linalool: 0.7,
+    caryophyllene: 13,
+    farnesene: 0,
+    humulene: 25,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 29.5
+  }
 }, {
-  name: "Motueka",
-  avgaa: 7
-}, {
-  name: "Mount Hood",
-  avgaa: 4.8
-}, {
-  name: "Mount Rainier",
-  avgaa: 6.2
-}, {
-  name: "Moutere",
-  avgaa: 18.5
+  name: "Mt. Rainier",
+  description: "Bred by Oregon State University, Mt. Rainier is a dual purpose variety with noble aroma characteristics. It is similar to the classic German variety, Hallertau Mittlefrüh, but features more bittering strength.",
+  country: "US",
+  aromaProfile: ["noble", "licorice", "floral"],
+  styles: ["american style ale", "lager", "pilsner"],
+  averageAlphaAcidPercentage: 6,
+  averageBetaAcidPercentage: 8,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0.7,
+    myrcene: 55,
+    linalool: 0.75,
+    caryophyllene: 8,
+    farnesene: 0,
+    humulene: 17.5,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 17
+  }
 }, {
   name: "Nelson Sauvin",
-  avgaa: 12.5
+  brandName: "85-03-06",
+  description: "Developed by the New Zealand Insititude for Plant and Food Research hop breeding program and released in 2000, Nelson Sauvin is a triploid variety bred from the New Zealand Smoothcone and a selected New Zealand male. It is known for being of the most unique hop varieties, displaying strong fruit and white wine aroma charachteristics.",
+  country: "NZ",
+  aromaProfile: ["white wine", "gooseberry", "grape", "sauvignon blanc"],
+  styles: ["lager", "pale ale", "ipa"],
+  averageAlphaAcidPercentage: 12.5,
+  averageBetaAcidPercentage: 7,
+  averageTotalOil: 1.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 22,
+    linalool: 0,
+    caryophyllene: 10.7,
+    farnesene: 0.4,
+    humulene: 36.4,
+    geraniol: 0,
+    selinene: 0,
+    other: 36
+  }
 }, {
   name: "Newport",
-  avgaa: 15.5
+  description: "Bred in 1992 by Oregon State Univeristy and released in 1992 through the USDA, Newport is a descendent of the classic bittering variety, Magnum. It contains high alpha acid, co-humulone, and myrcene content, offering more distinct aroma characteristics than its parent.",
+  country: "US",
+  aromaProfile: ["wine", "balsamic"],
+  styles: ["barley wine", "stout", "american style ale"],
+  averageAlphaAcidPercentage: 11.5,
+  averageBetaAcidPercentage: 6,
+  averageTotalOil: 2.05,
+  oilBreakdown: {
+    bPinene: 0.75,
+    myrcene: 50,
+    linalool: 0.5,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 17.5,
+    geraniol: 0.35,
+    selinene: 0,
+    other: 21
+  }
 }, {
   name: "Northdown",
-  avgaa: 8.6
+  description: "Bred at Wye College in 1970, Northdown is a cross between Northern Brewer and a German male. It is known for its fresh, yet rich flavor.",
+  country: "UK",
+  aromaProfile: ["floral", "pine", "cedar", "berry"],
+  styles: ["porter", "ale", "lager", "barley wine", "stout", "bock"],
+  averageAlphaAcidPercentage: 8.5,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 26,
+    linalool: 0,
+    caryophyllene: 15,
+    farnesene: 0,
+    humulene: 42.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 15.5
+  }
 }, {
   name: "Northern Brewer",
-  avgaa: 7.8
+  description: "Originally bred in England in 1934, Northern Brewer is a cross between Canterbury Golding and a male seedling of Brewer's Gold. It was originally grown in the North of England but has become one of the main varieties in the Hallertau region of Germany. Northern Brewer displays pleasant pine and mint characteristics in dual purpose brewing applications.",
+  country: "DE",
+  aromaProfile: ["mint", "pine", "grass"],
+  styles: ["porter", "english style bitter", "english style pale ale"],
+  averageAlphaAcidPercentage: 8,
+  averageBetaAcidPercentage: 4,
+  averageTotalOil: 1.3,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 35,
+    linalool: 0.55,
+    caryophyllene: 15,
+    farnesene: 0,
+    humulene: 42.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 14.5
+  }
 }, {
   name: "Nugget",
-  avgaa: 14
+  description: "Bred in 1970 by the USDA breeding program in Oregon and released in 1983, Nugget is a high alpha cultivar that is beginning to gain some acceptance as a dual purpose variety. Its lineage includes Brewer's Gold, Canterbury Golding, and Early Green.",
+  country: "US",
+  aromaProfile: ["green", "wood", "ginger"],
+  styles: ["lager", "pilsner", "pale ale", "esb"],
+  averageAlphaAcidPercentage: 14.5,
+  averageBetaAcidPercentage: 4.95,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 45,
+    linalool: 0.9,
+    caryophyllene: 10,
+    farnesene: 0,
+    humulene: 20,
+    geraniol: 0.15,
+    selinene: 0,
+    other: 22.5
+  }
 }, {
   name: "Olympic",
-  avgaa: 12
-}, {
-  name: "Omega",
-  avgaa: 10
+  description: "Released for commercial production in 1983, Olympic is a descendant of Brewer's Gold, Fuggle, and East Kent Golding. It is primarily used as a bittering hop, however some subtle citrus and spice aroma characteristics have been noted.",
+  country: "US",
+  aromaProfile: ["citrus", "spicy"],
+  styles: ["american style ale", "pale ale"],
+  averageAlphaAcidPercentage: 12.5,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.8,
+    myrcene: 50,
+    linalool: 0.55,
+    caryophyllene: 9.5,
+    farnesene: 0,
+    humulene: 11,
+    geraniol: 0.8,
+    selinene: 0,
+    other: 26
+  }
 }, {
   name: "Opal",
-  avgaa: 6.5
+  description: "Bred at the Hop Research Institute in Hüll, Opal is a daughter of Hallertau Gold. It si specifically known for its sweet and spicy characteristics, providing subtle pepper and clean citrus flavors.",
+  country: "DE",
+  aromaProfile: ["sweet spice", "pepper", "clean citrus", "anise"],
+  styles: ["belgian style ale", "wheat", "summer ale"],
+  averageAlphaAcidPercentage: 6.5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 1.05,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 32.5,
+    linalool: 1.25,
+    caryophyllene: 11.5,
+    farnesene: 0,
+    humulene: 40,
+    geraniol: 0,
+    selinene: 0,
+    other: 20
+  }
 }, {
   name: "Orion",
-  avgaa: 7
+  description: "Orion is a cross between German Perle and 70/10/15M; it is a half-sister to Challenger. Acreage and availability are limited.",
+  country: "DE",
+  aromaProfile: ["spicy"],
+  styles: ["helles", "dunkel", "german style ale", "lager", "pilsner"],
+  averageAlphaAcidPercentage: 7.25,
+  averageBetaAcidPercentage: 3.5,
+  averageTotalOil: 1.05,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 48,
+    linalool: 0,
+    caryophyllene: 9.5,
+    farnesene: 0,
+    humulene: 21,
+    geraniol: 0,
+    selinene: 0,
+    other: 20.5
+  }
+}, {
+  name: "Pacific Crest",
+  isBlend: true,
+  brandName: "TRI2302 BLEND",
+  description: "This blend connects the classic noble varieties with an American influence. Bringing together grassy, earthy, and tobacco characteristics with mild floral, spicy, herbal, and pine. Pacific Crest works well in Pilsner, Lager, and Pale Ales.",
+  country: "US",
+  aromaProfile: ["floral", "earthy", "grass", "spicy", "herbal"],
+  styles: ["pilsner", "lager", "blonde ale", "pale ale"],
+  averageAlphaAcidPercentage: 3.9,
+  averageBetaAcidPercentage: 3,
+  averageTotalOil: 0.5,
+  oilBreakdown: {
+    bPinene: 0.5,
+    myrcene: 26.4,
+    linalool: 0.8,
+    caryophyllene: 9.7,
+    farnesene: 8.4,
+    humulene: 23.8,
+    geraniol: 0.6,
+    selinene: 0,
+    other: 29.8
+  }
 }, {
   name: "Pacific Gem",
-  avgaa: 15.4
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 1987, Pacific Gem is a triploid alpha variety from New Zealand Smoothcone crossed with Californian Late Cluster and Fuggle. It is typically used as a first hop addition for bittering purposes, but is known for showcasing wood and blackberry flavors.",
+  country: "NZ",
+  aromaProfile: ["blackberry", "oak"],
+  styles: ["lager", "porter", "ipa"],
+  averageAlphaAcidPercentage: 14,
+  averageBetaAcidPercentage: 8,
+  averageTotalOil: 1.2,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 33.3,
+    linalool: 0,
+    caryophyllene: 11,
+    farnesene: 0.3,
+    humulene: 29.9,
+    geraniol: 0,
+    selinene: 0,
+    other: 26
+  }
 }, {
   name: "Pacific Jade",
-  avgaa: 13
+  brandName: "HORT1524",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 2004, Pacific Jade is a cross of New Zealand First Choice (a relative of Late Cluster) and a Saaz male. It is suited for use as a bittering hop but also delivers bold citrus and spice aroma characteristics.",
+  country: "NZ",
+  aromaProfile: ["fresh citrus", "black pepper"],
+  styles: ["ale", "lager", "porter"],
+  averageAlphaAcidPercentage: 13,
+  averageBetaAcidPercentage: 7.5,
+  averageTotalOil: 1.4,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 33.3,
+    linalool: 0,
+    caryophyllene: 10.2,
+    farnesene: 0.3,
+    humulene: 32.9,
+    geraniol: 0,
+    selinene: 0,
+    other: 24
+  }
 }, {
   name: "Pacifica",
-  avgaa: 5
+  brandName: "77-01",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 1993, Pacifica was bred through open pollination of Hallertau Mittlefrüh. It displays classic hallertau citrus and foral aroma characters but brings a blend of new and old-world taste descriptors to the brewer's forum.",
+  country: "NZ",
+  aromaProfile: ["orange zest", "marmalade"],
+  styles: ["lager", "pale ale", "ipa"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 6,
+  averageTotalOil: 1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 12.5,
+    linalool: 0,
+    caryophyllene: 16.7,
+    farnesene: 0.2,
+    humulene: 50.9,
+    geraniol: 0,
+    selinene: 0,
+    other: 19
+  }
+}, {
+  name: "Pahto",
+  brandName: "HBC 682 CV",
+  description: "Pahto is a super alpha hop that consistently delivers a clean and smooth canvas of bitterness for the boil. The Pahto story is every bit as refreshing. Snow melt from Pahto (the native name for Mt. Adams) and the neighboring Cascades provides irrigation for farms and ranches throughout the Yakima Valley.",
+  country: "US",
+  aromaProfile: ["herbal", "earthy", "floral"],
+  styles: ["ipa", "pale ale"],
+  averageAlphaAcidPercentage: 18.5,
+  averageBetaAcidPercentage: 5.3,
+  averageTotalOil: 1.75,
+  oilBreakdown: {
+    bPinene: 0.75,
+    myrcene: 65,
+    linalool: 0.5,
+    caryophyllene: 4.65,
+    farnesene: 0.15,
+    humulene: 9.5,
+    geraniol: 0.15,
+    selinene: 0,
+    other: 19.25
+  }
 }, {
   name: "Palisade",
-  avgaa: 7.5
+  brandName: "YCR 4 CV",
+  description: "Developed by Yakima Chief Ranches, Palisade YCR 4 cv. is known for its high yield and unique aroma profile. With moderate alpha acid, Palisade borders on being a dual purpose hop, however, more complex characteristics are seen in later additions.",
+  country: "US",
+  aromaProfile: ["apricot", "grass", "clean", "floral"],
+  styles: ["american style ale", "english style ale", "lager"],
+  averageAlphaAcidPercentage: 8.25,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 1.4,
+  oilBreakdown: {
+    bPinene: 0.7,
+    myrcene: 50,
+    linalool: 0.5,
+    caryophyllene: 12,
+    farnesene: 0,
+    humulene: 15,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 20.5
+  }
+}, {
+  name: "Pekko",
+  brandName: "ADHA 871",
+  description: "Pekko is named for the Finnish God of Field and Crops. Pekko's complex and clean characteristics of floral, citrus, and mint lend itself to many different styles of beer.",
+  country: "US",
+  aromaProfile: ["clean", "floral", "melon", "pineapple", "saaz-like", "cucumber", "mint", "herbal", "sage", "lemon"],
+  styles: ["all styles"],
+  averageAlphaAcidPercentage: 14.5,
+  averageBetaAcidPercentage: 3.9,
+  averageTotalOil: 2.4,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 50.5,
+    linalool: 0,
+    caryophyllene: 12,
+    farnesene: 0.5,
+    humulene: 13.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 23.5
+  }
 }, {
   name: "Perle",
-  avgaa: 8.2
+  description: "Bred at the Hop Research Institute in Hüll and released in 1978, Perle is a cross between Northern Brewer and 63/5/27M. It is tolerant to most diseases and is grown in both Germany and the United States. Perle is known for adding a traditional, German-like quality to beer.",
+  country: "US",
+  aromaProfile: ["spicy", "floral"],
+  styles: ["wheat", "lager", "kölsch", "pilsner"],
+  averageAlphaAcidPercentage: 7.5,
+  averageBetaAcidPercentage: 3.75,
+  averageTotalOil: 1.4,
+  oilBreakdown: {
+    bPinene: 0.45,
+    myrcene: 37.5,
+    linalool: 0.55,
+    caryophyllene: 14,
+    farnesene: 0,
+    humulene: 31,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 15
+  }
+}, {
+  name: "Perle",
+  description: "Bred at the Hop Research Institute in Hüll and released in 1978, Perle is a cross between Northern Brewer and 63/5/27M. It is tolerant to most diseases, being grown in Germany and the United States.",
+  country: "DE",
+  aromaProfile: ["mint", "tea", "pepper"],
+  styles: ["wheat", "lager", "kölsch", "pilsner"],
+  averageAlphaAcidPercentage: 6.5,
+  averageBetaAcidPercentage: 3.5,
+  averageTotalOil: 1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 27.5,
+    linalool: 0.4,
+    caryophyllene: 15,
+    farnesene: 0,
+    humulene: 45,
+    geraniol: 0,
+    selinene: 0,
+    other: 17
+  }
 }, {
   name: "Phoenix",
-  avgaa: 10
+  description: "Bred at Wye College and released in 1996, Phoenix is a seedling of Yeoman. In brewing trials, PHoenix has produced excellent results in both bittering and flavor applications.",
+  country: "UK",
+  aromaProfile: ["spicy", "foral", "chocolate"],
+  styles: ["english style bitter", "pale ale", "stout", "helles", "lager", "saison"],
+  averageAlphaAcidPercentage: 10,
+  averageBetaAcidPercentage: 4.15,
+  averageTotalOil: 1.85,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 24,
+    linalool: 0,
+    caryophyllene: 11,
+    farnesene: 1.5,
+    humulene: 30,
+    geraniol: 0,
+    selinene: 0,
+    other: 40
+  }
 }, {
   name: "Pilgrim",
-  avgaa: 11
+  description: "Bred at Wye College in the late 1990s and released in 2001, Pilgrim is half-sister to First gold and sister to Herald. It is often comapred to Target. Pilgrim's selinene content helps enhance brewing performance and produce a \"hoppier\" aroma.",
+  country: "UK",
+  aromaProfile: ["lemon", "grapefruit", "pear", "berry"],
+  styles: ["ale", "wheat", "stout", "helles", "lager"],
+  averageAlphaAcidPercentage: 11,
+  averageBetaAcidPercentage: 4.65,
+  averageTotalOil: 1.8,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 30,
+    linalool: 0,
+    caryophyllene: 7.5,
+    farnesene: 0.3,
+    humulene: 17,
+    geraniol: 0,
+    selinene: 0,
+    other: 45.5
+  }
+}, {
+  name: "Pilot",
+  description: "Bred at Wye College and released in 2001, Pilot is a result of open pollination of Pioneer. It is known for its distinct marmalade flavor and complete aroma profile being distinctively different than other UK varieties.",
+  country: "UK",
+  aromaProfile: ["marmalade", "lemon", "spice"],
+  styles: ["american style ale", "english style ale"],
+  averageAlphaAcidPercentage: 10,
+  averageBetaAcidPercentage: 4.15,
+  averageTotalOil: 1.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 33.5,
+    linalool: 0,
+    caryophyllene: 3.5,
+    farnesene: 0,
+    humulene: 4.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 57.5
+  }
 }, {
   name: "Pioneer",
-  avgaa: 9
+  description: "Bred at Wye College and released in 1996, Pioneer is a sister to Herald. It displays a distinctly \"hoppy\" aroma with crisp and refreshing bittering characteristics.",
+  country: "UK",
+  aromaProfile: ["lemon", "grapefruit", "cedar", "herbal"],
+  styles: ["english style bitter", "english style ale", "red ale"],
+  averageAlphaAcidPercentage: 9.95,
+  averageBetaAcidPercentage: 4.05,
+  averageTotalOil: 1.9,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 35,
+    linalool: 0,
+    caryophyllene: 7.5,
+    farnesene: 0,
+    humulene: 20,
+    geraniol: 0,
+    selinene: 0,
+    other: 36.5
+  }
+}, {
+  name: "Polaris",
+  description: "Bred at the Hop Research Institute in Hüll and released in 2012, Polaris was commercialized as a new, German variety in response to growing demand from the craft beer industry for distinct flavor profiles. It features extremely high alpha content along with intense mint flavors.",
+  country: "DE",
+  aromaProfile: ["mint", "pineapple", "menthol"],
+  styles: ["stout", "ipa", "double ipa"],
+  averageAlphaAcidPercentage: 20.5,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 4.5,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 50,
+    linalool: 0.25,
+    caryophyllene: 10.5,
+    farnesene: 0,
+    humulene: 27.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 11
+  }
+}, {
+  name: "Premiant",
+  description: "Bred from Saaz and released in 1996, Premiant has relatively high alpha content for Czech varieties. As a result, it has found some application as a dual purpose variety.",
+  country: "CZ",
+  aromaProfile: ["pleasant", "mild"],
+  styles: ["ale", "lager", "saison"],
+  averageAlphaAcidPercentage: 8.5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.55,
+    myrcene: 37.5,
+    linalool: 0.55,
+    caryophyllene: 11,
+    farnesene: 2,
+    humulene: 32.5,
+    geraniol: 0.06,
+    selinene: 0,
+    other: 17
+  }
 }, {
   name: "Pride of Ringwood",
-  avgaa: 10
+  description: "Bred in 1953 and commercially grown since the 1960s. One of Austrailia's most known and utilized hop varieties. Predominantly used for early kettle additions.",
+  country: "AU",
+  aromaProfile: ["cedar", "oak"],
+  styles: ["lager", "pale ale"],
+  averageAlphaAcidPercentage: 9.55,
+  averageBetaAcidPercentage: 5.7,
+  averageTotalOil: 1.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 32.5,
+    linalool: 0,
+    caryophyllene: 11.5,
+    farnesene: 0,
+    humulene: 3,
+    geraniol: 0,
+    selinene: 24.5,
+    other: 27.5
+  }
 }, {
   name: "Progress",
-  avgaa: 6.25
+  description: "Bred at Wye College in 1951 and released in 1964, Progress is a cross between WGV (Whitbread Golding Variety) and a wild, American male hop. It was originally introduced as an alternative to Fuggle, but showcases a slightly sweeter aroma.",
+  country: "UK",
+  aromaProfile: ["grass", "sweet", "mint", "honey", "blackcurrant"],
+  styles: ["english style ale", "porter", "stout", "english style bitter"],
+  averageAlphaAcidPercentage: 6.75,
+  averageBetaAcidPercentage: 2.35,
+  averageTotalOil: 0.65,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 26,
+    linalool: 0,
+    caryophyllene: 13.5,
+    farnesene: 0,
+    humulene: 43.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 16
+  }
 }, {
   name: "Rakau",
-  avgaa: 10.5
-}, {
-  name: "Record",
-  avgaa: 6.5
+  brandName: "70-4-9",
+  description: "Re-released in 2007 from the New Zealand hop breeding program, Rakau is of ten described as \"the whole orchard\". It is often used in New World styles where brash fruity character and big, but well constructed, bitterness is desired. Rakau performs best when used in combination of late additions ad dry hopping.",
+  country: "NZ",
+  aromaProfile: ["stone fruit", "fig", "apricot", "resine", "pine needle"],
+  styles: ["ipa", "lager", "pale ale"],
+  averageAlphaAcidPercentage: 10.5,
+  averageBetaAcidPercentage: 5.5,
+  averageTotalOil: 2.2,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 56,
+    linalool: 0,
+    caryophyllene: 5.2,
+    farnesene: 4.5,
+    humulene: 16.3,
+    geraniol: 0,
+    selinene: 0,
+    other: 18
+  }
 }, {
   name: "Riwaka",
-  avgaa: 5.5
+  brandName: "85.6-23",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 1996, Riwaka is a triploid aroma variety bred from \"Old Line\" Saaz and New Zealand breeding selections. It is quintessential New Zealand variety. Riwaka is a bold, fruity hop that is best suited for IPA and Imperial beer styles.",
+  country: "NZ",
+  aromaProfile: ["grapefruit", "citrus"],
+  styles: ["ipa", "double ipa", "pilsner"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 68,
+    linalool: 0,
+    caryophyllene: 4,
+    farnesene: 0,
+    humulene: 9,
+    geraniol: 0,
+    selinene: 0,
+    other: 18
+  }
 }, {
   name: "Saaz",
-  avgaa: 3.5
+  description: "As the US equivalent of the longstanding, Czech Republic landrace variety, Saaz is the most classic \"noble\" aroma hop with longstanding and strong traditions.",
+  country: "US",
+  aromaProfile: ["earthy", "spicy"],
+  styles: ["lager", "pilsner", "belgian style ale", "wheat"],
+  averageAlphaAcidPercentage: 3.75,
+  averageBetaAcidPercentage: 3.75,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 27.5,
+    linalool: 0,
+    caryophyllene: 10,
+    farnesene: 11,
+    humulene: 37.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 14
+  }
+}, {
+  name: "Saaz",
+  description: "A Czech Republic landrace variety, Saaz is the most classic \"noble\" aroma hop with longstanding and strong traditions. It is associated with and defines Czech-style pilsners",
+  country: "CZ",
+  aromaProfile: ["pleasant", "mild"],
+  styles: ["pilsner", "lager", "belgian style ale"],
+  averageAlphaAcidPercentage: 3.5,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 0.6,
+  oilBreakdown: {
+    bPinene: 0.6,
+    myrcene: 32.5,
+    linalool: 0.5,
+    caryophyllene: 7.5,
+    farnesene: 17,
+    humulene: 22.5,
+    geraniol: 0.15,
+    selinene: 0,
+    other: 19.5
+  }
+}, {
+  name: "Sabro",
+  brandName: "HBC 438 CV",
+  description: "Sabro HBC 438 cv. is the newest release from the Hop Breeding Company. Sabro is an aroma hop that is notable for its complexity of fruity and citrus flavors. Sabro's pedigree is the result of a unique cross pollination of a female neomexicanus hop. With a robust brewing performance, Sabro proves to be a strongly expressive hop that translates its flavor incredibly well into beer.",
+  country: "US",
+  aromaProfile: ["citrus", "stone fruit", "coconut", "tropical fruit", "herbal"],
+  styles: ["ipa", "saison", "porter", "stout", "fruit beer", "american pale ale"],
+  averageAlphaAcidPercentage: 15,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 2.6,
+  oilBreakdown: {
+    bPinene: 0.9,
+    myrcene: 59,
+    linalool: 0.55,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 10.5,
+    geraniol: 1.2,
+    selinene: 0,
+    other: 18
+  }
 }, {
   name: "Santiam",
-  avgaa: 6.5
+  description: "Released in 1997 by the USDA, Santiam is a triploid selection from Tettnang, Hallertau Mittlefrüh, and a cultivar derived from Cascade. It is an American aroma variety with noble hop characteristics.",
+  country: "US",
+  aromaProfile: ["black pepper", "spicy", "floral"],
+  styles: ["belgian style ale", "pilsner", "bock", "helles", "lager"],
+  averageAlphaAcidPercentage: 7.25,
+  averageBetaAcidPercentage: 7.6,
+  averageTotalOil: 1.6,
+  oilBreakdown: {
+    bPinene: 0.3,
+    myrcene: 20,
+    linalool: 1,
+    caryophyllene: 7.5,
+    farnesene: 16,
+    humulene: 25,
+    geraniol: 0.15,
+    selinene: 0,
+    other: 30
+  }
 }, {
   name: "Saphir",
-  avgaa: 4.25
+  description: "Bred at the Hop Research Institute in Hüll and released in 2002, Saphir is an aroma variety with a distinct hoppy tang.",
+  country: "DE",
+  aromaProfile: ["spicy", "floral"],
+  styles: ["german style lager", "belgian style ale", "pilsner", "wheat"],
+  averageAlphaAcidPercentage: 3.25,
+  averageBetaAcidPercentage: 5.5,
+  averageTotalOil: 1.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 32.5,
+    linalool: 1.05,
+    caryophyllene: 11.5,
+    farnesene: 0,
+    humulene: 25,
+    geraniol: 0,
+    selinene: 0,
+    other: 29
+  }
 }, {
-  name: "Satus",
-  avgaa: 13
+  name: "Savinjski Golding",
+  description: "Originating from UK Fuggle, Styrian Savinjski Golding is a traditional Slovenian variety with pleasant bittering and noble aroma characteristics.",
+  country: "SI",
+  aromaProfile: ["noble"],
+  styles: ["ale", "lager", "stout", "bitter", "barley wine"],
+  averageAlphaAcidPercentage: 5.25,
+  averageBetaAcidPercentage: 3,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 30,
+    linalool: 0,
+    caryophyllene: 10,
+    farnesene: 3.5,
+    humulene: 36,
+    geraniol: 0,
+    selinene: 0,
+    other: 20.5
+  }
+}, {
+  name: "Select",
+  description: "Bred at the Hop Research Center in Hüll and released in 1993, Select is often referred to as \"Splater Select\". It was bred to be like Spalt, Tettnag, and Saaz groups.",
+  country: "DE",
+  aromaProfile: ["spicy", "grass"],
+  styles: ["lager", "german style ale"],
+  averageAlphaAcidPercentage: 4.75,
+  averageBetaAcidPercentage: 3.75,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 30,
+    linalool: 1.25,
+    caryophyllene: 7,
+    farnesene: 18.5,
+    humulene: 16,
+    geraniol: 0,
+    selinene: 0,
+    other: 27.5
+  }
 }, {
   name: "Simcoe",
-  avgaa: 12.7
+  brandName: "YCR 14 CV",
+  description: "Developed by Yakima Chief Ranches and released in 2000, Simcoe YCR 14 cv. is known for its brewing versatility and unique aroma characteristics. It continues to rise in popularity becoming one fo the top ten varieties in the craft and home brewing industry.",
+  country: "US",
+  aromaProfile: ["passion fruit", "berry", "pine", "earth", "citrus", "bubble gum"],
+  styles: ["ipa", "american pale ale", "wheat", "saison", "amber"],
+  averageAlphaAcidPercentage: 13.25,
+  averageBetaAcidPercentage: 3.75,
+  averageTotalOil: 2,
+  oilBreakdown: {
+    bPinene: 0.75,
+    myrcene: 45,
+    linalool: 0.7,
+    caryophyllene: 11,
+    farnesene: 0,
+    humulene: 17.5,
+    geraniol: 1,
+    selinene: 0,
+    other: 23
+  }
 }, {
-  name: "Simcoe DBL",
-  avgaa: 2.2
+  name: "Sládek",
+  description: "A hybrid aroma variety of Saaz-type and Northern Brewer, Sládek displayed noble characteristics with a fruity twisty. Its name is derived from the Czech word meaning \"beer brewer\". Sládek is noted to be a good complement to Saaz in late-hopping applications.",
+  country: "CZ",
+  aromaProfile: ["peach", "grapefruit", "passion fruit"],
+  styles: ["ipa", "pilsner", "blonde ale"],
+  averageAlphaAcidPercentage: 6.25,
+  averageBetaAcidPercentage: 5.5,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.65,
+    myrcene: 42.5,
+    linalool: 0.2,
+    caryophyllene: 11.5,
+    farnesene: 0,
+    humulene: 30,
+    geraniol: 0.175,
+    selinene: 0,
+    other: 17
+  }
 }, {
-  name: "Simcoe LupuLN2",
-  avgaa: 23
-}, {
-  name: "Sonnet",
-  avgaa: 4.5
+  name: "Smaragd",
+  description: "Bred at the Hop Research Institute in Hüll, Smaragdis a fine aroma variety with many noble characteristics. It was formerly known as Emerald.",
+  country: "DE",
+  aromaProfile: ["anise", "tobacco", "clove"],
+  styles: ["ale", "altbier", "kölsch"],
+  averageAlphaAcidPercentage: 5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 0.6,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 30,
+    linalool: 1.1,
+    caryophyllene: 11.5,
+    farnesene: 0,
+    humulene: 40,
+    geraniol: 0,
+    selinene: 0,
+    other: 19.5
+  }
 }, {
   name: "Sorachi Ace",
-  avgaa: 11.1
+  description: "Developed in Japan in 1984 for Sapporo Breweries, Ltd., Sorachi Ace is a cross between Brewer's Gold, Saaz, and Beikei No. 2 male. It is available in limited quantities, however, it remains a popular variety among craft brewers for its unique citrus fruit, herbal, and dill aromas.",
+  country: "US",
+  aromaProfile: ["lemon", "lime", "dill"],
+  styles: ["ipa", "american pale ale", "lager", "belgian style ale", "saison"],
+  averageAlphaAcidPercentage: 13,
+  averageBetaAcidPercentage: 6.75,
+  averageTotalOil: 2.25,
+  oilBreakdown: {
+    bPinene: 0.65,
+    myrcene: 50,
+    linalool: 0.4,
+    caryophyllene: 9,
+    farnesene: 3.5,
+    humulene: 23,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 13
+  }
 }, {
   name: "Southern Cross",
-  avgaa: 12.5
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and release din 1994, Southern Cross is a triploid cross between New Zealand Smoothcone and a 1950's research variety bred from a crossing of Californian and English Fuggle. It has excellent essential oils and lo co-humulone delivering a delicate balance of citrus and spice when added at the end of boil.",
+  country: "NZ",
+  aromaProfile: ["lemon peel", "lime", "tropical fruit", "pine"],
+  styles: ["pale ale", "lager"],
+  averageAlphaAcidPercentage: 12.5,
+  averageBetaAcidPercentage: 5.5,
+  averageTotalOil: 1.2,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 32,
+    linalool: 0,
+    caryophyllene: 6.7,
+    farnesene: 7.3,
+    humulene: 20.8,
+    geraniol: 0,
+    selinene: 0,
+    other: 33
+  }
 }, {
   name: "Sovereign",
-  avgaa: 5.5
+  description: "Bred at Wye College in 1995 and released in 2004, Sovereign is a dwarf variety bred by open pollination. It is a granddaughter of Pioneer. Sovereign is often used in conjunction with Goldings in English style beers.",
+  country: "UK",
+  aromaProfile: ["floral", "grass", "herbal", "mint", "pear"],
+  styles: ["english style bitter", "pale ale"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 2.6,
+  averageTotalOil: 0.8,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 25.5,
+    linalool: 0,
+    caryophyllene: 8,
+    farnesene: 3.6,
+    humulene: 23.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 43
+  }
 }, {
   name: "Spalt",
-  avgaa: 4.5
+  description: "A landrace variety originating from the Spalt region in Southern Germany, Spalt (or Spalter) is an aroma variety with characteristics similar to German Tettnang. It belongs to the Saaz group and displays fine, noble characteristics.",
+  country: "DE",
+  aromaProfile: ["noble"],
+  styles: ["lager", "altbier", "bock", "helles", "pilsner"],
+  averageAlphaAcidPercentage: 4,
+  averageBetaAcidPercentage: 4,
+  averageTotalOil: 0.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 27.5,
+    linalool: 0.65,
+    caryophyllene: 10.5,
+    farnesene: 15,
+    humulene: 25,
+    geraniol: 0,
+    selinene: 0,
+    other: 21.5
+  }
 }, {
   name: "Sterling",
-  avgaa: 8.7
+  description: "Bred in 1990 and released in 1998, Sterling is an aroma variety with noble hop characteristics. Its lineage includes Saaz, Cascade, Brewer's Gold, and Early Green.",
+  country: "US",
+  aromaProfile: ["noble", "herbal", "spicy", "floral"],
+  styles: ["lager", "wheat", "pilsner"],
+  averageAlphaAcidPercentage: 7,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 1.5,
+  oilBreakdown: {
+    bPinene: 0.45,
+    myrcene: 40,
+    linalool: 0.75,
+    caryophyllene: 6.5,
+    farnesene: 17,
+    humulene: 17,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 18
+  }
 }, {
   name: "Sticklebract",
-  avgaa: 11.5
+  description: "Developed by New Zealand Horticultural Research Center at Riwaka (now New Zealand Institute for Plant and Food Research) and released in 1972, Sticklebract is a result of open pollination of New Zealand First Choice. It was originally released as a high alpha bittering hop, but has become a dual purpose variety characterized by citrus and pine flavors.",
+  country: "NZ",
+  aromaProfile: ["pine", "citrus"],
+  styles: ["english style bitter", "ipa", "english pale ale", "pilsner"],
+  averageAlphaAcidPercentage: 12.3,
+  averageBetaAcidPercentage: 12.3,
+  averageTotalOil: 0.8,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 15,
+    linalool: 0,
+    caryophyllene: 12.6,
+    farnesene: 6.7,
+    humulene: 25.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 40
+  }
 }, {
   name: "Strisselspalt",
-  avgaa: 3.5
-}, {
-  name: "Styrian Goldings",
-  avgaa: 5.5
+  description: "A traditional landrace variety from the Alsace region in France, near Strasbourg, Strisselspalt is globally accepted as a classic, noble variety. Its aroma is delicate with floral, spicy, herbal and subtle citrus notes.",
+  country: "FR",
+  aromaProfile: ["herbal", "grass", "spicy", "grapefruit", "floral"],
+  styles: ["saison", "biere de garde", "belgian style pale ale", "lager"],
+  averageAlphaAcidPercentage: 2.15,
+  averageBetaAcidPercentage: 4.35,
+  averageTotalOil: 0.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 43.5,
+    linalool: 0,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 17,
+    geraniol: 0,
+    selinene: 0,
+    other: 29.5
+  }
 }, {
   name: "Summer",
-  avgaa: 6
+  brandName: "Summer",
+  description: "Bred in 1997 at Tasmanian Bushy Park Breeding Garden, SummerTM is the result of open pollination of a tetraploid Czech Saaz. It features balanced citrus and stone fruit flavors, but showcases distinct apricot and melon characteristics in dry hopping applications.",
+  country: "AU",
+  aromaProfile: ["apricot", "melon"],
+  styles: ["ale", "lager", "pilsner"],
+  averageAlphaAcidPercentage: 6,
+  averageBetaAcidPercentage: 5.45,
+  averageTotalOil: 1.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 33.5,
+    linalool: 0.4,
+    caryophyllene: 9.5,
+    farnesene: 0,
+    humulene: 39,
+    geraniol: 0,
+    selinene: 1.5,
+    other: 16.5
+  }
 }, {
   name: "Summit",
-  avgaa: 18.5
+  brandName: "Summit",
+  description: "Bred by the American Dwarf Hop Association and released in 2003, SummitTM is a cross between Lexus and an unspecified male derived from numerous hops including Zeus, Nugget and male USDA varieties. It is the first dwarf hop to be bred for production in the United States. SummitTM is mainly used as a bittering hop, but does have earthy aromatic characteristics and subtle hints of citrus.",
+  country: "US",
+  aromaProfile: ["pepper", "incense", "ansie", "orange", "pink grapefruit", "tangerine"],
+  styles: ["ipa", "double ipa", "pale ale", "wheat"],
+  averageAlphaAcidPercentage: 16,
+  averageBetaAcidPercentage: 5.75,
+  averageTotalOil: 2.25,
+  oilBreakdown: {
+    bPinene: 0.45,
+    myrcene: 35,
+    linalool: 0.3,
+    caryophyllene: 14,
+    farnesene: 0,
+    humulene: 20,
+    geraniol: 0.35,
+    selinene: 0,
+    other: 28.5
+  }
 }, {
-  name: "Super Alpha",
-  avgaa: 13
+  name: "Super Pride",
+  description: "Bred in 1987 at the Rostrevor Breeding Garden in Victoria and released in 1995, Super Pride is a daughter of Pride of Ringwood. It is predominantly used as a bittering hop, but offers a subtle resin and fruit characteristic as well.",
+  country: "AU",
+  aromaProfile: ["resin", "fruit"],
+  styles: ["bock", "pale ale", "lager", "ipa"],
+  averageAlphaAcidPercentage: 14.4,
+  averageBetaAcidPercentage: 7,
+  averageTotalOil: 3.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 38,
+    linalool: 0,
+    caryophyllene: 7,
+    farnesene: 0,
+    humulene: 1.5,
+    geraniol: 0,
+    selinene: 30.5,
+    other: 22
+  }
 }, {
-  name: "Super Styrians",
-  avgaa: 9
+  name: "Sussex",
+  description: "Discovered in 2005 at Gate Court, Northiam in East Sussex, Sussex is a “chance find variety. It is likely to have resulted from open pollination of a wild hop.",
+  country: "UK",
+  aromaProfile: ["earthy", "grass", "mint", "citrus", "vanilla"],
+  styles: ["ale"],
+  averageAlphaAcidPercentage: 5.05,
+  averageBetaAcidPercentage: 2.8,
+  averageTotalOil: 0.5,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 42,
+    linalool: 0,
+    caryophyllene: 0,
+    farnesene: 0,
+    humulene: 23,
+    geraniol: 0,
+    selinene: 0,
+    other: 34
+  }
 }, {
-  name: "Taiheke",
-  avgaa: 7
+  name: "Sylva",
+  brandName: "Sylva",
+  description: "Bred in 1997 at Tasmanian Bushy Park Breeding Garden, SylvaTM is a result of open pollination of Czech Saaz. Brewing characteristics closely resemble that of its parent, with complex yet subtle floral and herbal characteristics.",
+  country: "AU",
+  aromaProfile: ["floral", "herbal", "noble"],
+  styles: ["lager", "pilsner"],
+  averageAlphaAcidPercentage: 6.45,
+  averageBetaAcidPercentage: 3.8,
+  averageTotalOil: 1.2,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 31,
+    linalool: 0,
+    caryophyllene: 6.5,
+    farnesene: 25,
+    humulene: 22.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 14
+  }
 }, {
-  name: "Talisman",
-  avgaa: 8
+  name: "Tahoma",
+  description: "Released by Washington State University in 2013, Tahoma is a daughter of Glacier. It retains the low co-humulone characteristic of Glacier but displays slightly higher alpha acid content. Tahoma is considered to be “Cascade-like” with a pleasant, predominantly citrus aroma profile.",
+  country: "US",
+  aromaProfile: ["lemon", "grapefruit", "cedar", "pine", "green melon", "floral", "pepper"],
+  styles: ["american style pale ale", "stout", "porter"],
+  averageAlphaAcidPercentage: 6.75,
+  averageBetaAcidPercentage: 7.5,
+  averageTotalOil: 1.75,
+  oilBreakdown: {
+    bPinene: 1,
+    myrcene: 60,
+    linalool: 0.6,
+    caryophyllene: 4,
+    farnesene: 0,
+    humulene: 10,
+    geraniol: 0.25,
+    selinene: 0,
+    other: 23.5
+  }
 }, {
   name: "Target",
-  avgaa: 11.5
+  description: "Bred at Wye College and released in 1972, Target is a second generation selection from Northern Brewer and a male Eastwell Golding; it is a cousin to Challenger. As a dual purpose variety, Target provides strong bittering characteristics and is unusually effective in dry hop applications compared to other English varieties.",
+  country: "UK",
+  aromaProfile: ["sage", "pepper", "citrus marmalade", "tangerine"],
+  styles: ["english style ale", "lager", "brown ale", "stout"],
+  averageAlphaAcidPercentage: 11,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.3,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 50,
+    linalool: 0,
+    caryophyllene: 9,
+    farnesene: 0,
+    humulene: 19.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 16
+  }
 }, {
-  name: "Tettnanger",
-  avgaa: 4.5
+  name: "Taurus",
+  description: "Bred at the Hop Research Center in Hüll and released in 1995, Taurus is a high alpha cross with noble aroma characteristics. It has good pickability of small, compact cones.",
+  country: "DE",
+  aromaProfile: ["blackcurrant", "pepper", "zesty"],
+  styles: ["german style ale", "lager"],
+  averageAlphaAcidPercentage: 14.5,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.15,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 40,
+    linalool: 1.25,
+    caryophyllene: 8.5,
+    farnesene: 0,
+    humulene: 27.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 22
+  }
+}, {
+  name: "Tettnang",
+  description: "Originating from the traditional landrace variety from Germany, Tettnang is from the Saaz group. It displays fine, noble characteristics with a slight spiciness and is typically used in lager and pilsner style beers. US Tettnang is grown in Washington State and Oregon.",
+  country: "US",
+  aromaProfile: ["noble"],
+  styles: ["lager", "wheat", "german style ale", "pilsner"],
+  averageAlphaAcidPercentage: 5,
+  averageBetaAcidPercentage: 3.25,
+  averageTotalOil: 0.7,
+  oilBreakdown: {
+    bPinene: 0.4,
+    myrcene: 35,
+    linalool: 0.7,
+    caryophyllene: 12,
+    farnesene: 6.5,
+    humulene: 27.5,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 17.5
+  }
+}, {
+  name: "Tettnang",
+  description: "A landrace variety originating from the Tettnang region on Lake Constance in Germany, Tettnang (or Tettnanger) is from the Saaz group. It displays fine, noble characteristics with a slight spiciness.",
+  country: "DE",
+  aromaProfile: ["spicy", "pepper", "black tea"],
+  styles: ["lager", "wheat", "german style ale", "pilsner"],
+  averageAlphaAcidPercentage: 4.5,
+  averageBetaAcidPercentage: 4,
+  averageTotalOil: 0.7,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 27.5,
+    linalool: 0.65,
+    caryophyllene: 8.5,
+    farnesene: 20,
+    humulene: 25,
+    geraniol: 0,
+    selinene: 0,
+    other: 19
+  }
 }, {
   name: "Tomahawk",
-  avgaa: 15
+  brandName: "F10 CV",
+  description: "Bred by Charles Zimmermann, Tomahawk® F10 cv. was the first commercially grown “Super Alpha” variety. Tomahawk® is often referred to as CTZ, a trio of similar hops including Columbus and Zeus.",
+  country: "US",
+  aromaProfile: ["pungent", "black pepper", "licorice", "curry"],
+  styles: ["ipa", "pale ale", "imperial ale"],
+  averageAlphaAcidPercentage: 16.25,
+  averageBetaAcidPercentage: 5.25,
+  averageTotalOil: 3.5,
+  oilBreakdown: {
+    bPinene: 0.8,
+    myrcene: 50,
+    linalool: 0.5,
+    caryophyllene: 8,
+    farnesene: 0,
+    humulene: 11.5,
+    geraniol: 0.35,
+    selinene: 0,
+    other: 28
+  }
 }, {
   name: "Topaz",
-  avgaa: 15.9
+  brandName: "TC-85-70",
+  description: "Bred during the 1980s, TopazTM did not find popularity within the brewing community until 2007-2008. Its ancestry includes an existing high alpha Australian variety crossed with a Wye College male. TopazTM is known for its single hop applications, producing resinous, grass and tropical fruit flavors.",
+  country: "AU",
+  aromaProfile: ["resin", "grass", "lychee"],
+  styles: ["pale ale", "ipa", "amber"],
+  averageAlphaAcidPercentage: 15.7,
+  averageBetaAcidPercentage: 7.15,
+  averageTotalOil: 1.95,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 45,
+    linalool: 0.45,
+    caryophyllene: 10,
+    farnesene: 0,
+    humulene: 10.5,
+    geraniol: 0,
+    selinene: 2,
+    other: 31
+  }
+}, {
+  name: "Tradition",
+  description: "Bred at the Hop Research Institute in Hüll and registered in 1993, Tradition is a daughter of Hallertau Gold. It is often compared to Mittelfrüh, displaying fine, noble characteristics with a fruity twist.",
+  country: "DE",
+  aromaProfile: ["grass", "tea", "orange", "lavender"],
+  styles: ["german style lager", "wheat", "pilsner"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 4.5,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 24.5,
+    linalool: 1,
+    caryophyllene: 12.5,
+    farnesene: 0,
+    humulene: 42.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 18.5
+  }
+}, {
+  name: "Tripleplear",
+  description: "Released by USDA-ARS in 2013, TriplePearl is an open pollinated cross between a tetraploid Perle female and an unknown diploid male. Its lineage includes Northern Brewer and Hallertau. TriplePearl is similar to Perle but features more pronounced aroma characteristics.",
+  country: "US",
+  aromaProfile: ["melon", "orange", "resin", "spice", "pepper"],
+  styles: ["pale ale"],
+  averageAlphaAcidPercentage: 10.75,
+  averageBetaAcidPercentage: 3.75,
+  averageTotalOil: 1.45,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 47,
+    linalool: 0,
+    caryophyllene: 4,
+    farnesene: 0,
+    humulene: 9,
+    geraniol: 0,
+    selinene: 0,
+    other: 39
+  }
+}, {
+  name: "Triskel",
+  description: "Developed in 2006 as a cross between Strisselspalt and Yeoman, Triskel contains many of the same characteristics as Strisselspalt but displays a more pronounced flavor profile.",
+  country: "FR",
+  aromaProfile: ["floral", "herbal", "citrus", "spicy"],
+  styles: ["saison", "belgian style ale", "lager", "pale ale", "pilsner", "wheat"],
+  averageAlphaAcidPercentage: 8.5,
+  averageBetaAcidPercentage: 4.35,
+  averageTotalOil: 1.75,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 60,
+    linalool: 0,
+    caryophyllene: 6.1,
+    farnesene: 0,
+    humulene: 13.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 19.4
+  }
 }, {
   name: "Ultra",
-  avgaa: 4.5
+  description: "Bred by the hops research program in Corvallis, Oregon in 1983 and released in 1995 by the USDA, Ultra is a triploid seedling of Hallertau Mittelfrüh and half sister to Mt. Hood, Liberty and Crystal. Ultra is related to traditional German varieties and can be utilized in similar applications.",
+  country: "US",
+  aromaProfile: ["mild", "floral bouquet"],
+  styles: ["lager", "pilsner", "wheat"],
+  averageAlphaAcidPercentage: 9.25,
+  averageBetaAcidPercentage: 3.9,
+  averageTotalOil: 1.25,
+  oilBreakdown: {
+    bPinene: 0.8,
+    myrcene: 55,
+    linalool: 1.25,
+    caryophyllene: 7.5,
+    farnesene: 0,
+    humulene: 12.5,
+    geraniol: 0.3,
+    selinene: 0,
+    other: 21.5
+  }
 }, {
   name: "Vanguard",
-  avgaa: 5
+  description: "Bred in 1982 by the USDA and released in 1997, Vanguard is an aroma variety with similar characteristics to Hallertau Mittelfrüh. Vanguard is typically utilized in traditional German-style beers as a noble type variety.",
+  country: "US",
+  aromaProfile: ["wood"],
+  styles: ["lager", "belgian style ale", "pilsner", "wheat"],
+  averageAlphaAcidPercentage: 5.5,
+  averageBetaAcidPercentage: 6.25,
+  averageTotalOil: 0.75,
+  oilBreakdown: {
+    bPinene: 0.35,
+    myrcene: 10,
+    linalool: 0.3,
+    caryophyllene: 15,
+    farnesene: 0,
+    humulene: 52,
+    geraniol: 0.15,
+    selinene: 0,
+    other: 21.5
+  }
 }, {
   name: "Vic Secret",
-  avgaa: 15.5
+  brandName: "00-207-013",
+  description: "Developed in 2000 and reaching commercial production in 2013, Vic SecretTM is one of the newest hop varieties from Australia. It is a sister to TopazTM containing high alpha content and displaying pronounced tropical fruit flavors in whirlpool and dry hop additions.",
+  country: "AU",
+  aromaProfile: ["pine", "earth", "passionfruit", "pineapple"],
+  styles: ["pale ale", "ipa", "stout", "porter"],
+  averageAlphaAcidPercentage: 15.5,
+  averageBetaAcidPercentage: 6.95,
+  averageTotalOil: 2.5,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 39.5,
+    linalool: 0,
+    caryophyllene: 13,
+    farnesene: 0,
+    humulene: 16.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 30
+  }
 }, {
   name: "Wai-iti",
-  avgaa: 3
+  brandName: "HORT7709",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 2011, Wai-itiTM is a granddaughter of Liberty and is derived from 1/3 Hallertau MIttelfrüh. Fresh peaches and stone fruit dominate the aroma in single hopped beers and when combining with other varieties in late additions. Wai-itiTM is best known for its fruity, aroma-driven results.",
+  country: "NZ",
+  aromaProfile: ["peach", "apricot", "spice", "lime", "tropical fruit"],
+  styles: ["pale ale", "pilsner", "ipa", "wheat"],
+  averageAlphaAcidPercentage: 3,
+  averageBetaAcidPercentage: 5,
+  averageTotalOil: 1.6,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 3,
+    linalool: 0,
+    caryophyllene: 9,
+    farnesene: 13,
+    humulene: 28,
+    geraniol: 0,
+    selinene: 0,
+    other: 47
+  }
 }, {
   name: "Waimea",
-  avgaa: 17.5
+  brandName: "HORT3953",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 2012, Waimea’s lineage includes Californian Late Cluster, Saaz and Fuggle. Waimea is a big hop for big beers and can be used across an array of styles in a variety of brew house and dry hopping applications.",
+  country: "NZ",
+  aromaProfile: ["citrus", "pine", "herbal"],
+  styles: ["ipa", "lager"],
+  averageAlphaAcidPercentage: 17.5,
+  averageBetaAcidPercentage: 8,
+  averageTotalOil: 2.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 60,
+    linalool: 0,
+    caryophyllene: 2.6,
+    farnesene: 5,
+    humulene: 9.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 23
+  }
 }, {
   name: "Wakatu",
-  avgaa: 7.5
-}, {
-  name: "Warrior",
-  avgaa: 16
-}, {
-  name: "Whitbread Golding",
-  avgaa: 6
-}, {
-  name: "Willamette",
-  avgaa: 4.5
-}, {
-  name: "Wye Challenger",
-  avgaa: 8.9
-}, {
-  name: "Wye Target",
-  avgaa: 10
-}, {
-  name: "Yakima Cluster",
-  avgaa: 7
-}, {
-  name: "Yamhill Goldings",
-  avgaa: 4
-}, {
-  name: "Yeoman",
-  avgaa: 7.25
-}, {
-  name: "Zenith",
-  avgaa: 9
-}, {
-  name: "Zeus",
-  avgaa: 16
-}, {
-  name: "Zythos",
-  avgaa: 11
+  brandName: "77-05",
+  description: "Developed by the New Zealand Institute for Plant and Food Research hop breeding program and released in 1988, as Hallertau Aroma, WakatuTM was renamed in 2011. It is a triplod variety with two thirds Hallertau Mittelfrüh parentage. WakatuTM is a well rounded variety with strong, fresh citrus characteristics and some bittering capabilities.",
+  country: "NZ",
+  aromaProfile: ["lime zest", "floral"],
+  styles: ["lager", "pale ale", "pilsner", "bock"],
+  averageAlphaAcidPercentage: 17.5,
+  averageBetaAcidPercentage: 8,
+  averageTotalOil: 2.1,
+  oilBreakdown: {
+    bPinene: 0,
+    myrcene: 60,
+    linalool: 0,
+    caryophyllene: 2.6,
+    farnesene: 5,
+    humulene: 9.5,
+    geraniol: 0,
+    selinene: 0,
+    other: 23
+  }
 }]);
 
 /***/ }),
@@ -22651,7 +25278,11 @@ var countryCodeToSvgPath = {
   FI: "flag-icons/264-finland.svg",
   DE: "flag-icons/264-germany.svg",
   UK: "flag-icons/264-united-kingdom.svg",
-  IE: "flag-icons/264-ireland.svg"
+  IE: "flag-icons/264-ireland.svg",
+  FR: "flag-icons/264-france.svg",
+  CZ: "flag-icons/264-czech-republic.svg",
+  AU: "flag-icons/264-australia.svg",
+  SI: "flag-icons/264-slovenia.svg"
 };
 
 var CountryCodeToSVGPathService =
