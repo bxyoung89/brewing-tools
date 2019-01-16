@@ -1,5 +1,8 @@
 <template>
 	<div class="hop-chart">
+		<div class="value-name">
+			{{valueName}}
+		</div>
 		<svg :id="id"></svg>
 	</div>
 
@@ -21,7 +24,7 @@
 		},
 		updated: function(){
 			ChartRenderer.render(this);
-		}
+		},
 	}
 </script>
 
@@ -30,8 +33,12 @@
 
 	.hop-chart {
 		width: 100%;
-		height: 500px;
+		height: 1200px;
 		background: $dark-blue;
+
+		.value-name {
+			display: none;
+		}
 
 		> svg {
 			height: 100%;

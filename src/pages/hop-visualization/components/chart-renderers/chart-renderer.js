@@ -7,6 +7,7 @@ import BubbleRenderer from './bubble-renderer';
 class ChartRenderer {
 	async render({id, maxValue, valueFormatter, hops, valueFunction}) {
 		const domSVG = document.getElementById(id);
+		domSVG.innerHTML = "";
 		const width = domSVG.clientWidth;
 		const height = domSVG.clientHeight;
 
@@ -16,38 +17,13 @@ class ChartRenderer {
 
 
 		const mappedData = hops.map(hop => ({...hop, x: valueFunction(hop)})).sort((a, b) => b.x - a.x);
-		let twoPointData = [
-			mappedData[0],
-			mappedData[1],
-			mappedData[2],
-			mappedData[3],
-			mappedData[4],
-			mappedData[5],
-		];
-		// twoPointData = mappedData;
-		const quadtree = HopChartService.getQuadtree(xScale);
+		const filteredData = mappedData.filter(hop => hop.x !== 0);
+		const processedData = HopChartService.getYValuesForData(filteredData, xScale);
 
 
-		await this.updateQuadtree(twoPointData, quadtree, xScale);
 		CenterLineRenderer.render(svg, xScale, height);
 		TopAxisRenderer.render(svg, xScale, valueFormatter);
-		BubbleRenderer.render(svg, xScale, twoPointData, height, quadtree);
-	}
-
-	async updateQuadtree(data, quadtree, xScale) {
-		for (let datum of data) {
-			await this.processDatum(datum, quadtree, xScale);
-		}
-	}
-
-	processDatum(datum, quadtree, xScale) {
-		return new Promise((resolve) => {
-			HopChartService.calculateOffset(datum, quadtree, xScale).then((offset) => {
-				datum.offset = offset;
-				quadtree.add(datum);
-				resolve();
-			});
-		});
+		BubbleRenderer.render(svg, xScale, processedData, height);
 	}
 }
 
