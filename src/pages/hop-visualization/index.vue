@@ -5,20 +5,25 @@
 			Hop Visualization
 		</h1>
 		<div class="hop-visualization">
-			<v-select
-				:options="dropdownOptions"
-				label="valueName"
-				v-on:input="(val) => {this.selectedDropdownOption = val}"
-				:value="selectedDropdownOption"
-			>
-			</v-select>
-			<hop-chart
-				:hops="hops"
-				:valueFunction="selectedDropdownOption.valueFunction"
-				:valueName="selectedDropdownOption.valueName"
-				:valueFormatter="selectedDropdownOption.valueFormatter"
-				:maxValue="selectedDropdownOption.maxValue"
-			/>
+			<div class="dropdown-wrapper">
+				<v-select
+					:options="dropdownOptions"
+					label="valueName"
+					v-on:input="(val) => {this.selectedDropdownOption = val}"
+					:value="selectedDropdownOption"
+					:searchable="false"
+				>
+				</v-select>
+			</div>
+			<div id="hop-chart-wrapper">
+				<hop-chart
+					:hops="hops"
+					:valueFunction="selectedDropdownOption.valueFunction"
+					:valueName="selectedDropdownOption.valueName"
+					:valueFormatter="selectedDropdownOption.valueFormatter"
+					:maxValue="selectedDropdownOption.maxValue"
+				/>
+			</div>
 		</div>
 	</div>
 </template>
@@ -138,6 +143,18 @@
 
 	.hop-visualization {
 		margin-top: 30px;
+
+		/deep/ .dropdown-toggle {
+			background: $white;
+		}
+
+		/deep/ .clear {
+			display: none;
+		}
+	}
+
+	.dropdown-wrapper {
+		margin-bottom: 20px;
 	}
 
 </style>
