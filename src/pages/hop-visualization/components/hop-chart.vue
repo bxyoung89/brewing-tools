@@ -3,10 +3,10 @@
 		<svg :id="id"></svg>
 		<div class="chart-points" id="chart-points">
 			<div
-				v-for="(point, index) in chartPoints"
+				v-for="(point) in chartPoints"
 				:style="{top: `${point.y - 12}px`, left: `${point.scaledX - 10}px`}"
 				class="chart-point"
-				:key="index"
+				:key="`${point.name}-${point.country}`"
 			>
 				<HopChartPoint
 						:hop="point"

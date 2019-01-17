@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "35eca9eda36e03b9d1ea";
+/******/ 	var hotCurrentHash = "eb9a707a96b7cbfbe2d1";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -32561,11 +32561,11 @@ var render = function() {
     _c(
       "div",
       { staticClass: "chart-points", attrs: { id: "chart-points" } },
-      _vm._l(_vm.chartPoints, function(point, index) {
+      _vm._l(_vm.chartPoints, function(point) {
         return _c(
           "div",
           {
-            key: index,
+            key: point.name + "-" + point.country,
             staticClass: "chart-point",
             style: { top: point.y - 12 + "px", left: point.scaledX - 10 + "px" }
           },
