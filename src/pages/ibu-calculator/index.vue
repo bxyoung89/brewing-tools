@@ -11,7 +11,7 @@
 						IBU Formula
 					</div>
 					<div class="regular-input">
-						<v-select v-model="selectedCalculator" label="name" :options="ibuCalculators"/>
+						<v-select v-model="selectedCalculator" label="name" :options="ibuCalculators" :searchable="false"/>
 					</div>
 				</div>
 				<div class="double-section">
@@ -133,6 +133,10 @@ export default {
 
 		/deep/ .dropdown-toggle {
 			background: $white;
+		}
+
+		/deep/ .clear {
+			display: none;
 		}
 	}
 
