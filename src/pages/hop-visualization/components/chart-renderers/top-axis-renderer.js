@@ -1,9 +1,8 @@
-import * as d3 from 'd3';
-import HopChartService from '../../../../services/hop-chart-service';
+import * as d3 from "d3";
 
 class TopAxisRender {
 	render(svg, xScale, valueFormatter) {
-		var xAxis = d3.axisTop(xScale)
+		const xAxis = d3.axisTop(xScale)
 			.ticks(5)
 			.tickFormat(valueFormatter);
 

@@ -9,6 +9,5 @@
   ],
   "plugins": [
     "dynamic-import-webpack",
-    "syntax-async-functions"
   ]
 }

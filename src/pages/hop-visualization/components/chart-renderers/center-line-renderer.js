@@ -1,4 +1,4 @@
-import HopChartService from '../../../../services/hop-chart-service';
+import HopChartService from "../../../../services/hop-chart-service";
 
 class CenterLineRenderer {
 	render(svg, xScale, height) {

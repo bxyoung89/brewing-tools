@@ -1,4 +1,3 @@
-import "regenerator-runtime/runtime";
 import Vue from "vue";
 import VueSelect from "vue-select";
 import router from "./router";

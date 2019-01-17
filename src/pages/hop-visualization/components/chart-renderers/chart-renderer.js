@@ -1,11 +1,20 @@
-import * as d3 from 'd3';
-import HopChartService from '../../../../services/hop-chart-service';
-import CenterLineRenderer from './center-line-renderer';
-import TopAxisRenderer from './top-axis-renderer';
+import * as d3 from "d3";
+import HopChartService from "../../../../services/hop-chart-service";
+import CenterLineRenderer from "./center-line-renderer";
+import TopAxisRenderer from "./top-axis-renderer";
+
 // import BubbleRenderer from './bubble-renderer';
 
 class ChartRenderer {
-	async render({id, maxValue, valueFormatter, hops, valueFunction}) {
+	render(
+		{
+			id,
+			maxValue,
+			valueFormatter,
+			// hops,
+			// valueFunction,
+		},
+	) {
 		const domSVG = document.getElementById(id);
 		domSVG.innerHTML = "";
 		const width = domSVG.clientWidth;

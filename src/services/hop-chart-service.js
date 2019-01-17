@@ -1,4 +1,4 @@
-import * as d3 from 'd3';
+import * as d3 from "d3";
 
 class HopChartService {
 	constructor() {
@@ -26,14 +26,13 @@ class HopChartService {
 	}
 
 	findNeighbors(possibleNeighbors, datumToFindNeighborFor, xScale) {
-		return possibleNeighbors.filter(neighbor => {
+		return possibleNeighbors.filter((neighbor) => {
 			const neighborValue = xScale(neighbor.x);
 			const myValue = xScale(datumToFindNeighborFor.x);
 			if (neighborValue < myValue) {
 				return neighborValue + this.BUBBLE_SIZE + this.SPACE_BETWEEN_BUBBLES >= myValue - this.BUBBLE_SIZE;
-			} else {
-				return myValue + this.BUBBLE_SIZE + this.SPACE_BETWEEN_BUBBLES >= neighborValue - this.BUBBLE_SIZE ;
 			}
+			return myValue + this.BUBBLE_SIZE + this.SPACE_BETWEEN_BUBBLES >= neighborValue - this.BUBBLE_SIZE;
 		});
 	}
 
@@ -50,15 +49,16 @@ class HopChartService {
 		neighbors.forEach((neighbor) => {
 			const neighborValue = xScale(neighbor.x);
 			const horizontalDistanceBetweenCenters = myValue - neighborValue;
-			const verticalDistanceBetweenCenters = Math.sqrt(hypoteneuse ** 2 - horizontalDistanceBetweenCenters ** 2);
+			const verticalDistanceBetweenCenters = Math.sqrt((hypoteneuse ** 2) - (horizontalDistanceBetweenCenters ** 2));
 			occupied.push({
 				bottom: neighbor.y + verticalDistanceBetweenCenters,
-				top: neighbor.y - verticalDistanceBetweenCenters
+				top: neighbor.y - verticalDistanceBetweenCenters,
 			});
 		});
 
 		occupied.sort((a, b) => b.bottom - a.bottom);
-		const {lowestValue, highestValue} = occupied.reduce(({lowestValue, highestValue}, occupiedItem) => {
+		// eslint-disable-next-line
+		const { lowestValue, highestValue } = occupied.reduce(({ lowestValue, highestValue }, occupiedItem) => {
 			if (lowestValue > occupiedItem.bottom) {
 				return {
 					highestValue: Math.min(lowestValue, occupiedItem.bottom),
@@ -68,7 +68,7 @@ class HopChartService {
 			return {
 				lowestValue: Math.min(lowestValue, occupiedItem.top),
 				highestValue,
-			}
+			};
 		}, {
 			lowestValue: Number.POSITIVE_INFINITY,
 			highestValue: Number.POSITIVE_INFINITY,

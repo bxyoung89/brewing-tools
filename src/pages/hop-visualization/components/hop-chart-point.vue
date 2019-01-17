@@ -22,24 +22,24 @@
 </template>
 
 <script>
-	import CountryCodeToSvgPathService from "../../../services/country-code-to-svg-path-service";
+import CountryCodeToSvgPathService from "../../../services/country-code-to-svg-path-service";
 
-	export default {
-		name: "hop-chart-point",
-		data: function(){
-			return {
-				getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
-			};
-		},
-		props: ['hop', 'valueFunction', 'valueName', 'valueFormatter'],
-	}
+export default {
+	name: "hop-chart-point",
+	data() {
+		return {
+			getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
+		};
+	},
+	props: ["hop", "valueFunction", "valueName", "valueFormatter"],
+};
 </script>
 
 <style scoped lang="scss">
 	@import "../../../styles/core";
 
 	.hop-chart-point {
-		position: absolute;
+		position: relative;
 		z-index: 1;
 
 		&:hover {
@@ -79,10 +79,6 @@
 		min-width: 200px;
 		justify-content: space-between;
 		pointer-events: none;
-	}
-
-	.name-and-value-label {
-
 	}
 
 	.name {
