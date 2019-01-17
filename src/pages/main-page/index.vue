@@ -52,6 +52,11 @@ export default {
 				text: "Hop Directory",
 				svg: "hop.svg",
 			},
+			{
+				url: "/hop-visualization",
+				text: "Hop Visualization",
+				svg: "hop.svg",
+			},
 		],
 	}),
 	components: {

@@ -7,6 +7,7 @@ import HydrometerTemperatureCorrection from "./pages/hydrometer-temperature-corr
 import IBUCalculator from "./pages/ibu-calculator/index.vue";
 import HopDirectory from "./pages/hop-directory/index.vue";
 import HopDetail from "./pages/hop-directory/hop-detail/index.vue";
+import HopVisualization from "./pages/hop-visualization/index.vue";
 
 Vue.use(Router);
 
@@ -47,6 +48,10 @@ export default new Router({
 		{
 			path: "/hop-directory/:id",
 			component: HopDetail,
+		},
+		{
+			path: "/hop-visualization",
+			component: HopVisualization,
 		},
 	],
 });
