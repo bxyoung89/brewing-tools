@@ -6,6 +6,7 @@ import "./style.scss";
 
 import BaseComponentsRegistry from "./base-components-registry";
 
+
 Vue.component("v-select", VueSelect.VueSelect);
 Object.keys(BaseComponentsRegistry).forEach((componentTag) => {
 	Vue.component(componentTag, BaseComponentsRegistry[componentTag]);
