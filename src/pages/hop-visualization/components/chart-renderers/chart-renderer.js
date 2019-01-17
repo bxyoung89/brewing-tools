@@ -3,6 +3,8 @@ import HopChartService from "../../../../services/hop-chart-service";
 import CenterLineRenderer from "./center-line-renderer";
 import TopAxisRenderer from "./top-axis-renderer";
 
+// uncomment everything here to show the original bubbles.
+
 // import BubbleRenderer from './bubble-renderer';
 
 class ChartRenderer {

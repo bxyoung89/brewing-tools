@@ -7,9 +7,6 @@ class BubbleRenderer {
 			.attr("class", "bubbles")
 			.attr("transform", `translate(0, ${middleOfSVG})`);
 
-		// todo make this flags
-		// todo try to make this so you add once hop at a time.
-		// right now the "offset" sucks because it has to be an iterative process.
 		group.selectAll("circle")
 			.data(data)
 			.enter()
