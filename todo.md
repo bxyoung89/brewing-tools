@@ -17,3 +17,8 @@ Fix button styling on hop detail
 Linkify the descriptions for the hop detail
 
 Double check icon attribution
+
+Get better icons.
+
+New tools
+- ABV calculator

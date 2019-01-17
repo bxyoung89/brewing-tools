@@ -68,7 +68,7 @@ export default {
 
 	.hop-chart {
 		width: 100%;
-		height: 1200px;
+		height: 600px;
 		position: relative;
 
 		.center-line {
