@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "eb9a707a96b7cbfbe2d1";
+/******/ 	var hotCurrentHash = "f95d1020f7a98608a606";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2660,7 +2660,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans);", ""]);
 
 // Module
-exports.push([module.i, ".hop-chart {\n  width: 100%;\n  height: 1200px;\n  position: relative;\n}\n.hop-chart .center-line {\n    stroke: #FFF;\n}\n.hop-chart .chart-points {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    transform: translateY(50%);\n}\n.hop-chart .chart-point {\n    height: 20px;\n    width: 20px;\n    position: absolute;\n}\n.hop-chart > svg {\n    height: 100%;\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, ".hop-chart {\n  width: 100%;\n  height: 600px;\n  position: relative;\n}\n.hop-chart .center-line {\n    stroke: #FFF;\n}\n.hop-chart .chart-points {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    transform: translateY(50%);\n}\n.hop-chart .chart-point {\n    height: 20px;\n    width: 20px;\n    position: absolute;\n}\n.hop-chart > svg {\n    height: 100%;\n    width: 100%;\n}\n", ""]);
 
 
 
