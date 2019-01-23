@@ -22,3 +22,7 @@ Get better icons.
 
 New tools
 - ABV calculator
+
+Hop visualization
+- handle tooltip leaving screen
+- handle resize better

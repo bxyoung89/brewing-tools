@@ -5,6 +5,7 @@ import GrainDropdown from "./base-components/grain-dropdown.vue";
 import HopDropdown from "./base-components/hop-dropdown.vue";
 import Checkbox from "./base-components/checkbox.vue";
 import XButton from "./base-components/x-button.vue";
+import RadioPills from './base-components/radio-pills.vue';
 
 export default {
 	DynamicSvg,
@@ -14,4 +15,5 @@ export default {
 	HopDropdown,
 	Checkbox,
 	XButton,
+	RadioPills,
 };

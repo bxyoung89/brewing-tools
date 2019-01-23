@@ -1,20 +1,21 @@
 <template>
-	<div class="body-content">
+	<div>
 		<app-header/>
-		<h1>
-			Hop Visualization
-		</h1>
-		<div class="hop-visualization">
-			<div class="dropdown-wrapper">
-				<v-select
-					:options="dropdownOptions"
-					label="valueName"
-					v-on:input="(val) => {this.selectedDropdownOption = val}"
-					:value="selectedDropdownOption"
-					:searchable="false"
-				>
-				</v-select>
+		<div class="body-content">
+			<h1>
+				Hop Visualization
+			</h1>
+			<div class="radio-pills">
+				<radio-pills
+					:items="dropdownOptions"
+					label-property="valueName"
+					:on-item-selected="(val) => {this.selectedDropdownOption = val}"
+					:selected-item="selectedDropdownOption"
+					theme="dark-blue"
+				/>
 			</div>
+		</div>
+		<div class="hop-visualization">
 			<div id="hop-chart-wrapper">
 				<hop-chart
 					:hops="hops"
@@ -29,7 +30,6 @@
 </template>
 
 <script>
-import VueSelect from "vue-select";
 import HopChart from "./components/hop-chart.vue";
 import hops from "../../data/hop-directory";
 import HopDirectoryService from "../../services/hop-directory-service";
@@ -123,7 +123,6 @@ export default {
 	}),
 	components: {
 		HopChart,
-		"v-select": VueSelect,
 	},
 };
 </script>
@@ -133,18 +132,15 @@ export default {
 
 	.hop-visualization {
 		margin-top: 30px;
-
-		/deep/ .dropdown-toggle {
-			background: $white;
-		}
-
-		/deep/ .clear {
-			display: none;
-		}
 	}
 
-	.dropdown-wrapper {
+	.radio-pills {
 		margin-bottom: 20px;
+	}
+
+	.hop-visualization {
+		width: 75%;
+		margin: 0 auto;
 	}
 
 </style>
