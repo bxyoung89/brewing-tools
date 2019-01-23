@@ -30,26 +30,26 @@
 </template>
 
 <script>
-	import VueSelect from "vue-select";
-	import ABVService from '../../services/abv-service';
+import VueSelect from "vue-select";
+import ABVService from "../../services/abv-service";
 
-	export default {
-		name: "abv-calculator",
-		data: () => ({
-			abvFormulae: ABVService.getABVFormulae(),
-			selectedFormula: ABVService.getABVFormulae()[0],
-			originalGravity: 1.05,
-			finalGravity: 1.01,
-		}),
-		computed: {
-			abv() {
-				return this.selectedFormula.getAbv(this.originalGravity, this.finalGravity);
-			},
+export default {
+	name: "abv-calculator",
+	data: () => ({
+		abvFormulae: ABVService.getABVFormulae(),
+		selectedFormula: ABVService.getABVFormulae()[0],
+		originalGravity: 1.05,
+		finalGravity: 1.01,
+	}),
+	computed: {
+		abv() {
+			return this.selectedFormula.getAbv(this.originalGravity, this.finalGravity);
 		},
-		components: {
-			"v-select": VueSelect,
-		},
-	};
+	},
+	components: {
+		"v-select": VueSelect,
+	},
+};
 </script>
 
 <style lang="scss" scoped>

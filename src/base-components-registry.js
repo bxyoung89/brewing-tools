@@ -1,19 +1,11 @@
-import DynamicSvg from "./base-components/dynamic-svg.vue";
-import AppHeader from "./base-components/app-header.vue";
-import AppButton from "./base-components/app-button.vue";
-import GrainDropdown from "./base-components/grain-dropdown.vue";
-import HopDropdown from "./base-components/hop-dropdown.vue";
-import Checkbox from "./base-components/checkbox.vue";
-import XButton from "./base-components/x-button.vue";
-import RadioPills from "./base-components/radio-pills.vue";
+const req = require.context('./base-components', true, /.vue$/);
 
-export default {
-	DynamicSvg,
-	AppHeader,
-	AppButton,
-	GrainDropdown,
-	HopDropdown,
-	Checkbox,
-	XButton,
-	RadioPills,
-};
+const baseComponentRegistry = req.keys().reduce((sum, filename) => {
+	const component = req(filename).default;
+	return {
+		...sum,
+		[component.name]: component,
+	};
+}, {});
+
+export default baseComponentRegistry;
