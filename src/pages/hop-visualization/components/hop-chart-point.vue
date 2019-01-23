@@ -34,7 +34,7 @@ export default {
 	data() {
 		return {
 			getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
-			unknownCountryFlag : CountryCodeToSvgPathService.getUnknownCountryFlag(),
+			unknownCountryFlag: CountryCodeToSvgPathService.getUnknownCountryFlag(),
 		};
 	},
 	props: ["hop", "valueFunction", "valueName", "valueFormatter"],

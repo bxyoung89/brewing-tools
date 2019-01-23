@@ -131,16 +131,12 @@ export default {
 	@import "../../styles/core";
 
 	.hop-visualization {
-		margin-top: 30px;
+		width: 75%;
+		margin: 0 auto;
 	}
 
 	.radio-pills {
-		margin-bottom: 20px;
-	}
-
-	.hop-visualization {
-		width: 75%;
-		margin: 0 auto;
+		margin-bottom: 50px;
 	}
 
 </style>

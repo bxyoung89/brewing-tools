@@ -18,7 +18,7 @@ class CountryCodeToSVGPathService {
 		return countryCodeToSvgPath[countryCode] || this.getUnknownCountryFlag();
 	}
 
-	getUnknownCountryFlag(){
+	getUnknownCountryFlag() {
 		return "flag-icons/unknown-country.svg";
 	}
 }

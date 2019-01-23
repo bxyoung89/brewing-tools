@@ -5,7 +5,7 @@
 			:class-name="`radio-pill ${selectedItem && selectedItem[labelProperty] === item[labelProperty] && 'selected'}`"
 			:click="() => onItemSelected(item)"
 			:theme="theme"
-			v-key="index"
+			:key="index"
 		>
 			{{item[labelProperty]}}
 		</app-button>
@@ -13,17 +13,13 @@
 </template>
 
 <script>
-	export default {
-		name: "radio-pills",
-		props: ['items', 'selectedItem', 'labelProperty', 'className', 'theme', 'onItemSelected']
-	}
+export default {
+	name: "radio-pills",
+	props: ["items", "selectedItem", "labelProperty", "className", "theme", "onItemSelected"],
+};
 </script>
 
 <style lang="scss" scoped>
-	.radio-pills {
-
-	}
-
 	.radio-pill {
 		opacity: 0.5;
 		margin-right: 10px;
