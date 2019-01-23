@@ -2,7 +2,12 @@
 	<div class="hop-chart-point">
 		<router-link :to="`/hop-directory/${hop.id}`">
 			<div class="content">
-				<dynamic-svg :src="getFlagFromCountry(hop.country)"/>
+				<div class="background-flag">
+					<dynamic-svg :src="unknownCountryFlag"/>
+				</div>
+				<div class="regular-flag">
+					<dynamic-svg :src="getFlagFromCountry(hop.country)"/>
+				</div>
 				<div class="tool-tip">
 					<div class="name-and-value-label">
 						<div class="name">
@@ -29,6 +34,7 @@ export default {
 	data() {
 		return {
 			getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
+			unknownCountryFlag: CountryCodeToSvgPathService.getUnknownCountryFlag(),
 		};
 	},
 	props: ["hop", "valueFunction", "valueName", "valueFormatter"],
@@ -64,6 +70,34 @@ export default {
 			height: 20px;
 			width: 20px;
 		}
+	}
+
+	.background-flag,
+	.regular-flag {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		/deep/ > svg {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.background-flag {
+		z-index: 4;
+		height: 24px;
+		width: 24px;
+		margin-left: -2px;
+		margin-bottom: -2px;
+		/deep/ > svg {
+			fill: $white;
+		}
+	}
+
+	.regular-flag {
+		z-index: 5;
+		height: 20px;
+		width: 20px;
 	}
 
 	.tool-tip {

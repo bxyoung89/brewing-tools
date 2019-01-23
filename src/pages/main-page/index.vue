@@ -57,6 +57,11 @@ export default {
 				text: "Hop Visualization",
 				svg: "hop.svg",
 			},
+			{
+				url: "/abv-calculator",
+				text: "ABV Calculator",
+				svg: "thermometer.svg",
+			},
 		],
 	}),
 	components: {
