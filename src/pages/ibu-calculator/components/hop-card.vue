@@ -10,7 +10,7 @@ export default {
 			const newHop = {
 				...this.hop,
 				...hop,
-				alphaAcid: hop.avgaa || hop.alphaAcid || this.hop.alphaAcid,
+				alphaAcid: hop.averageAlphaAcidPercentage || hop.alphaAcid || this.hop.alphaAcid,
 			};
 			this.$emit("changed", newHop, this.index);
 		},
