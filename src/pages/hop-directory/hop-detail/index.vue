@@ -51,7 +51,7 @@
 								Description
 							</div>
 							<div class="description">
-								{{hop.description}}
+								<linkified-description :text="hop.description" :hop-id="index" />
 							</div>
 						</div>
 						<div class="navigation-footer">
@@ -114,6 +114,7 @@ import allHops from "../../../data/hop-directory";
 import CountryCodeToSvgPathService from "../../../services/country-code-to-svg-path-service";
 import HopDirectoryService from "../../../services/hop-directory-service";
 import BrewingValue from "./components/brewing-value.vue";
+import LinkifiedDescription from "./components/linkified-description.vue";
 
 
 export default {
@@ -124,6 +125,7 @@ export default {
 		const nextHop = allHops[index + 1];
 		const previousHop = allHops[index - 1];
 		return {
+			index,
 			hop,
 			getFlagFromCountry: country => CountryCodeToSvgPathService.getSvgPath(country),
 			allHops,
@@ -196,6 +198,7 @@ export default {
 	},
 	components: {
 		BrewingValue,
+		LinkifiedDescription,
 	},
 };
 </script>

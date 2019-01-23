@@ -22,4 +22,3 @@ Hop Detail
 - fix button styling on mobile
 - arrow key interaction
 - swipe interaction
-- linkify description
