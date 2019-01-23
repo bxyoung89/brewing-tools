@@ -22,3 +22,5 @@ Hop Detail
 - fix button styling on mobile
 - arrow key interaction
 - swipe interaction
+- make linkification better (Select shouldn't link for Selected)
+- figure out why umlat u doesn't linkify.
