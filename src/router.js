@@ -8,6 +8,7 @@ import IBUCalculator from "./pages/ibu-calculator/index.vue";
 import HopDirectory from "./pages/hop-directory/index.vue";
 import HopDetail from "./pages/hop-directory/hop-detail/index.vue";
 import HopVisualization from "./pages/hop-visualization/index.vue";
+import ABVCaluclator from "./pages/abv-calculator/index.vue";
 
 Vue.use(Router);
 
@@ -52,6 +53,10 @@ export default new Router({
 		{
 			path: "/hop-visualization",
 			component: HopVisualization,
+		},
+		{
+			path: "/abv-calculator",
+			component: ABVCaluclator,
 		},
 	],
 });
