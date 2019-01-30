@@ -62,6 +62,11 @@ export default {
 				text: "ABV Calculator",
 				svg: "thermometer.svg",
 			},
+			{
+				url: "/blog",
+				text: "Blog",
+				svg: "social-icons/053-blogger.svg",
+			},
 		],
 	}),
 	components: {

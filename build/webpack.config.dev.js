@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const {VueLoaderPlugin} = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const marked = require("marked");
+const renderer = new marked.Renderer();
 // const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 
@@ -43,6 +45,21 @@ module.exports = {
 				test: /\.(svg)$/,
 				use: 'html-loader',
 			},
+			{
+				test: /\.md$/,
+				use: [
+					{
+						loader: "html-loader"
+					},
+					{
+						loader: "markdown-loader",
+						options: {
+							pedantic: true,
+							renderer
+						}
+					}
+				]
+			}
 			// {
 			// 	test: /\.svg$/,
 			// 	loader: 'svg-sprite-loader',

@@ -9,6 +9,8 @@ import HopDirectory from "./pages/hop-directory/index.vue";
 import HopDetail from "./pages/hop-directory/hop-detail/index.vue";
 import HopVisualization from "./pages/hop-visualization/index.vue";
 import ABVCaluclator from "./pages/abv-calculator/index.vue";
+import Blog from "./pages/blog/index.vue";
+import BlogDetail from "./pages/blog/blog-detail/index.vue";
 
 Vue.use(Router);
 
@@ -57,6 +59,14 @@ export default new Router({
 		{
 			path: "/abv-calculator",
 			component: ABVCaluclator,
+		},
+		{
+			path: "/blog",
+			component: Blog,
+		},
+		{
+			path: "/blog/:id",
+			component: BlogDetail,
 		},
 	],
 });
