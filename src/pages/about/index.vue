@@ -55,13 +55,13 @@
 					I develop this and brew beer. More better words soon.
 				</div>
 				<div class="social-links">
-					<a href="https://twitter.com/bxyoung89" target="_blank">
+					<a href="https://twitter.com/bxyoung89" target="_blank" rel="noreferrer noopener" alt="Broderick Young's Twitter">
 						<dynamic-svg src="social-icons/013-twitter-1.svg" />
 					</a>
-					<a href="https://github.com/bxyoung89/" target="_blank">
+					<a href="https://github.com/bxyoung89/" target="_blank" rel="noreferrer noopener" alt="Broderick Young's GitHub">
 						<dynamic-svg src="social-icons/039-github.svg" />
 					</a>
-					<a href="http://broderickyoung.com/" target="_blank">
+					<a href="http://broderickyoung.com/" target="_blank" rel="noreferrer noopener" alt="Broderick Young's Website">
 						<dynamic-svg src="website.svg" />
 					</a>
 				</div>
@@ -74,13 +74,13 @@
 					Tweaks css and design. More better words soon.
 				</div>
 				<div class="social-links">
-					<a href="https://github.com/shaunrfox" target="_blank">
+					<a href="https://github.com/shaunrfox" target="_blank" rel="noreferrer noopener" alt="Shaun Fox's GitHub">
 						<dynamic-svg src="social-icons/039-github.svg" />
 					</a>
-					<a href="https://dribbble.com/shaunrfox" target="_blank">
+					<a href="https://dribbble.com/shaunrfox" target="_blank" rel="noreferrer noopener" alt="Shaun Fox's Dribble">
 						<dynamic-svg src="social-icons/048-dribbble.svg" />
 					</a>
-					<a href="http://shaunfox.com/" target="_blank">
+					<a href="http://shaunfox.com/" target="_blank" rel="noreferrer noopener" alt="Shaun Fox's Website">
 						<dynamic-svg src="website.svg" />
 					</a>
 				</div>

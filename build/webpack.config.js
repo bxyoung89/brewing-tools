@@ -2,11 +2,12 @@ const webpack = require('webpack');
 const {VueLoaderPlugin} = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const marked = require("marked");
+const renderer = new marked.Renderer();
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 
 module.exports = {
-	mode: 'development',
 	entry: [
 		'./src/index.js',
 	],
@@ -40,17 +41,25 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(svg)$/,
-				use: 'html-loader',
+				test: /\.md$/,
+				use: [
+					{
+						loader: "html-loader"
+					},
+					{
+						loader: "markdown-loader",
+						options: {
+							pedantic: true,
+							renderer
+						}
+					}
+				]
 			},
-			// {
-			// 	test: /\.svg$/,
-			// 	loader: 'svg-sprite-loader',
-			// 	options: {
-			// 		// extract: true,
-			// 	}
-			// }
-		]
+			{
+				test: /\.svg$/,
+				loader: 'svg-sprite-loader',
+			}
+		],
 	},
 	output: {
 		filename: '[name].bundle.js',
@@ -66,6 +75,11 @@ module.exports = {
 			template: 'index-dev.html',
 			inject: true
 		}),
-		// new SpriteLoaderPlugin(),
-	]
+		new SpriteLoaderPlugin(),
+	],
+	optimization: {
+		providedExports: true,
+		usedExports: true,
+		splitChunks: {}
+	}
 };

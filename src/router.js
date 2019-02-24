@@ -1,14 +1,16 @@
 import Vue from "vue";
 import Router from "vue-router";
 import MainPage from "./pages/main-page/index.vue";
-import LauteringCalculator from "./pages/lautering-calculator/index.vue";
-import About from "./pages/about/index.vue";
-import HydrometerTemperatureCorrection from "./pages/hydrometer-temperature-correction/index.vue";
-import IBUCalculator from "./pages/ibu-calculator/index.vue";
-import HopDirectory from "./pages/hop-directory/index.vue";
-import HopDetail from "./pages/hop-directory/hop-detail/index.vue";
-import HopVisualization from "./pages/hop-visualization/index.vue";
-import ABVCaluclator from "./pages/abv-calculator/index.vue";
+import LauteringCalculator from "./dynamic-routes/lautering-calculator";
+import About from "./dynamic-routes/about";
+import HydrometerTemperatureCorrection from "./dynamic-routes/hydrometer-temperature-correction";
+import IBUCalculator from "./dynamic-routes/ibu-calculator";
+import HopDirectory from "./dynamic-routes/hop-directory";
+import HopDetail from "./dynamic-routes/hop-detail";
+import HopVisualization from "./dynamic-routes/hop-visualization";
+import ABVCaluclator from "./dynamic-routes/abv-calculator";
+import Blog from "./dynamic-routes/blog";
+import BlogDetail from "./dynamic-routes/blog-detail";
 
 Vue.use(Router);
 
@@ -57,6 +59,14 @@ export default new Router({
 		{
 			path: "/abv-calculator",
 			component: ABVCaluclator,
+		},
+		{
+			path: "/blog",
+			component: Blog,
+		},
+		{
+			path: "/blog/:id",
+			component: BlogDetail,
 		},
 	],
 });
