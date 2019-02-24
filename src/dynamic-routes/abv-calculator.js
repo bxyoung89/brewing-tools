@@ -1,1 +1,1 @@
-export default () => import ('../pages/abv-calculator/index.vue');
+export default () => import("../pages/abv-calculator/index.vue");

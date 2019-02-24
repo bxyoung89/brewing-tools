@@ -1,1 +1,1 @@
-export default () => import ('../pages/hydrometer-temperature-correction/index.vue');
+export default () => import("../pages/hydrometer-temperature-correction/index.vue");

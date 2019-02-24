@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import BlogData from "../../data/blog-data.js";
+import BlogData from "../../data/blog-data";
 
 export default {
 	name: "blog",
@@ -31,10 +31,6 @@ export default {
 <style lang="scss" scoped>
 	@import "../../styles/core";
 
-	.blog-posts {
-
-	}
-
 	.blog-post {
 		display: block;
 		text-decoration: none;
@@ -46,9 +42,5 @@ export default {
 
 	.title {
 		font-size: 24px;
-	}
-
-	.date {
-
 	}
 </style>

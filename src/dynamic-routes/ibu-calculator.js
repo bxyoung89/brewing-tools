@@ -1,1 +1,1 @@
-export default () => import ('../pages/ibu-calculator/index.vue');
+export default () => import("../pages/ibu-calculator/index.vue");

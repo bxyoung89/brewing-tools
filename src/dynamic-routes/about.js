@@ -1,1 +1,1 @@
-export default () => import ('../pages/about/index.vue');
+export default () => import("../pages/about/index.vue");

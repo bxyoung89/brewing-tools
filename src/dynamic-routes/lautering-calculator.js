@@ -1,1 +1,1 @@
-export default () => import ('../pages/lautering-calculator/index.vue');
+export default () => import("../pages/lautering-calculator/index.vue");

@@ -1,1 +1,1 @@
-export default () => import ('../pages/hop-directory/index.vue');
+export default () => import("../pages/hop-directory/index.vue");
