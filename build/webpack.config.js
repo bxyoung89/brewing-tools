@@ -8,6 +8,7 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 
 module.exports = {
+	mode: 'production',
 	entry: [
 		'./src/index.js',
 	],
