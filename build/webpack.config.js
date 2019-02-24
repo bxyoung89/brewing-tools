@@ -4,11 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const marked = require("marked");
 const renderer = new marked.Renderer();
-// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 
 module.exports = {
-	mode: 'development',
 	entry: [
 		'./src/index.js',
 	],
@@ -42,10 +41,6 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(svg)$/,
-				use: 'html-loader',
-			},
-			{
 				test: /\.md$/,
 				use: [
 					{
@@ -59,15 +54,12 @@ module.exports = {
 						}
 					}
 				]
+			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-sprite-loader',
 			}
-			// {
-			// 	test: /\.svg$/,
-			// 	loader: 'svg-sprite-loader',
-			// 	options: {
-			// 		// extract: true,
-			// 	}
-			// }
-		]
+		],
 	},
 	output: {
 		filename: '[name].bundle.js',
@@ -83,6 +75,11 @@ module.exports = {
 			template: 'index-dev.html',
 			inject: true
 		}),
-		// new SpriteLoaderPlugin(),
-	]
+		new SpriteLoaderPlugin(),
+	],
+	optimization: {
+		providedExports: true,
+		usedExports: true,
+		splitChunks: {}
+	}
 };

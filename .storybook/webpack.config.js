@@ -1,3 +1,4 @@
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
 	module: {
@@ -11,9 +12,12 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(svg)$/,
-				use: 'html-loader',
-			},
+				test: /\.svg$/,
+				loader: 'svg-sprite-loader',
+			}
 		]
 	},
+	plugins: [
+		new SpriteLoaderPlugin(),
+	]
 };

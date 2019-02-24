@@ -18,13 +18,14 @@
 </template>
 
 <script>
-	import BlogData from '../../data/blog-data.js';
-	export default {
-		name: "blog",
-		data: () => ({
-			posts: BlogData,
-		}),
-	}
+import BlogData from "../../data/blog-data.js";
+
+export default {
+	name: "blog",
+	data: () => ({
+		posts: BlogData,
+	}),
+};
 </script>
 
 <style lang="scss" scoped>

@@ -8,21 +8,21 @@
 </template>
 
 <script>
-	export default {
-		name: "blog-detail",
-		mounted() {
+export default {
+	name: "blog-detail",
+	mounted() {
 			import(`../../../data/blog-posts/${this.fileName}`).then((blogPost) => {
 				this.markdownContent = blogPost;
 			});
-		},
-		data: function () {
-			const fileName = this.$route.params.id;
-			return {
-				fileName,
-				markdownContent: '',
-			};
-		},
-	}
+	},
+	data() {
+		const fileName = this.$route.params.id;
+		return {
+			fileName,
+			markdownContent: "",
+		};
+	},
+};
 </script>
 
 <style scoped>

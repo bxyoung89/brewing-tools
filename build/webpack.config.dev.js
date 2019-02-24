@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const marked = require("marked");
 const renderer = new marked.Renderer();
-// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 
 module.exports = {
@@ -42,10 +42,6 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(svg)$/,
-				use: 'html-loader',
-			},
-			{
 				test: /\.md$/,
 				use: [
 					{
@@ -59,14 +55,11 @@ module.exports = {
 						}
 					}
 				]
+			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-sprite-loader',
 			}
-			// {
-			// 	test: /\.svg$/,
-			// 	loader: 'svg-sprite-loader',
-			// 	options: {
-			// 		// extract: true,
-			// 	}
-			// }
 		]
 	},
 	output: {
@@ -75,6 +68,7 @@ module.exports = {
 		path: path.resolve(__dirname, '../dist'),
 	},
 	plugins: [
+		new SpriteLoaderPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new VueLoaderPlugin(),
 		new HtmlWebpackPlugin({
@@ -82,6 +76,5 @@ module.exports = {
 			template: 'index-dev.html',
 			inject: true
 		}),
-		// new SpriteLoaderPlugin(),
 	]
 };

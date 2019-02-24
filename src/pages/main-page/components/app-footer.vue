@@ -1,9 +1,9 @@
 <template>
 	<div class="footer">
-		<a href="https://github.com/bxyoung89/brewing-tools" target="_blank">
+		<a href="https://github.com/bxyoung89/brewing-tools" target="_blank" alt="Project Github" rel="noreferrer noopener">
 			<dynamic-svg src="social-icons/039-github.svg" />
 		</a>
-		<router-link to="/about">
+		<router-link to="/about" alt="About">
 			<dynamic-svg src="question-mark.svg" />
 		</router-link>
 	</div>

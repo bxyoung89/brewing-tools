@@ -22,13 +22,17 @@ export default {
 		divId: `dynamic-svg-${GuidService.newGuid()}`,
 	}),
 	mounted() {
-			import(`../../images/${this.src}`).then((svgText) => {
+			import(`../../images/${this.src}`).then((svg) => {
+				const {id, viewBox} = svg.default;
+				const svgText = `<svg viewBox="${viewBox}"><use xlink:href="#${id}"></use></svg>`;
 				updateElementWithSvgText(this.divId, svgText);
 			});
 	},
 	// using arrow functions will lose instance
 	updated() {
-			import(`../../images/${this.src}`).then((svgText) => {
+			import(`../../images/${this.src}`).then((svg) => {
+				const {id} = svg.default;
+				const svgText = `<svg viewBox="${viewBox}"><use xlink:href="#${id}"></use></svg>`;
 				updateElementWithSvgText(this.divId, svgText);
 			});
 	},
