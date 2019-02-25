@@ -168,4 +168,11 @@ export default {
 			fill: $white;
 		}
 	}
+
+	@media (max-width: 800px) {
+		.section {
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+		}
+	}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="body-content">
+	<div class="body-content main-page">
 		<h1>
 			Brewing Tools
 		</h1>
@@ -99,5 +99,39 @@ export default {
 			background: $dark-blue;
 		}
 	}
+
+	@media (max-width: 1250px) {
+		.grid {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			> * {
+				height: 200px;
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		.grid {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.main-page {
+			padding-top: 0;
+		}
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.grid {
+			grid-template-columns: 1fr;
+
+			> * {
+				height: 100px;
+			}
+		}
+	}
+
 
 </style>

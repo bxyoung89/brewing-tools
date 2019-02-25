@@ -35,3 +35,14 @@ a {
 	margin: 0 auto;
 	padding-top: 80px;
 }
+
+@media (max-width: 800px) {
+	.body-content {
+		padding-top: 30px;
+	}
+
+	h1 {
+		font-size: 36px;
+		line-height: 50px;
+	}
+}

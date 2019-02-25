@@ -243,4 +243,17 @@ export default {
 		color: $dark-blue;
 		text-align: center;
 	}
+
+	@media (max-width: 1000px) {
+		.ibu-calculator {
+			margin-top: 10px;
+			display: block;
+		}
+
+		.ibu {
+			width: 100%;
+			background: tint($red, 2);
+			border-left: 0;
+		}
+	}
 </style>

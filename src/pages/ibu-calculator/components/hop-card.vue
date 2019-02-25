@@ -45,9 +45,15 @@ export default {
 		</div>
 		<div :class="{'hop-card-content': true, 'has-cancel-button': numberOfCards > 1}" v-if="hop !== undefined">
 			<div>
+				<div class="input-label">
+					Name
+				</div>
 				<hop-dropdown v-on:input="onHopDropdownChange" :value="hop"/>
 			</div>
 			<div>
+				<div class="input-label">
+					Alpha Acid
+				</div>
 				<input
 					type="number"
 					:value="hop.alphaAcid"
@@ -55,6 +61,9 @@ export default {
 				/>
 			</div>
 			<div>
+				<div class="input-label">
+					Boil Time
+				</div>
 				<input
 					type="number"
 					:value="hop.boilTime"
@@ -62,6 +71,9 @@ export default {
 				/>
 			</div>
 			<div>
+				<div class="input-label">
+					Ounces
+				</div>
 				<input
 					type="number"
 					:value="hop.ounces"
@@ -74,7 +86,9 @@ export default {
 						v-model="hop.isWholeHop"
 						:value="hop.isWholeHop"
 						v-on:input="(value) => onHopDropdownChange({isWholeHop: value})"
-					/>
+					>
+						<span class="checkbox-label">Whole Hop?</span>
+					</checkbox>
 				</div>
 			</div>
 			<x-button v-if="numberOfCards > 1" :click="() => removeHopAtIndex(index)" class-name="remove-hop-button"/>
@@ -94,7 +108,7 @@ export default {
 	.hop-card-content {
 		display: grid;
 		margin-bottom: 10px;
-		grid-template-columns: 220px 80px 80px 80px 100px;
+		grid-template-columns: 1fr 80px 80px 80px 100px;
 		grid-column-gap: 10px;
 
 		/deep/ > div > input {
@@ -102,7 +116,7 @@ export default {
 		}
 
 		/deep/ &.has-cancel-button {
-			grid-template-columns: 220px 80px 80px 50px 100px 30px;
+			grid-template-columns: 1fr 80px 80px 50px 100px 30px;
 		}
 	}
 
@@ -123,5 +137,61 @@ export default {
 	.remove-hop-button {
 		height: 100%;
 		width: 20px;
+	}
+
+	.input-label {
+		display: none;
+		font-size: 12px;
+	}
+
+	.checkbox-label {
+		display: none;
+	}
+
+
+	@media (max-width: 700px) {
+		.hop-card-content {
+			background: rgba($blue, .4);
+			padding: 10px;
+			margin-bottom: 10px;
+			display: block;
+			font-size: 0;
+			> * {
+				margin-bottom: 10px;
+				display: inline-block;
+				vertical-align: top;
+				width: calc(50% - 5px);
+				font-size: 16px;
+
+				&:nth-child(odd) {
+					margin-right: 5px;
+				}
+
+				&:nth-child(even) {
+					margin-left: 5px;
+				}
+			}
+		}
+
+		.title-row{
+			display: none;
+		}
+
+		.input-label {
+			display: block;
+		}
+
+		.checkbox-label {
+			display: inline-block;
+		}
+
+		.checkbox-wrapper {
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+		.remove-hop-button{
+			height: 30px;
+		}
 	}
 </style>

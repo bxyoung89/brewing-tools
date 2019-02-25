@@ -216,4 +216,17 @@ export default {
 			margin: 0 auto;
 		}
 	}
+
+	@media (max-width: 800px) {
+		.lautering-calculator {
+			margin-top: 10px;
+			display: block;
+		}
+
+		.efficiency {
+			width: 100%;
+			background: tint($red, 2);
+			border-left: 0;
+		}
+	}
 </style>
