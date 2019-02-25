@@ -1,10 +1,4 @@
-Proper svg code splitting. Right now bundle has every single svg. (or cull images)
-
-Svg sprite usage.
-
 Cache busting.
-
-Mobile layouts.
 
 Allow for metric measurements
 
@@ -24,3 +18,5 @@ Hop Detail
 - swipe interaction
 - make linkification better (Select shouldn't link for Selected)
 - figure out why umlat u doesn't linkify.
+
+Priming Sugar calculator
