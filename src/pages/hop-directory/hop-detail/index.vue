@@ -54,55 +54,57 @@
 								<linkified-description :text="hop.description" :hop-id="index" />
 							</div>
 						</div>
-						<div class="navigation-footer">
-							<router-link :to="`/hop-directory/${previousHop.id}`" class="previous-link" v-if="previousHop">
-								<app-button theme="dark-blue" class="hop-navigation-link">
-									<div class="arrow">
-										<dynamic-svg src="left-arrow.svg"/>
-									</div>
-									<div class="hop-flag">
-										<dynamic-svg :src="getFlagFromCountry(previousHop.country)"/>
-									</div>
-									<div class="hop-name">
-										{{previousHop.name}}
-									</div>
-								</app-button>
-							</router-link>
-							<div v-if="!previousHop"></div>
-							<router-link :to="`/hop-directory`">
-								Back to the directory!
-							</router-link>
-							<router-link :to="`/hop-directory/${nextHop.id}`" class="next-link" v-if="nextHop">
-								<app-button theme="dark-blue" class="hop-navigation-link">
-									<div class="hop-flag">
-										<dynamic-svg :src="getFlagFromCountry(nextHop.country)"/>
-									</div>
-									<div class="hop-name">
-										{{nextHop.name}}
-									</div>
-									<div class="arrow">
-										<dynamic-svg src="right-arrow.svg"/>
-									</div>
-								</app-button>
-							</router-link>
-							<div v-if="!nextHop"></div>
-						</div>
 					</div>
 					<div class="value-side-bar">
 						<div class="section-label">
 							Brewing Values
 						</div>
-						<brewing-value
-							v-for="(value, index) in brewingValues"
-							:name="value.name"
-							:maxHop="maxHop"
-							:property-function="value.propertyFunction"
-							:format-function="value.formatFunction"
-							:hop="hop"
-							:key="index"
-							class-name="brewing-value"
-						/>
+						<div class="brewing-values">
+							<brewing-value
+								v-for="(value, index) in brewingValues"
+								:name="value.name"
+								:maxHop="maxHop"
+								:property-function="value.propertyFunction"
+								:format-function="value.formatFunction"
+								:hop="hop"
+								:key="index"
+								class-name="brewing-value"
+							/>
+						</div>
 					</div>
+				</div>
+				<div class="navigation-footer">
+					<router-link :to="`/hop-directory/${previousHop.id}`" class="previous-link" v-if="previousHop">
+						<app-button theme="dark-blue" class="hop-navigation-link">
+							<div class="arrow">
+								<dynamic-svg src="left-arrow.svg"/>
+							</div>
+							<div class="hop-flag">
+								<dynamic-svg :src="getFlagFromCountry(previousHop.country)"/>
+							</div>
+							<div class="hop-name">
+								{{previousHop.name}}
+							</div>
+						</app-button>
+					</router-link>
+					<div v-if="!previousHop"></div>
+					<router-link :to="`/hop-directory`">
+						Back to the directory!
+					</router-link>
+					<router-link :to="`/hop-directory/${nextHop.id}`" class="next-link" v-if="nextHop">
+						<app-button theme="dark-blue" class="hop-navigation-link">
+							<div class="hop-flag">
+								<dynamic-svg :src="getFlagFromCountry(nextHop.country)"/>
+							</div>
+							<div class="hop-name">
+								{{nextHop.name}}
+							</div>
+							<div class="arrow">
+								<dynamic-svg src="right-arrow.svg"/>
+							</div>
+						</app-button>
+					</router-link>
+					<div v-if="!nextHop"></div>
 				</div>
 			</div>
 		</div>
@@ -327,16 +329,39 @@ export default {
 	}
 
 	.navigation-footer {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 10px;
+		margin-top: 20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
 		/deep/ > a {
 			text-decoration: none;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.sections-and-value-sidebar {
+			display: block;
+		}
+
+		.sections {
+			padding-bottom: 10px;
+		}
+
+		.value-side-bar {
+			margin-left: 0;
+		}
+
+		.brewing-values {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 10px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.brewing-values {
+			grid-template-columns: 1fr;
 		}
 	}
 

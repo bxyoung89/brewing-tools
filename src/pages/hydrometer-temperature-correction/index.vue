@@ -99,4 +99,18 @@ export default {
 			width: 100%;
 		}
 	}
+
+	@media (max-width: 800px) {
+		.hydrometer-temperature-correction {
+			margin-top: 10px;
+			display: block;
+		}
+
+		.adjusted-gravity {
+			width: 100%;
+			background: tint($red, 2);
+			border-left: 0;
+			height: 150px;
+		}
+	}
 </style>
