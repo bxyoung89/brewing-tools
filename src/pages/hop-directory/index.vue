@@ -34,6 +34,10 @@ export default {
 <style lang="scss" scoped>
 	@import "../../styles/core";
 
+	.hop-directory {
+		margin-top: 20px;
+	}
+
 	.hop-link {
 		display: flex;
 		margin-bottom: 5px;
