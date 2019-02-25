@@ -15,7 +15,7 @@ const updateElementWithSvgText = (elementId, svgText) => {
 	element.remove();
 };
 
-const handleSvgLoaded = (svg) => {
+const handleSvgLoaded = function(svg) {
 	const { id, viewBox } = svg.default;
 	const svgText = `<svg viewBox="${viewBox}"><use xlink:href="#${id}"></use></svg>`;
 	updateElementWithSvgText(this.divId, svgText);
@@ -28,11 +28,11 @@ export default {
 		divId: `dynamic-svg-${GuidService.newGuid()}`,
 	}),
 	mounted() {
-			import(`../../images/${this.src}`).then(handleSvgLoaded);
+			import(`../../images/${this.src}`).then(handleSvgLoaded.bind(this));
 	},
 	// using arrow functions will lose instance
 	updated() {
-			import(`../../images/${this.src}`).then(handleSvgLoaded);
+			import(`../../images/${this.src}`).then(handleSvgLoaded.bind(this));
 	},
 };
 </script>
