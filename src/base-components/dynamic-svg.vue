@@ -15,7 +15,7 @@ const updateElementWithSvgText = (elementId, svgText) => {
 	element.remove();
 };
 
-const handleSvgLoaded = function(svg) {
+const handleSvgLoaded = function (svg) {
 	const { id, viewBox } = svg.default;
 	const svgText = `<svg viewBox="${viewBox}"><use xlink:href="#${id}"></use></svg>`;
 	updateElementWithSvgText(this.divId, svgText);
