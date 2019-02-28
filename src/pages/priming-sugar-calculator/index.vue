@@ -26,7 +26,7 @@
 				</div>
 			</div>
 			<div class="sugars">
-				<div class="sugar" v-for="sugar in sugars" key="sugar.name">
+				<div class="sugar" v-for="sugar in sugars" :key="sugar.name">
 					<div class="name">
 						{{sugar.name}}
 					</div>
@@ -40,9 +40,7 @@
 </template>
 
 <script>
-import VueSelect from "vue-select";
-import ABVService from "../../services/abv-service";
-import PrimingSugarService from '../../services/priming-sugar-calculator-service';
+import PrimingSugarService from "../../services/priming-sugar-calculator-service";
 
 export default {
 	name: "priming-sugar-calculator",
@@ -55,9 +53,6 @@ export default {
 		sugars() {
 			return PrimingSugarService.getSugarsWithWeights(this.beerVolume, this.desiredCO2, this.temperature);
 		},
-	},
-	components: {
-		"v-select": VueSelect,
 	},
 };
 </script>

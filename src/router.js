@@ -70,8 +70,8 @@ export default new Router({
 			component: BlogDetail,
 		},
 		{
-			path: '/priming-sugar-calculator',
+			path: "/priming-sugar-calculator",
 			component: PrimingSugarCalculator,
-		}
+		},
 	],
 });

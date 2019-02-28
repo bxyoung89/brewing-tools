@@ -25,60 +25,60 @@
 </template>
 
 <script>
-	import MainPageLink from "./components/main-page-link.vue";
-	import AppFooter from "./components/app-footer.vue";
+import MainPageLink from "./components/main-page-link.vue";
+import AppFooter from "./components/app-footer.vue";
 
-	export default {
-		name: "main-page",
-		data: () => ({
-			tools: [
-				{
-					url: "/lautering-calculator",
-					text: "Lautering Efficiency Calculator",
-					svg: "discount.svg",
-				},
-				{
-					url: "/hydrometer-correction",
-					text: "Hydrometer Temperature Correction",
-					svg: "thermometer.svg",
-				},
-				{
-					url: "/ibu-calculator",
-					text: "IBU Calculator",
-					svg: "hop.svg",
-				},
-				{
-					url: "/hop-directory",
-					text: "Hop Directory",
-					svg: "hop.svg",
-				},
-				{
-					url: "/hop-visualization",
-					text: "Hop Visualization",
-					svg: "hop.svg",
-				},
-				{
-					url: "/abv-calculator",
-					text: "ABV Calculator",
-					svg: "thermometer.svg",
-				},
-				{
-					url: "/priming-sugar-calculator",
-					text: "Priming Sugar Calculator",
-					svg: "thermometer.svg",
-				},
-				{
-					url: "/blog",
-					text: "Blog",
-					svg: "social-icons/053-blogger.svg",
-				},
-			],
-		}),
-		components: {
-			MainPageLink,
-			AppFooter,
-		},
-	};
+export default {
+	name: "main-page",
+	data: () => ({
+		tools: [
+			{
+				url: "/lautering-calculator",
+				text: "Lautering Efficiency Calculator",
+				svg: "discount.svg",
+			},
+			{
+				url: "/hydrometer-correction",
+				text: "Hydrometer Temperature Correction",
+				svg: "thermometer.svg",
+			},
+			{
+				url: "/ibu-calculator",
+				text: "IBU Calculator",
+				svg: "hop.svg",
+			},
+			{
+				url: "/hop-directory",
+				text: "Hop Directory",
+				svg: "hop.svg",
+			},
+			{
+				url: "/hop-visualization",
+				text: "Hop Visualization",
+				svg: "hop.svg",
+			},
+			{
+				url: "/abv-calculator",
+				text: "ABV Calculator",
+				svg: "thermometer.svg",
+			},
+			{
+				url: "/priming-sugar-calculator",
+				text: "Priming Sugar Calculator",
+				svg: "thermometer.svg",
+			},
+			{
+				url: "/blog",
+				text: "Blog",
+				svg: "social-icons/053-blogger.svg",
+			},
+		],
+	}),
+	components: {
+		MainPageLink,
+		AppFooter,
+	},
+};
 </script>
 
 <style lang="scss" scoped>
