@@ -11,6 +11,7 @@ import HopVisualization from "./dynamic-routes/hop-visualization";
 import ABVCaluclator from "./dynamic-routes/abv-calculator";
 import Blog from "./dynamic-routes/blog";
 import BlogDetail from "./dynamic-routes/blog-detail";
+import PrimingSugarCalculator from "./dynamic-routes/priming-sugar-calculator";
 
 Vue.use(Router);
 
@@ -68,5 +69,9 @@ export default new Router({
 			path: "/blog/:id",
 			component: BlogDetail,
 		},
+		{
+			path: '/priming-sugar-calculator',
+			component: PrimingSugarCalculator,
+		}
 	],
 });
