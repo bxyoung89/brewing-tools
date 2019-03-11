@@ -50,7 +50,8 @@ module.exports = {
 					{
 						loader: "markdown-loader",
 						options: {
-							pedantic: true,
+							// pedantic: true,
+							tables: true,
 							renderer
 						}
 					}
@@ -59,7 +60,16 @@ module.exports = {
 			{
 				test: /\.svg$/,
 				loader: 'svg-sprite-loader',
-			}
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {},
+					},
+				],
+			},
 		]
 	},
 	output: {

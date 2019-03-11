@@ -23,6 +23,7 @@ export default {
 	.radio-pill {
 		opacity: 0.5;
 		margin-right: 10px;
+		margin-bottom: 10px;
 		display: inline-block;
 		vertical-align: top;
 
