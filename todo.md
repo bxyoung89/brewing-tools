@@ -2,6 +2,7 @@
 - favicon
 - better icons
 - real blog
+- update about
 
 # After sharing
 - metric?

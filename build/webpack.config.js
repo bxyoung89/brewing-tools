@@ -5,6 +5,7 @@ const path = require('path');
 const marked = require("marked");
 const renderer = new marked.Renderer();
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 module.exports = {
@@ -23,7 +24,8 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				use: 'babel-loader'
+				use: 'babel-loader',
+				exclude: /node_modules/
 			},
 			{
 				test: /\.vue$/,
@@ -77,10 +79,21 @@ module.exports = {
 			inject: true
 		}),
 		new SpriteLoaderPlugin(),
+		// new BundleAnalyzerPlugin(),
 	],
 	optimization: {
 		providedExports: true,
 		usedExports: true,
-		splitChunks: {}
+		splitChunks: {
+			cacheGroups: {
+				default: false,
+				commons: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendor_app',
+					chunks: 'all',
+					minChunks: 2
+				}
+			}
+		}
 	}
 };
