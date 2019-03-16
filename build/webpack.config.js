@@ -5,7 +5,6 @@ const path = require('path');
 const marked = require("marked");
 const renderer = new marked.Renderer();
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 module.exports = {
@@ -52,7 +51,7 @@ module.exports = {
 					{
 						loader: "markdown-loader",
 						options: {
-							pedantic: true,
+							tables: true,
 							renderer
 						}
 					}
@@ -88,7 +87,6 @@ module.exports = {
 			inject: true
 		}),
 		new SpriteLoaderPlugin(),
-		// new BundleAnalyzerPlugin(),
 	],
 	optimization: {
 		providedExports: true,
