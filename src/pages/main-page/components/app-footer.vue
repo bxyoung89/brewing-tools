@@ -19,7 +19,6 @@ export default {
 	@import "../../../styles/core";
 
 	.footer {
-		position: fixed;
 		bottom: 10px;
 		left: 0;
 		right: 0;

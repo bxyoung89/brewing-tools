@@ -16,3 +16,10 @@
   - make linkification better (Select shouldn't link for Selected)
   - figure out why umlat u doesn't linkify.
 
+lautering calculator
+- aria-labelby
+- step should be like 0.01
+- aria-live
+
+main page
+- use ul
