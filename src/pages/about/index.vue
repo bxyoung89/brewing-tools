@@ -52,7 +52,7 @@
 					Broderick Young
 				</div>
 				<div class="team-member-blurb">
-					I develop this and brew beer. More better words soon.
+					Web developer based in Austin, Texas. I also am an aspiring homebrewer. Thanks for stopping by!
 				</div>
 				<div class="social-links">
 					<a href="https://twitter.com/bxyoung89" target="_blank" rel="noreferrer noopener" alt="Broderick Young's Twitter">
@@ -71,7 +71,7 @@
 					Shaun Fox
 				</div>
 				<div class="team-member-blurb">
-					Tweaks css and design. More better words soon.
+					Shaun is a UX Designer based in Austin, Texas. On this site he's helped out with some design and css tweaks.
 				</div>
 				<div class="social-links">
 					<a href="https://github.com/shaunrfox" target="_blank" rel="noreferrer noopener" alt="Shaun Fox's GitHub">
