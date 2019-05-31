@@ -8,7 +8,7 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: [
 		'./src/index.js',
 	],
@@ -23,7 +23,8 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				use: 'babel-loader'
+				use: 'babel-loader',
+				exclude: /node_modules/
 			},
 			{
 				test: /\.vue$/,
@@ -50,7 +51,6 @@ module.exports = {
 					{
 						loader: "markdown-loader",
 						options: {
-							// pedantic: true,
 							tables: true,
 							renderer
 						}
@@ -66,22 +66,19 @@ module.exports = {
 				use: [
 					{
 						loader: 'file-loader',
-						options: {
-							publicPath: 'images',
-							name: '[path][name].[ext]',
-						},
+						options: {},
 					},
 				],
 			},
-		]
+		],
 	},
 	output: {
 		filename: '[name].bundle.js',
 		chunkFilename: '[name].bundle.js',
 		path: path.resolve(__dirname, '../dist'),
+		publicPath: 'dist/'
 	},
 	plugins: [
-		new SpriteLoaderPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new VueLoaderPlugin(),
 		new HtmlWebpackPlugin({
@@ -89,5 +86,21 @@ module.exports = {
 			template: 'index-dev.html',
 			inject: true
 		}),
-	]
+		new SpriteLoaderPlugin(),
+	],
+	optimization: {
+		providedExports: true,
+		usedExports: true,
+		splitChunks: {
+			cacheGroups: {
+				default: false,
+				commons: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendor_app',
+					chunks: 'all',
+					minChunks: 2
+				}
+			}
+		}
+	},
 };
