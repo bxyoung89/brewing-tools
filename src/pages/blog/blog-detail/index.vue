@@ -30,7 +30,9 @@ export default {
 
 	.blog-post {
 		/deep/ img {
-			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+			max-width: 300px;
 		}
 
 		/deep/ p {
