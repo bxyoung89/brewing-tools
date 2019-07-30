@@ -61,7 +61,7 @@ export default {
 
 		/deep/ h2 {
 			font-size: 32px;
-			font-weight: bold;
+			font-weight: 700;
 			padding-bottom: 5px;
 			margin-bottom: 5px;
 			border-bottom: 1px solid $white;
@@ -70,14 +70,14 @@ export default {
 
 		/deep/ h3 {
 			font-size: 24px;
-			font-weight: bold;
+			font-weight: 700;
 			color: $dark-blue;
 		}
 
 		/deep/ h4 {
 			font-size: 16px;
 			font-style: italic;
-			font-weight: bold;
+			font-weight: 700;
 			margin: 24px 0;
 			color: $dark-blue;
 			opacity: 0.75;
