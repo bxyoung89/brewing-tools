@@ -12,6 +12,7 @@ import ABVCaluclator from "./dynamic-routes/abv-calculator";
 import Blog from "./dynamic-routes/blog";
 import BlogDetail from "./dynamic-routes/blog-detail";
 import PrimingSugarCalculator from "./dynamic-routes/priming-sugar-calculator";
+import WhatsOnTap from "./dynamic-routes/whats-on-tap";
 
 Vue.use(Router);
 
@@ -72,6 +73,10 @@ export default new Router({
 		{
 			path: "/priming-sugar-calculator",
 			component: PrimingSugarCalculator,
+		},
+		{
+			path: "/whats-on-tap",
+			component: WhatsOnTap,
 		},
 	],
 });

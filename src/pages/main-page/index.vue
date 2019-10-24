@@ -72,6 +72,11 @@ export default {
 				text: "Blog",
 				svg: "social-icons/053-blogger.svg",
 			},
+			{
+				url: "/whats-on-tap",
+				text: "What's on Tap",
+				svg: "beer.svg",
+			},
 		],
 	}),
 	components: {
