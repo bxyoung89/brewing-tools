@@ -69,16 +69,6 @@ const beers = [
 	},
 	{
 		formFactor: "bottle",
-		name: "Family Tree",
-		beerStyle: "Tart Cider",
-		abv: "6.62",
-		hops: [],
-		yeast: "LalBrew Belle Saison Yeast",
-		malts: [],
-		description: "Hand pressed from 50lbs of apples.",
-	},
-	{
-		formFactor: "bottle",
 		name: "Pomegranate Cider",
 		beerStyle: "Cider",
 		abv: "6.64",
